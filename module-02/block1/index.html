@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Module 2 · Living and Spending · Block 1 · The Empty Box</title>
+<style>
+:root{--navy:#18304a;--navy2:#274967;--ink:#26323b;--muted:#69737a;--paper:#fffdf9;--cream:#f5ecde;--sand:#e7d9c3;--gold:#b98a45;--line:#d8cbb8;--blue:#edf2f7;--green:#eef3e9;--lilac:#f2eef7;--rose:#f7ece8;--shadow:0 10px 28px rgba(25,40,55,.09)}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:#e9e5de;color:var(--ink);font:16px/1.58 Georgia,"Times New Roman",serif}
+main{max-width:1180px;margin:auto;padding:18px 14px 52px}
+.hero{position:relative;min-height:390px;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);background:#f8f1e7 url('assets/hero.png') right center/auto 100% no-repeat;display:grid;grid-template-columns:minmax(420px,1fr) 245px}
+.hero-copy{padding:30px 30px 34px;max-width:610px;background:linear-gradient(90deg,rgba(250,246,238,.98) 0%,rgba(250,246,238,.94) 72%,rgba(250,246,238,0) 100%);position:relative;z-index:2}
+.kicker{font:700 .78rem/1.2 Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:var(--navy)}
+h1{font:italic 700 clamp(3.4rem,7vw,5.7rem)/.9 Georgia,serif;color:var(--navy);margin:24px 0 16px}
+.hero-copy p{font-size:1.05rem;max-width:520px;margin:0;color:#37414a}.hero-tag{display:inline-block;margin-top:18px;padding:7px 12px;border:1px solid #c7a66d;border-radius:18px;color:#7d6035;font:700 .76rem Arial,sans-serif;background:rgba(255,250,240,.82)}
+.journey{align-self:stretch;background:rgba(249,242,230,.96);color:var(--navy);padding:25px 18px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid #cdbda8;position:relative;z-index:3}.journey h3{text-align:center;margin:0 0 14px;font-size:1.2rem}.journey a{display:flex;gap:10px;align-items:center;padding:9px 2px;color:inherit;text-decoration:none;border-bottom:1px dashed #cdbda8;font-weight:700}.icon{width:25px;text-align:center;color:var(--gold);font-family:Arial,sans-serif}
+.route{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}.route a{background:#fffaf1;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font:700 .75rem Arial,sans-serif;color:var(--navy);text-decoration:none}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 5px 18px rgba(0,0,0,.045);padding:20px}.card.blue{background:var(--blue)}.card.green{background:var(--green)}.card.lilac{background:var(--lilac)}.card.rose{background:var(--rose)}
+.section-head{display:flex;gap:11px;align-items:flex-start}.badge{width:45px;height:45px;border-radius:50%;background:#e7edf3;color:var(--navy);display:grid;place-items:center;font:1.25rem Arial,sans-serif;flex:0 0 auto}.badge.gold{background:#f5ead5;color:#8a652e}.badge.green{background:#e0eadc;color:#55724d}.badge.purple{background:#e8dff0;color:#75547d}
+h2{margin:0 0 5px;color:var(--navy);font-size:1.55rem}h3{margin:0 0 7px;color:var(--navy)}.small{color:var(--muted);font-size:.92rem}.btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:9px 15px;border-radius:20px;background:var(--navy);color:#fff;border:0;text-decoration:none;font:bold .76rem Arial,sans-serif;cursor:pointer}.btn.light{background:#fff;border:1px solid var(--line);color:var(--navy)}
+.before{display:grid;grid-template-columns:170px repeat(3,1fr);background:#f8f0e3;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:14px 0}.before-title{padding:18px 16px;background:#e6d8c3;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.question{padding:16px;border-left:1px dashed #c9b79f}.qnum{font:bold .75rem Arial,sans-serif;color:var(--gold)}
+.story-strip{background:#f8f0e4;border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0}.story-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:12px}.story-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.story-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;position:relative}.story-card button{padding:0;border:0;background:none;width:100%;display:block;cursor:pointer}.story-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}.story-card .cap{padding:8px 9px;text-align:center;font-size:.82rem}.num{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:50%;background:var(--gold);color:#fff;font:bold .7rem Arial,sans-serif}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}.skill{border:1px solid var(--line);border-radius:16px;padding:20px;background:var(--paper)}.skill.heart{background:var(--lilac)}.skill.lang{background:var(--green)}.skill.beyond{background:#f8f1df}
+.section{margin:12px 0}.section details{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}.section summary{cursor:pointer;padding:15px 18px;font-weight:700;color:var(--navy);font-size:1.03rem;list-style:none}.section summary::-webkit-details-marker{display:none}.section summary:before{content:"＋";font:700 1.1rem Arial;color:var(--gold);display:inline-block;width:25px}.section details[open] summary:before{content:"−"}.content{padding:0 20px 20px}.reading{background:#fffdf8;border-radius:12px;padding:18px;border:1px solid #e3d8c8}.reading p{margin:0 0 13px}.callout{border-left:4px solid var(--gold);background:#fbf4e7;padding:12px 14px;border-radius:8px;margin:12px 0}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}ol{padding-left:24px}li{margin:6px 0}
+table{width:100%;border-collapse:collapse;background:#fff}th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left}th{background:#eee5d7}
+.song{background:var(--navy);color:#fff;border-radius:16px;padding:20px;margin:14px 0}.song h2{color:#fff}.song audio{width:100%;margin-top:12px}.song-intro{display:flex;justify-content:space-between;gap:15px;align-items:center}.song details{margin-top:14px;background:#fffdf8;color:var(--ink);border:1px solid rgba(255,255,255,.25);border-radius:12px;overflow:hidden}.song summary{cursor:pointer;padding:14px 17px;font-weight:700;color:var(--navy);list-style:none}.song summary::-webkit-details-marker{display:none}.song summary:before{content:"＋";font:700 1.1rem Arial;color:var(--gold);display:inline-block;width:25px}.song details[open] summary:before{content:"−"}.lyrics{padding:0 17px 17px}.lyrics-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden}.lyric{padding:15px;background:#fbfaf6}.lyric.ru{background:#eef2f4;border-left:1px solid #c9d1d5}.lyric-label{font-weight:700;color:var(--navy);margin-bottom:6px}.lyric.ru .lyric-label{color:#85653d}.lyric ul{margin:4px 0;padding-left:20px}
+.project{background:linear-gradient(135deg,#f3eadc,#eaf0ea);border:1px solid #d6c9b6;border-radius:16px;padding:20px;margin:14px 0}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin:15px 0}.step{background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:13px;text-align:center}.step .num{margin-bottom:7px}.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.video-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px}.video-card video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#111;border-radius:8px;display:block}.video-card .btn{margin-top:8px}.warning{background:#fff5e8;border:1px solid #e5cfaa;border-radius:12px;padding:13px;margin-top:14px}
+.reflection{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#f7f0e4;border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:14px}.write-box{min-height:180px;border:1px dashed #cdbda8;border-radius:10px;background:#fffdf8;padding:12px;color:#a09a91}
+.media-note{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.hint{font:700 .72rem Arial,sans-serif;color:#6f6659;background:#fffaf1;border:1px solid var(--line);border-radius:999px;padding:6px 9px}
+.modal{position:fixed;inset:0;background:rgba(9,19,30,.78);display:none;align-items:center;justify-content:center;padding:24px;z-index:9999}.modal.open{display:flex}.modal-panel{max-width:min(1000px,96vw);max-height:92vh;background:#fffdf8;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);position:relative}.modal-panel img,.modal-panel video{display:block;max-width:100%;max-height:80vh;width:auto;height:auto;margin:auto;background:#111}.modal-caption{padding:11px 15px;color:var(--muted);font-size:.9rem}.close{position:absolute;right:10px;top:8px;width:36px;height:36px;border:0;border-radius:50%;background:rgba(24,48,74,.9);color:#fff;font:700 22px Arial;cursor:pointer;z-index:2}.modal-nav{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;pointer-events:none}.modal-nav button{pointer-events:auto;border:0;background:rgba(24,48,74,.8);color:#fff;border-radius:50%;width:42px;height:42px;font:700 24px Arial;cursor:pointer;margin:0 8px}.modal-title{padding:10px 15px 0;font-weight:700;color:var(--navy)}
+footer{text-align:center;color:#756f67;margin-top:20px;font-size:.88rem}
+@media(max-width:900px){.hero{grid-template-columns:1fr;background-position:center bottom;background-size:auto 55%}.hero-copy{max-width:none;background:linear-gradient(180deg,rgba(250,246,238,.98),rgba(250,246,238,.92))}.journey{border-left:0;border-top:1px solid #cdbda8}.before{grid-template-columns:1fr}.question{border-left:0;border-top:1px dashed #c9b79f}.story-grid{grid-template-columns:repeat(3,1fr)}.skills{grid-template-columns:1fr}.video-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.hero{background-size:auto 45%;min-height:0}.hero-copy{padding:25px 22px}.journey{padding:18px}.grid3,.two,.lyrics-grid,.reflection{grid-template-columns:1fr}.story-grid{grid-template-columns:1fr 1fr}.lyric.ru{border-left:0;border-top:1px solid #c9d1d5}.steps{grid-template-columns:1fr}.modal{padding:10px}}
+</style>
+
+<style>
+/* REVISION 5 — visible interactive learning layer */
+.interactive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media(max-width:760px){.interactive-grid{grid-template-columns:1fr}}
+.task-card{background:#fff;border:1px solid rgba(30,50,70,.12);border-radius:16px;padding:18px;box-shadow:0 5px 18px rgba(30,50,70,.05)}
+.task-card h3{margin-top:0}.task-card label{display:block;margin:10px 0 6px;font-weight:700}.task-card input,.task-card textarea,.task-card select{width:100%;box-sizing:border-box;border:1px solid #cbd5dc;border-radius:10px;padding:10px;font:inherit;background:#fff}.task-card textarea{min-height:90px;resize:vertical}.task-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.feedback{margin-top:10px;padding:10px 12px;border-radius:10px;background:#f5f7f8;display:none}.feedback.show{display:block}.answer{display:none;margin-top:10px;padding:10px 12px;border-left:3px solid #b9a27a;background:#faf8f2;border-radius:6px}.answer.show{display:block}.choice-row{display:flex;gap:8px;flex-wrap:wrap}.choice{border:1px solid #cbd5dc;background:#fff;border-radius:999px;padding:8px 13px;cursor:pointer}.choice.selected{background:#e8eef2}.meter{height:8px;background:#e8ecef;border-radius:8px;overflow:hidden;margin:10px 0}.meter span{display:block;height:100%;width:0;background:#9b8060;transition:.3s}.reveal-btn{cursor:pointer}.project-board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.project-board .task-card{padding:13px}@media(max-width:900px){.project-board{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.project-board{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <div class="kicker">Module 2 · Living and Spending · Block 1</div>
+    <h1>The Empty Box</h1>
+    <p>Conscious spending · true value · things versus experiences</p>
+    <span class="hero-tag">A story about what money cannot buy</span>
+  </div>
+  <aside class="journey">
+    <h3>Your Journey</h3>
+    <a href="#story"><span class="icon">▣</span> READ</a>
+    <a href="#listening"><span class="icon">◉</span> LISTEN</a>
+    <a href="#visuals"><span class="icon">◇</span> LOOK</a>
+    <a href="#heart"><span class="icon">✦</span> THINK</a>
+    <a href="#project"><span class="icon">✎</span> CREATE</a>
+    <a href="#reflection"><span class="icon">♡</span> SHARE</a>
+  </aside>
+</section>
+
+<nav class="route" aria-label="Block navigation">
+  <a href="#lead">Lead-in</a><a href="#story">Story</a><a href="#listening">Listening</a><a href="#language">Language</a><a href="#song">Song</a><a href="#project">Memory Lab</a>
+</nav>
+
+<section class="before" id="lead">
+  <div class="before-title">Before<br>You Read<div class="small" style="margin-top:8px">Predict first. There is no single right answer.</div></div>
+  <div class="question"><span class="qnum">01 · IMAGINE</span><p>Imagine a teenager saving for something he really wants. What might he give up to reach his goal?</p><p class="small"><strong>Say one idea aloud.</strong></p></div>
+  <div class="question"><span class="qnum">02 · CHOOSE</span><p>Which can feel more valuable: <strong>a new thing</strong> or <strong>time with someone you love</strong>?</p><p class="small"><strong>Choose one and give one reason.</strong></p></div>
+  <div class="question"><span class="qnum">03 · PREDICT</span><p>The title is <strong>The Empty Box</strong>. What do you think the box will mean in the story?</p><p class="small"><strong>Keep your prediction — check it later.</strong></p></div>
+</section>
+
+<section class="grid3">
+  <article class="card blue" id="story">
+    <div class="section-head"><div class="badge">▣</div><div><h2>Read the Story</h2><div class="small">First encounter · Read for meaning</div></div></div>
+    <p>Read once without translating every word. Find out what Leo wanted, what happened after he bought it, and what changed.</p>
+    <div class="callout"><strong>Reading goal:</strong> Find the moment when Leo's feelings change.</div>
+    <a class="btn" href="#reading">READ NOW ↓</a>
+  </article>
+  <article class="card green" id="listening">
+    <div class="section-head"><div class="badge green">◉</div><div><h2>Listen to the Story</h2><div class="small">Second encounter · Listen for detail</div></div></div>
+    <p>Listen after reading. This time, notice the words that show Leo's feelings and the moments connected with his grandmother.</p>
+    <audio controls preload="metadata" src="assets/story_audio.wav" style="width:100%;margin-top:5px"></audio>
+    <div class="media-note"><span class="hint">1 · Read</span><span class="hint">2 · Listen</span><span class="hint">3 · Notice</span></div>
+  </article>
+  <article class="card" id="visuals">
+    <div class="section-head"><div class="badge gold">◇</div><div><h2>Look & Notice</h2><div class="small">Use the images as evidence</div></div></div>
+    <p>Before opening an image, say what you expect to see. Then open it and check your idea.</p>
+    <div class="media-note"><span class="hint">🖼 OPEN IMAGE</span><span class="hint">↔ FOLLOW THE STORY</span></div>
+  </article>
+</section>
+
+<section class="story-strip">
+  <div class="story-head"><div><h2>The Story Unfolds</h2><div class="small">Predict → open → check. Follow the emotional journey, not just the events.</div></div><span class="small">01 → 05</span></div>
+  <div class="story-grid">
+    <div class="story-card"><button data-image="assets/story01.jpg" data-title="01 · The Dream"><img src="assets/story01.jpg" alt="The Dream"><div class="cap"><span class="num">01</span><br><strong>The Dream</strong><br><span class="small">What does Leo want?</span></div></button></div>
+    <div class="story-card"><button data-image="assets/story02.jpg" data-title="02 · The Saving"><img src="assets/story02.jpg" alt="The Saving"><div class="cap"><span class="num">02</span><br><strong>The Saving</strong><br><span class="small">What does he give up?</span></div></button></div>
+    <div class="story-card"><button data-image="assets/story03.jpg" data-title="03 · The Purchase"><img src="assets/story03.jpg" alt="The Purchase"><div class="cap"><span class="num">03</span><br><strong>The Purchase</strong><br><span class="small">Does he feel happy?</span></div></button></div>
+    <div class="story-card"><button data-image="assets/album.jpg" data-title="04 · The Memories"><img src="assets/album.jpg" alt="The Memories"><div class="cap"><span class="num">04</span><br><strong>The Memories</strong><br><span class="small">What does he remember?</span></div></button></div>
+    <div class="story-card"><button data-image="assets/hero.png" data-title="05 · The Real Treasure"><img src="assets/hero.png" alt="The Real Treasure"><div class="cap"><span class="num">05</span><br><strong>The Real Treasure</strong><br><span class="small">What is really valuable?</span></div></button></div>
+  </div>
+  <div class="callout" style="margin-bottom:0"><strong>After the gallery:</strong> Go back to your prediction in <em>Before You Read</em>. Was it correct? What would you change?</div>
+</section>
+
+<section class="skills" id="heart">
+  <article class="skill heart"><h3>♡ For the Heart & Mind</h3><p><strong>Comprehension Check</strong><br>7 questions</p><p><strong>Think & Analyse</strong><br>4 questions</p><p><strong>Discuss & Relate</strong><br>3 questions</p><a class="btn light" href="#heart-tasks">OPEN ↓</a></article>
+  <article class="skill lang" id="language"><h3>▣ For Language Skills</h3><p><strong>Vocabulary Focus</strong><br>Antonyms · context · personal sentences</p><p><strong>Grammar in Context</strong><br>Infinitive of purpose · countable/uncountable nouns · Past Simple</p><p><strong>Brain Workout</strong><br>Memory Chain · associations · upside-down text</p><a class="btn light" href="#language-tasks">OPEN ↓</a></article>
+  <article class="skill beyond"><h3>✦ Beyond the Text</h3><p>Email / WhatsApp to Leo</p><p>Diary entry</p><p>4-frame comic</p><p>Optional AI image task</p><a class="btn light" href="#beyond-tasks">OPEN ↓</a></article>
+</section>
+
+<div class="section"><details id="reading">
+  <summary>01 · The Story Window · Reading</summary><div class="content">
+    <div class="callout"><strong>Read for the main idea:</strong> What does Leo discover about the difference between buying something and feeling rich?</div>
+    <div class="reading">
+      <p><strong>Leo wanted one thing: the new Pro-Gamer X-3000 console.</strong> His friends talked about it every day. The screen was 4K. The sound was like in a real cinema. Leo had to have it.</p>
+      <p>It cost 500 dollars.</p><p>Leo didn't have 500 dollars. He had 20 dollars from his grandmother. So he started saving. No snacks after school. No comics. No apps. Every dollar went into a blue box on his shelf.</p><p>It took him eight months.</p><p>The day he opened the box, his hands were shaking. He counted the money. Twice. Three times. Five hundred and twelve dollars. More than enough.</p><p>He ran to the shop. He bought the console. He ran home. He connected it to the TV. He put the first disc in.</p><p>And then he just… sat there.</p><p>The graphics were perfect. The sound was perfect. But Leo felt nothing. He played for an hour. Then he turned it off.</p><p><em>Why do I feel so empty?</em> he thought.</p><p>He looked at the blue box on his shelf. It was empty now. But then he remembered: eight months of small choices. Eight months of saying “no” to little things so he could say “yes” to one big thing.</p><p>He remembered something else too.</p><p>His grandmother. Every Sunday, he visited her. They baked cookies together. She told stories about her childhood. He laughed at her old jokes. She never talked about money. She just liked being with him.</p><p>Leo closed his eyes. The console was shiny and new. But the real treasure wasn't in his hands. It was in those Sunday afternoons he almost missed because he was too busy saving.</p><p>He picked up his phone.</p><p>“Grandma? Can I come over tomorrow? I miss your cookies.”</p><p>Her voice was warm. “I was just thinking about you, my boy.”</p><p>Leo smiled. And for the first time in eight months, he felt rich.</p>
+    </div>
+  </div>
+</details></div>
+
+<div class="section"><details id="listening-room">
+  <summary>02 · Listening Room · The Story</summary><div class="content"><p>Listen to the complete story. You can listen after reading it or use it as a listening-first activity.</p><audio controls preload="metadata" src="assets/story_audio.wav" style="width:100%"></audio></div>
+</details></div>
+
+<div class="section"><details><summary>03 · Glossary · Vocabulary</summary><div class="content"><div class="callout">Use the glossary while reading. Pay attention to pronunciation and context.</div><div style="overflow:auto"><table><thead><tr><th>Word / phrase</th><th>American pronunciation</th><th>Translation</th></tr></thead><tbody>
+<tr><td><strong>console</strong></td><td>[ˈkɑːnsoʊl]</td><td>игровая приставка</td></tr><tr><td><strong>screen</strong></td><td>[skriːn]</td><td>экран</td></tr><tr><td><strong>to cost</strong></td><td>[kɔːst]</td><td>стоить</td></tr><tr><td><strong>to save (money)</strong></td><td>[seɪv]</td><td>копить (деньги)</td></tr><tr><td><strong>snack</strong></td><td>[snæk]</td><td>перекус, снек</td></tr><tr><td><strong>comic</strong></td><td>[ˈkɑːmɪk]</td><td>комикс</td></tr><tr><td><strong>app</strong></td><td>[æp]</td><td>приложение</td></tr><tr><td><strong>shelf</strong></td><td>[ʃelf]</td><td>полка</td></tr><tr><td><strong>to shake</strong></td><td>[ʃeɪk]</td><td>трястись, дрожать</td></tr><tr><td><strong>to count</strong></td><td>[kaʊnt]</td><td>считать</td></tr><tr><td><strong>enough</strong></td><td>[ɪˈnʌf]</td><td>достаточно</td></tr><tr><td><strong>to connect</strong></td><td>[kəˈnekt]</td><td>подключать</td></tr><tr><td><strong>disc</strong></td><td>[dɪsk]</td><td>диск</td></tr><tr><td><strong>graphics</strong></td><td>[ˈɡræfɪks]</td><td>графика</td></tr><tr><td><strong>perfect</strong></td><td>[ˈpɜːrfɪkt]</td><td>идеальный</td></tr><tr><td><strong>empty</strong></td><td>[ˈempti]</td><td>пустой</td></tr><tr><td><strong>choice</strong></td><td>[tʃɔɪs]</td><td>выбор</td></tr><tr><td><strong>to bake</strong></td><td>[beɪk]</td><td>печь</td></tr><tr><td><strong>cookie</strong></td><td>[ˈkʊki]</td><td>печенье</td></tr><tr><td><strong>childhood</strong></td><td>[ˈtʃaɪldhʊd]</td><td>детство</td></tr><tr><td><strong>treasure</strong></td><td>[ˈtreʒər]</td><td>сокровище</td></tr><tr><td><strong>to miss</strong></td><td>[mɪs]</td><td>пропустить, скучать</td></tr><tr><td><strong>to pick up</strong></td><td>[pɪk ʌp]</td><td>поднять, взять (телефон)</td></tr><tr><td><strong>warm</strong></td><td>[wɔːrm]</td><td>тёплый</td></tr><tr><td><strong>rich</strong></td><td>[rɪtʃ]</td><td>богатый</td></tr>
+</tbody></table></div></div></details></div>
+
+<div class="section"><details id="heart-tasks">
+<summary>04 · For the Heart & Mind · Understand → Think → Connect</summary>
+<div class="content">
+<div class="interactive-grid">
+<div class="task-card"><h3>1 · Understand</h3><p>Put the events in the correct order.</p><label><input type="text" id="orderTask" placeholder="Example: 3-1-4-2"></label><button class="btn light" onclick="checkOrder()">CHECK</button><div class="feedback" id="orderFeedback"></div></div>
+<div class="task-card"><h3>2 · Think</h3><p>Why did Leo feel empty after buying the console?</p><textarea id="thinkAnswer" placeholder="Write 1–2 sentences."></textarea><div class="task-actions"><button class="btn light" onclick="toggleBox('thinkModel')">SHOW A MODEL IDEA</button></div><div class="answer" id="thinkModel">The console gave Leo the thing he wanted, but it could not replace the meaningful time and memories he had with his grandmother.</div></div>
+<div class="task-card"><h3>3 · Evidence Hunt</h3><p>Find one sentence from the story that shows Leo's feelings changed.</p><textarea placeholder="Copy the sentence or write it in your own words."></textarea><button class="btn light" onclick="toggleBox('evidenceHint')">NEED A HINT?</button><div class="answer" id="evidenceHint">Look near the end of the story, after Leo calls his grandmother.</div></div>
+<div class="task-card"><h3>4 · Connect</h3><p>Which matters more to Leo at the end?</p><div class="choice-row" data-group="connect"><button class="choice" onclick="selectChoice(this,'connect')">The console</button><button class="choice" onclick="selectChoice(this,'connect')">Time with Grandma</button><button class="choice" onclick="selectChoice(this,'connect')">Money itself</button></div><div class="feedback" id="connectFeedback"></div></div>
+</div>
+<div class="task-card" style="margin-top:14px"><h3>5 · Your Thought</h3><p>Finish the sentence: <strong>“A real treasure can be…”</strong></p><input id="treasureWord" placeholder="a person, a moment, a memory…"><div class="task-actions"><button class="btn light" onclick="showPersonal('treasureFeedback','treasureWord')">SAVE MY IDEA</button></div><div class="feedback" id="treasureFeedback"></div></div>
+</div></details></div>
+
+<div class="section"><details id="language-tasks">
+<summary>05 · For Language Skills · Notice → Practise → Use</summary>
+<div class="content">
+<div class="interactive-grid">
+<div class="task-card"><h3>A · Vocabulary</h3><p>Choose the word that fits: <strong>Leo ______ money for eight months.</strong></p><select id="vocabQ"><option value="">Choose…</option><option value="saved">saved</option><option value="spent">spent</option><option value="lost">lost</option></select><button class="btn light" onclick="checkSelect('vocabQ','saved','vocabFeedback')">CHECK</button><div class="feedback" id="vocabFeedback"></div></div>
+<div class="task-card"><h3>B · Grammar in Context</h3><p>Complete with the infinitive of purpose:</p><p><em>Leo picked up his phone ______ Grandma.</em></p><input id="grammarQ" placeholder="to + verb"><button class="btn light" onclick="checkText('grammarQ',['to call'],'grammarFeedback')">CHECK</button><div class="feedback" id="grammarFeedback"></div></div>
+<div class="task-card"><h3>C · Past Simple Detective</h3><p>Find one regular and one irregular Past Simple verb in the story.</p><input id="pastRegular" placeholder="Regular verb"><input id="pastIrregular" placeholder="Irregular verb"><button class="btn light" onclick="checkPast()">CHECK</button><div class="feedback" id="pastFeedback"></div></div>
+<div class="task-card"><h3>D · Use It</h3><p>Write one sentence with <strong>to save money for</strong>.</p><textarea placeholder="I am saving money for…"></textarea><p class="small">Now say your sentence aloud.</p></div>
+</div>
+<div class="task-card" style="margin-top:14px"><h3>Brain Workout · Memory Chain</h3><p>Remember the story in 5 steps. Add one event at a time.</p><div class="meter"><span id="memoryMeter"></span></div><div class="task-actions"><button class="choice" onclick="memoryStep(1)">1 · Dream</button><button class="choice" onclick="memoryStep(2)">2 · Save</button><button class="choice" onclick="memoryStep(3)">3 · Buy</button><button class="choice" onclick="memoryStep(4)">4 · Remember</button><button class="choice" onclick="memoryStep(5)">5 · Reconnect</button></div><div class="feedback" id="memoryFeedback"></div></div>
+</div></details></div>
+
+<div class="section"><details id="beyond-tasks">
+<summary>06 · Beyond the Text · Choose Your Path</summary>
+<div class="content"><p><strong>Choose ONE path.</strong> Your goal is to show what “real treasure” means to you.</p>
+<div class="interactive-grid">
+<div class="task-card"><h3>Path 1 · Message to Leo</h3><p>Write a short message to Leo. Give him one piece of advice.</p><textarea placeholder="Hi Leo, …"></textarea><button class="btn light" onclick="toggleBox('path1Tip')">SHOW TIP</button><div class="answer" id="path1Tip">Use: <em>I think you should… / You could… / Don't forget to…</em></div></div>
+<div class="task-card"><h3>Path 2 · Diary</h3><p>Write 5–6 lines as Leo, one week later.</p><textarea placeholder="Dear diary, …"></textarea></div>
+<div class="task-card"><h3>Path 3 · 4-Frame Storyboard</h3><p>Plan four frames: <strong>want → save → empty → treasure</strong>.</p><div class="project-board"><input placeholder="Frame 1"><input placeholder="Frame 2"><input placeholder="Frame 3"><input placeholder="Frame 4"></div></div>
+<div class="task-card"><h3>Path 4 · Visual Story</h3><p>Choose one image from the gallery and explain how it supports the message of the story.</p><textarea placeholder="This image shows… It is important because…"></textarea></div>
+</div></div></details></div>
+
+<section class="song" id="song">
+  <div class="song-intro"><div class="section-head"><div class="badge">♪</div><div><h2>♫ Song: The Empty Box</h2><div>Listen first. The lyrics are hidden until you are ready to read them.</div></div></div><span class="hint">OPEN LYRICS ↓</span></div>
+  <audio controls preload="metadata" src="assets/song.mp3"></audio>
+  <details><summary>SHOW SONG LYRICS</summary><div class="lyrics"><div class="lyrics-grid">
+    <div class="lyric"><div class="lyric-label">Verse 1</div><ul><li>Eight months of saving, no candy, no games</li><li>A blue cardboard box, just whispering my name</li><li>I wanted that console, the graphics so bright</li><li>But I sat in the darkness alone late at night</li></ul></div>
+    <div class="lyric ru"><div class="lyric-label">Куплет 1</div><ul><li>Восемь месяцев экономии, никаких сладостей, никаких игр</li><li>Синяя картонная коробка, просто шептала моё имя</li><li>Я пропускал все перекусы и откладывал веселье</li><li>Я думал, что приставка сделает меня кем-то</li></ul></div>
+    <div class="lyric"><div class="lyric-label">Chorus</div><ul><li>The empty box taught me what I couldn't see</li><li>The treasure was never the thing I would buy</li><li>It was Sunday mornings, the flour on my sleeve</li><li>And grandma's warm voice saying “Don't you ever leave”</li></ul></div>
+    <div class="lyric ru"><div class="lyric-label">Припев</div><ul><li>Пустая коробка научила меня тому, чего я не мог увидеть</li><li>Сокровище никогда не было вещью, которую я мог бы купить</li><li>Это были воскресные утра, мука на рукаве</li><li>И бабушкин тёплый голос: “Не уходи, пожалуйста”</li></ul></div>
+    <div class="lyric"><div class="lyric-label">Verse 2</div><ul><li>I turned off the TV, the silence was loud</li><li>Picked up my phone and said “Grandma, I'm proud</li><li>Not of the console, but of who I became</li><li>When I realized that love is the only real game”</li></ul></div>
+    <div class="lyric ru"><div class="lyric-label">Куплет 2</div><ul><li>Я выключил телевизор, тишина была глубокой</li><li>Я взял телефон, хотя руки мои были слабы</li><li>“Бабушка, можно я приду? Я скучаю по твоей тёплой улыбке</li><li>И по печенью, которое мы пекли, и по нашим разговорам”</li></ul></div>
+    <div class="lyric"><div class="lyric-label">Chorus (repeat)</div><ul><li>The empty box taught me what I couldn't see</li><li>The treasure was never the thing I would buy</li><li>It was Sunday mornings, the flour on my sleeve</li><li>And grandma's warm voice saying “Don't you ever leave”</li></ul></div>
+    <div class="lyric ru"><div class="lyric-label">Припев (повтор)</div><ul><li>Пустая коробка научила меня тому, чего я не мог увидеть</li><li>Сокровище никогда не было вещью, которую я мог бы купить</li><li>Это были воскресные утра, мука на рукаве</li><li>И бабушкин тёплый голос: “Не уходи, пожалуйста”</li></ul></div>
+    <div class="lyric"><div class="lyric-label">Outro</div><ul><li>The box is still empty, but my heart is so full</li><li>Some lessons are simple, some pain is a tool</li><li>I found my whole fortune in cookies and tea</li><li>In grandma's small kitchen, where I'm finally free.</li></ul></div>
+    <div class="lyric ru"><div class="lyric-label">Аутро</div><ul><li>Коробка всё ещё пуста, моё сердце так полно</li><li>Некоторые уроки просты, некоторая боль — это инструмент</li><li>Я нашёл своё целое состояние в печенье и чае</li><li>На бабушкиной маленькой кухне, где я наконец свободен.</li></ul></div>
+  </div></div></details>
+</section>
+
+<div class="section"><details><summary>07 · After the Song · Listen → Notice → Respond</summary><div class="content"><div class="two"><div class="card"><h3>A. Listen Again</h3><p>Listen to the chorus one more time. Write down <strong>three words</strong> that connect the song to the story.</p><p><strong>Then:</strong> Which line best expresses the idea of “real treasure”? Explain why.</p></div><div class="card"><h3>B. Compare</h3><ol><li>What idea is shared by the story and the song?</li><li>Does the song add a new feeling or image that the story does not emphasise?</li><li>Choose one line that you would use as the title of Leo's lesson. Why?</li></ol></div></div><div class="callout"><strong>Mini-response:</strong> Complete: “After the story and the song, I think real treasure is ______ because ______.”</div></div></details></div>
+
+<section class="project" id="project">
+  <div class="section-head"><div class="badge gold">▧</div><div><h2>Our Empty Boxes Project</h2><div>Turn memories into a story.</div></div></div>
+  <p><strong>Your Mission:</strong> Create a short memory video using photos and <em>The Empty Box</em> as inspiration. Your story should show not only <em>what happened</em>, but <em>why it matters</em>.</p>
+  <div class="task-card"><h3>Project Planner · Before You Create</h3><div class="project-board">
+    <div><strong>1 · My person</strong><input placeholder="Who is important to me?"></div>
+    <div><strong>2 · My memory</strong><input placeholder="Which moment? "></div>
+    <div><strong>3 · My message</strong><input placeholder="What really matters?"></div>
+    <div><strong>4 · My ending</strong><input placeholder="What should viewers feel?"></div>
+  </div><div class="task-actions"><button class="btn light" onclick="toggleBox('projectChecklist')">SHOW CREATION CHECKLIST</button></div><div class="answer" id="projectChecklist"><strong>Before you export:</strong> 5–10 photos · clear sequence · readable English captions · appropriate music volume · permission to use photos · 1–2 minute final video.</div></div>
+  <div class="steps"><div class="step"><span class="num">1</span><br><strong>Choose</strong><br>Find meaningful photos.</div><div class="step"><span class="num">2</span><br><strong>Arrange</strong><br>Build a story.</div><div class="step"><span class="num">3</span><br><strong>Add</strong><br>Use the song or another suitable soundtrack.</div><div class="step"><span class="num">4</span><br><strong>Create</strong><br>Make a 1–2 minute video.</div><div class="step"><span class="num">5</span><br><strong>Share</strong><br>Present the message.</div></div>
+  <div class="video-grid">
+    <div class="video-card"><video controls preload="metadata"><source src="assets/story_video_1.mp4" type="video/mp4"></video><strong>Watch: How It Works</strong><br><button class="btn light" data-video="assets/story_video_1.mp4" data-title="How It Works">OPEN VIDEO ↗</button></div>
+    <div class="video-card"><video controls preload="metadata"><source src="assets/story_video_2.mp4" type="video/mp4"></video><strong>Watch: Student Example</strong><br><button class="btn light" data-video="assets/story_video_2.mp4" data-title="Student Example">OPEN VIDEO ↗</button></div>
+    <div class="video-card"><video controls preload="metadata"><source src="assets/story_video_3.mp4" type="video/mp4"></video><strong>Watch: Project Tips</strong><br><button class="btn light" data-video="assets/story_video_3.mp4" data-title="Project Tips">OPEN VIDEO ↗</button></div>
+  </div>
+  <div class="warning"><strong>Important:</strong> Ask permission before using another person's photos. If grandparents are not part of your life, choose another person or memory that matters to you.</div>
+</section>
+
+<section class="reflection" id="reflection"><div><h2>Reflection Time</h2><p>Look back at your journey through the block.</p><ol><li>One thing I understood better after the story was…</li><li>One English word or structure I can now use is…</li><li>One memory or idea I want to keep is…</li></ol></div><div class="card"><h3>My Reflection</h3><textarea id="reflectionText" style="width:100%;min-height:150px;box-sizing:border-box;border:1px solid #cbd5dc;border-radius:10px;padding:12px;font:inherit" placeholder="Write 3–5 sentences…"></textarea><div class="task-actions"><button class="btn light" onclick="saveReflection()">SAVE REFLECTION</button></div><div class="feedback" id="reflectionFeedback"></div></div></section>
+<footer>Module 2 · Living and Spending · Block 1 · The Empty Box</footer>
+</main>
+
+<div class="modal" id="mediaModal" aria-hidden="true"><div class="modal-panel"><button class="close" id="closeModal" aria-label="Close">×</button><div class="modal-title" id="modalTitle"></div><div id="modalBody"></div><div class="modal-caption" id="modalCaption"></div><div class="modal-nav" id="modalNav" style="display:none"><button id="prevMedia" aria-label="Previous">‹</button><button id="nextMedia" aria-label="Next">›</button></div></div></div>
+<script>
+const modal=document.getElementById('mediaModal'), body=document.getElementById('modalBody'), title=document.getElementById('modalTitle'), caption=document.getElementById('modalCaption'), nav=document.getElementById('modalNav');
+const storyButtons=[...document.querySelectorAll('.story-card button')]; let storyIndex=0;
+function openModal(type,src,text,index=-1){body.innerHTML=''; title.textContent=text||''; caption.textContent=''; nav.style.display='none';
+ if(type==='image'){const img=document.createElement('img');img.src=src;img.alt=text||'';body.appendChild(img);if(index>=0){storyIndex=index;nav.style.display='flex';}}
+ if(type==='video'){const v=document.createElement('video');v.src=src;v.controls=true;v.autoplay=true;v.playsInline=true;body.appendChild(v);}
+ modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+function closeModal(){const v=body.querySelector('video');if(v)v.pause();modal.classList.remove('open');modal.setAttribute('aria-hidden','true');body.innerHTML='';document.body.style.overflow='';}
+function openStory(i){const b=storyButtons[i];openModal('image',b.dataset.image,b.dataset.title,i)}
+storyButtons.forEach((b,i)=>b.addEventListener('click',()=>openStory(i)));
+document.querySelectorAll('[data-video]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();openModal('video',b.dataset.video,b.dataset.title)}));
+document.getElementById('prevMedia').addEventListener('click',()=>openStory((storyIndex-1+storyButtons.length)%storyButtons.length));
+document.getElementById('nextMedia').addEventListener('click',()=>openStory((storyIndex+1)%storyButtons.length));
+document.getElementById('closeModal').addEventListener('click',closeModal);modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});document.addEventListener('keydown',e=>{if(!modal.classList.contains('open'))return;if(e.key==='Escape')closeModal();if(e.key==='ArrowLeft'&&storyButtons.length)openStory((storyIndex-1+storyButtons.length)%storyButtons.length);if(e.key==='ArrowRight'&&storyButtons.length)openStory((storyIndex+1)%storyButtons.length)});
+
+function toggleBox(id){document.getElementById(id).classList.toggle('show')}
+function checkOrder(){const v=document.getElementById('orderTask').value.replace(/\s/g,'');const f=document.getElementById('orderFeedback');f.classList.add('show');f.textContent=v==='12345'?'Excellent — you followed the story in order.':'Try again. Think: dream → saving → purchase → memories → real treasure.'}
+function selectChoice(el,group){document.querySelectorAll('[data-group="'+group+'"] .choice').forEach(x=>x.classList.remove('selected'));el.classList.add('selected');if(group==='connect'){const f=document.getElementById('connectFeedback');f.classList.add('show');f.textContent=el.textContent.includes('Time')?'Yes. Leo discovers that shared time and memories are his real treasure.':'Look at the final paragraphs again. What makes Leo feel rich?'}}
+function checkSelect(id,answer,feedback){const v=document.getElementById(id).value;const f=document.getElementById(feedback);f.classList.add('show');f.textContent=v===answer?'Correct!':'Not yet. Look at the sentence: Leo puts money aside for eight months.'}
+function checkText(id,answers,feedback){const v=document.getElementById(id).value.trim().toLowerCase().replace(/[.]/g,'');const f=document.getElementById(feedback);f.classList.add('show');f.textContent=answers.includes(v)?'Correct — “to call” expresses purpose.':'Try: to + verb.'}
+function checkPast(){const r=document.getElementById('pastRegular').value.trim().toLowerCase();const i=document.getElementById('pastIrregular').value.trim().toLowerCase();const f=document.getElementById('pastFeedback');f.classList.add('show');const regular=['wanted','started','played','turned','remembered','visited','baked','smiled'];const irregular=['had','felt','bought','ran','put','thought','picked','was','went','took'];f.textContent=(regular.includes(r)&&irregular.includes(i))?'Great detective work!':'Check the story again. Example: wanted (regular) + bought (irregular).'}
+let memory=0;function memoryStep(n){if(n===memory+1){memory=n;document.getElementById('memoryMeter').style.width=(n*20)+'%';const f=document.getElementById('memoryFeedback');f.classList.add('show');f.textContent=n===5?'Perfect sequence — you rebuilt the story.':'Good. Add the next event.'}else{const f=document.getElementById('memoryFeedback');f.classList.add('show');f.textContent='Follow the story one step at a time.'}}
+function showPersonal(feedbackId,inputId){const v=document.getElementById(inputId).value.trim();const f=document.getElementById(feedbackId);f.classList.add('show');f.textContent=v?'Your idea is saved on this page.':'Write one idea first.'}
+function saveReflection(){const v=document.getElementById('reflectionText').value.trim();const f=document.getElementById('reflectionFeedback');f.classList.add('show');f.textContent=v?'Reflection saved for this session.':'Write a few sentences first.'}
+</script>
+<script>
+(function(){
+  let timer;
+  function sendHeight(){
+    clearTimeout(timer);
+    timer=setTimeout(function(){
+      try{
+        parent.postMessage({
+          type:'module2Height',
+          height:Math.max(document.body.scrollHeight,document.documentElement.scrollHeight)
+        },'*');
+      }catch(e){}
+    },60);
+  }
+  window.addEventListener('load',sendHeight);
+  document.addEventListener('toggle',sendHeight,true);
+  setTimeout(sendHeight,300);
+})();
+</script>
+</body></html>

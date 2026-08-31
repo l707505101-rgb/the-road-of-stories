@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 7 · Block 2 · The Mystery of the Missing Band</title>
+<style>
+:root{--navy:#0b2030;--purple:#5b2a83;--green:#08724d;--blue:#173e63;--brown:#7a3f18;--gold:#f2bd2e;--cream:#fffaf1;--ink:#17232d}
+*{box-sizing:border-box} body{margin:0;background:#f4eee5;color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.5}
+.page{max-width:1500px;margin:auto;background:var(--cream);min-height:100vh;padding:20px}
+.grid{display:grid;grid-template-columns:280px 1fr;gap:22px}
+.sidebar{background:#fff;border-radius:18px;padding:16px;box-shadow:0 5px 20px #0001;position:sticky;top:15px;height:max-content}
+.brand{background:var(--navy);color:#fff;border-radius:14px;padding:18px;font-weight:900;font-size:22px}
+.brand span{color:#ffd32f} .module{padding:18px 8px 12px;color:var(--purple);font-weight:900;font-size:24px}
+.lesson{background:#ffd342;border-radius:14px;padding:14px;color:#2d1740;font-weight:900;font-size:19px}
+.meta{padding:12px 8px;color:#4b5660;font-size:14px}
+.nav a{display:block;padding:11px 12px;margin:4px 0;border-radius:10px;text-decoration:none;color:#26343d;font-weight:700}
+.nav a.active{background:var(--purple);color:#fff} .side-photo{margin-top:15px;border-radius:14px;overflow:hidden}
+.side-photo img{width:100%;display:block}
+.hero{display:grid;grid-template-columns:1fr 1.45fr;gap:22px;align-items:center}
+.hero-text h1{font-family:Georgia,serif;font-size:54px;line-height:.98;margin:0;color:#172a3a}
+.rule{height:4px;background:var(--gold);width:80%;margin:22px 0}
+.hero-text p{font-family:Georgia,serif;font-size:21px;font-style:italic;color:#28624d}
+.hero-image{border-radius:18px;overflow:hidden;box-shadow:0 8px 25px #0002}
+.hero-image img{width:100%;height:380px;object-fit:cover;display:block}
+.media-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:20px 0}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 18px #0001}
+.card h2,summary{margin:0;padding:12px 15px;color:#fff;font-size:17px;font-weight:900}
+.lead h2{background:var(--green)} .audio h2{background:var(--blue)} .video h2{background:var(--brown)}
+.card-body{padding:15px} audio,video{width:100%;margin-top:10px}
+details{background:#fff;border-radius:14px;overflow:hidden;margin:14px 0;box-shadow:0 4px 18px #0001}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none} summary::after{content:"⌄";font-size:24px}
+details[open] summary::after{content:"⌃"}
+.story summary{background:var(--green)} .song summary{background:var(--purple)} .glossary summary{background:#8a3d1d}
+.heart summary{background:#8a2044} .language summary{background:#4631a2} .beyond summary{background:#087f93}
+.body{padding:20px} .story-text{white-space:pre-line;font-size:17px}
+.song-player{margin-bottom:14px} .song-grid{border:1px solid #eadcf6;border-radius:12px;overflow:hidden}
+.song-head,.song-row{display:grid;grid-template-columns:1fr 1fr} .song-head{background:#f2e9fa;color:var(--purple);font-weight:900}
+.song-head>div,.song-row>div{padding:12px 15px} .song-row:nth-child(even){background:#fcfaff}
+.song-row>div+div{border-left:1px solid #eadcf6} .song-row b{display:block;color:var(--purple);margin-bottom:4px}
+.table{width:100%;border-collapse:collapse} .table th,.table td{border:1px solid #ddd;padding:9px;text-align:left}
+.table th{background:#f2e9df;color:#7a3f18} .worksheet{white-space:pre-line;font-family:Georgia,serif}
+.worksheet h3{color:var(--purple)} .footer{display:flex;justify-content:space-between;margin-top:22px}
+button{padding:10px 14px;border-radius:9px;border:1px solid #9aa5ad;background:#fff;font-weight:800}
+@media(max-width:1000px){.grid,.hero,.media-row{grid-template-columns:1fr}.sidebar{position:static}.hero-text h1{font-size:42px}}
+@media(max-width:650px){.page{padding:10px}.song-head,.song-row{grid-template-columns:1fr}.song-row>div+div{border-left:0;border-top:1px solid #eadcf6}.hero-image img{height:250px}}
+</style>
+</head>
+<body><div class="page"><div class="grid">
+<aside class="sidebar">
+<div class="brand">LANGUAGE<br><span>OF THE SOUL</span></div>
+<div class="module">MODULE 7<br>LET'S HAVE FUN</div>
+<div class="lesson">02 · THE MYSTERY OF THE MISSING BAND</div>
+<div class="meta"><b>Level:</b> Medium<br><b>Genre:</b> Intriguing detective story with humour<br><b>Value:</b> Sometimes the most interesting stories are right under our noses — we only need to notice them.</div>
+<nav class="nav">
+<a class="active" href="#story">📖 The Story</a><a href="#audio">🎧 Audio Text</a><a href="#video">▶ Video</a><a href="#song">♫ The Song</a>
+<a href="#glossary">📚 Glossary</a><a href="#heart">♥ For the Heart and Mind</a><a href="#language">✎ For Language Skills</a><a href="#beyond">✦ Beyond the Text</a>
+</nav>
+<div class="side-photo"><img src="ticket.png" alt="Old concert ticket"></div>
+</aside>
+<main>
+<section class="hero">
+<div class="hero-text"><h1>THE MYSTERY OF<br>THE MISSING BAND</h1><div class="rule"></div><p>An intriguing story about a lost band, an old ticket and a mystery that refuses to disappear.</p></div>
+<div class="hero-image"><img src="hero.png" alt="The Mystery of the Missing Band"></div>
+</section>
+
+<div class="media-row">
+<section class="card lead"><h2>📖 LEAD-IN</h2><div class="card-body"><div style="white-space:pre-line">1. Have you ever found something old that made you curious about its story?<br>2. Is there a band or musician that you love but no one else seems to know?<br>3. The phrasal verb “to turn up” can mean to appear or be found unexpectedly. What&#x27;s something interesting that&#x27;s ever turned up in your life?</div></div></section>
+<section class="card audio" id="audio"><h2>🎧 AUDIO TEXT</h2><div class="card-body"><p>Listen to the story.</p><audio controls preload="metadata" src="story.wav"></audio></div></section>
+<section class="card video" id="video"><h2>▶ VIDEO</h2><div class="card-body"><p>Watch the story.</p><video controls preload="metadata" poster="hero.png" src="video.mp4"></video></div></section>
+</div>
+
+<details class="story" id="story" open><summary>📖 THE STORY</summary><div class="body"><div class="story-text">&quot;<br>УРОВЕНЬ: СРЕДНИЙ<br>Жанр: Интригующая история с элементами детектива и юмораЦенностный фокус: Иногда самые интересные истории находятся прямо под носом — нужно лишь уметь их заметить.<br>LEAD-IN:<br>Have you ever found something old that made you curious about its story?<br>Is there a band or musician that you love but no one else seems to know?<br>The phrasal verb &quot;to turn up&quot; can mean to appear or be found unexpectedly. What&#x27;s something interesting that&#x27;s ever turned up in your life?<br>THE MYSTERY OF THE MISSING BAND<br>It was a quiet Sunday afternoon. We were cleaning out Mike&#x27;s garage. Well, Mike was &quot;supervising.&quot; Dave and I were doing the actual work.<br>&quot;Hey, what&#x27;s this?&quot; Dave held up an old concert ticket. It was faded and torn, but you could still read it: &quot;The Midnight Echoes — Live at The Underground — October 12, 1998.&quot;<br>Mike grabbed it. &quot;The Midnight Echoes? Never heard of them.&quot;<br>&quot;1998,&quot; I said. &quot;That was before we were born.&quot;<br>Dave turned the ticket over. On the back, someone had written in pencil: &quot;Best night of my life. If you ever find this, listen to them. You won&#x27;t regret it.&quot;<br>We looked at each other. Who wrote that? And why was the ticket in Mike&#x27;s garage?<br>Mike&#x27;s mom walked in. She saw the ticket and smiled. &quot;Oh, I remember that night. Your father and I went to that concert. It was our first date.&quot;<br>We were shocked. Mike&#x27;s parents? At a concert?<br>&quot;What kind of music did they play?&quot; Mike asked.<br>&quot;It was... unusual. A mix of rock, folk, and something else. They were amazing. But after that night, they disappeared. No albums were ever released. No recordings were made. It was like they vanished.&quot;<br>Dave: &quot;So they were never heard from again?&quot;<br>&quot;Never. Some people say they turned into a cult. Others say they were abducted by aliens. The truth? Nobody knows.&quot;<br>Mike&#x27;s eyes lit up. &quot;We have to find them!&quot;<br>Dave sighed. &quot;If they haven&#x27;t been seen in 25 years, they probably don&#x27;t want to be found.&quot;<br>But Mike was already on his phone. &quot;The Underground club — it&#x27;s still open! It&#x27;s been turned into a coffee shop, but the owner might remember something.&quot;<br>An hour later, we were at the coffee shop. The owner was an old man with long grey hair and a nose ring. When we showed him the ticket, he laughed.<br>&quot;The Midnight Echoes! I haven&#x27;t thought about them in years. That night was something special. Only about fifty people were there. The band played for three hours. At the end, everyone was crying.&quot;<br>&quot;Why did they disappear?&quot; I asked.<br>He shrugged. &quot;Nobody knows. They packed up their instruments and were never seen again. But listen — if you&#x27;re really interested, talk to Lucy. She was at that concert. She runs the record shop on Elm Street.&quot;<br>We found Lucy in her tiny shop, surrounded by vinyl records. She was in her forties, with bright red hair and a kind smile. When she saw the ticket, her eyes filled with tears.<br>&quot;I was nineteen,&quot; she said. &quot;That night changed my life. Their music... it was like nothing I&#x27;d ever heard. After the concert, I tried to find them. I called every record label. I searched online. Nothing. It&#x27;s like they were erased.&quot;<br>She handed the ticket back. &quot;If you ever find out what happened to them, let me know. I&#x27;ve been waiting 25 years for an answer.&quot;<br>We left the shop, feeling strange. A mystery that had never been solved. A band that had never been recorded. A night that had never been forgotten by those who were there.<br>Mike: &quot;So... what now?&quot;<br>Dave: &quot;Now? Nothing. Some mysteries are meant to stay mysteries.&quot;<br>Narrator: &quot;But you&#x27;re not going to leave it alone, are you?&quot;<br>Mike grinned. &quot;Of course not. I&#x27;ve already started a Reddit thread.&quot;<br>And that&#x27;s how our obsession began. We never found The Midnight Echoes. But we found something better: a story that connected us to the past, to strangers, and to each other.<br>The ticket was framed and hung in Mike&#x27;s garage. And sometimes, late at night, we&#x27;d look at it and wonder: who were they? And where did they turn up in the end?<br>Maybe one day, they&#x27;ll be found. Until then, the mystery lives on.</div></div></details>
+
+<details class="song" id="song"><summary>♫ ECHOES FROM THE UNDERGROUND — SONG</summary><div class="body">
+<div class="song-player"><audio controls preload="metadata" src="song.mp3"></audio></div>
+<div class="song-grid"><div class="song-head"><div>ENGLISH LYRICS</div><div>ПЕРЕВОД (РУССКИЙ)</div></div><div class="song-row"><div><b>Verse 1</b><div>I found a ticket in a dusty box<br>Faded and torn, from a forgotten show<br>October 1998, The Underground<br>A name I didn&#x27;t know — The Midnight Echoes</div></div><div><b>Куплет 1</b><div>Я нашёл билет в пыльной коробке<br>Выцветший и потрёпанный, с забытого концерта<br>Октябрь 1998, «Подполье»<br>Имя, которого я не знал — «Полуночное Эхо»</div></div></div><div class="song-row"><div><b>Pre-chorus</b><div>I turned it over, someone wrote:<br>“This was the best night of my life…<br>If you ever find this, please… listen.”</div></div><div><b>Распевка</b><div>Я перевернул его, кто-то написал:<br>«Это была лучшая ночь в моей жизни…<br>Если ты когда-нибудь найдёшь это, пожалуйста… послушай».</div></div></div><div class="song-row"><div><b>Chorus</b><div>They played for three hours, they played for the few<br>Fifty people heard the echo, but nobody knew<br>What happened after? Where did they go?<br>The Midnight Echoes — a legend with no home</div></div><div><b>Припев</b><div>Они играли три часа, они играли для немногих<br>Пятьдесят человек услышали то эхо, но никто не знал<br>Что случилось потом? Куда они исчезли?<br>«Полуночное Эхо» — легенда без дома</div></div></div><div class="song-row"><div><b>Verse 2</b><div>I walked to the café, the owner laughed<br>“Those were the days, I still remember that<br>A band that vanished, no records left<br>Just a story passed from breath to breath”</div></div><div><b>Куплет 2</b><div>Я зашёл в кафе, владелец засмеялся:<br>«Это были дни, я до сих пор помню<br>Группа, которая исчезла, не оставив записей<br>Просто история, передаваемая из уст в уста»</div></div></div><div class="song-row"><div><b>Pre-chorus</b><div>I found a woman in a record shop<br>With red hair and a heart that never stopped<br>She held the ticket, tears in her eyes<br>“Those chords,” she said, “they changed my life”</div></div><div><b>Распевка</b><div>Я нашёл женщину в магазине пластинок<br>С рыжими волосами и сердцем, которое не остановилось<br>Она держала билет, слёзы на глазах<br>«Эти аккорды, — сказала она, — изменили мою жизнь»</div></div></div><div class="song-row"><div><b>Chorus</b><div>They played for three hours, they played for the few<br>Fifty people heard the echo, but nobody knew<br>What happened after? Where did they go?<br>The Midnight Echoes — a legend with no home</div></div><div><b>Припев</b><div>Они играли три часа, они играли для немногих<br>Пятьдесят человек услышали то эхо, но никто не знал<br>Что случилось потом? Куда они исчезли?<br>«Полуночное Эхо» — легенда без дома</div></div></div><div class="song-row"><div><b>Bridge</b><div>Some secrets turn to dust<br>Some songs are made of rust<br>But once in every generation<br>A melody survives the grave<br>And waits for someone to be brave</div></div><div><b>Бридж</b><div>Некоторые тайны превращаются в пыль<br>Некоторые песни состоят из ржавчины<br>Но раз в поколение<br>Мелодия выживает в могиле<br>И ждёт, пока кто-то будет достаточно смел</div></div></div><div class="song-row"><div><b>Final Chorus</b><div>They played for three hours, they played for the few<br>Fifty people heard the echo, but nobody knew<br>What happened after? Where did they go?<br>The Midnight Echoes — a legend with no home</div></div><div><b>Финальный припев</b><div>Они играли три часа, они играли для немногих<br>Пятьдесят человек услышали то эхо, но никто не знал<br>Что случилось потом? Куда они исчезли?<br>«Полуночное Эхо» — легенда без дома</div></div></div></div>
+</div></details>
+
+<details class="glossary" id="glossary"><summary>📚 GLOSSARY</summary><div class="body">
+<div class="table-wrap"><table class="table"><thead><tr><th>Word / Phrase</th><th>Pronunciation</th><th>Перевод</th></tr></thead><tbody>
+<tr><td><b>to turn up</b></td><td>[tɜːrn ʌp]</td><td>появляться, находиться</td></tr>
+<tr><td><b>to turn into</b></td><td>[tɜːrn ˈɪntə]</td><td>превращаться в</td></tr>
+<tr><td><b>to turn out</b></td><td>[tɜːrn aʊt]</td><td>оказываться</td></tr>
+<tr><td><b>to turn over</b></td><td>[tɜːrn ˈoʊvər]</td><td>переворачивать</td></tr>
+<tr><td><b>ticket</b></td><td>[ˈtɪkɪt]</td><td>билет</td></tr>
+<tr><td><b>faded</b></td><td>[ˈfeɪdɪd]</td><td>выцветший</td></tr>
+<tr><td><b>torn</b></td><td>[tɔːrn]</td><td>порванный</td></tr>
+<tr><td><b>concert</b></td><td>[ˈkɑːnsərt]</td><td>концерт</td></tr>
+<tr><td><b>date</b></td><td>[deɪt]</td><td>свидание</td></tr>
+<tr><td><b>to vanish</b></td><td>[ˈvænɪʃ]</td><td>исчезать</td></tr>
+<tr><td><b>album</b></td><td>[ˈælbəm]</td><td>альбом</td></tr>
+<tr><td><b>recording</b></td><td>[rɪˈkɔːrdɪŋ]</td><td>запись</td></tr>
+<tr><td><b>cult</b></td><td>[kʌlt]</td><td>культ</td></tr>
+<tr><td><b>to abduct</b></td><td>[æbˈdʌkt]</td><td>похищать</td></tr>
+<tr><td><b>alien</b></td><td>[ˈeɪliən]</td><td>инопланетянин</td></tr>
+<tr><td><b>club</b></td><td>[klʌb]</td><td>клуб</td></tr>
+<tr><td><b>owner</b></td><td>[ˈoʊnər]</td><td>владелец</td></tr>
+<tr><td><b>nose ring</b></td><td>[noʊz rɪŋ]</td><td>пирсинг в носу</td></tr>
+<tr><td><b>to pack up</b></td><td>[pæk ʌp]</td><td>собирать вещи</td></tr>
+<tr><td><b>instrument</b></td><td>[ˈɪnstrəmənt]</td><td>музыкальный инструмент</td></tr>
+<tr><td><b>record shop</b></td><td>[ˈrekərd ʃɑːp]</td><td>магазин пластинок</td></tr>
+<tr><td><b>vinyl</b></td><td>[ˈvaɪnl]</td><td>винил</td></tr>
+<tr><td><b>to erase</b></td><td>[ɪˈreɪs]</td><td>стирать, уничтожать</td></tr>
+<tr><td><b>mystery</b></td><td>[ˈmɪstəri]</td><td>тайна</td></tr>
+<tr><td><b>to solve</b></td><td>[sɑːlv]</td><td>разгадать</td></tr>
+<tr><td><b>obsession</b></td><td>[əbˈseʃn]</td><td>одержимость</td></tr>
+<tr><td><b>to frame</b></td><td>[freɪm]</td><td>вставлять в рамку</td></tr>
+</tbody></table></div></div></details>
+
+<details class="heart" id="heart"><summary>♥ FOR THE HEART AND MIND</summary><div class="body"><div class="worksheet">FOR THE HEART AND MIND<br>A. Comprehension Check:<br>What did Dave find in Mike&#x27;s garage?<br>What was written on the back of the ticket?<br>Who did the ticket belong to originally?<br>What happened to the band after that concert?<br>Who did they talk to at the coffee shop?<br>Who was Lucy, and how did she react to the ticket?<br>Did they ever find the band?<br>What did they do with the ticket in the end?<br>B. Think &amp; Analyse:<br>The ticket had been hidden in Mike&#x27;s garage for 25 years. Why do you think small objects can carry such powerful memories?<br>Lucy said: &quot;I&#x27;ve been waiting 25 years for an answer.&quot; Why do you think some mysteries stay with us for so long?<br>Mike started a Reddit thread. In what ways can the internet help solve old mysteries? In what ways can it create new ones?<br>Dave said: &quot;Some mysteries are meant to stay mysteries.&quot; Do you agree? Or should every mystery be solved?<br>C. Discuss &amp; Relate:<br>Is there a mystery in your family or community that has never been solved? What is it?<br>Why do people become obsessed with unsolved mysteries (like lost bands, missing people, unexplained events)?<br>If you could find out the truth about any mystery in history, what would it be?</div></div></details>
+<details class="language" id="language"><summary>✎ FOR LANGUAGE SKILLS</summary><div class="body"><div class="worksheet">FOR LANGUAGE SKILLS<br>A. Vocabulary Focus (Phrasal verbs with TURN):<br>Match the phrasal verb with its meaning from the story:<br>Phrasal Verb<br>Meaning<br>1. turn up<br>a) transform into<br>2. turn into<br>b) appear or be found<br>3. turn out<br>c) flip to see the other side<br>4. turn over<br>d) happen in a particular way<br>Find the phrasal verbs in the text and write the sentences:<br>a) turn over: ______________________________b) turn into: ______________________________c) turn up (two meanings?): _________________________<br>Fill in the blanks with the correct form of TURN + particle:<br>a) The old club had ______ a coffee shop.b) The ticket ______ in Mike&#x27;s garage after all those years.c) She ______ the ticket and read the back.d) It ______ that the band had never been recorded.e) I wonder where they ______ in the end.<br>B. Grammar in Context (Passive Voice):<br>Identify the passive structures in the text:<br>a) &quot;No albums were ever released.&quot; — Tense: ______b) &quot;No recordings were made.&quot; — Tense: ______c) &quot;They were never heard from again.&quot; — Tense: ______d) &quot;It had been turned into a coffee shop.&quot; — Tense: ______e) &quot;Only about fifty people were there.&quot; — Is this passive? Why/why not? ______f) &quot;It&#x27;s like they were erased.&quot; — Tense: ______<br>Change these active sentences to passive:<br>a) Someone had written a message on the back.→ A message ______ ______ written on the back.<br>b) They never released any albums.→ No albums ______ ever ______.<br>c) The owner might remember something.→ Something ______ ______ remembered by the owner. (Be careful with modals)<br>d) Lucy ran the record shop.→ The record shop ______ ______ by Lucy.<br>Complete with the correct passive form:<br>a) The concert ______ (hold) in 1998.b) The band ______ (never / see) again after that night.c) The ticket ______ (keep) in the garage for years.d) A Reddit thread ______ (start) by Mike.<br>C. Brain Workout:<br>Reddit thread: In groups, imagine you are Mike. Write the first post of his Reddit thread asking for information about The Midnight Echoes. Use at least two passive constructions.<br>Interview role play: In pairs, one is a journalist, one is Lucy. Interview her about that night. Use passive forms where appropriate.<br>Speculation: Use &quot;might have been&quot;, &quot;could have been&quot;, &quot;must have been&quot; to speculate about what happened to the band.<br>Example: They might have been abducted by aliens.</div></div></details>
+<details class="beyond" id="beyond"><summary>✦ BEYOND THE TEXT</summary><div class="body"><div class="worksheet">BEYOND THE TEXT<br>Choose ONE:<br>Continue the story: Write a short scene (5-6 sentences) where someone responds to Mike&#x27;s Reddit thread with a clue about the band.<br>Lucy&#x27;s letter: Write a letter from Lucy to the band that she never got to send.<br>Concert review: Imagine you were at that concert in 1998. Write a review for a local newspaper. Use passive forms.<br>AI image (optional): Create an image of the three friends in Lucy&#x27;s record shop, surrounded by vinyl, holding the ticket, with Lucy looking emotional.<br>Your own mystery: Describe a real or imaginary mystery that you&#x27;d like to solve. Use at least three passive constructions.</div></div></details>
+
+<details class="song" id="song-exercises"><summary>♫ SONG WORKSHEET — ECHOES FROM THE UNDERGROUND</summary><div class="body"><div class="worksheet">УПРАЖНЕНИЯ К ПЕСНЕ                                                                           «ECHOES FROM THE UNDERGROUND»<br>EXERCISE 1. Echoes of the Past<br>Instruction:The song is full of objects that carry memories: a ticket, a record shop, a cassette tape. These are not just things — they are portals to the past.<br>Part A. Complete the table.<br>Object from the song<br>What does it represent? (write 2-3 words)<br>Why is it important?<br>The ticket<br>______________________<br>______________________<br>The record shop<br>______________________<br>______________________<br>The cassette tape in the outro<br>______________________<br>______________________<br>Part B. What object in your life carries a memory? Write 2-3 sentences about it.<br>EXERCISE 2. The Words on the Back of the Ticket<br>Instruction:On the back of the ticket, someone wrote: «This was the best night of my life… If you ever find this, please… listen.»<br>Why do you think the person wrote this message?<br>What does the word «listen» mean here? Is it only about music, or something deeper?<br>If you could leave a message on a ticket for someone in the future, what would you write?<br>Write a short paragraph (4-5 sentences) answering one of these questions.<br>EXERCISE 3. The Unfinished Story<br>Instruction:The song never reveals what happened to the band. It ends with a question: «What happened after? Where did they go?»<br>Why do you think the songwriter left the ending open?<br>What do you think happened to The Midnight Echoes? Write 3-4 sentences with your own theory.<br>Is it sometimes better to not know the answer? Why?</div></div></details>
+
+<div class="footer"><button>← PREVIOUS BLOCK</button><button>NEXT BLOCK →</button></div>
+</main></div></div></body></html>

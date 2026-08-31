@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Module 1 · Strong Ties</title>
+<style>
+:root{--navy:#213a56;--purple:#7650b8;--gold:#b78338;--cream:#f7f1e7;--ink:#27333b;--muted:#68737b;--line:#d9d0c4;--white:#fffdf9}
+*{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:#ece9e3;color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+.module{max-width:1220px;margin:auto;background:var(--white);min-height:100vh;padding-bottom:40px}
+.hero{margin:0 14px 12px;border-radius:0 0 16px 16px;background:linear-gradient(135deg,#1e344d,#304b68);color:#fff;padding:30px 28px 24px}
+.kicker{font:700 12px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#e7c98f}
+.hero h1{margin:8px 0 5px;font-size:46px;line-height:1.05;font-style:italic}.subtitle{font-size:17px;font-style:italic;color:#f4efe7;max-width:780px;line-height:1.45}
+.path{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}.path a{text-decoration:none;color:#24374b;background:#fff;border-radius:11px;padding:13px 15px;border:1px solid rgba(255,255,255,.4)}.path b{display:block;font-size:16px}.path span{display:block;color:#68737b;font:12px Arial,sans-serif;margin-top:4px}
+.intro{margin:12px 14px;padding:15px 18px;border:1px solid var(--line);border-radius:11px;background:#fffaf0;line-height:1.5}.intro em{color:#5b4779}
+.block{margin:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;box-shadow:0 5px 16px rgba(30,45,60,.06);scroll-margin-top:12px}.block>summary{cursor:pointer;list-style:none;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:15px;background:#faf7f2;color:var(--navy);font-size:20px;font-weight:700}.block>summary::-webkit-details-marker{display:none}.block>summary:before{content:"▸";color:var(--purple);font:18px Arial,sans-serif;margin-right:8px}.block[open]>summary:before{content:"▾"}.info{flex:1}.info small{display:block;font:12px Arial,sans-serif;color:var(--muted);margin-top:4px;font-weight:400}.open-note{font:700 10px Arial,sans-serif;letter-spacing:.08em;color:var(--purple)}
+iframe{display:block;width:100%;border:0;min-height:900px;background:#fff;overflow:hidden}
+.footer{text-align:center;color:var(--muted);font:12px Arial,sans-serif;margin:20px 14px}
+@media(max-width:700px){.hero{margin:0 8px 10px;padding:23px 18px 18px}.hero h1{font-size:34px}.path{grid-template-columns:1fr}.intro,.block{margin-left:8px;margin-right:8px}.block>summary{font-size:17px;padding:13px 14px}.open-note{display:none}}
+</style>
+</head>
+<body>
+<div class="module">
+<header class="hero">
+<div class="kicker">MODULE 1 · STRONG TIES</div>
+<h1>Strong Ties</h1>
+<div class="subtitle">Three stories. Three ways of looking at human connection. One journey from misunderstanding to empathy, friendship and trust.</div>
+<nav class="path" aria-label="Module blocks">
+<a href="#block1" data-target="block1"><b>01 · The Mask Party</b><span>Appearance · identity · first impressions</span></a>
+<a href="#block2" data-target="block2"><b>02 · The Unsaid</b><span>Misunderstanding · empathy · honest words</span></a>
+<a href="#block3" data-target="block3"><b>03 · A Friend's Code</b><span>Friendship · cultures · voices across time</span></a>
+</nav>
+</header>
+<div class="intro"><strong>Your journey through Module 1:</strong> begin by looking beyond appearances, move into the words we sometimes leave unsaid, and finish by exploring what friendship means across cultures and generations.</div>
+
+<details class="block" id="block1">
+<summary><div class="info">01 · The Mask Party<small>Appearance · identity · first impressions</small></div><span class="open-note">OPEN BLOCK</span></summary>
+<iframe id="frame1" src="block1/index.html" title="Block 1 — The Mask Party" loading="eager"></iframe>
+</details>
+
+<details class="block" id="block2">
+<summary><div class="info">02 · The Unsaid<small>Misunderstanding · empathy · honest words</small></div><span class="open-note">OPEN BLOCK</span></summary>
+<iframe id="frame2" src="block2/index.html" title="Block 2 — The Unsaid" loading="lazy"></iframe>
+</details>
+
+<details class="block" id="block3">
+<summary><div class="info">03 · A Friend's Code<small>Friendship · cultures · voices across time</small></div><span class="open-note">OPEN BLOCK</span></summary>
+<iframe id="frame3" src="block3/index.html" title="Block 3 — A Friend's Code" loading="lazy"></iframe>
+</details>
+
+<div class="footer">MODULE 1 · STRONG TIES · BLOCKS 1–3</div>
+</div>
+<script>
+const blocks=[...document.querySelectorAll('.block')];
+const frames=[...document.querySelectorAll('iframe')];
+function fit(f){try{const d=f.contentDocument;if(!d)return;const h=Math.max(900,d.documentElement.scrollHeight,d.body?d.body.scrollHeight:0);f.style.height=(h+8)+'px'}catch(e){}}
+function fitAll(){frames.forEach(f=>fit(f))}
+frames.forEach(f=>f.addEventListener('load',()=>{fit(f);setTimeout(()=>fit(f),250);setTimeout(()=>fit(f),900);setTimeout(()=>fit(f),1800)}));
+window.addEventListener('resize',fitAll);
+
+// Controlled module navigation: no smooth nested scrolling, no repeated hash jumps.
+document.querySelectorAll('[data-target]').forEach(link=>link.addEventListener('click',e=>{
+ e.preventDefault();
+ const target=document.getElementById(link.dataset.target);
+ blocks.forEach(b=>{if(b!==target)b.open=false});
+ target.open=true;
+ history.replaceState(null,'','#'+target.id);
+ const top=target.getBoundingClientRect().top+window.pageYOffset-10;
+ window.scrollTo({top,behavior:'auto'});
+ const f=target.querySelector('iframe');
+ if(f){fit(f);setTimeout(()=>fit(f),250)}
+}));
+
+function openFromHash(){
+ const id=location.hash.slice(1); if(!id)return;
+ const target=document.getElementById(id); if(!target)return;
+ blocks.forEach(b=>b.open=(b===target));
+ setTimeout(()=>{const top=target.getBoundingClientRect().top+window.pageYOffset-10;window.scrollTo({top,behavior:'auto'});},40);
+}
+window.addEventListener('hashchange',openFromHash);openFromHash();
+blocks.forEach(b=>b.addEventListener('toggle',()=>{if(b.open){const f=b.querySelector('iframe');if(f){fit(f);setTimeout(()=>fit(f),250);setTimeout(()=>fit(f),800)}}}));
+</script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Module 1 · Strong Ties · Block 2 — The Unsaid</title>
+<style>
+:root{--navy:#243b53;--purple:#7550b7;--gold:#b9873c;--cream:#f8f1e6;--ink:#28343d;--muted:#6b747b;--line:#ddd2c4;--white:#fffdf9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#eeeae3;color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+.wrap{max-width:1180px;margin:auto;background:var(--white);min-height:100vh;padding-bottom:25px}
+.hero{display:grid;grid-template-columns:1.05fr 1.35fr .52fr;min-height:430px;margin:0 14px;border-radius:0 0 18px 18px;overflow:hidden;background:#203850;color:white}
+.hero-copy{padding:38px 30px;display:flex;flex-direction:column;justify-content:center}
+.kicker{font:700 11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#e8cb94}
+h1{font-size:58px;line-height:.95;margin:15px 0 18px;font-style:italic}
+.hero-copy p{font-size:17px;line-height:1.5;color:#f5f0e9}
+.hero-img{background:#ddd center/cover no-repeat}
+.hero-journey{background:#faf4e8;color:#243b53;padding:30px 18px;display:flex;flex-direction:column;justify-content:center}
+.hero-journey h3{margin:0 0 18px;font-size:18px;font-style:italic}
+.hero-journey a{color:#243b53;text-decoration:none;border-bottom:1px dotted #cdbfa9;padding:10px 0;font-weight:700;font-size:14px}
+.hero-journey a:before{content:"◇";color:var(--gold);margin-right:10px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;padding:10px 14px}
+.nav a{background:#fff;border:1px solid var(--line);border-radius:20px;padding:8px 13px;text-decoration:none;color:#3e4750;font:700 12px Arial}
+.section{margin:12px 14px;border:1px solid var(--line);border-radius:13px;background:#fff;overflow:hidden;box-shadow:0 4px 13px rgba(35,55,70,.05)}
+.section>summary{cursor:pointer;list-style:none;padding:15px 18px;background:#faf7f2;color:var(--navy);font-size:20px;font-weight:700}
+.section>summary::-webkit-details-marker{display:none}
+.section>summary:before{content:"▸";color:var(--purple);margin-right:8px}
+.section[open]>summary:before{content:"▾"}
+.content{padding:18px}
+.card{border:1px solid var(--line);border-radius:11px;padding:15px;margin:12px 0;background:#fffdfa}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:17px}
+.story{font-size:17px;line-height:1.72}
+.story p{margin:0 0 13px}
+.read-grid{display:grid;grid-template-columns:1.45fr .55fr;gap:18px}
+.media{width:100%;border-radius:9px;border:1px solid #d7ccbf;display:block;cursor:pointer}
+.full{max-height:500px;object-fit:contain;background:#f5f2ed}
+.song-image{max-height:420px;object-fit:contain;background:#fff}
+audio{width:100%;margin:8px 0}
+video{width:100%;max-height:540px;background:#111;border-radius:9px}
+.item{border:1px solid var(--line);border-radius:9px;margin:9px 0;background:#fff}
+.item summary{cursor:pointer;padding:11px 13px;color:#4d3a76;font-weight:700}
+.inside{padding:11px 14px 15px;line-height:1.55}
+table{width:100%;border-collapse:collapse;margin:10px 0}th,td{border:1px solid var(--line);padding:8px;text-align:left}th{background:#f8f1e6}
+textarea{width:100%;min-height:90px;padding:8px;border:1px solid #cfc5b8;border-radius:7px;font:14px Georgia}
+button,.jump{border:1px solid #c7b5e3;background:#7650b8;color:white;border-radius:8px;padding:9px 13px;font-weight:700;cursor:pointer;text-decoration:none}
+.song{background:#fbf8ff;border-color:#d8c6ef}
+.song-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.lyrics-grid{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fffdfa}
+.lyrics-head{display:grid;grid-template-columns:1fr 1fr;background:#f8f1e6;color:var(--navy);font-weight:700}
+.lyrics-head div{padding:11px 14px}
+.lyric-pair{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.lyric-pair>div{padding:12px 15px;line-height:1.55}
+.lyric-pair>div+div{border-left:1px solid var(--line);color:#62566b}
+.lyric-pair h4{margin:0 0 7px;color:#5b4779;font-size:15px}
+.lyric-pair p{margin:4px 0}
+.emoji-line{font-size:24px;letter-spacing:8px}
+.lightbox{position:fixed;inset:0;background:rgba(20,27,35,.82);display:none;align-items:center;justify-content:center;padding:20px;z-index:10}
+.lightbox img{max-width:94vw;max-height:92vh;object-fit:contain;background:#fff;border-radius:10px}
+.lightbox.show{display:flex}.close{position:absolute;right:22px;top:14px;color:white;font:700 28px Arial;cursor:pointer}
+@media(max-width:780px){
+.hero{grid-template-columns:1fr;min-height:0}.hero-copy{padding:28px 22px}.hero-img{height:300px}.hero-journey{padding:20px 22px}
+h1{font-size:47px}.read-grid{grid-template-columns:1fr}.nav{padding:9px}
+.lyrics-head,.lyric-pair{grid-template-columns:1fr}.lyric-pair>div+div{border-left:0;border-top:1px solid var(--line)}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+<div class="hero-copy">
+<div class="kicker">MODULE 1 · STRONG TIES · BLOCK 2</div>
+<h1>The Unsaid</h1>
+<p>A story about misunderstanding, empathy, and the courage to say what matters.</p>
+</div>
+<div class="hero-img" style="background-image:url('assets/the_unsaid_hero.png')"></div>
+<aside class="hero-journey">
+<h3>Your Journey</h3>
+<a href="#lead">LOOK & THINK</a>
+<a href="#story">READ</a>
+<a href="#listen">LISTEN</a>
+<a href="#mind">THINK</a>
+<a href="#language">CREATE</a>
+<a href="#song">SING</a>
+<a href="#beyond">SHARE</a>
+</aside>
+</header>
+
+<nav class="nav">
+<a href="#lead">Lead-in</a><a href="#story">Story</a><a href="#listen">Listening</a>
+<a href="#mind">Heart & Mind</a><a href="#language">Language Skills</a><a href="#song">Song</a><a href="#beyond">Beyond the Text</a>
+</nav>
+
+<details class="section" id="lead" open>
+<summary>LOOK & THINK · Lead-in</summary>
+<div class="content">
+<div class="card">
+<p><strong>1.</strong> Look at this body language: crossed arms, no eye contact, short answers. What do these signals usually mean?</p>
+<p><strong>2.</strong> When was the last time you misunderstood someone or someone misunderstood you? What happened?</p>
+</div>
+</div>
+</details>
+
+<details class="section" id="story" open>
+<summary>READ · THE UNSAID</summary>
+<div class="content read-grid">
+<div class="story"><p>Sophie and Jake had been best friends since sixth grade. They worked on every school project together. So when the history teacher announced a big presentation, they immediately teamed up.</p>
+<p>Sophie was a perfectionist. She spent hours on her part, researching facts and creating beautiful slides. On Tuesday night, at 11:47 PM, she sent Jake her draft with a message: «Hey, I've finished my part. Could you look at it and tell me what you think?»</p>
+<p>Jake was exhausted. He had practised football for three hours, then helped his little brother with homework. He glanced at the message, opened the file, skimmed it, and tapped a quick «like» emoji. Then his eyes closed.</p>
+<p>The next day, they met in the library. Sophie was cold. She answered his questions with one word: «Fine.» «Okay.» «Sure.» She didn't look at him. Her arms were crossed.</p>
+<p>Jake felt a familiar anger rising. What's her problem? I said her work was good. Why is she acting like this? He stopped talking too. An awkward silence grew between them.</p>
+<p>Their friend Mark sat nearby, watching. Finally, he turned to Sophie and asked quietly: «Hey, is everything okay? How's your grandmother? I heard she was taken to the hospital on Tuesday.»</p>
+<p>Sophie's eyes filled with tears. «She's stable now, but… I was so scared. I didn't sleep that night. I just worked to distract myself.»</p>
+<p>Jake froze. Tuesday night. While he was sleeping, Sophie had been alone, terrified, waiting for news. She didn't need a grammar check. She needed a friend.</p>
+<p>He took a deep breath. «Sophie… I didn't know. I'm so sorry. I was blind.»</p>
+<p>Sophie looked up. «I didn't tell you. I thought you would notice something was wrong. But you just sent an emoji.»</p>
+<p>«I was exhausted,» Jake said. «But that's not an excuse. Tell me now. How are you? How is she?»</p>
+<p>For the first time that day, Sophie's shoulders relaxed. She started talking. Jake listened. And the unsaid was finally spoken.</p></div>
+<div>
+<img class="media full" src="assets/the_unsaid_hero.png" alt="The Unsaid" onclick="openLightbox(this.src)">
+<details class="item"><summary>GLOSSARY</summary>
+<div class="inside"><table><tr><th>Слово / Словосочетание</th><th>Транскрипция</th><th>Перевод</th></tr><tr><td>since</td><td>[sɪns]</td><td>с (какого-то времени)</td></tr><tr><td>to team up</td><td>[tiːm ʌp]</td><td>объединяться, работать в паре</td></tr><tr><td>perfectionist</td><td>[pərˈfekʃənɪst]</td><td>перфекционист</td></tr><tr><td>to spend (time)</td><td>[spend]</td><td>тратить (время)</td></tr><tr><td>draft</td><td>[dræft]</td><td>черновик</td></tr><tr><td>exhausted</td><td>[ɪɡˈzɔːstɪd]</td><td>измученный, вымотанный</td></tr><tr><td>to practise</td><td>[ˈpræktɪs]</td><td>тренироваться, заниматься</td></tr><tr><td>to glance</td><td>[ɡlæns]</td><td>взглянуть мельком</td></tr><tr><td>to skim</td><td>[skɪm]</td><td>просмотреть бегло</td></tr><tr><td>to tap</td><td>[tæp]</td><td>нажать (на экране)</td></tr><tr><td>cold</td><td>[koʊld]</td><td>холодный</td></tr><tr><td>to cross one's arms</td><td>[krɔːs wʌnz ɑːrmz]</td><td>скрестить руки</td></tr><tr><td>familiar</td><td>[fəˈmɪliər]</td><td>знакомый</td></tr><tr><td>anger</td><td>[ˈæŋɡər]</td><td>гнев</td></tr><tr><td>awkward</td><td>[ˈɔːkwərd]</td><td>неловкий</td></tr><tr><td>silence</td><td>[ˈsaɪləns]</td><td>тишина, молчание</td></tr><tr><td>to turn to</td><td>[tɜːrn tuː]</td><td>повернуться к</td></tr><tr><td>to be taken to hospital</td><td>[biː ˈteɪkən tuː ˈhɑːspɪtl]</td><td>быть доставленным в больницу</td></tr><tr><td>to fill with tears</td><td>[fɪl wɪð tɪrz]</td><td>наполниться слезами</td></tr><tr><td>stable</td><td>[ˈsteɪbl]</td><td>стабильный</td></tr><tr><td>scared</td><td>[skerd]</td><td>испуганный</td></tr><tr><td>to distract</td><td>[dɪˈstrækt]</td><td>отвлекать(ся)</td></tr><tr><td>to freeze</td><td>[friːz]</td><td>замереть</td></tr><tr><td>blind</td><td>[blaɪnd]</td><td>слепой</td></tr><tr><td>to notice</td><td>[ˈnoʊtɪs]</td><td>заметить</td></tr><tr><td>excuse</td><td>[ɪkˈskjuːs]</td><td>оправдание</td></tr><tr><td>shoulders</td><td>[ˈʃoʊldərz]</td><td>плечи</td></tr><tr><td>to relax</td><td>[rɪˈlæks]</td><td>расслабляться</td></tr><tr><td>unsaid</td><td>[ʌnˈsed]</td><td>недосказанное</td></tr></table></div>
+</details>
+</div>
+</div>
+</details>
+
+<details class="section" id="listen">
+<summary>LISTEN · STORY + VIDEO</summary>
+<div class="content">
+<div class="card"><h3>🎧 Listen to the story</h3><audio controls src="assets/story_audio.mp3"></audio>
+<details class="item"><summary>TRANSCRIPT</summary><div class="inside">The complete story transcript is available in the READ section above.</div></details></div>
+<div class="card"><h3>🎬 Watch the story</h3><video controls src="assets/story_video.mp4" poster="assets/the_unsaid_hero.png"></video></div>
+</div>
+</details>
+
+<details class="section" id="mind">
+<summary>♥ FOR THE HEART AND MIND</summary>
+<div class="content">
+<details class="item"><summary>A. COMPREHENSION CHECK</summary><div class="inside">
+<ol>
+<li>How long had Sophie and Jake been friends?</li><li>Why did Sophie send Jake a message late at night?</li>
+<li>How did Jake respond to her message?</li><li>How did Sophie behave the next day? Give two examples.</li>
+<li>What did Mark ask Sophie?</li><li>What had happened to Sophie's grandmother?</li>
+<li>How did Jake feel when he understood the truth?</li><li>What did Jake say to Sophie at the end?</li>
+</ol></div></details>
+<details class="item"><summary>B. THINK & ANALYSE</summary><div class="inside">
+<ol>
+<li>Why did Sophie act coldly towards Jake? Was it only because of the emoji?</li>
+<li>Jake said: «I was exhausted. But that's not an excuse.» Why is it important that he added the second part?</li>
+<li>The story is called «The Unsaid». What things remained unsaid between Sophie and Jake? Why do people often leave important things unsaid?</li>
+<li>Do you think Sophie was fair to Jake? Why or why not?</li>
+</ol></div></details>
+<details class="item"><summary>C. DISCUSS & RELATE</summary><div class="inside">
+<ol>
+<li>Have you ever misunderstood a friend's behaviour because you didn't know their situation? What happened?</li>
+<li>Is it our responsibility to notice when a friend is hurting, or should they tell us directly?</li>
+<li>What helps you repair a relationship after a conflict?</li>
+</ol><textarea placeholder="Your thoughts…"></textarea></div></details>
+</div>
+</details>
+
+<details class="section" id="language">
+<summary>FOR LANGUAGE SKILLS</summary>
+<div class="content">
+<details class="item"><summary>A. VOCABULARY FOCUS</summary><div class="inside">
+<p><strong>1. Find the synonyms in the glossary:</strong></p>
+<ul><li>very tired — _______</li><li>to look quickly — _______</li><li>unpleasant and embarrassing — _______</li></ul>
+<p><strong>2. Phrasal verbs:</strong> Explain the meaning of <em>to team up</em> and <em>to fill with</em>. Use each in your own sentence.</p>
+<textarea placeholder="Your sentences…"></textarea>
+<p><strong>3. Emotion words:</strong> From the glossary, pick 5 words that describe negative emotions or states. Write a short paragraph (3–4 sentences) about a moment when you felt one of them.</p>
+<textarea placeholder="Your paragraph…"></textarea>
+<p><strong>4. Complete the sentences with words from the glossary:</strong></p>
+<ol type="a"><li>After three hours of football practice, Jake was ______.</li><li>Sophie's eyes ______ tears when Mark asked about her grandmother.</li><li>An ______ silence grew between them.</li><li>«I was tired, but that's not an ______,» Jake said.</li></ol>
+</div></details>
+<details class="item"><summary>B. GRAMMAR IN CONTEXT</summary><div class="inside">
+<p><strong>1. Past Perfect vs Past Simple</strong></p>
+<p>Find the sentence: «While he was sleeping, Sophie had been alone, terrified, waiting for news.»</p>
+<p>Why is Past Perfect used here? <em>(Because her being alone happened BEFORE his realisation.)</em></p>
+<p>Complete: When Jake understood everything, Sophie ______ (already / spend) a sleepless night.</p>
+<p><strong>2. Direct speech punctuation</strong></p>
+<p>Look at the dialogue. How are the speakers' words formatted?</p>
+<p>Rewrite one exchange as indirect speech.</p>
+<p><strong>Example:</strong> Sophie said that her grandmother was stable but she had been very scared.</p>
+<textarea placeholder="Your answer…"></textarea>
+</div></details>
+<details class="item"><summary>C. BRAIN WORKOUT</summary><div class="inside">
+<p><strong>1. Скорость реакции (быстрое преобразование):</strong></p>
+<p>Учитель называет слово из глоссария, ученики должны как можно быстрее назвать его антоним или противоположную ситуацию.</p>
+<ul><li>exhausted → energetic</li><li>cold → warm</li><li>awkward → comfortable / natural</li><li>to relax → to tense up</li></ul>
+<p><strong>2. Эпизодическая память + визуализация (метод локусов):</strong></p>
+<p>Закрой глаза. Представь свою комнату. Мысленно «размести» в разных её углах 5 новых слов из текста (например, <em>draft</em> на письменном столе, <em>awkward</em> на стуле, <em>silence</em> под кроватью и т.д.). Открой глаза и «пройди» по комнате, называя слова.</p>
+<p><strong>3. Восстанови последовательность:</strong></p>
+<p>Расставь события в правильном порядке (1–6):</p>
+<ol>
+<li>___ Jake realised what had happened to Sophie's grandmother.</li>
+<li>___ Sophie sent Jake her draft.</li>
+<li>___ Mark asked Sophie about her grandmother.</li>
+<li>___ Sophie and Jake teamed up for the project.</li>
+<li>___ Sophie was cold and avoided eye contact.</li>
+<li>___ Jake apologised and asked Sophie to tell him everything.</li>
+</ol>
+</div></details>
+</div>
+</details>
+
+<details class="section song" id="song">
+<summary>♫ THE UNSAID · THE SONG</summary>
+<div class="content">
+<div class="card">
+<h3>Listen and sing along!</h3>
+<audio controls src="assets/song_audio.mp3"></audio>
+<img class="media song-image" src="assets/sorry_thankyou.png" alt="Sorry and Thank You" onclick="openLightbox(this.src)">
+<div class="song-actions"><a class="jump" href="#songlyrics">SHOW SONG LYRICS</a><a class="jump" href="#songtasks">SONG TASKS</a></div>
+</div>
+<details class="item" id="songlyrics"><summary>♫ SONG LYRICS · ENGLISH + РУССКИЙ</summary>
+<div class="inside">
+<div class="lyrics-grid">
+<div class="lyrics-head"><div>ENGLISH</div><div>РУССКИЙ</div></div>
+<div class="lyric-pair"><div><p>THE UNSAID</p></div><div><p>НЕДОСКАЗАННОЕ</p></div></div><div class="lyric-pair"><div><h4>Jake</h4><p>I didn't know.</p><p>I was blind.</p><p>I saw your face, but not your mind.</p><p>You needed me — I wasn't there.</p><p>I left you lost in your despair.</p></div><div><h4>Джейк</h4><p>Я не знал.</p><p>Я был слеп.</p><p>Я видел твоё лицо, но не твой ум.</p><p>Я не был рядом, когда я был тебе нужен.</p><p>Я оставил тебя в отчаянии.</p></div></div><div class="lyric-pair"><div><h4>Sophie</h4><p>I didn't tell you.</p><p>I was scared.</p><p>I thought you'd see, I thought you'd care.</p><p>But you were tired, and I was cold.</p><p>We both had stories left untold.</p></div><div><h4>Софи</h4><p>Я не сказала тебе.</p><p>Мне было страшно.</p><p>Я думала, ты увидишь, я думала, тебе не всё равно.</p><p>Но ты был уставшим, а я была холодной.</p><p>У нас обоих были нерассказанные истории.</p></div></div><div class="lyric-pair"><div><h4>Both</h4><p>The unsaid was finally spoken.</p><p>A silence broken.</p><p>The words we kept inside for so long</p><p>Now turn into a quiet song.</p></div><div><h4>Вместе</h4><p>Недоговорённое наконец было сказано.</p><p>Тишина была нарушена.</p><p>Слова, которые мы так долго держали внутри,</p><p>Теперь превращаются в тихую песню.</p></div></div><div class="lyric-pair"><div><h4>Outro</h4><p>The unsaid… is said.</p></div><div><h4>Аутро</h4><p>Недоговорённое… сказано.</p></div></div>
+</div>
+</div>
+</details>
+<details class="item" id="songtasks"><summary>♫ SONG TASKS</summary>
+<div class="inside">
+<h3>EXERCISE 1. The Words We Keep Inside</h3>
+<p><em>Instruction:</em> The song is about words that were left unsaid for a long time — and then finally spoken.</p>
+<p><strong>Part A. Complete the sentences:</strong></p>
+<ol>
+<li>One thing I wish I had said to someone is...</li>
+<li>One thing I wish someone had said to me is...</li>
+<li>One time I stayed silent when I should have spoken was...</li>
+</ol>
+<p><strong>Part B.</strong> Choose ONE of your answers and write 2–3 sentences about why you kept that word inside.</p>
+<textarea placeholder="Your answer…"></textarea>
+
+<h3>EXERCISE 2. The Emoji of Sorry and Thank You</h3>
+<p><em>Instruction:</em> The two most important words in the song are «SORRY» and «THANK YOU».</p>
+<p class="emoji-line">😔 🙏 💬 🕊️ 🤝</p>
+<ol>
+<li>Choose two emojis that you think best represent the feeling of saying «sorry» or «thank you».</li>
+<li>Write one sentence explaining why you chose each one.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<ul>
+<li>🙏 — Because saying «thank you» is like a quiet prayer of gratitude.</li>
+<li>🕊️ — Because saying «sorry» can bring peace, like a dove landing.</li>
+</ul>
+<p><strong>Your turn:</strong></p>
+<textarea placeholder="Your ideas…"></textarea>
+
+<h3>EXERCISE 3. The Letter You Never Wrote (Part 2)</h3>
+<p><em>Instruction:</em> The song ends with the words: «The unsaid… is said.»</p>
+<p>Think of someone you have unfinished words with — a friend, a family member, or even yourself.</p>
+<p>Write a short letter (5–7 sentences) to them, saying what you never said.</p>
+<p>You can start with:</p>
+<ul>
+<li>«Dear _______, I never told you…»</li>
+<li>«I should have said…»</li>
+</ul>
+<p><strong>You don't have to send it. Just write it.</strong></p>
+<textarea placeholder="Your letter…"></textarea>
+</div>
+</details>
+</div>
+</details>
+
+<details class="section" id="beyond">
+<summary>BEYOND THE TEXT · CREATE & SHARE</summary>
+<div class="content">
+<details class="item"><summary>Creative Task — choose ONE</summary><div class="inside">
+<ol>
+<li><strong>Письмо (эмпатия):</strong> Напиши короткое сообщение (3–4 предложения), которое Джейк отправил Софи вечером того же дня. Используй как минимум два слова из глоссария.</li>
+<li><strong>Ролевая игра:</strong> В паре с одноклассником разыграйте диалог между Софи и Джейком через неделю после событий. Они вместе готовят презентацию. Как изменилось их общение?</li>
+<li><strong>Визуализация (без ИИ):</strong> Нарисуй простую схему или комикс из 3–4 кадров, показывающую, как менялись отношения Софи и Джейка на протяжении рассказа.</li>
+<li><strong>ИИ-задание (факультативно):</strong> Создай иллюстрацию к ключевому моменту истории — моменту, когда Марк спрашивает Софи о бабушке. Пример промпта: «A school library, two teenagers sitting at a table. A girl with crossed arms looks sad, a boy looks confused. Another boy leans in and asks gently. Soft lighting, emotional atmosphere, comic book style.»</li>
+<li><strong>Альтернативная концовка:</strong> Придумай, что бы произошло, если бы Марк не вмешался. Напиши 5–7 предложений. Используй Past Simple.</li>
+</ol>
+<textarea placeholder="Your creative work…"></textarea>
+</div></details>
+</div>
+</details>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()"><span class="close">×</span><img id="lightboxImg" src="" alt=""></div>
+<script>
+function openLightbox(src){document.getElementById('lightboxImg').src=src;document.getElementById('lightbox').classList.add('show')}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('show')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()})
+</script>
+</div>
+</body></html>

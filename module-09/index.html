@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GEMS OF THE COLLECTION — BONUS MODULE</title>
+<style>
+:root{--cream:#f6f0e6;--paper:#fffdf8;--burg:#6d2430;--gold:#b88a3b;--ink:#33464b;--line:#ded3c3}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:#3e3934;font-family:Georgia,"Times New Roman",serif}.top{position:sticky;top:0;z-index:50;background:rgba(246,240,230,.97);border-bottom:1px solid var(--line);padding:12px 22px;display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--burg);font-weight:700}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;color:var(--burg);font-weight:700;cursor:pointer}.block-frame{width:100%;border:0;display:block;overflow:hidden;background:var(--cream)}.divider{height:18px;background:linear-gradient(90deg,#f6f0e6,#e8d7b7,#f6f0e6)}
+#globalLightbox{position:fixed;inset:0;background:rgba(25,20,18,.78);display:none;align-items:center;justify-content:center;padding:24px;z-index:99999}#globalLightbox.open{display:flex}.glb-card{position:relative;max-width:min(1200px,96vw);max-height:94vh;background:#fffdf8;border:1px solid #d8cdbd;border-radius:20px;padding:16px;box-shadow:0 30px 90px rgba(0,0,0,.35)}#globalPhoto{display:block;max-width:92vw;max-height:84vh;width:auto;height:auto;object-fit:contain;border-radius:12px}#globalTitle{text-align:center;color:var(--burg);font-weight:700;margin:6px 48px 2px;font-size:16px}#globalClose{position:absolute;right:10px;top:10px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:white;color:var(--burg);font-size:24px;cursor:pointer;z-index:2}
+</style></head><body>
+<header class="top"><div class="brand">💎 GEMS OF THE COLLECTION</div><nav class="nav"><button onclick="go(1)">BLOCK 1 · A LOVE STORY</button><button onclick="go(2)">BLOCK 2 · VARIA'S NEW NOSE</button><button onclick="go(3)">BLOCK 3 · THE HAPPY VIKING</button></nav></header>
+<section id="b1"><iframe id="frame1" class="block-frame" src="Block-1/index.html" title="Block 1 — A Love Story in Details"></iframe></section><div class="divider"></div>
+<section id="b2"><iframe id="frame2" class="block-frame" src="Block-2/index.html" title="Block 2 — Varia's New Nose"></iframe></section><div class="divider"></div>
+<section id="b3"><iframe id="frame3" class="block-frame" src="Block-3/index.html" title="Block 3 — The Happy Viking"></iframe></section>
+<div id="globalLightbox" aria-hidden="true"><div class="glb-card"><button id="globalClose" aria-label="Close">×</button><div id="globalTitle"></div><img id="globalPhoto" alt=""></div></div>
+<script>
+const lb=document.getElementById('globalLightbox'),photo=document.getElementById('globalPhoto'),title=document.getElementById('globalTitle');
+window.__openGlobalPhoto=function(src,t){photo.src=src;photo.alt=t||'Photo';title.textContent=t||'';lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};
+function closeGlobal(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');photo.removeAttribute('src');document.body.style.overflow=''}
+document.getElementById('globalClose').onclick=closeGlobal;lb.addEventListener('click',e=>{if(e.target===lb)closeGlobal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGlobal()});
+function resizeFrame(f){try{const d=f.contentDocument;const h=Math.max(d.body.scrollHeight,d.documentElement.scrollHeight);f.style.height=(h+4)+'px'}catch(e){f.style.height='1000px'}}
+['frame1','frame2','frame3'].forEach(id=>{const f=document.getElementById(id);f.addEventListener('load',()=>{resizeFrame(f);setTimeout(()=>resizeFrame(f),400);setTimeout(()=>resizeFrame(f),1200)})});
+function go(n){document.getElementById('b'+n).scrollIntoView({behavior:'smooth',block:'start'})}
+window.addEventListener('resize',()=>document.querySelectorAll('.block-frame').forEach(resizeFrame));
+</script></body></html>

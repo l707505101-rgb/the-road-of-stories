@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Language of the Soul — Module 8: Technology — The Anonymous Helper</title>
+<style>
+:root{--navy:#061728;--navy2:#0b2238;--gold:#d7a63a;--cream:#f7f1e5;--paper:#fffdf8;--ink:#17202b;--muted:#68717c;--green:#214f39;--purple:#3b2856;--line:#dfd5c4;--softgold:#f1e5c9}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:#eee9df;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+button,summary{font:inherit} a{color:inherit}
+.topbar{position:sticky;top:0;z-index:20;height:66px;background:var(--navy);color:#fff;display:flex;align-items:center;padding:0 22px;gap:28px;box-shadow:0 3px 12px #0003}
+.brand{font-weight:800;letter-spacing:.04em;color:#efb83f;line-height:1.05;width:210px}.nav{display:flex;gap:30px;align-items:center;flex:1;justify-content:center;font-size:14px;font-weight:700}.nav a{text-decoration:none;opacity:.9}.nav a.active{color:#f0bd4a;border-bottom:2px solid #f0bd4a;padding-bottom:7px}.top-icons{display:flex;gap:9px}.icon-btn{width:39px;height:39px;border:1px solid #e5b85a;border-radius:50%;background:transparent;color:#fff;display:grid;place-items:center}
+.shell{display:grid;grid-template-columns:300px minmax(0,1fr);max-width:1450px;margin:auto;background:var(--paper);min-height:100vh}
+.sidebar{background:var(--navy);color:#fff;min-height:100%;padding-bottom:18px}.hero-img{width:100%;height:250px;object-fit:cover;display:block}.side-inner{padding:17px 18px}.module-no{color:#efb83f;font-size:18px;font-weight:800}.module-title{color:#efb83f;font-size:27px;font-weight:900;letter-spacing:.03em;margin-top:2px}.chip{width:95px;margin:12px 0 18px;opacity:.95}.side-rule{border-top:1px solid #c8993c55;margin:10px 0 15px}.block-no{color:#efb83f;font-size:17px;font-weight:800}.block-title{font-size:18px;font-weight:700;margin-top:3px}.quote{color:#f1b844;font-style:italic;font-weight:700;margin:18px 0;font-size:16px}.menu{display:flex;flex-direction:column;gap:3px;margin-top:15px}.menu a{padding:10px 9px;border-radius:4px;text-decoration:none;font-size:14px;display:flex;align-items:center;justify-content:space-between}.menu a:hover,.menu a.active{background:#d49b32;color:#fff}.menu span:first-child{display:flex;gap:9px;align-items:center}.earth{width:100%;display:block;margin-top:18px}
+main{padding:28px 30px 50px;min-width:0}.crumb{color:#a77724;font-weight:800;letter-spacing:.02em}.title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(40px,5vw,70px);line-height:1.02;margin:6px 0 14px;color:#111c2b}.ornament{display:flex;align-items:center;gap:14px;color:#bd8b2d}.ornament:before,.ornament:after{content:"";height:2px;background:#d3a54a;flex:1}.subtitle{font-size:18px;max-width:900px;margin:15px 0 24px;color:#343c45}
+.cards{display:grid;grid-template-columns:1.05fr .95fr 1fr;gap:16px;margin-bottom:18px}.card{border:1px solid #b9c0bf;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 2px 7px #0000000b}.card-head{padding:12px 16px;color:#fff;font-weight:800;font-size:18px}.head-navy{background:linear-gradient(90deg,#071827,#0d2b45)}.head-purple{background:linear-gradient(90deg,#342149,#4a3266)}.card-body{display:grid;grid-template-columns:1fr 40%;min-height:200px}.video-card .card-body{grid-template-columns:1fr 48%}.video-box{position:relative;background:#091a2b;min-height:200px}.video-box video{width:100%;height:100%;min-height:200px;object-fit:cover;display:block}.video-caption{font-size:12px;color:#69727b;margin:7px 0 0}.song-player{width:100%;margin:10px 0 12px;accent-color:#76529b}.media-note{font-size:12px;color:#6e7074;margin:5px 0 0}.card-copy{padding:18px;display:flex;flex-direction:column;justify-content:center}.card-copy p{margin:0 0 16px}.card-img{width:100%;height:100%;object-fit:cover}.cta{display:inline-block;border:0;border-radius:8px;padding:10px 14px;font-weight:800;color:#fff;background:var(--navy);text-decoration:none;align-self:flex-start}.audio-card .card-body{display:block}.audio-card{min-height:200px}.audio-wrap{padding:20px}.audio-title{font-size:20px;font-weight:800;margin:0 0 6px}.audio-note{color:var(--muted);margin:0 0 14px}.audio{width:100%;accent-color:#76529b}
+.accordion{display:flex;flex-direction:column;gap:10px}.accordion details{background:#fffdfa;border:1px solid var(--line);border-radius:13px;overflow:hidden}.accordion summary{cursor:pointer;list-style:none;padding:16px 18px;display:flex;align-items:center;gap:14px}.accordion summary::-webkit-details-marker{display:none}.acc-icon{width:42px;height:42px;border-radius:50%;background:var(--softgold);display:grid;place-items:center;font-size:21px;flex:0 0 auto}.acc-title{font-weight:900;font-size:17px}.acc-desc{font-size:13px;color:#59616a}.chev{margin-left:auto;font-size:20px;transition:.2s}.accordion details[open] .chev{transform:rotate(180deg)}.content{padding:0 22px 22px;border-top:1px solid #eee5d8}.content h3{font-family:Georgia,serif;color:#243a4d;margin:20px 0 8px}.content h4{margin:17px 0 7px;color:#7c4b37}.content p{margin:7px 0}.content ol,.content ul{margin-top:6px}.story{font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.72}.story p{margin:0 0 13px}.lead-in{background:#f4eee3;border-left:4px solid var(--gold);padding:13px 16px;border-radius:8px;margin-top:14px}.glossary{width:100%;border-collapse:collapse;font-size:16px}.glossary th,.glossary td{border:1px solid #ddd2c0;padding:9px;text-align:left;vertical-align:top}.glossary th{background:#f1e6cf}.exercise{background:#fbf8f1;border:1px solid #eadfcd;border-radius:10px;padding:13px 15px;margin:10px 0}.exercise strong{color:#6e4d1e}.song{margin-top:18px;border-radius:15px;overflow:hidden;border:1px solid #bdb1c9;background:#fff}.song-head{background:var(--purple);color:#fff;padding:12px 17px;display:flex;justify-content:space-between;align-items:center;font-weight:900;font-size:20px}.song-body{display:grid;grid-template-columns:240px 1fr;gap:18px;padding:15px}.song-media{display:flex;flex-direction:column;gap:8px}.song-media .song-img{height:125px}.song-copy{min-width:0}.song-img{width:100%;height:125px;object-fit:cover;border-radius:10px}.lyrics-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}.lyrics-grid>*{min-width:0;overflow-wrap:anywhere}.song-lyrics-details{margin-top:10px;border:1px solid #d8c9e3;border-radius:10px;background:#faf7fc}.song-lyrics-details summary{cursor:pointer;padding:10px 12px;font-weight:800;color:#4b3265}.song-lyrics-details .lyrics-grid{padding:12px}.lyrics{background:#f3eef7;border-radius:10px;padding:14px;white-space:pre-line;min-width:0;overflow-wrap:anywhere}.lyrics h4{margin-top:0;color:#4b3265}.project{margin-top:18px;border:1px solid #b8c7bc;border-radius:15px;overflow:hidden;background:#fff}.project-head{background:var(--green);color:#fff;padding:12px 17px;font-weight:900;font-size:20px}.project-body{display:grid;grid-template-columns:240px 1fr;gap:18px;padding:15px}.project-img{width:100%;height:150px;object-fit:cover;border-radius:10px}.small-card{background:#f1f6f1;border-radius:9px;padding:12px;margin-top:12px}.section-jump{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 18px}.jump{padding:8px 12px;border:1px solid #d8cdbb;border-radius:999px;background:#fff;text-decoration:none;font-size:13px;font-weight:700}.block-footer{display:flex;justify-content:space-between;gap:16px;padding:18px 24px;background:#071827;color:#fff;font:700 13px Arial}.block-footer a{color:#f2b632;text-decoration:none}.footer{margin-top:25px;padding:16px;background:var(--navy);color:#fff;display:flex;justify-content:space-between;gap:10px;align-items:center;border-radius:14px}.footer a{border:1px solid #d3a54a;border-radius:8px;padding:8px 12px;text-decoration:none;color:#f3c75b;font-weight:800}.note{font-size:12px;color:#7a7f84}
+.modal{display:none;position:fixed;inset:0;background:#000c;z-index:50;align-items:center;justify-content:center;padding:30px}.modal.open{display:flex}.modal img{max-width:92vw;max-height:88vh;object-fit:contain;border-radius:10px;box-shadow:0 10px 40px #000}.modal button{position:absolute;top:18px;right:20px;width:44px;height:44px;border-radius:50%;border:1px solid #fff;color:#fff;background:#0008;font-size:25px}.zoomable{cursor:zoom-in}
+@media(max-width:1050px){.cards{grid-template-columns:1fr 1fr}.audio-card{grid-column:1/-1}}
+@media(max-width:900px){.shell{grid-template-columns:1fr}.sidebar{min-height:auto}.hero-img{height:220px}.earth{max-width:300px}.cards{grid-template-columns:1fr}.nav{display:none}.topbar{justify-content:space-between}.brand{width:auto}.card-body,.song-body,.project-body{grid-template-columns:1fr}.lyrics-grid{grid-template-columns:1fr}.main{padding:22px 16px}.title{font-size:45px}}
+
+
+/* REFERENCE BUILD — shared interaction rules */
+html{scroll-behavior:auto!important}
+body{overflow-x:hidden}
+img.zoomable{cursor:zoom-in;outline:none}
+img.zoomable:focus{box-shadow:0 0 0 3px #d3a54a88}
+.master-lightbox{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;background:rgba(5,12,20,.88)!important;z-index:2147483647!important;display:none!important;align-items:center!important;justify-content:center!important;padding:32px!important;overflow:auto!important}
+.master-lightbox.show{display:flex!important}
+.master-lightbox img{display:block!important;width:auto!important;height:auto!important;max-width:94vw!important;max-height:90vh!important;object-fit:contain!important;margin:auto!important;border-radius:10px!important;box-shadow:0 16px 60px rgba(0,0,0,.45)!important}
+.master-lightbox-close{position:fixed!important;right:22px!important;top:18px!important;width:46px!important;height:46px!important;border-radius:50%!important;border:1px solid rgba(255,255,255,.8)!important;background:rgba(0,0,0,.45)!important;color:#fff!important;font:32px/1 Arial,sans-serif!important;cursor:pointer!important;z-index:2147483648!important}
+body.lb-open{overflow:hidden!important}
+details>summary{cursor:pointer!important}
+/* Keep bilingual song lyrics wide and parallel on desktop. */
+.lyrics-grid,.lyrics{min-width:0}
+@media(min-width:901px){.lyrics-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}.lyrics-col{min-width:0!important}.songGrid{grid-template-columns:minmax(280px,34%) minmax(0,66%)!important}.songCell{min-width:0!important}}
+/* Hero images must be shown whole, never cropped in their initial state. */
+.heroImg{display:flex!important;align-items:center!important;justify-content:center!important;background:#f1ece2!important;overflow:hidden!important}
+.heroImg img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}
+@media(max-width:900px){.heroImg{min-height:300px!important}.heroImg img{height:auto!important;max-height:520px!important}}
+/* Song image sits immediately below the song audio. */
+.songCell:first-child audio{display:block!important;width:100%!important}
+.songCell:first-child .songImg{display:block!important;width:100%!important;height:auto!important;max-height:430px!important;object-fit:contain!important;margin:16px 0 0!important}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="brand">LANGUAGE<br/>OF THE SOUL</div>
+<nav class="nav"><a href="#top">HOME</a><a class="active" href="#top">THE JOURNEY</a><a href="#heart">THE WISDOM</a><a href="#language">THE PRACTICE</a><a href="#song">THE GIFT</a></nav>
+<div class="top-icons"><button class="icon-btn" title="Language">◎</button><button class="icon-btn" onclick="document.getElementById('storyAudio').focus();document.getElementById('storyAudio').scrollIntoView({behavior:'smooth'})" title="Audio">♪</button><button class="icon-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Menu">☰</button></div>
+</header>
+<div class="shell" id="top">
+<aside class="sidebar">
+<img alt="A hooded person with a laptop overlooking city lights at night" class="hero-img zoomable" onclick="openImg(this.src)" src="assets/hero-hooded.png"/>
+<div class="side-inner">
+<div class="module-no">MODULE 8</div><div class="module-title">TECHNOLOGY</div>
+<div aria-hidden="true" class="chip">▣</div><div class="side-rule"></div>
+<div class="block-no">BLOCK 1</div><div class="block-title">The Anonymous Helper</div>
+<div class="quote">“The joy is in the helping,<br/>not in the recognition.”</div><div class="side-rule"></div>
+<div class="menu">
+<a class="active" href="#read"><span>📖 The Story</span><b>›</b></a>
+<a href="#audio"><span>🎧 Audio</span><b>›</b></a>
+<a href="#read"><span>📚 Read</span><b>›</b></a>
+<a href="#glossary"><span>▤ Glossary</span><b>›</b></a>
+<a href="#heart"><span>♥ For the Heart and Mind</span><b>›</b></a>
+<a href="#language"><span>✎ For Language Skills</span><b>›</b></a>
+<a href="#beyond"><span>☆ Beyond the Text</span><b>›</b></a>
+<a href="#song"><span>♫ Song: No Name, No Glory</span><b>›</b></a>
+<a href="#project"><span>♧ The Kindness Chain</span><b>›</b></a>
+</div>
+<img alt="Connected world at night" class="earth zoomable" onclick="openImg(this.src)" src="assets/earth.png"/>
+</div>
+</aside>
+<main>
+<div class="crumb">THE JOURNEY ◆ MODULE 8: TECHNOLOGY</div>
+<h1 class="title">The Anonymous Helper</h1>
+<div class="ornament">◆</div>
+<p class="subtitle">A story about kindness in the digital age — and a song about the quiet joy of giving without being seen.</p>
+<div class="section-jump">
+<a class="jump" href="#read">READ</a><a class="jump" href="#glossary">GLOSSARY</a><a class="jump" href="#heart">HEART &amp; MIND</a><a class="jump" href="#language">LANGUAGE SKILLS</a><a class="jump" href="#song">SONG</a><a class="jump" href="#project">CREATE</a>
+</div>
+<section class="cards">
+<article class="card">
+<div class="card-head head-navy">📖 THE STORY</div>
+<div class="card-body"><div class="card-copy"><p>Read the story, learn new vocabulary and complete engaging tasks.</p><a class="cta" href="#read">START READING</a></div><img alt="A gift bag with a heart and a note saying For you" class="card-img zoomable" onclick="openImg(this.src)" src="assets/gift-bag.png"/></div>
+</article>
+<article class="card video-card">
+<div class="card-head" style="background:linear-gradient(90deg,#214f39,#2d6749)">▶ VIDEO</div>
+<div class="card-body"><div class="card-copy"><p>Watch a short video that introduces the story.</p><a class="cta" href="#video" style="background:#214f39">WATCH VIDEO</a></div><div class="video-box" id="video"><video controls="" poster="assets/video-poster.jpg" preload="metadata"><source src="assets/anonymous-helper-video.mp4" type="video/mp4"/>Your browser does not support video playback.</video></div></div>
+</article>
+<article class="card audio-card" id="audio">
+<div class="card-head head-purple">♫ AUDIO — THE ANONYMOUS HELPER</div>
+<div class="card-body"><div class="audio-wrap"><p class="audio-title">Reading audio</p><p class="audio-note">Listen to the story while following the text.</p><audio class="audio" controls="" id="storyAudio" preload="metadata"><source src="assets/anonymous-helper-reading-new.mp3" type="audio/mpeg"/>Your browser does not support audio playback.</audio><p class="media-note">New assembled recording · 3:13</p></div></div>
+</article>
+</section>
+<section class="accordion">
+<details id="read" open="True"><summary><span class="acc-icon">📖</span><span><span class="acc-title">READ: THE ANONYMOUS HELPER</span><br/><span class="acc-desc">Read the full story about Mark, a man who helps others anonymously.</span></span><span class="chev">⌄</span></summary><div class="content">
+<h3>BEFORE YOU READ</h3><div class="lead-in"><ol><li>Have you ever received help from a stranger? How did it make you feel?</li><li>If you could do something kind for someone anonymously, what would you do?</li><li>The phrasal verb <em>to give away</em> can mean to reveal a secret. Why might someone want to keep their kindness a secret?</li></ol></div>
+<h3>THE TEXT</h3><div class="story">
+<p>It started with small things.</p><p>An elderly woman in a small town found a bag of groceries on her doorstep. No note. No name. Just food.</p><p>A single mother received an envelope with cash and a short message: “For your son's school trip. He deserves it.”</p><p>A struggling student opened his email to find that someone had paid for his online course. The receipt showed a gift card, no name.</p><p>People in the town began to talk. Who was helping them? A rich relative? A charity? A ghost?</p><p>The local newspaper picked up the story. They called the mysterious helper “The Anonymous Angel.” Articles were written. Interviews were given by grateful recipients. But no one knew who it was.</p><p>Then one day, the local computer repair shop owner came forward. He had noticed something strange. Someone had been using a public computer at the library late at night. The searches were all about people in need — single parents, sick children, elderly people living alone.</p><p>“Whoever it was,” the shop owner said, “they didn't want to be found.”</p><p>A young reporter named Lena decided to investigate. She spent weeks following small clues. Finally, she tracked the helper to a small apartment on the edge of town.</p><p>She knocked on the door. A middle-aged man opened it. His clothes were simple. His apartment was small. He looked... ordinary.</p><p>“Are you the one?” Lena asked.</p><p>The man sighed. “Please, come in. But I won't give you a story.”</p><p>His name was Mark. He worked as a warehouse worker. He wasn't rich. He wasn't famous. He just believed in doing good.</p><p>“I had a difficult childhood,” he explained. “A stranger once helped my family when we had nothing. I never knew who it was. But it changed my life. Now I have a little extra money. Not much. But enough to help someone else.”</p><p>He didn't use his own computer. He used the public library computer so no one could track him. He paid with gift cards. He never left his name.</p><p>“But why anonymous?” Lena asked. “People want to thank you.”</p><p>Mark shook his head. “If people know who I am, they'll want to thank me. They'll want to repay me. That's not why I do it. I do it because... because I can. Because someone did it for me. The joy is in the helping, not in the recognition.”</p><p>Lena didn't write the article. She couldn't betray his trust. But she started volunteering at a local shelter on weekends.</p><p>“Some secrets,” she later told a friend, “are worth keeping.”</p><p>And the anonymous help continued. Groceries appeared. Bills were paid. Scholarships were funded. The town still talked about their “Angel.” But no one ever found out who it was.</p><p>Except Lena. And she never told.</p></div>
+</div></details>
+<details id="glossary"><summary><span class="acc-icon">📚</span><span><span class="acc-title">GLOSSARY</span><br/><span class="acc-desc">Word • American English transcription • Russian translation</span></span><span class="chev">⌄</span></summary><div class="content">
+<table class="glossary"><thead><tr><th>Word / phrase</th><th>American English</th><th>Перевод</th></tr></thead><tbody>
+<tr><td>anonymous</td><td>[əˈnɑːnɪməs]</td><td>анонимный</td></tr><tr><td>doorstep</td><td>[ˈdɔːrstep]</td><td>порог</td></tr><tr><td>envelope</td><td>[ˈenvəloʊp]</td><td>конверт</td></tr><tr><td>receipt</td><td>[rɪˈsiːt]</td><td>квитанция, чек</td></tr><tr><td>charity</td><td>[ˈtʃærəti]</td><td>благотворительная организация</td></tr><tr><td>to come forward</td><td>[kʌm ˈfɔːrwərd]</td><td>выступить с заявлением, объявиться</td></tr><tr><td>clue</td><td>[kluː]</td><td>улика, подсказка</td></tr><tr><td>to track</td><td>[træk]</td><td>отследить, выследить</td></tr><tr><td>warehouse</td><td>[ˈwerhaʊs]</td><td>склад</td></tr><tr><td>extra</td><td>[ˈekstrə]</td><td>дополнительный, лишний</td></tr><tr><td>gift card</td><td>[ɡɪft kɑːrd]</td><td>подарочная карта</td></tr><tr><td>to repay</td><td>[rɪˈpeɪ]</td><td>отплатить, возместить</td></tr><tr><td>recognition</td><td>[ˌrekəɡˈnɪʃn]</td><td>признание, известность</td></tr><tr><td>to betray</td><td>[bɪˈtreɪ]</td><td>предать</td></tr><tr><td>trust</td><td>[trʌst]</td><td>доверие</td></tr><tr><td>to volunteer</td><td>[ˌvɑːlənˈtɪr]</td><td>работать волонтёром</td></tr><tr><td>shelter</td><td>[ˈʃeltər]</td><td>приют, убежище</td></tr><tr><td>scholarship</td><td>[ˈskɑːlərʃɪp]</td><td>стипендия</td></tr><tr><td>to fund</td><td>[fʌnd]</td><td>финансировать</td></tr>
+</tbody></table>
+</div></details>
+<details id="heart"><summary><span class="acc-icon">♥</span><span><span class="acc-title">FOR THE HEART AND MIND</span><br/><span class="acc-desc">Comprehension, thinking deeper and discussing the ideas.</span></span><span class="chev">⌄</span></summary><div class="content">
+<h3>A. COMPREHENSION CHECK</h3><div class="exercise"><ol><li>What kind of things did the anonymous helper do for people in the town?</li><li>What did the local newspaper call this mysterious person?</li><li>How did the computer repair shop owner help the investigation?</li><li>Who was the anonymous helper? What was his job?</li><li>Why did Mark start helping others?</li><li>Why didn't Mark want people to know who he was?</li><li>What did Lena decide to do after meeting Mark?</li><li>What does the final line mean: “Some secrets are worth keeping”?</li></ol></div>
+<h3>B. THINK &amp; ANALYSE</h3><div class="exercise"><ol><li>Mark says: “The joy is in the helping, not in the recognition.” Do you agree? Why or why not?</li><li>Why did Lena choose not to write the article? Was she right or wrong?</li><li>The text says Mark “used the public library computer so no one could track him.” How do technologies help people hide their identity? Is this always bad?</li><li>Mark was inspired by a stranger who helped his family when he was a child. Can one act of kindness create a chain reaction?</li></ol></div>
+<h3>C. DISCUSS &amp; RELATE</h3><div class="exercise"><ol><li>If you had a little extra money, would you prefer to help anonymously or publicly? Why?</li><li>Do you think social media makes people want recognition for their good deeds? Is that a problem?</li><li>Lena started volunteering at a shelter instead of writing the story. How did Mark's example change her?</li></ol></div>
+</div></details>
+<details id="language"><summary><span class="acc-icon">✎</span><span><span class="acc-title">FOR LANGUAGE SKILLS</span><br/><span class="acc-desc">Vocabulary, grammar, phrasal verbs and language practice.</span></span><span class="chev">⌄</span></summary><div class="content">
+<h3>A. VOCABULARY FOCUS — WORD FAMILIES</h3><div class="exercise"><p>Complete the word families.</p><table class="glossary"><tr><th>Verb</th><th>Noun</th><th>Adjective</th></tr><tr><td>to help</td><td>___________</td><td>helpful</td></tr><tr><td>___________</td><td>recognition</td><td>recognized</td></tr><tr><td>to volunteer</td><td>___________</td><td>___________</td></tr><tr><td>___________</td><td>betrayal</td><td>___________</td></tr></table></div>
+<div class="exercise"><p><strong>Find the word in the text that means:</strong></p><ol><li>a small piece of information that helps solve a mystery (paragraph 5) → ___________</li><li>to follow and find someone or something (paragraph 6) → ___________</li><li>not special, average (paragraph 7) → ___________</li></ol></div>
+<div class="exercise"><p><strong>Complete the sentences with words from the glossary:</strong></p><ol type="a"><li>The ___________ left a bag of food on the old woman's ___________.</li><li>She received an ___________ with cash inside.</li><li>He didn't want ___________ for his good deeds.</li><li>Lena decided to ___________ at a local ___________.</li></ol></div>
+<h3>B. GRAMMAR IN CONTEXT — PASSIVE VOICE &amp; PAST TENSES</h3><div class="exercise"><ol><li>Find examples of the Past Simple Passive in the text. Example: <em>A bag of groceries was found on her doorstep.</em></li><li>Rewrite in the Passive Voice:<ol type="a"><li>Someone left an envelope with cash. → An envelope with cash ___________ left.</li><li>Someone paid for his online course. → His online course ___________ paid for.</li><li>A stranger once helped his family. → His family ___________ helped by a stranger.</li></ol></li><li>Complete with Past Simple or Past Perfect:<ol type="a"><li>Mark explained that he ___________ (have) a difficult childhood.</li><li>Before Lena ___________ (track) Mark down, many articles ___________ (write) about the “Angel”.</li><li>She ___________ (knock) on his door after she ___________ (find) his address.</li></ol></li></ol></div>
+<h3>C. BRAIN WORKOUT — PHRASAL VERBS WITH GIVE &amp; TURN</h3><div class="exercise"><ol><li>Complete with the correct particle:<ol type="a"><li>Mark didn't want to <strong>give ______</strong> his identity. (reveal)</li><li>He <strong>turned ______</strong> to helping others after a stranger helped him. (changed direction/started doing)</li><li>Many people <strong>turned ______</strong> to the library to try to find clues. (appeared/arrived)</li><li>The town <strong>gave ______</strong> to the “Angel” as a kind of legend. (created a name)</li></ol></li><li>Create your own sentences using these phrasal verbs in the context of kindness: <em>give away, turn to, give back.</em></li><li>Role Play: In pairs, act out the conversation between Lena and Mark when she first knocks on his door. One is the persistent reporter, the other is the humble helper.</li></ol></div>
+</div></details>
+<details id="beyond"><summary><span class="acc-icon">☆</span><span><span class="acc-title">BEYOND THE TEXT</span><br/><span class="acc-desc">Creative tasks and real-world connection.</span></span><span class="chev">⌄</span></summary><div class="content">
+<p><strong>Choose ONE:</strong></p><div class="exercise"><ol><li><strong>Lena's Diary:</strong> Write a short diary entry from Lena the night she met Mark. Why did she decide not to write the article?</li><li><strong>Mark's Letter (Unsent):</strong> Mark was inspired by a stranger who helped his family. Write a short letter from Mark to that unknown stranger, thanking them.</li><li><strong>Social Media Post (Irony):</strong> Write a short, ironic social media post that Mark might secretly laugh at — a post where someone is getting praise for being “so generous” publicly.</li><li><strong>AI Image Prompt:</strong> Create a prompt for an image of Mark in his small apartment, looking at a gift card on his simple wooden table, with a soft lamp light. He looks peaceful, not rich. The mood is quiet, humble, wise.<br/><em>Example:</em> “A middle-aged man in a simple, clean but small apartment sitting at a wooden table. He holds a blank gift card in his hands. A single warm lamp lights his face. His expression is peaceful, content, not sad. Outside the window, a night city is blurred. Style: photorealistic, cinematic lighting, warm tones.”</li><li><strong>Anonymous Kindness Challenge:</strong> For one week, try to do one small anonymous act of kindness (leave a note, help without being asked, give something without taking credit). Write 3–4 sentences about how it made you feel.</li></ol></div>
+</div></details>
+</section>
+<section class="song" id="song">
+<div class="song-head"><span>♫ NO NAME, NO GLORY</span><span>SONG • LYRICS</span></div>
+<div class="song-body"><div class="song-media"><img alt="Silhouette of a guitarist at sunset" class="song-img zoomable" onclick="openImg(this.src)" src="assets/guitar.png"/><audio class="song-player" controls="" preload="metadata"><source src="assets/no-name-no-glory.mp3" type="audio/mpeg"/>Your browser does not support audio playback.</audio><p class="media-note">Song audio · 3:26</p></div><div class="song-copy"><p><strong>Listen to the song and follow the lyrics in English and Russian.</strong></p><details class="song-lyrics-details"><summary>♫ SHOW SONG LYRICS · ENGLISH + РУССКИЙ</summary><div class="lyrics-grid"><div class="lyrics"><h4>Lyrics (English)</h4><strong>Verse 1</strong><br/>A bag on the doorstep, an envelope too<br/>No name, no return, just a kindness from you<br/>The town called you angel, they searched for your face<br/>But you left no footprints, you left no trace<br/><br/><strong>Chorus</strong><br/>No name, no glory, no camera, no stage<br/>Just a quiet believer turning the page<br/>The joy is in giving, the joy is unseen<br/>The world's full of flowers that grow in between<br/><br/><strong>Verse 2</strong><br/>A young reporter tracked you to a humble small door<br/>A warehouse worker who wasn't rich nor poor<br/>“Why do you hide it?” she asked with a tear<br/>“Because I don't need to be seen,” he said, “I just need to be here.”<br/><br/><strong>Chorus</strong><br/>No name, no glory, no camera, no stage<br/>Just a quiet believer turning the page<br/>The joy is in giving, the joy is unseen<br/>The world's full of flowers that grow in between<br/><br/><strong>Bridge</strong><br/>“When I was a child, a stranger helped us<br/>No name, no face, but they made a difference<br/>I never forgot that someone cared<br/>Now I give back the love that I once shared”<br/><br/><strong>Outro</strong><br/>She never wrote the article, she kept his secret safe<br/>And started volunteering at a local homeless place<br/>Some secrets are worth keeping, some kindnesses are deep<br/>And the best kind of promise is the one you never speak.<br/><br/><strong>Final line:</strong> The best kind of promise is the one you never speak</div><div class="lyrics"><h4>Перевод (Русский)</h4><strong>Куплет 1</strong><br/>Пакет на пороге, конверт тоже<br/>Ни имени, ни обратного адреса, просто доброта от тебя<br/>Город назвал тебя ангелом, они искали твоё лицо<br/>Но ты не оставил следов, ты не оставил улик<br/><br/><strong>Припев</strong><br/>Ни имени, ни славы, ни камеры, ни сцены<br/>Просто тихий верующий, переворачивающий страницу<br/>Радость — в дарении, радость невидима<br/>Мир полон цветов, которые растут в промежутках<br/><br/><strong>Куплет 2</strong><br/>Молодая журналистка выследила тебя до скромной маленькой двери<br/>Рабочий на складе, который не был ни богат, ни беден<br/>“Зачем ты прячешь это?” — спросила она со слезой<br/>“Потому что мне не нужно, чтобы меня видели, — сказал он, — мне просто нужно быть здесь”<br/><br/><strong>Припев</strong><br/>Ни имени, ни славы, ни камеры, ни сцены<br/>Просто тихий верующий, переворачивающий страницу<br/>Радость — в дарении, радость невидима<br/>Мир полон цветов, которые растут в промежутках<br/><br/><strong>Бридж</strong><br/>“Когда я был ребёнком, незнакомец помог нам<br/>Ни имени, ни лица, но они изменили нашу жизнь<br/>Я никогда не забыл, что кто-то заботился<br/>Теперь я возвращаю любовь, которой когда-то делились со мной”<br/><br/><strong>Аутро</strong><br/>Она никогда не написала статью, она сохранила его секрет<br/>И начала работать волонтёром в местном приюте для бездомных<br/>Некоторые секреты стоит хранить, доброта глубока.<br/>И лучший вид обещания — это то, которое ты никогда не произносишь.<br/><br/><strong>Финальная строка:</strong> Лучший вид обещания — это то, которое ты никогда не произносишь.</div></div></details></div></div></section><footer class="block-footer"><a class="block-nav" data-dir="prev" href="../index.html">‹ PREVIOUS BLOCK</a><span>MODULE 8 · TECHNOLOGY · BLOCK 1</span><a class="block-nav" data-dir="next" href="../block2/index.html">NEXT BLOCK ›</a></footer></main></div>
+
+<details class="project" id="project">
+<summary class="project-head">♧ THE KINDNESS CHAIN <span style="float:right;font-size:13px;letter-spacing:.08em">GROUP PROJECT</span></summary>
+<div class="project-body"><img alt="A Be kind tag and a heart" class="project-img zoomable" onclick="openImg(this.src)" src="assets/kindness.png"/><div><p><strong>Class project: “The Kindness Chain”</strong></p><p><strong>Type:</strong> Kindness action + reflection   <strong>Duration:</strong> 1 week</p><p><strong>Integration:</strong> English + social responsibility + emotional intelligence</p><div class="small-card"><strong>Your Mission</strong><br/>Perform one small act of kindness for someone — anonymously. Then, write a short reflection about how it felt.</div><details style="margin-top:10px"><summary><strong>Step by step</strong> ▾</summary><ol><li>Choose your act of kindness.</li><li>Do it anonymously — don't tell the person it was you.</li><li>Write a short reflection (5–7 sentences) in English answering the questions below.</li><li>Share your reflection with the class (you can keep the act anonymous).</li></ol><strong>Ideas for anonymous kindness:</strong><ul><li>Leave a kind note on someone's desk.</li><li>Pay for someone's coffee or snack secretly.</li><li>Help a classmate with homework without taking credit.</li><li>Leave a small treat on a teacher's desk.</li><li>Do a chore at home without being asked.</li><li>Send an anonymous encouraging message to someone who seems sad.</li><li>Donate something you don't need to a charity box.</li></ul><strong>Reflection questions:</strong><ol><li>What did you do? (Don't reveal the person's name if you want to stay anonymous.)</li><li>How did you feel while doing it?</li><li>How did you feel after doing it?</li><li>Was it difficult to stay anonymous? Why or why not?</li><li>Would you do it again? Why?</li></ol></details></div></div>
+</details>
+<div class="footer"><a href="#top">↑ MODULE 8</a><span>BLOCK 1 · THE ANONYMOUS HELPER</span><a href="#read">CONTINUE ↓</a></div>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeImg()"><button aria-label="Close" onclick="closeImg()">×</button><img alt="Expanded image" id="modalImg"/></div>
+
+<script>
+(function(){
+  function reportHeight(){
+    const h=Math.max(document.documentElement.scrollHeight, document.body.scrollHeight, 900);
+    if(window.parent!==window){ window.parent.postMessage({type:'block-height',height:h},'*'); }
+  }
+  function openLightbox(src, alt){
+    let lb=document.getElementById('masterLightbox');
+    if(!lb){
+      lb=document.createElement('div'); lb.id='masterLightbox'; lb.className='master-lightbox';
+      lb.innerHTML='<button class="master-lightbox-close" aria-label="Close">×</button><img alt="">';
+      document.body.appendChild(lb);
+      lb.addEventListener('click',e=>{ if(e.target===lb || e.target.classList.contains('master-lightbox-close')) closeLightbox(); });
+      document.addEventListener('keydown',e=>{if(e.key==='Escape') closeLightbox();});
+    }
+    const img=lb.querySelector('img'); img.src=src; img.alt=alt||''; lb.classList.add('show'); document.body.classList.add('lb-open');
+  }
+  function closeLightbox(){const lb=document.getElementById('masterLightbox'); if(lb){lb.classList.remove('show'); document.body.classList.remove('lb-open');}}
+  document.addEventListener('DOMContentLoaded',()=>{
+    document.querySelectorAll('img').forEach(img=>{
+      if(img.closest('.master-lightbox')) return;
+      if(!img.classList.contains('no-zoom')){
+        img.classList.add('zoomable'); img.setAttribute('tabindex','0');
+        img.addEventListener('click',()=>openLightbox(img.currentSrc||img.src,img.alt));
+        img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLightbox(img.currentSrc||img.src,img.alt);}});
+      }
+    });
+    document.querySelectorAll('details').forEach(d=>{
+      // Compact default: only the main reading/story section may start open.
+      if(!d.closest('.hero') && !d.classList.contains('keep-open')) d.open=false;
+    });
+    reportHeight();
+    setTimeout(reportHeight,300); setTimeout(reportHeight,1000);
+    if(window.ResizeObserver){ new ResizeObserver(reportHeight).observe(document.body); }
+  });
+  window.addEventListener('load',reportHeight); window.addEventListener('message',e=>{if(e.data&&e.data.type==='request-height')reportHeight();});
+  window.addEventListener('resize',reportHeight);
+})();
+
+// Robust navigation and in-page reading controls
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+    const id=a.getAttribute('href').slice(1); const el=document.getElementById(id);
+    if(el){e.preventDefault(); el.scrollIntoView({behavior:'auto',block:'start'});}
+  }));
+  document.querySelectorAll('.block-nav').forEach(a=>a.addEventListener('click',e=>{
+    if(window.parent!==window){e.preventDefault(); window.parent.postMessage({type:'switch-block',dir:a.dataset.dir},'*');}
+  }));
+});
+window.addEventListener('message',e=>{
+  if(e.data && e.data.type==='request-height'){
+    const h=Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,900);
+    if(window.parent!==window) window.parent.postMessage({type:'block-height',height:h},'*');
+  }
+});
+</script></body></html>

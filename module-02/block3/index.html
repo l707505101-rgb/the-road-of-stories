@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Module 2 · Block 3 · What Is Wealth?</title>
+<style>
+:root{
+ --navy:#243a55;--purple:#6f4bb4;--green:#3e7b43;--gold:#b67f2f;--ink:#26323a;
+ --muted:#68747c;--paper:#fffdf9;--cream:#f7efe3;--line:#ddd2c3;
+ --pink:#f8e9ec;--aqua:#e9f4f4;--lav:#f1edf8;--shadow:0 8px 22px rgba(30,45,60,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f0eee9;color:var(--ink);font:15px/1.5 Georgia,"Times New Roman",serif}
+main{max-width:1180px;margin:auto;background:#fff;padding:12px 14px 35px}
+.top{display:flex;align-items:center;gap:18px;padding:4px 2px 12px}
+.module{background:#7350b4;color:#fff;border-radius:9px;padding:8px 16px;font:700 13px Arial}
+.title{flex:1;text-align:center}
+.title h1{margin:0;color:#1f477a;font-size:36px;line-height:1.05}
+.title h1 span{color:#8a5721}
+.subtitle{margin-top:5px;font-style:italic;font-size:17px}
+.navicons{display:flex;gap:12px;background:#f7f4ef;border-radius:12px;padding:9px 12px;font:20px Arial}
+.layout{display:grid;grid-template-columns:1fr 1.08fr;gap:14px}
+.card,.panel{border:1px solid var(--line);border-radius:10px;background:var(--paper);padding:14px;box-shadow:var(--shadow)}
+.lead{background:#fffaf0;border-color:#e6c986}
+h2{font-size:19px;margin:0 0 8px;color:#254a7a}
+h3{font-size:15px;margin:8px 0 5px;color:#263d54}
+.small{color:var(--muted);font-size:13px}
+textarea,input,select{font:inherit;border:1px solid #cfd7dc;border-radius:7px;background:#fff;padding:8px 9px;width:100%}
+textarea{min-height:70px;resize:vertical}
+.btn{border:0;border-radius:8px;padding:8px 12px;background:var(--purple);color:#fff;font:bold 12px Arial;cursor:pointer}
+.btn.light{background:#fff;color:var(--purple);border:1px solid #c9b7e8}
+.lead .q{margin:8px 0}.q strong{display:block;margin-bottom:4px}
+.reading h2{display:flex;justify-content:space-between;align-items:center}
+.collapse{font:700 11px Arial;color:#496d9a;cursor:pointer}
+.reading p{margin:7px 0}
+details{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+summary{list-style:none;cursor:pointer;padding:10px 12px;font-weight:700;color:var(--navy)}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";display:inline-block;width:18px;color:var(--purple)}
+details[open] summary:before{content:"▾"}
+.glossary{background:#f4f8ef;border-color:#cbdcc2}
+.glossary table{font-size:12px}
+table{width:100%;border-collapse:collapse}
+th,td{border-bottom:1px solid #e3ddd4;padding:6px 7px;text-align:left;vertical-align:top}
+th{background:#eef3e9;color:#335a3a}
+.listening{background:#faf7ff;border-color:#d8caef}
+.voice{background:#fff;border:1px solid #e0d7ed;border-radius:9px;padding:9px;margin:8px 0}
+.voice{display:grid;grid-template-columns:minmax(180px,46%) 1fr;gap:12px;align-items:center}.voice img{width:100%;height:190px;object-fit:contain;background:#f4ecdf;border-radius:7px;display:block;cursor:zoom-in;padding:2px}.voice .voice-title,.voice .small,.voice audio,.voice .transcript{grid-column:2}.voice img{grid-row:1 / span 4}.voice.zulu img{height:190px;object-fit:contain}
+.voice.zulu img{height:82px;object-fit:cover}
+.voice-title{font-weight:700;color:#2c3d55;margin:7px 0 3px;font-size:14px}
+audio{width:100%;height:34px;margin-top:4px}
+.transcript{margin-top:6px}
+.transcript summary{padding:5px 0;font-size:12px;color:#315e9b}
+.after{background:#edf7fb;border-color:#a9d7ec;margin-top:9px}
+.section-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.pink{background:#fff6f8;border-color:#eac8d0}.aqua{background:#f2fbfb;border-color:#c8e0df}
+.purple{background:#faf7ff;border-color:#d8caef}
+.item summary{font-size:13px;padding:8px 10px}
+.item .inside{padding:0 12px 12px}
+.song{background:#fff;border-color:#d8c6ef}
+.song-head{display:flex;gap:12px;align-items:center}
+.song-img{width:43%;max-height:125px;object-fit:cover;border-radius:8px;cursor:zoom-in}
+.song audio{width:50%}
+.song-controls{display:flex;gap:8px;margin-top:10px}
+.bottom{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:12px}
+.bottom .mini{border:1px solid var(--line);border-radius:9px;padding:11px;background:#fff}
+.mini h3{font-size:14px}
+.mini button{width:100%;margin-top:8px}
+.quote{text-align:center;margin-top:12px;padding:10px;background:#fff8e7;border-radius:8px;font-size:16px}
+.modal{position:fixed;inset:0;background:rgba(10,20,30,.78);display:none;align-items:center;justify-content:center;z-index:99;padding:20px}
+.modal.open{display:flex}
+.modalbox{max-width:95vw;max-height:90vh;background:#fff;border-radius:10px;overflow:auto;position:relative}
+.modalbox img{display:block;max-width:95vw;max-height:82vh;margin:auto}
+.close{position:absolute;right:8px;top:7px;width:34px;height:34px;border:0;border-radius:50%;background:#243a55;color:#fff;font:20px Arial;cursor:pointer}
+.feedback{display:none;background:#eef6e9;border:1px solid #c6dcbf;border-radius:7px;padding:7px;margin-top:7px;color:#45633e}
+.feedback.show{display:block}
+.choice{border:1px solid #d6c9e8;background:#fff;border-radius:20px;padding:7px 10px;margin:3px;cursor:pointer;font:12px Arial;color:#4d377f}
+.choice.selected{background:#6f4bb4;color:#fff}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.bottom{grid-template-columns:1fr 1fr 1fr}.section-row{grid-template-columns:1fr}.voice{grid-template-columns:1fr}.voice img{grid-column:1;grid-row:auto;height:220px}.voice .voice-title,.voice .small,.voice audio,.voice .transcript{grid-column:1}}
+@media(max-width:600px){.top{flex-wrap:wrap}.title{order:3;flex-basis:100%}.title h1{font-size:28px}.bottom{grid-template-columns:1fr 1fr}}
+
+.major{border:0;background:transparent;border-radius:0}
+.major>summary,.major-section>summary{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:13px 4px;color:var(--navy);font-size:18px;font-weight:700;
+}
+.major>summary:before,.major-section>summary:before{display:none}
+.major-hint{font:700 10px Arial,sans-serif;letter-spacing:.06em;color:var(--purple)}
+.major-content{padding-top:4px}
+.major-section{
+  display:block;margin-top:12px;border:1px solid var(--line);
+  border-radius:10px;background:#fff;box-shadow:var(--shadow);overflow:hidden
+}
+.major-section>summary{
+  padding:14px 16px;background:#faf7ff;color:#4f3786
+}
+.major-section-content{padding:0 0 2px}
+
+.song-tasks-panel{background:#fbf8ff;border-color:#d8c6ef}
+.song-tasks-panel>.small{margin-bottom:8px;color:#6a6178}
+.song-tasks-panel .item{margin:7px 0;background:#fff}
+.song-tasks-panel .item summary{color:#4f3786}
+
+.song-task-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer}
+#songTasks{scroll-margin-top:18px}
+#songTasks.song-task-target{outline:2px solid #8b63c7;outline-offset:3px}
+.target-highlight{animation:taskFlash 1.4s ease}
+@keyframes taskFlash{0%{box-shadow:0 0 0 0 rgba(111,75,180,.0)}35%{box-shadow:0 0 0 6px rgba(111,75,180,.22)}100%{box-shadow:0 0 0 0 rgba(111,75,180,.0)}}
+.song-task-link{cursor:pointer}
+''</style>
+</head>
+<body>
+<main>
+<div class="top">
+ <div class="module">MODULE 2</div>
+ <div class="title"><h1>Block 3 <span>What Is Wealth?</span></h1><div class="subtitle">Four voices. Many centuries. One timeless question.</div></div>
+ <div class="navicons">♧　⌂　☰</div>
+</div>
+
+<div class="layout">
+<div>
+<section class="card lead" id="lead">
+<h2>💡 BEFORE YOU READ</h2>
+<div class="q"><strong>1. The word “wealth” usually means money. But can a person be rich without having much money?</strong><textarea placeholder="Write your first thought…"></textarea></div>
+<div class="q"><strong>2. Look at the four voices below. They are from Ancient Rome, 19th-century America, modern Sweden, and African folklore. What do you think they might have in common?</strong><textarea placeholder="Your prediction…"></textarea></div>
+<div class="q"><strong>3. Before you read, write one sentence that defines “true wealth” for you.</strong><textarea placeholder="To me, true wealth means…"></textarea></div>
+</section>
+
+<section class="card reading" id="text" style="margin-top:10px">
+<h2>THE TEXT: “WHAT IS WEALTH?” <span class="collapse" onclick="document.getElementById('fullText').open=!document.getElementById('fullText').open">COLLAPSE⌃</span></h2>
+<details id="fullText" open>
+<summary>OPEN / CLOSE COMPLETE TEXT</summary>
+<div style="padding:0 12px 12px">
+<p><strong>VOICE 1. Ancient Rome (Seneca, 4 BC–65 AD, philosopher)</strong><br>
+“It is not the man who has too little, but the man who craves more, that is poor. Poverty is not having too little; it is wanting more. Wealth consists not in having great possessions, but in having few wants. A man is rich in proportion to the number of things he can afford to let alone.”</p>
+<p><strong>VOICE 2. 19th Century America (Henry David Thoreau, 1817–1862, writer and naturalist)</strong><br>
+“I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived. Most of the luxuries, and many of the so-called comforts of life, are not only not indispensable, but positive hindrances to the elevation of mankind. A man is rich in proportion to the number of things which he can afford to let alone.” — from <em>Walden; or, Life in the Woods</em></p>
+<p><strong>VOICE 3. Modern Sweden (The Law of Jante / Lagom)</strong><br>
+In Scandinavian culture, there is an unspoken rule: <em>“Lagom är bäst”</em> — “The right amount is best.” Not too much, not too little. Enough. There is also the Law of Jante, which warns against the belief that you are better than others. Its deeper meaning here is about equality of worth. No one is above, no one is beneath. Wealth is not showing off; wealth is having exactly what you need — and no more than your neighbour.</p>
+<p><strong>VOICE 4. Africa (Zulu Proverb, South Africa)</strong><br>
+<em>“Umuntu ngumuntu ngabantu.”</em><br>
+This means: “A person is a person through other people.” A Zulu elder explained it this way: “I am because we are. Your wealth is not in your bank account. Your wealth is in your relationships. If you have many people who love you, you are a billionaire. If you are alone with your money, you are a beggar.”</p>
+<p><strong>VOICE 5. A Modern Voice (You)</strong><br>
+After reading these four voices, complete the sentence:<br>
+<strong>“To me, real wealth means ______________________________.”</strong></p>
+</div>
+</details>
+</section>
+
+<section class="card glossary" style="margin-top:10px" id="glossary">
+<h2>📖 GLOSSARY <span class="collapse" onclick="document.getElementById('gloss').open=!document.getElementById('gloss').open">COLLAPSE⌃</span></h2>
+<details id="gloss"><summary>OPEN / CLOSE GLOSSARY</summary>
+<div style="padding:0 10px 10px">
+<table><tr><th>Word / Phrase</th><th>Pronunciation (AmE)</th><th>Meaning (Russian)</th></tr><tr><td>wealth</td><td>[welθ]</td><td>богатство</td></tr><tr><td>to crave</td><td>[kreɪv]</td><td>жаждать, сильно хотеть</td></tr><tr><td>poor</td><td>[pʊr]</td><td>бедный</td></tr><tr><td>possessions</td><td>[pəˈzeʃənz]</td><td>имущество, владения</td></tr><tr><td>wants (n)</td><td>[wɑːnts]</td><td>желания, потребности</td></tr><tr><td>in proportion to</td><td>[ɪn prəˈpɔːrʃən tuː]</td><td>пропорционально, в соответствии с</td></tr><tr><td>to afford</td><td>[əˈfɔːrd]</td><td>позволить себе (финансово)</td></tr><tr><td>to let alone</td><td>[let əˈloʊn]</td><td>оставить в покое, обойтись без</td></tr><tr><td>deliberately</td><td>[dɪˈlɪbərətli]</td><td>осознанно, намеренно</td></tr><tr><td>essential</td><td>[ɪˈsenʃl]</td><td>существенный, необходимый</td></tr><tr><td>luxuries</td><td>[ˈlʌkʃəriz]</td><td>предметы роскоши</td></tr><tr><td>so-called</td><td>[soʊ kɔːld]</td><td>так называемый</td></tr><tr><td>indispensable</td><td>[ˌɪndɪˈspensəbl]</td><td>незаменимый, обязательный</td></tr><tr><td>hindrance</td><td>[ˈhɪndrəns]</td><td>препятствие, помеха</td></tr><tr><td>elevation</td><td>[ˌelɪˈveɪʃn]</td><td>возвышение, подъём</td></tr><tr><td>mankind</td><td>[mænˈkaɪnd]</td><td>человечество</td></tr><tr><td>unspoken</td><td>[ʌnˈspoʊkən]</td><td>невысказанный</td></tr><tr><td>rule</td><td>[ruːl]</td><td>правило</td></tr><tr><td>amount</td><td>[əˈmaʊnt]</td><td>количество</td></tr><tr><td>enough</td><td>[ɪˈnʌf]</td><td>достаточно</td></tr><tr><td>to warn</td><td>[wɔːrn]</td><td>предупреждать</td></tr><tr><td>to crush</td><td>[krʌʃ]</td><td>сокрушать, подавлять</td></tr><tr><td>ambition</td><td>[æmˈbɪʃn]</td><td>амбиция, честолюбие</td></tr><tr><td>equality</td><td>[iˈkwɑːləti]</td><td>равенство</td></tr><tr><td>worth</td><td>[wɜːrθ]</td><td>ценность, достоинство</td></tr><tr><td>above</td><td>[əˈbʌv]</td><td>выше</td></tr><tr><td>beneath</td><td>[bɪˈniːθ]</td><td>ниже</td></tr><tr><td>to show off</td><td>[ʃoʊ ɔːf]</td><td>хвастаться, красоваться</td></tr><tr><td>neighbour</td><td>[ˈneɪbər]</td><td>сосед</td></tr><tr><td>elder</td><td>[ˈeldər]</td><td>старейшина</td></tr><tr><td>billionaire</td><td>[ˌbɪljəˈner]</td><td>миллиардер</td></tr><tr><td>beggar</td><td>[ˈbeɡər]</td><td>нищий</td></tr><tr><td>lagom</td><td>[ˈlɑːɡoʊm]</td><td>«в самый раз» (шведская концепция)</td></tr><tr><td>relationship</td><td>[rɪˈleɪʃnʃɪp]</td><td>отношения, связь</td></tr></table>
+</div></details>
+</section>
+</div>
+
+<div>
+<section class="card listening" id="listen"><h2>🎧 LISTENING ROOM — FOUR VOICES</h2><div class="small">Listen to each voice. Think about the key idea.</div>
+<div class="voice"><img src="assets/voice1_rome.png" alt="Ancient Roman philosopher" data-image="assets/voice1_rome.png" data-title="Voice 1 — Seneca"><div class="voice-title">1. Ancient Rome — Seneca</div><div class="small">A philosopher on wanting less.</div><audio controls preload="metadata"><source src="assets/voice1_audio.wav" type="audio/wav"></audio><details class="transcript"><summary>TRANSCRIPT</summary><div style="padding:0 8px 8px">It is not the man who has too little, but the man who craves more, that is poor. Poverty is not having too little; it is wanting more. Wealth consists not in having great possessions, but in having few wants. A man is rich in proportion to the number of things he can afford to let alone.</div></details></div>
+<div class="voice"><img src="assets/voice2_lake.png" alt="Man by a lake" data-image="assets/voice2_lake.png" data-title="Voice 2 — Thoreau"><div class="voice-title">2. 19th Century America — Thoreau</div><div class="small">A writer on living deliberately.</div><audio controls preload="metadata"><source src="assets/voice2_audio.wav" type="audio/wav"></audio><details class="transcript"><summary>TRANSCRIPT</summary><div style="padding:0 8px 8px">I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived. Most of the luxuries, and many of the so-called comforts of life, are not only not indispensable, but positive hindrances to the elevation of mankind.</div></details></div>
+<div class="voice"><img src="assets/voice3_window.png" alt="Window and chair" data-image="assets/voice3_window.png" data-title="Voice 3 — Modern Sweden · Lagom / Jante"><div class="voice-title">3. Modern Sweden — Lagom / Jante</div><div class="small">A culture of enough and equality.</div><audio controls preload="metadata"><source src="assets/voice3_audio.wav" type="audio/wav"></audio><details class="transcript"><summary>TRANSCRIPT</summary><div style="padding:0 8px 8px">In Scandinavian culture, there is an unspoken rule: “Lagom är bäst” — “The right amount is best.” Not too much, not too little. Enough. There is also the Law of Jante, which warns against the belief that you are better than others. Its first rule is: “You are not to think you are anything special.” But its deeper meaning is not about crushing ambition — it is about the equality of worth. No one is above, no one is beneath. Wealth is not showing off; wealth is having exactly what you need — and no more than your neighbour.</div></details></div>
+<div class="voice zulu"><img src="assets/zulu_voice4.png" alt="Zulu people" data-image="assets/zulu_voice4.png" data-title="Voice 4 — Zulu proverb"><div class="voice-title">4. Africa — Zulu Proverb</div><div class="small">An elder on relationships.</div><audio controls preload="metadata"><source src="assets/voice4_audio.wav" type="audio/wav"></audio><details class="transcript"><summary>TRANSCRIPT</summary><div style="padding:0 8px 8px">“Umuntu ngumuntu ngabantu.” This means: “A person is a person through other people.” A Zulu elder explained it this way: “I am because we are. Your wealth is not in your bank account. Your wealth is in your relationships. If you have many people who love you, you are a billionaire. If you are alone with your money, you are a beggar.”</div></details></div>
+<div class="card after" style="margin-top:10px"><h3>💬 AFTER LISTENING</h3><p><strong>Which voice touched you most? Why?</strong><br><strong>What is the key idea of each voice in one short phrase?</strong></p><button class="btn" onclick="document.getElementById('afterTask').scrollIntoView({behavior:'smooth'})">OPEN ACTIVITY</button></div></section>
+
+<section class="card song" id="song" style="margin-top:10px">
+<h2>♫ WHAT IS WEALTH? (THE SONG)</h2>
+<div class="small">Listen and sing along!</div>
+<div class="song-head" style="margin-top:8px">
+<audio controls preload="metadata"><source src="assets/wealth_song.mp3" type="audio/mpeg"></audio>
+<img class="song-img" src="assets/wealth_values.png" alt="Symbolic values of wealth across times and cultures" data-image="assets/wealth_values.png" data-title="What Is Wealth? — symbolic values">
+</div>
+<div class="song-controls">
+<button class="btn" onclick="document.getElementById('lyrics').open=!document.getElementById('lyrics').open">SHOW SONG LYRICS</button>
+<button type="button" class="btn light song-task-link" id="songTaskButton">SONG TASKS ✎</button>
+</div>
+<details id="lyrics" style="margin-top:8px">
+<summary>SONG LYRICS</summary>
+<div style="padding:0 10px 10px">
+<div class="section-row">
+<div><h3>ENGLISH</h3>
+<p><strong>Voice 1 — Seneca</strong><br>It is not the man who has too little,<br>But the man who craves more, that is poor.<br>Wealth consists not in having great possessions,<br>But in having few wants.</p>
+<p><strong>Voice 2 — Thoreau</strong><br>I went to the woods because I wished to live deliberately.<br>Most of the luxuries of life are not indispensable.<br>A man is rich in proportion to the number of things which he can afford to let alone.</p>
+<p><strong>Voice 3 — Lagom</strong><br>Lagom är bäst. The right amount is best.<br>Not too much. Not too little. Enough.</p>
+<p><strong>Voice 4 — Zulu proverb</strong><br>Umuntu ngumuntu ngabantu.<br>A person is a person through other people.<br>Your wealth is in your relationships.</p>
+<p><strong>Final:</strong> To me, real wealth means having enough… and having someone to share it with.</p></div>
+<div><h3>РУССКАЯ ВЕРСИЯ</h3>
+<p><strong>Голос 1 — Сенека</strong><br>Беден не тот, у кого мало, а тот, кто жаждет большего.<br>Богатство — не в великих владениях, а в немногих желаниях.</p>
+<p><strong>Голос 2 — Торо</strong><br>Я ушёл в лес, потому что желал жить осознанно.<br>Большинство предметов роскоши не необходимы.</p>
+<p><strong>Голос 3 — Лагом</strong><br>Лучше всего — в меру.<br>Не слишком много. Не слишком мало. Достаточно.</p>
+<p><strong>Голос 4 — Зулусская пословица</strong><br>Человек является человеком благодаря другим людям.<br>Твоё богатство — в твоих отношениях.</p>
+<p><strong>Финал:</strong> Для меня настоящее богатство — иметь достаточно и иметь с кем этим поделиться.</p></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+</div>
+
+<div class="section-row" id="activities">
+<section class="card pink">
+<h2>♥ FOR THE HEART & MIND</h2>
+<details class="item"><summary>A. Comprehension Check (8 questions)</summary><div class="inside">
+<ol><li>What makes a person poor according to Seneca?</li><li>What does wealth consist in?</li><li>Why did Thoreau go to the woods?</li><li>What does he say about luxuries?</li><li>What does <em>lagom</em> mean?</li><li>What does the Law of Jante warn against?</li><li>What does the Zulu proverb mean?</li><li>When is a person a “billionaire” in the final voice?</li></ol>
+<button class="btn light" onclick="toggle('heartAnswers')">CHECK YOURSELF</button><div id="heartAnswers" class="feedback">The answers are found directly in the four voices: wanting more; having few wants; living deliberately; luxuries are not indispensable; “enough”; equality rather than superiority; a person through other people; and being loved by many people.</div>
+</div></details>
+<details class="item"><summary>B. Think & Analyse (4 questions)</summary><div class="inside"><ol><li>Why do Seneca and Thoreau reach a similar idea centuries apart?</li><li>How can “enough” be a form of wealth?</li><li>How does the Zulu proverb challenge a bank-account definition of wealth?</li><li>Which voice is most relevant to modern consumer culture?</li></ol><textarea placeholder="Choose one and answer…"></textarea></div></details>
+<details class="item"><summary>C. Synthesis: Four Voices Matrix</summary><div class="inside"><table><tr><th>Voice</th><th>Key idea</th><th>Modern example</th></tr><tr><td>Seneca</td><td><input></td><td><input></td></tr><tr><td>Thoreau</td><td><input></td><td><input></td></tr><tr><td>Lagom / Jante</td><td><input></td><td><input></td></tr><tr><td>Zulu proverb</td><td><input></td><td><input></td></tr></table></div></details>
+<details class="item"><summary>D. Discuss & Relate (4 questions)</summary><div class="inside"><p>Which voice would you explain to a friend? Why? Has your definition of wealth changed?</p><textarea placeholder="Discuss / write your response…"></textarea></div></details>
+</section>
+
+<section class="card aqua"><h2>▮ FOR LANGUAGE SKILLS</h2>
+<details class="item"><summary>A. Vocabulary Focus — Synonyms & Antonyms</summary><div class="inside"><p><strong>Find a synonym in the texts for:</strong> to desire strongly · necessary · to demonstrate wealth proudly.</p><div class="section-row"><input placeholder="to desire strongly →"><input placeholder="necessary →"></div><input style="margin-top:8px" placeholder="to demonstrate wealth proudly →"><p><strong>Find an antonym in the texts for:</strong> rich · essential · above.</p><div class="section-row"><input placeholder="rich →"><input placeholder="essential →"></div><input style="margin-top:8px" placeholder="above →"></div></details>
+<details class="item"><summary>B. Word Formation</summary><div class="inside"><table><tr><th>Noun</th><th>Adjective</th><th>Opposite Adjective</th></tr><tr><td>poverty</td><td>poor</td><td><input></td></tr><tr><td><input></td><td>essential</td><td>non-essential / <input></td></tr><tr><td>equality</td><td>equal</td><td><input></td></tr><tr><td>ambition</td><td><input></td><td>unambitious</td></tr></table></div></details>
+<details class="item"><summary>C. Contextual Meaning</summary><div class="inside"><p>The word <strong>want</strong> can be a verb (to desire) or a noun (a lack, a need). Find both uses in Seneca’s text. Explain the difference.</p><textarea placeholder="Verb: … / Noun: …"></textarea><p><strong>Complete the sentences with words from the glossary:</strong></p><div class="section-row"><input placeholder="a) He is never satisfied. He always ______ more and more."><input placeholder="b) A smartphone is not a ______; it is a necessity today."></div><div class="section-row"><input placeholder="c) Her negative attitude was a ______ to our team's success."><input placeholder="d) In some cultures, it is rude to ______ your wealth."></div><input style="margin-top:8px" placeholder="e) The ______ of the village gathered to make a decision."></div></details>
+<details class="item"><summary>D. Grammar in Context</summary><div class="inside"><p><strong>Complex sentences with relative clauses.</strong> Find in Thoreau’s text: “I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach...” Identify the main clause, reason clause (because), infinitive of purpose, and noun clause (what...).</p><textarea placeholder="Main clause… / reason clause… / infinitive of purpose… / noun clause…"></textarea><p><strong>Defining relative clauses:</strong> Write your own definition of wealth using <em>who, which,</em> or <em>that</em>.</p><input placeholder="True wealth is something THAT…"><p><strong>Passive voice:</strong> Find: “Your wealth is not measured by your bank account.” Why is passive voice used here? What is the focus?</p><textarea placeholder="The passive focuses on…"></textarea><input placeholder="Active: People…"><p><strong>Quoting and reporting:</strong> Choose one quote and report it in indirect speech.</p><textarea placeholder="Seneca argued that…"></textarea></div></details>
+<details class="item"><summary>E. Brain Workout — Critical Thinking</summary><div class="inside"><h3>Synthesis Matrix</h3><table><tr><th>Voice</th><th>Key idea (3–5 words)</th><th>A modern example</th></tr><tr><td>Seneca</td><td><input></td><td><input></td></tr><tr><td>Thoreau</td><td><input></td><td><input></td></tr><tr><td>Lagom / Jante</td><td><input></td><td><input></td></tr><tr><td>Zulu proverb</td><td><input></td><td><input></td></tr></table><h3>Compare & Contrast</h3><p>Seneca and Thoreau use almost the same sentence. What is similar? What is different? (Ancient Roman senator vs 19th-century naturalist)</p><textarea placeholder="Your comparison…"></textarea><h3>Metaphor Extension</h3><p>Where would you go to find your own “essential facts of life”? Describe it in 3–4 sentences.</p><textarea placeholder="I would go…"></textarea><h3>Speed Debate</h3><p>Person A: “The Law of Jante is dangerous — it stops people from achieving greatness.” Person B: “The Law of Jante is wisdom — it reminds us that no one is better than anyone else.”</p><button class="choice" onclick="choose(this)">Dangerous</button><button class="choice" onclick="choose(this)">Wisdom</button><button class="choice" onclick="choose(this)">Both / depends</button><textarea placeholder="My argument…"></textarea></div></details></section>
+</div>
+
+<div class="bottom" id="afterTask"><div class="mini purple"><h3>★ BEYOND THE TEXT</h3><p>Choose ONE task.</p><button class="btn" onclick="document.getElementById('beyondPanel').scrollIntoView({behavior:'smooth'})">CHOOSE PATH</button></div><div class="mini" style="background:#f2f8ed"><h3>🌿 LAGOM CHALLENGE</h3><p>Practice “exactly enough” in one area for a week.</p><button class="btn" style="background:#3e7b43" onclick="document.getElementById('lagomTask').scrollIntoView({behavior:'smooth'})">START CHALLENGE</button></div><div class="mini" style="background:#fff7e8"><h3>♟ MODERN VOICE 6</h3><p>Find a modern non-material voice about wealth.</p><button class="btn" style="background:#c27c0d" onclick="document.getElementById('voice6').scrollIntoView({behavior:'smooth'})">WRITE NOW ✎</button></div><div class="mini" style="background:#eef4fb"><h3>▣ CURATE YOUR OWN ANTHOLOGY</h3><p>Add one more voice from any culture or century.</p><button class="btn" style="background:#315f9b" onclick="document.getElementById('curate').scrollIntoView({behavior:'smooth'})">ADD A VOICE ＋</button></div><div class="mini purple" id="reflection"><h3>★ VOICE 5 — YOUR REFLECTION</h3><p>“To me, real wealth means…”</p><textarea id="refText" placeholder="Write your answer here…"></textarea><button class="btn" onclick="saveRef()">SAVE</button><div id="refSaved" class="feedback"></div></div></div>
+<details class="major-section">
+<summary><span>★ BEYOND THE TEXT & HEART / MIND EXTENSION</span><span class="major-hint">OPEN</span></summary>
+<div class="major-section-content">
+<div class="section-row" id="beyondPanel" style="margin-top:12px"><section class="card pink"><h2>★ BEYOND THE TEXT — CHOOSE ONE</h2><details class="item" open><summary>1. Voice 5 — Complete the Sentence</summary><div class="inside"><p>Complete “To me, real wealth means…” and expand it into 80–100 words. Use at least 5 glossary words.</p><textarea placeholder="Your paragraph…"></textarea></div></details><details class="item"><summary>2. A Letter to Seneca or Thoreau</summary><div class="inside"><p>Thank them, argue with them, or ask a question about modern life. How would they judge our consumer society?</p><textarea placeholder="Dear Seneca / Dear Thoreau…"></textarea></div></details><details class="item" id="voice6"><summary>3. A Modern Voice 6</summary><div class="inside"><p>Research a modern thinker, writer, or artist who speaks about wealth in a non-material way. Bring their quote to class and explain why it belongs.</p><textarea placeholder="Who? Quote? Why?…"></textarea></div></details><details class="item"><summary>4. AI Image (Optional)</summary><div class="inside"><p>Create an image that represents “A person is a person through other people.”</p><div class="callout" style="background:#fff"><strong>Prompt:</strong> Many diverse figures standing together, connected by golden threads of light. Their individual shapes are distinct, but together they form a larger human figure. Warm earth tones, symbolic and uplifting style.</div></div></details><details class="item" id="lagomTask"><summary>5. The Lagom Challenge</summary><div class="inside"><p>Choose possessions, screen time, spending, or eating. Try to live with “exactly enough, not too much.” Write 5–7 sentences in English: What was difficult? What did you learn?</p><textarea placeholder="Your reflection…"></textarea></div></details><details class="item" id="curate"><summary>6. Curate Your Own Anthology</summary><div class="inside"><p>Find ONE more voice about wealth from any culture or century. It can be a poem, proverb, song lyric, or film scene. Add it and explain why it belongs.</p><textarea placeholder="Source, quote, introduction…"></textarea></div></details></section><section class="card aqua"><h2>♥ FOR THE HEART & MIND</h2><details class="item"><summary>A. Comprehension Check</summary><div class="inside"><ol><li>According to Seneca, what makes a person poor?</li><li>What does Seneca say wealth consists in?</li><li>Why did Thoreau go to the woods?</li><li>What does Thoreau say about luxuries and comforts?</li><li>What does <em>lagom</em> mean?</li><li>What does the Law of Jante warn against?</li><li>Translate “Umuntu ngumuntu ngabantu.”</li><li>When is a person a billionaire — and when are they a beggar?</li></ol><button class="btn light" onclick="toggle('heartAnswers')">CHECK YOURSELF</button><div id="heartAnswers" class="feedback">The answers are in the four voices: wanting more; having few wants; living deliberately; luxuries are not indispensable; “enough”; equality of worth; a person through other people; loved by many vs alone with money.</div></div></details><details class="item"><summary>B. Think & Analyse</summary><div class="inside"><ol><li>Why does the same idea appear in different centuries and cultures?</li><li>What is the deeper meaning of the Law of Jante here?</li><li>How does the Zulu proverb connect to Text 2.A and Text 2.B?</li><li>Which voice challenges modern consumer culture most?</li></ol><textarea placeholder="Your analysis…"></textarea></div></details><details class="item"><summary>C. Discuss & Relate</summary><div class="inside"><ol><li>Has your definition changed? How?</li><li>Can you live deliberately in a modern city?</li><li>Who embodies lagom today?</li><li>Is loneliness a form of poverty?</li><li>Which voice speaks most deeply to you?</li></ol><textarea placeholder="Your response…"></textarea></div></details></section></div>
+
+<section class="card song-tasks-panel" id="songTasks" style="margin-top:12px">
+<h2>♫ SONG TASKS</h2>
+<div class="small">Listen → Lyrics → Translation → Song Tasks → Create</div>
+
+<details class="item">
+<summary>A. First Impressions — What Is Wealth?</summary>
+<div class="inside">
+<p>Listen to the song once. Then answer:</p>
+<ol>
+<li>What is the main idea of the song?</li>
+<li>Which emotion or feeling does the song leave you with?</li>
+<li>If you had to describe the song in one word, what would it be? Why?</li>
+</ol>
+<textarea placeholder="Your first impressions…"></textarea>
+</div>
+</details>
+
+<details class="item">
+<summary>B. The Four Voices — One Question, Different Answers</summary>
+<div class="inside">
+<p>Match each voice with the idea it expresses most strongly.</p>
+<table>
+<tr><th>Voice</th><th>Key idea</th><th>Your explanation</th></tr>
+<tr><td>Seneca</td><td><input placeholder="e.g. wanting less"></td><td><input></td></tr>
+<tr><td>Thoreau</td><td><input placeholder="e.g. essential life"></td><td><input></td></tr>
+<tr><td>Lagom</td><td><input placeholder="e.g. enough"></td><td><input></td></tr>
+<tr><td>Zulu proverb</td><td><input placeholder="e.g. relationships"></td><td><input></td></tr>
+</table>
+</div>
+</details>
+
+<details class="item">
+<summary>C. Compare and Discuss — What Is Real Wealth?</summary>
+<div class="inside">
+<ol>
+<li>Seneca and Thoreau both suggest that having fewer wants can make a person richer. Why?</li>
+<li>How is the idea of <em>lagom</em> similar to their ideas? How is it different?</li>
+<li>Why does the Zulu proverb move the idea of wealth from possessions to relationships?</li>
+<li>Which voice gives the strongest answer to the question “What is wealth?” Explain.</li>
+</ol>
+<textarea placeholder="Discuss and write your ideas…"></textarea>
+</div>
+</details>
+
+<details class="item">
+<summary>D. The Moment of Choice — Enough or More?</summary>
+<div class="inside">
+<p>Imagine you are offered something you really want, but you already have enough. Which voice would help you make your decision?</p>
+<p>Choose one: <button class="choice" onclick="choose(this)">Seneca</button>
+<button class="choice" onclick="choose(this)">Thoreau</button>
+<button class="choice" onclick="choose(this)">Lagom</button>
+<button class="choice" onclick="choose(this)">Zulu proverb</button></p>
+<textarea placeholder="I would follow this voice because…"></textarea>
+</div>
+</details>
+
+<details class="item">
+<summary>E. Vocabulary from the Song</summary>
+<div class="inside">
+<p>Match the word or phrase from the song with its meaning.</p>
+<table>
+<tr><th>Word / phrase</th><th>Meaning</th></tr>
+<tr><td>1. to crave</td><td>a) to have exactly the amount needed</td></tr>
+<tr><td>2. possessions</td><td>b) to want something very strongly</td></tr>
+<tr><td>3. indispensable</td><td>c) things that you own</td></tr>
+<tr><td>4. to show off</td><td>d) absolutely necessary</td></tr>
+<tr><td>5. enough</td><td>e) to try to impress people by showing what you have</td></tr>
+</table>
+<input placeholder="Answers: 1–__, 2–__, 3–__, 4–__, 5–__">
+</div>
+</details>
+
+<details class="item">
+<summary>F. Understanding the Messages</summary>
+<div class="inside">
+<p>Explain what each line means in your own words.</p>
+<ol>
+<li><strong>“Wealth consists not in having great possessions, but in having few wants.”</strong></li>
+<li><strong>“The right amount is best. Not too much. Not too little. Enough.”</strong></li>
+<li><strong>“Your wealth is in your relationships.”</strong></li>
+<li><strong>“If you are alone with your money, you are a beggar.”</strong></li>
+</ol>
+<textarea placeholder="Write your explanations…"></textarea>
+</div>
+</details>
+
+<details class="item">
+<summary>G. Expressing Your Own Philosophy</summary>
+<div class="inside">
+<p>The song invites you to complete the final sentence: <strong>“To me, real wealth means…”</strong></p>
+<p>Write three sentences about your own idea of wealth. Try to use at least two words from the song glossary.</p>
+<ol>
+<li>To me, real wealth means __________________________________.</li>
+<li>I think a rich person is someone who ________________________.</li>
+<li>For me, money is __________________________________________.</li>
+</ol>
+<textarea placeholder="My own philosophy…"></textarea>
+</div>
+</details>
+
+<details class="item">
+<summary>H. Brain Workout — One Question, Four Answers</summary>
+<div class="inside">
+<p>Imagine the four voices are sitting together and discussing one question:</p>
+<p><strong>“What is the most valuable thing a person can have?”</strong></p>
+<p>Write a short dialogue of 6–8 lines. Let each voice defend its own idea.</p>
+<textarea style="min-height:120px" placeholder="Seneca: …&#10;Thoreau: …&#10;Lagom: …&#10;Zulu elder: …"></textarea>
+</div>
+</details>
+</section>
+
+<div class="quote">❝ Wealth is not about having more, but needing less — and sharing what we have. ❞ ♥</div>
+</main>
+
+<div class="modal" id="modal"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div id="modalBody"></div></div></div>
+
+<script>
+function toggleMoreGloss(){document.getElementById('moreGloss').style.display=document.getElementById('moreGloss').style.display==='none'?'block':'none'}
+function toggle(id){document.getElementById(id).classList.toggle('show')}
+function choose(el){el.parentNode.querySelectorAll('.choice').forEach(x=>x.classList.remove('selected'));el.classList.add('selected')}
+function saveRef(){const v=document.getElementById('refText').value.trim(),f=document.getElementById('refSaved');f.classList.add('show');f.textContent=v?'Saved for this session.':'Write your reflection first.'}
+const modal=document.getElementById('modal'),mb=document.getElementById('modalBody');
+document.querySelectorAll('[data-image]').forEach(el=>el.addEventListener('click',()=>{mb.innerHTML='<img src="'+el.dataset.image+'" style="max-width:95vw;max-height:88vh;display:block;margin:auto">';modal.classList.add('open')}));
+function closeModal(){modal.classList.remove('open');mb.innerHTML=''}
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+
+const songTaskButton=document.getElementById('songTaskButton');
+const songTaskPanel=document.getElementById('songTasks');
+if(songTaskButton && songTaskPanel){
+  songTaskButton.addEventListener('click', function(){
+    songTaskPanel.scrollIntoView({behavior:'smooth', block:'start'});
+    songTaskPanel.classList.add('target-highlight');
+    setTimeout(()=>songTaskPanel.classList.remove('target-highlight'), 1400);
+  });
+}
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const link=document.querySelector('.song-task-link');
+  const target=document.getElementById('songTasks');
+  if(link && target){
+    link.addEventListener('click', function(){
+      target.classList.remove('song-task-target');
+      void target.offsetWidth;
+      target.classList.add('song-task-target');
+      setTimeout(()=>target.classList.remove('song-task-target'),1400);
+    });
+  }
+});
+</script>
+<script>
+(function(){
+  let timer;
+  function sendHeight(){
+    clearTimeout(timer);
+    timer=setTimeout(function(){
+      try{
+        parent.postMessage({
+          type:'module2Height',
+          height:Math.max(document.body.scrollHeight,document.documentElement.scrollHeight)
+        },'*');
+      }catch(e){}
+    },60);
+  }
+  window.addEventListener('load',sendHeight);
+  document.addEventListener('toggle',sendHeight,true);
+  setTimeout(sendHeight,300);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Module 8 — Technology · Block 3</title>
+<style>
+:root{--navy:#071827;--navy2:#0d2a40;--teal:#267c86;--green:#17483f;--cream:#fbf8f0;--gold:#c89a43;--ink:#142533;--pink:#a94972;--purple:#57418d;--line:#d9d4c8;}
+*{box-sizing:border-box} body{margin:0;background:#f4f1e9;color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
+.top{background:var(--navy);color:white;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5}
+.brand{font:700 20px Arial,sans-serif;letter-spacing:.08em;color:#f2b632} .nav{font:700 13px Arial,sans-serif;opacity:.9}
+.page{max-width:1320px;margin:auto;background:var(--cream);box-shadow:0 0 30px #0001}
+.hero{display:grid;grid-template-columns:38% 62%;min-height:430px;background:var(--navy2);color:white}
+.heroText{padding:52px 40px 40px} .tag{font:700 15px Arial,sans-serif;letter-spacing:.04em;color:#d9e6df}
+.badge{display:inline-block;background:#245e4f;border-radius:9px;padding:7px 11px;margin-right:10px;font:bold 26px Arial}
+h1{font:700 54px/1.02 Georgia;margin:38px 0 18px;letter-spacing:.02em}
+.subtitle{font-style:italic;font-size:24px;color:#c9e1d5;border-top:1px solid #b78e3a;padding-top:18px}
+.heroImg{position:relative;overflow:hidden} .heroImg img{width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+.zoomHint{position:absolute;right:18px;bottom:18px;background:#0009;color:#fff;padding:8px 12px;border-radius:20px;font:12px Arial}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:24px}
+.card,.section{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 2px 8px #0000000a}
+.cardHead{padding:13px 18px;background:var(--green);color:white;font:bold 17px Arial;letter-spacing:.04em}
+.cardHead.blue{background:var(--navy2)} .cardHead.teal{background:var(--teal)}
+.cardBody{padding:20px} .btn{display:inline-block;background:#17483f;color:#fff;padding:11px 18px;border-radius:8px;font:bold 14px Arial;text-decoration:none;border:0;cursor:pointer}
+audio,video{width:100%;margin-top:12px}
+.section{margin:0 24px 18px} summary{cursor:pointer;list-style:none;padding:16px 20px;font:bold 20px Arial;color:#17352e;background:#f3efe6}
+summary::-webkit-details-marker{display:none} summary:after{content:'⌄';float:right} details[open] summary:after{content:'⌃'}
+.content{padding:20px 24px} .story p{font-size:17px;margin:0 0 15px} .lead{background:#eef4f0;border-left:5px solid var(--teal);padding:18px;border-radius:10px}
+.table{width:100%;border-collapse:collapse;font-size:16px} .table th,.table td{border-bottom:1px solid #ddd;padding:10px;text-align:left} .table th{background:#f3f0e8}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:0 24px 18px}
+.two .section{margin:0} .pink summary{background:#faeef3;color:#7d274e} .purple summary{background:#f0edf9;color:#3f2d72}
+.question{margin:12px 0} .exercise{padding:15px;background:#faf9f5;border-radius:10px;margin:12px 0}
+.song{margin:0 24px 18px;border:1px solid #b9d4d6;border-radius:14px;overflow:hidden;background:white}
+.songHead{background:var(--teal);color:#fff;padding:15px 20px;font:bold 20px Arial}
+.songGrid{display:grid;grid-template-columns:28% 72%;gap:0} .songCell{padding:20px;border-right:1px solid #ddd;min-width:0}.songCell:first-child .songImg{display:block;margin-top:16px}.songCell:first-child .songImg{display:block;margin-top:16px} .songCell:last-child{border-right:0}
+.songImg{width:100%;height:auto;max-height:420px;min-height:0;object-fit:contain;background:#f7f4ee;cursor:zoom-in;border-radius:8px}
+.lyrics{display:grid;grid-template-columns:1fr 1fr;gap:20px} .lyric-part{margin-bottom:18px} .lyric-part h4{color:var(--teal);margin:0 0 6px;font:700 15px Arial;text-transform:uppercase} .lyric-part p{margin:3px 0}
+.project{background:#eef7f4;border:1px solid #b7d6cd;border-radius:12px;padding:18px} ol{padding-left:24px} li{margin:7px 0}
+footer{background:var(--navy);color:#fff;padding:20px 28px;display:flex;justify-content:space-between;font:bold 13px Arial} footer a{color:#f2b632;text-decoration:none;cursor:pointer}
+.lightbox{display:none!important} .lightbox img{display:block;max-width:94vw;max-height:92vh;width:auto!important;height:auto!important;object-fit:contain;margin:auto} .lightbox.show{display:none!important} .close{position:absolute;right:25px;top:18px;color:white;font:32px Arial;cursor:pointer}
+@media(max-width:900px){.hero,.grid3,.two,.songGrid{grid-template-columns:1fr} h1{font-size:42px} .lyrics{grid-template-columns:1fr} .top{position:static}}</style>
+<style>
+.photo-pop{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;pointer-events:auto;background:transparent!important;}
+.photo-pop img{display:block!important;max-width:90vw!important;max-height:90vh!important;width:auto!important;height:auto!important;object-fit:contain!important;box-shadow:0 10px 30px rgba(0,0,0,.25)!important;border-radius:10px!important;background:#fff!important;cursor:zoom-out!important;}
+.photo-pop-close{position:fixed;right:18px;top:14px;z-index:2147483648;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#263746;font:32px/38px Arial;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.18);}
+</style></head>
+<body>
+<div class="top"><div class="brand">LANGUAGE<br/>OF THE SOUL</div><div class="nav">THE JOURNEY   •   MODULE 8: TECHNOLOGY   •   BLOCK 3</div></div>
+<div class="page">
+<section class="hero">
+<div class="heroText">
+<div class="tag"><span class="badge">03</span> THE JOURNEY</div>
+<h1>THE HOME<br/>ON WHEELS</h1>
+<div class="subtitle">Petya, Iris, and the Home on Wheels</div>
+</div>
+<div class="heroImg"><img alt="Petya and Iris" class="zoomable" src="assets/petya-iris.png"/><div class="zoomHint">Click to enlarge</div></div>
+</section>
+<div class="grid3">
+<div class="card"><div class="cardHead">▣ THE STORY</div><div class="cardBody"><p>Read the story, learn new vocabulary and complete engaging tasks.</p><a class="btn" href="#story">START READING →</a></div></div>
+<div class="card"><div class="cardHead blue">◉ AUDIO TEXT</div><div class="cardBody"><p>Listen to the full story.</p><audio controls="" preload="metadata" src="assets/story-audio.wav"></audio></div></div>
+<div class="card"><div class="cardHead teal">▷ VIDEO</div><div class="cardBody"><p>Watch a short video about Petya and Iris.</p><video controls="" preload="metadata" src="assets/video.mp4"></video></div></div>
+</div>
+<details class="section" id="story" open="True">
+<summary>📖 THE STORY</summary><div class="content story">
+<div class="lead"><strong>Level:</strong> Difficult   ·   <strong>Genre:</strong> Real-life narrative / Travellers' story<br/><strong>Value focus:</strong> Family, kindness, respect for other cultures and helping people in need.</div>
+<details><summary>LEAD-IN</summary><div class="content"><ol><li>Do you follow any travel bloggers? What do you like about them?</li><li>Would you like to travel around the world in a camper van? Why?</li><li>The phrasal verb "to give back" means to help others. How can people "give back" while traveling?</li></ol></div></details>
+<h2>Petya, Iris, and the Home on Wheels</h2>
+<p>Imagine your home on wheels, your office by the ocean, and your neighbours from all over the world. This is the life of Petya and Iris, a couple who have turned their passion for travel into a unique way of living and helping others.</p><p>Petya, originally from Odesa, Ukraine, moved to China for work. There, he met Iris, a local Chinese girl. Despite the cultural differences and her parents' initial worries about a foreigner, their love grew strong. They got married and soon started a life that many only dream of. They bought a camper van and began traveling across China.</p><p>But they didn’t just want to show beautiful postcard views. Their goal was much deeper. On their YouTube channel and Telegram blog, they show life as it really is — the good, the difficult, and the surprising.</p><p>Their travels have taken them not only across all of China but also to England, Bali, Italy, Iceland, Bangladesh, Africa, and even Antarctica. Wherever they go, they have one important rule: respect the local traditions and people.</p>
+<h2>More Than Just Tourists</h2><p>What makes Petya and Iris special is not just their adventurous spirit but their kind hearts. They don’t just film beautiful places. They talk to local people. They listen to their stories. And when they see someone who needs help, they act.</p><p>Iris is a very emotional person. She often cries when she sees someone suffering. And her tears turn into action. The couple is known for helping those in need. Sometimes they simply give money to a poor family. Other times, they buy specific things:</p><p>They bought a laptop for a young boy so he could study properly.</p><p>They bought a cart for an elderly man so he could carry the goods he had to sell to survive.</p><p>In villages, they give sweets and treats to local children, just to see them smile.</p><p>They do all this quietly, without loud announcements. Their viewers find out about these good deeds from their videos and posts, which inspires thousands of others to be kinder too.</p><h2>The Secret of Their Happiness</h2><p>Many people ask Petya and Iris: "What is the secret of their happy marriage and life?" They answer simply: "We support each other. And we remember that the most important thing is not the places we see, but the people we meet and the hearts we touch.</p><p>They live in a small camper van, which can be hard sometimes. There’s not much space. But they have learned that you don't need much to be happy. You need a person who loves you, a sense of adventure, and a desire to make the world a tiny bit better.</p><p>Petya and Iris are not just travelers. They are a small force of good, rolling across the planet in their home on wheels, proving that kindness has no nationality and that the best journey is the one you share.</p>
+</div></details>
+<details class="section"><summary>📚 GLOSSARY</summary><div class="content"><table class="table"><thead><tr><th>Word / Phrase</th><th>Transcription</th><th>Translation</th></tr></thead><tbody>
+<tr><td>camper van</td><td>[ˈkæmpər væn]</td><td>дом на колесах, автодом</td></tr><tr><td>initially</td><td>[ɪˈnɪʃəli]</td><td>изначально, сначала</td></tr><tr><td>foreigner</td><td>[ˈfɔːrənər]</td><td>иностранец</td></tr><tr><td>deeper</td><td>[ˈdiːpər]</td><td>глубже</td></tr><tr><td>local</td><td>[ˈloʊkl]</td><td>местный</td></tr><tr><td>to respect</td><td>[rɪˈspekt]</td><td>уважать</td></tr><tr><td>tradition</td><td>[trəˈdɪʃn]</td><td>традиция</td></tr><tr><td>adventurous</td><td>[ædˈventʃərəs]</td><td>авантюрный, полный приключений</td></tr><tr><td>to suffer</td><td>[ˈsʌfər]</td><td>страдать</td></tr><tr><td>to turn into</td><td>[tɜːrn ˈɪntə]</td><td>превращаться в</td></tr><tr><td>specific</td><td>[ˈspəˈsɪfɪk]</td><td>конкретный, определённый</td></tr><tr><td>goods</td><td>[ɡʊdz]</td><td>товары</td></tr><tr><td>to survive</td><td>[sərˈvaɪv]</td><td>выживать</td></tr><tr><td>deed</td><td>[diːd]</td><td>поступок, дело</td></tr><tr><td>to inspire</td><td>[ɪnˈspaɪər]</td><td>вдохновлять</td></tr><tr><td>to support</td><td>[səˈpɔːrt]</td><td>поддерживать</td></tr><tr><td>to touch hearts</td><td>[tʌtʃ hɑːrts]</td><td>трогать сердца</td></tr><tr><td>desire</td><td>[dɪˈzaɪər]</td><td>желание, стремление</td></tr><tr><td>tiny</td><td>[ˈtaɪni]</td><td>крошечный</td></tr><tr><td>force</td><td>[fɔːrs]</td><td>сила</td></tr><tr><td>to prove</td><td>[pruːv]</td><td>доказывать</td></tr><tr><td>nationality</td><td>[ˌnæʃəˈnæləti]</td><td>национальность</td></tr>
+</tbody></table></div></details>
+<div class="two">
+<details class="section pink"><summary>♥ FOR THE HEART AND MIND</summary><div class="content">
+<details><summary>A. Comprehension Check</summary><div class="content"><ol><li>Where is Petya originally from, and where did he meet Iris?</li><li>What is special about the way Petya and Iris show their travels?</li><li>Why is Iris described as an "emotional person"?</li><li>What are three examples of how they help people?</li><li>What is the "secret" of their happiness according to them?</li></ol></div></details>
+<details><summary>B. Think &amp; Analyse</summary><div class="content"><ol><li>The text says their goal is "deeper" than showing beautiful views. What does this mean?</li><li>Why do you think Iris cries when she sees people suffering? Is this a weakness or a strength?</li><li>How does their way of helping differ from just giving money to a charity?</li><li>What does the phrase "kindness has no nationality" mean?</li></ol></div></details>
+<details><summary>C. Discuss &amp; Relate</summary><div class="content"><ol><li>Do you think traveling can make a person more open-minded and kind? Why?</li><li>What small acts of kindness could a tourist do when visiting another country?</li><li>If you had a YouTube channel, would you use it to show only beautiful things or real life too? Why?</li></ol></div></details>
+</div></details>
+<details class="section purple"><summary>✎ FOR LANGUAGE SKILLS</summary><div class="content">
+<details><summary>A. Vocabulary Focus</summary><div class="content">
+<div class="exercise"><strong>1. Complete the word families:</strong>
+<table class="table"><tr><th>Verb</th><th>Noun (Person)</th><th>Adjective</th></tr>
+<tr><td>to travel</td><td>traveler</td><td>___________</td></tr>
+<tr><td>___________</td><td>___________</td><td>emotional</td></tr>
+<tr><td>to help</td><td>___________</td><td>___________</td></tr>
+<tr><td>to inspire</td><td>___________</td><td>inspiring</td></tr></table></div>
+<div class="exercise"><strong>2. Find the word in the text that means:</strong><br/>
+a) the way of life of a particular group of people (paragraph 3)<br/>b) a strong wish to do something (paragraph 8)<br/>c) to show that something is true (paragraph 9)</div>
+<div class="exercise"><strong>3. Complete the sentences with words from the glossary:</strong><br/>
+a) They bought a new ___________ for the boy because his old one was broken.<br/>
+b) When you visit a new country, it is important to ___________ the local customs.<br/>
+c) Their videos ___________ thousands of people to be kinder.</div>
+</div></details>
+<details><summary>B. Grammar in Context (Passive Voice &amp; "Used to")</summary><div class="content">
+<div class="exercise"><strong>1. Find examples of the Past Simple Passive in the text.</strong><br/>Example: A laptop was bought for a young boy.</div>
+<div class="exercise"><strong>2. Rewrite the sentences in the Passive Voice:</strong><br/>
+a) Petya and Iris help many people. → Many people ___________ helped by Petya and Iris.<br/>
+b) They bought a cart for an elderly man. → A cart ___________ bought for an elderly man.<br/>
+c) They give sweets to local children. → Sweets ___________ given to local children.</div>
+<div class="exercise"><strong>3. "Used to" for past habits:</strong><br/>Petya moved to China. He <em>used to</em> live in Odesa. (He lived there before, but not now.)<br/><br/>
+Complete the sentence: Iris <em>used to</em> ___________ (live) only in China, but now she travels everywhere with Petya.</div>
+</div></details>
+<details><summary>C. Brain Workout</summary><div class="content">
+<div class="exercise"><strong>1. Phrasal Verbs of Kindness:</strong><br/>
+• <strong>give out</strong> (to distribute): They give out sweets to children.<br/>
+• <strong>help out</strong> (to assist): They always help out families in need.<br/>
+• <strong>give back</strong> (to return help): They believe in giving back to the community.<br/>
+• <strong>care for</strong> (to look after): They care for people they meet on their travels.<br/><br/>
+<strong>Task:</strong> Write one sentence using each phrasal verb in the context of helping others.</div>
+<div class="exercise"><strong>2. Visualizing a Story:</strong> Imagine you are a local child who received sweets from Petya and Iris. Describe that moment in 2-3 sentences.</div>
+<div class="exercise"><strong>3. The Perfect Gift:</strong> Petya and Iris bought a laptop for a student and a cart for an old man. Why were these perfect gifts for those people? What gift would you buy for someone in need in your community?</div>
+</div></details>
+</div></details>
+</div>
+<section class="song">
+<div class="songHead">♫ THE HOME ON WHEELS</div>
+<div class="songGrid">
+<div class="songCell"><h3>Listen to the song</h3><p>Read along with the lyrics.</p><audio controls="" preload="metadata" src="assets/song.mp3"></audio><img alt="Petya and Iris" class="songImg zoomable" src="assets/petya-iris.png"/></div>
+<div class="songCell"><details><summary>LYRICS</summary><div class="content">
+<div class="lyrics"><div><h3>English</h3><div class="lyric-part"><h4>Verse 1</h4><p>We sold the chairs, we sold the table</p><p>Bought a van and we were able</p><p>To leave the city, leave the noise</p><p>To find a life with quieter joys</p></div><div class="lyric-part"><h4>Pre-chorus</h4><p>They said "You're crazy, stay right here"</p><p>But we could see the world so clear</p></div><div class="lyric-part"><h4>Chorus</h4><p>If you've got a dream, don't wait around</p><p>Build your own wheels on solid ground</p><p>Pack your heart and hit the road</p><p>Even if you carry a heavy load</p><p>And when you meet someone in need</p><p>Plant a little kindness like a seed</p><p>The world gives back what you give out</p><p>That's what the home on wheels is about</p></div><div class="lyric-part"><h4>Verse 2</h4><p>We met a boy with broken screen</p><p>A laptop for his school, a dream</p><p>We bought a cart for an old man</p><p>So he could sell with stronger hands</p></div><div class="lyric-part"><h4>Pre-chorus 2</h4><p>We gave the kids some sweets to share</p><p>Just to see them smile, because we care</p></div><div class="lyric-part"><h4>Chorus 2</h4><p>If you've got a dream, don't wait around</p><p>Build your own wheels on solid ground</p><p>Pack your heart and hit the road</p><p>Even if you carry a heavy load</p><p>And when you meet someone in need</p><p>Plant a little kindness like a seed</p><p>The world gives back what you give out</p><p>That's what the home on wheels is about</p></div><div class="lyric-part"><h4>Bridge</h4><p>Iris cries when she sees the pain</p><p>But tears can turn to sun and rain</p><p>Petya drives, he holds the wheel</p><p>Together they can always heal</p></div><div class="lyric-part"><h4>Outro</h4><p>So if you're waiting for a sign — this is it</p><p>Don't be afraid to take the hit</p><p>Your home is not a place, it's who you love</p><p>With wheels beneath and stars above</p></div><div class="lyric-part"><h4>Final line</h4><p>The world gives back what you give out.</p></div></div><div><h3>Русский перевод</h3><div class="lyric-part"><h4>Куплет 1</h4><p>Мы продали стулья, продали стол</p><p>Купили фургон — и мы смогли</p><p>Уехать из города, уехать от шума</p><p>Найти жизнь с более тихими радостями</p></div><div class="lyric-part"><h4>Распевка</h4><p>Они говорили: «Ты с ума сошёл, оставайся здесь»</p><p>Но мы видели мир так ясно</p></div><div class="lyric-part"><h4>Припев</h4><p>Если у тебя есть мечта — не жди</p><p>Построй свои собственные колёса на твёрдой земле</p><p>Собери своё сердце и отправляйся в дорогу</p><p>Даже если у тебя тяжёлый груз</p><p>А когда встретишь кого-то в нужде</p><p>Посади маленькую доброту, как семя</p><p>Мир возвращает то, что ты отдаёшь</p><p>Вот о чём этот дом на колёсах</p></div><div class="lyric-part"><h4>Куплет 2</h4><p>Мы встретили мальчика со сломанным экраном</p><p>Ноутбук для его школы, мечта</p><p>Мы купили тележку для старика</p><p>Чтобы он мог торговать более сильными руками</p></div><div class="lyric-part"><h4>Распевка 2</h4><p>Мы раздали детям сладости</p><p>Просто чтобы увидеть их улыбки, потому что нам не всё равно</p></div><div class="lyric-part"><h4>Припев 2</h4><p>Если у тебя есть мечта — не жди</p><p>Построй свои собственные колёса на твёрдой земле</p><p>Собери своё сердце и отправляйся в дорогу</p><p>Даже если у тебя тяжёлый груз</p><p>А когда встретишь кого-то в нужде</p><p>Посади маленькую доброту, как семя</p><p>Мир возвращает то, что ты отдаёшь</p><p>Вот о чём этот дом на колёсах</p></div><div class="lyric-part"><h4>Бридж</h4><p>Ирис плачет, когда видит боль</p><p>Но слёзы могут превратиться в солнце и дождь</p><p>Петя ведёт машину, он держит руль</p><p>Вместе они всегда могут исцелить</p></div><div class="lyric-part"><h4>Аутро</h4><p>Так что если ты ждёшь знака — вот он</p><p>Не бойся принять удар</p><p>Твой дом — это не место, это тот, кого ты любишь</p><p>С колёсами внизу и звёздами наверху</p></div><div class="lyric-part"><h4>Финальная строка</h4><p>Мир возвращает то, что ты отдаёшь.</p></div></div></div>
+</div></details></div>
+</div>
+<div class="content"><details class="project"><summary>🎯 GROUP PROJECT — “My Dream, My Kindness”</summary><div class="content">
+<p><strong>Тип задания:</strong> Творческий коллаж + план действий<br/><strong>Длительность:</strong> 3-4 дня</p>
+<p><strong>Your Mission:</strong> Create a short presentation (poster, digital collage, or video) that answers two questions:</p>
+<ol><li>What is one dream you have that you've been waiting to start?</li><li>What is one small act of kindness you can do this week?</li></ol>
+<p>Use the song “The Home on Wheels” as inspiration.</p>
+<p><strong>Format options:</strong></p><ol><li>Poster: Split in half. Left side: your dream. Right side: your kindness act.</li><li>Digital collage: Use Canva or Google Slides.</li><li>Short video (30 seconds): Speak your answers directly to the camera.</li></ol>
+<p><strong>Guiding questions for your dream:</strong></p><ul><li>What's stopping you? (Time? Money? Fear?)</li><li>What's one small step you can take this week?</li></ul>
+<p><strong>Guiding questions for your kindness act:</strong></p><ul><li>Who needs help?</li><li>What can you do, even something small?</li></ul>
+<p><strong>Final sentence to include:</strong><br/>“The world gives back what you give out.”</p>
+</div></details>
+</div></section>
+<details class="section"><summary>🌍 BEYOND THE TEXT</summary><div class="content"><p><strong>Choose ONE:</strong></p>
+<ol>
+<li><strong>A Postcard from the Road:</strong> Imagine you are Petya or Iris. Write a short postcard from Antarctica to a friend. Describe one beautiful thing and one difficult thing about living in a camper van there.</li>
+<li><strong>A Social Media Post:</strong> Write a post for their Telegram channel. Describe one of their acts of kindness (e.g., buying the cart for the old man) as if you were there. Use emojis and a hashtag like #KindnessTravels.</li>
+<li><strong>Your Own Travel Vlog Plan:</strong> Create a short plan for a travel video. It must include: a) a beautiful place, b) a local person you interview, and c) one small act of kindness you will do.</li>
+<li><strong>AI Image Prompt (for the teacher/student):</strong> Create a prompt to generate an image of Petya and Iris's camper van in a beautiful, snowy landscape with the northern lights (aurora borealis) in the sky.<br/><em>Example prompt:</em> “A cozy white camper van parked on a snowy plain under a dark blue sky filled with green aurora borealis. The van's windows are glowing with warm yellow light. A couple stands outside, looking up at the sky in wonder. Peaceful, magical atmosphere, photorealistic style.”</li>
+<li><strong>Discussion:</strong> Why is it important that they show “real life” and not just “holiday pictures”? What can we learn from this?</li>
+</ol></div></details>
+<footer><a class="block-nav" data-dir="prev" href="../block2/index.html">‹ PREVIOUS BLOCK</a><span>MODULE 8 · TECHNOLOGY · BLOCK 3</span><a class="block-nav" data-dir="next" href="../block4/index.html">NEXT BLOCK ›</a></footer>
+</div>
+
+
+<script>
+(function(){
+  function reportHeight(){const h=Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,900);if(window.parent!==window)window.parent.postMessage({type:'block-height',height:h},'*');}
+  let pop=null;
+  function closePhoto(){if(pop){pop.remove();pop=null;} document.body.classList.remove('photo-open');}
+  function openPhoto(img){
+    closePhoto();
+    pop=document.createElement('div'); pop.className='photo-pop';
+    const close=document.createElement('button'); close.className='photo-pop-close'; close.type='button'; close.textContent='×'; close.setAttribute('aria-label','Close image');
+    const big=document.createElement('img'); big.src=img.currentSrc||img.src; big.alt=img.alt||'';
+    pop.appendChild(close); pop.appendChild(big); document.body.appendChild(pop);
+    close.addEventListener('click',closePhoto);
+    pop.addEventListener('click',e=>{if(e.target===pop)closePhoto();});
+    big.addEventListener('click',e=>{e.stopPropagation();closePhoto();});
+  }
+  document.addEventListener('DOMContentLoaded',()=>{
+    document.querySelectorAll('img').forEach(img=>{
+      if(img.closest('.photo-pop')||img.classList.contains('no-zoom')) return;
+      img.classList.add('zoomable');
+    });
+    document.addEventListener('click',e=>{
+      const img=e.target.closest('img.zoomable');
+      if(img && !img.closest('.photo-pop')){e.preventDefault();e.stopPropagation();openPhoto(img);}
+    },true);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closePhoto();});
+    document.querySelectorAll('details').forEach(d=>{if(!d.closest('.hero')&&!d.classList.contains('keep-open'))d.open=false;});
+    reportHeight();setTimeout(reportHeight,300);setTimeout(reportHeight,1000);
+    if(window.ResizeObserver)new ResizeObserver(reportHeight).observe(document.body);
+    document.querySelectorAll('.block-nav').forEach(a=>a.addEventListener('click',e=>{if(window.parent!==window){e.preventDefault();window.parent.postMessage({type:'switch-block',dir:a.dataset.dir},'*');}}));
+  });
+  window.addEventListener('message',e=>{if(e.data&&e.data.type==='request-height')reportHeight();});
+})();
+</script></body></html>

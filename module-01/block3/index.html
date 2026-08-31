@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Module 1 · Strong Ties · Block 3 — A Friend's Code</title>
+<style>
+:root{--navy:#273d53;--purple:#7550b7;--gold:#b98a42;--cream:#f7f0e5;--ink:#29353d;--line:#ddd3c8;--white:#fffdf9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#ece8e1;color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+.wrap{max-width:1180px;margin:auto;background:var(--white);min-height:100vh;padding-bottom:25px}
+.hero{display:grid;grid-template-columns:1fr 1.35fr .55fr;min-height:410px;margin:0 14px;border-radius:0 0 18px 18px;overflow:hidden;background:#20384f;color:white}
+.hero-copy{padding:36px 30px;display:flex;flex-direction:column;justify-content:center}
+.kicker{font:700 11px Arial,sans-serif;letter-spacing:.14em;color:#e9d19d}
+h1{font-size:52px;line-height:.95;margin:15px 0;font-style:italic}.hero-copy p{font-size:17px;line-height:1.5;color:#f6f0e8}
+.hero-img{background:#fff center/cover no-repeat}.journey{background:#faf4e9;color:var(--navy);padding:25px 18px;display:flex;flex-direction:column;justify-content:center}
+.journey h3{margin:0 0 14px;font-style:italic}.journey a{color:var(--navy);text-decoration:none;padding:9px 0;font:bold 13px Arial;border-bottom:1px dotted #cfc1ae}.journey a:before{content:"◇";color:var(--gold);margin-right:8px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;padding:10px 14px}.nav a{padding:8px 13px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:#46515a;font:bold 12px Arial;background:#fff}
+.section{margin:12px 14px;border:1px solid var(--line);border-radius:13px;background:#fff;overflow:hidden;box-shadow:0 4px 13px rgba(35,55,70,.05)}
+.section>summary{cursor:pointer;list-style:none;padding:15px 18px;background:#faf7f2;color:var(--navy);font-size:20px;font-weight:700}.section>summary::-webkit-details-marker{display:none}.section>summary:before{content:"▸";color:var(--purple);margin-right:8px}.section[open]>summary:before{content:"▾"}
+.content{padding:18px}.lead{font-size:17px;line-height:1.6}.concept{width:100%;max-height:360px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:10px;cursor:pointer}
+.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.voice-card{border:1px solid var(--line);border-radius:11px;overflow:hidden;background:#fffdfa}.voice-media{height:420px;background:#f5f1ea;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:10px}.voice-img{width:auto;height:100%;max-width:100%;object-fit:contain;object-position:center;cursor:pointer;border-radius:6px}.voice-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#eef2f5,#f7efe4);color:#5b6670;font:bold 28px Georgia}
+.voice-body{padding:14px}h3{margin:0 0 8px;color:var(--navy);font-size:17px}.quote{font-size:16px;line-height:1.58;white-space:pre-line}audio{width:100%;margin:7px 0}
+.mini{border:1px solid var(--line);border-radius:8px;margin-top:8px;background:#fff}.mini summary{cursor:pointer;padding:9px 11px;color:#5b4779;font-weight:700}.mini-in{padding:10px 13px;line-height:1.55}
+.card{border:1px solid var(--line);border-radius:11px;padding:15px;margin:10px 0;background:#fffdfa}.video{width:100%;max-height:560px;background:#111;border-radius:9px}
+table{width:100%;border-collapse:collapse;margin:9px 0}th,td{border:1px solid var(--line);padding:8px;text-align:left}th{background:var(--cream)}textarea{width:100%;min-height:90px;border:1px solid #cec4b8;border-radius:7px;padding:9px;font:14px Georgia}
+.song{background:#fbf8ff}.song-art{width:100%;max-height:370px;object-fit:contain;border:1px solid var(--line);border-radius:9px;background:#fff;cursor:pointer}
+.lyrics{border:1px solid var(--line);border-radius:10px;overflow:hidden}.lyrics-head,.lyric-pair{display:grid;grid-template-columns:1fr 1fr}.lyrics-head{background:var(--cream);font-weight:700;color:var(--navy)}.lyrics-head div,.lyric-pair>div{padding:11px 14px}.lyric-pair{border-top:1px solid var(--line)}.lyric-pair>div+div{border-left:1px solid var(--line);color:#62566b}.lyric-pair h4{margin:0 0 6px;color:#5b4779;font-size:15px}.lyric-pair p{margin:4px 0;line-height:1.5}
+.lb{position:fixed;inset:0;background:rgba(18,25,32,.84);display:none;align-items:center;justify-content:center;padding:20px;z-index:20}.lb.show{display:flex}.lb img{max-width:94vw;max-height:92vh;object-fit:contain;background:#fff;border-radius:10px}.x{position:absolute;right:22px;top:12px;color:white;font:700 28px Arial;cursor:pointer}
+@media(max-width:780px){.hero{grid-template-columns:1fr}.hero-img{height:260px}.voice-grid{grid-template-columns:1fr}.lyrics-head,.lyric-pair{grid-template-columns:1fr}.lyric-pair>div+div{border-left:0;border-top:1px solid var(--line)}h1{font-size:44px}}
+</style></head>
+<body><div class="wrap">
+<header class="hero"><div class="hero-copy"><div class="kicker">MODULE 1 · STRONG TIES · BLOCK 3</div><h1>A Friend's Code</h1><p>Four voices across time and cultures — and your own voice at the end.</p></div>
+<div class="hero-img" style="background-image:url('assets/concept.png')"></div>
+<div class="journey"><h3>Your Journey</h3><a href="#lead">LOOK & THINK</a><a href="#voices">READ & LISTEN</a><a href="#mind">THINK</a><a href="#language">LANGUAGE</a><a href="#song">SING</a><a href="#beyond">CREATE</a></div></header>
+<nav class="nav"><a href="#lead">Lead-in</a><a href="#voices">Four Voices</a><a href="#listen">Video</a><a href="#mind">Heart & Mind</a><a href="#language">Language Skills</a><a href="#song">Song</a><a href="#beyond">Beyond the Text</a></nav>
+
+<details class="section" id="lead" open><summary>LOOK & THINK · Lead-in</summary><div class="content lead">
+<p><strong>1.</strong> What makes someone a real friend? Make a list of 3–4 qualities.</p>
+<p><strong>2.</strong> Do you think people from different centuries and cultures understand friendship in the same way? Why?</p>
+<p><strong>3.</strong> Look at the title: «A Friend's Code». What could a «code» of friendship include?</p>
+</div></details>
+
+<details class="section" id="voices" open><summary>READ & LISTEN · VOICES ACROSS TIME AND CULTURES</summary><div class="content">
+<div class="voice-grid">
+    <article class="voice-card">
+      <div class="voice-media"><img class="media voice-img" src="assets/voice1.jpg" alt="VOICE 1. Ancient Greece — Aristotle" onclick="openLB(this.src)"></div>
+      <div class="voice-body">
+        <h3>VOICE 1. Ancient Greece — Aristotle</h3>
+        <p class="quote">«Friendship is a single soul dwelling in two bodies. It is not about being together all the time, but about being connected even when you are apart. A true friend understands your silence, not only your words. The desire for friendship comes quickly, but friendship itself is a slow-growing fruit. It must be watered with trust and ripened in the sun of shared experience.»</p>
+        <audio controls src="assets/voice1.mp3"></audio>
+        <details class="mini"><summary>TRANSCRIPT</summary><div class="mini-in"><p>«Friendship is a single soul dwelling in two bodies. It is not about being together all the time, but about being connected even when you are apart. A true friend understands your silence, not only your words. The desire for friendship comes quickly, but friendship itself is a slow-growing fruit. It must be watered with trust and ripened in the sun of shared experience.»</p></div></details>
+      </div>
+    </article>
+    <article class="voice-card">
+      <div class="voice-media"><img class="media voice-img" src="assets/voice2.jpg" alt="VOICE 2. Africa — Yoruba proverb, Nigeria" onclick="openLB(this.src)"></div>
+      <div class="voice-body">
+        <h3>VOICE 2. Africa — Yoruba proverb, Nigeria</h3>
+        <p class="quote">«Hold a true friend with both hands. Do not let go easily, because such a bond is rare. A true friend knows the song of your heart. And when you lose your way, they can sing it back to you until you remember who you are.»</p>
+        <audio controls src="assets/voice2.mp3"></audio>
+        <details class="mini"><summary>TRANSCRIPT</summary><div class="mini-in"><p>«Hold a true friend with both hands. Do not let go easily, because such a bond is rare. A true friend knows the song of your heart. And when you lose your way, they can sing it back to you until you remember who you are.»</p></div></details>
+      </div>
+    </article>
+    <article class="voice-card">
+      <div class="voice-media"><img class="media voice-img" src="assets/voice3.png" alt="VOICE 3. Modern Psychology — Dr. Brené Brown" onclick="openLB(this.src)"></div>
+      <div class="voice-body">
+        <h3>VOICE 3. Modern Psychology — Dr. Brené Brown</h3>
+        <p class="quote">«Friendship is not about being perfect for each other. It is about being real with each other. Vulnerability is the birthplace of connection. You cannot have a strong tie without the courage to say: 'I'm struggling. I need you.' And the other person saying: 'I see you. I'm here.' Being real is harder than being perfect, but it is the only way to truly connect.»</p>
+        <audio controls src="assets/voice3.mp3"></audio>
+        <details class="mini"><summary>TRANSCRIPT</summary><div class="mini-in"><p>«Friendship is not about being perfect for each other. It is about being real with each other. Vulnerability is the birthplace of connection. You cannot have a strong tie without the courage to say: 'I'm struggling. I need you.' And the other person saying: 'I see you. I'm here.' Being real is harder than being perfect, but it is the only way to truly connect.»</p></div></details>
+      </div>
+    </article>
+    <article class="voice-card">
+      <div class="voice-media"><img class="media voice-img" src="assets/voice4.jpg" alt="VOICE 4. Japan — Bushido" onclick="openLB(this.src)"></div>
+      <div class="voice-body">
+        <h3>VOICE 4. Japan — Bushido</h3>
+        <p class="quote">«A true friend is one who walks in when the rest of the world walks out. They do not give you what you want; they give you what you need — honesty, even when it hurts. Loyalty is not blind agreement. Loyalty is holding your friend to a higher standard because you believe in who they can become. A friend who challenges you is often the one who cares the most.»</p>
+        <audio controls src="assets/voice4.mp3"></audio>
+        <details class="mini"><summary>TRANSCRIPT</summary><div class="mini-in"><p>«A true friend is one who walks in when the rest of the world walks out. They do not give you what you want; they give you what you need — honesty, even when it hurts. Loyalty is not blind agreement. Loyalty is holding your friend to a higher standard because you believe in who they can become. A friend who challenges you is often the one who cares the most.»</p></div></details>
+      </div>
+    </article></div>
+<div class="card" style="margin-top:14px"><h3>VOICE 5 · A Modern Voice — You</h3><p>After reading these four voices, complete the sentence:</p><p style="font-size:20px;font-style:italic">«To me, real friendship means ________________________________________.»</p><textarea placeholder="Complete the sentence…"></textarea></div>
+<details class="mini"><summary>GLOSSARY</summary><div class="mini-in"><table><tr><th>Слово / Словосочетание</th><th>Транскрипция</th><th>Перевод</th></tr><tr><td>soul</td><td>[soʊl]</td><td>душа</td></tr><tr><td>to dwell</td><td>[dwel]</td><td>обитать, находиться</td></tr><tr><td>to understand</td><td>[ˌʌndərˈstænd]</td><td>понимать</td></tr><tr><td>silence</td><td>[ˈsaɪləns]</td><td>тишина, молчание</td></tr><tr><td>desire</td><td>[dɪˈzaɪər]</td><td>желание</td></tr><tr><td>slow-growing</td><td>[sloʊ ˈɡroʊɪŋ]</td><td>медленно растущий</td></tr><tr><td>fruit</td><td>[fruːt]</td><td>плод</td></tr><tr><td>to water</td><td>[ˈwɔːtər]</td><td>поливать</td></tr><tr><td>trust</td><td>[trʌst]</td><td>доверие</td></tr><tr><td>to ripen</td><td>[ˈraɪpən]</td><td>созревать</td></tr><tr><td>shared</td><td>[ʃerd]</td><td>разделённый</td></tr><tr><td>experience</td><td>[ɪkˈspɪriəns]</td><td>опыт</td></tr><tr><td>to hold</td><td>[hoʊld]</td><td>держать</td></tr><tr><td>rare</td><td>[rer]</td><td>редкий</td></tr><tr><td>vulnerability</td><td>[ˌvʌlnərəˈbɪləti]</td><td>уязвимость</td></tr><tr><td>birthplace</td><td>[ˈbɜːrθpleɪs]</td><td>место рождения, колыбель</td></tr><tr><td>connection</td><td>[kəˈnekʃn]</td><td>связь</td></tr><tr><td>courage</td><td>[ˈkɜːrɪdʒ]</td><td>смелость</td></tr><tr><td>to struggle</td><td>[ˈstrʌɡl]</td><td>бороться, испытывать трудности</td></tr><tr><td>loyalty</td><td>[ˈlɔɪəlti]</td><td>верность, преданность</td></tr><tr><td>blind</td><td>[blaɪnd]</td><td>слепой</td></tr><tr><td>agreement</td><td>[əˈɡriːmənt]</td><td>согласие</td></tr><tr><td>standard</td><td>[ˈstændərd]</td><td>стандарт, планка</td></tr><tr><td>to believe in</td><td>[bɪˈliːv ɪn]</td><td>верить в</td></tr><tr><td>to challenge</td><td>[ˈtʃælɪndʒ]</td><td>бросать вызов</td></tr></table></div></details>
+</div></details>
+
+<details class="section" id="listen"><summary>🎬 LISTENING ROOM · FOUR VOICES</summary><div class="content">
+<div class="card"><h3>Watch the video</h3><video class="video" controls src="assets/video.mp4" poster="assets/concept.png"></video></div>
+<p>Listen to each voice above, then watch the video and compare the ideas.</p>
+</div></details>
+
+<details class="section" id="mind"><summary>♥ FOR THE HEART AND MIND</summary><div class="content">
+<details class="mini"><summary>A. COMPREHENSION CHECK</summary><div class="mini-in"><ol>
+<li>According to Aristotle, what is friendship?</li>
+<li>Why does Aristotle compare friendship to a «slow-growing fruit»?</li>
+<li>What does the Yoruba proverb mean: «Hold a true friend with both hands»?</li>
+<li>What does Dr. Brené Brown say is the «birthplace of connection»?</li>
+<li>According to the Samurai Code, what does a true friend do when the world walks out?</li>
+<li>What is the difference between «giving what you want» and «giving what you need»?</li>
+</ol></div></details>
+<details class="mini"><summary>B. THINK & ANALYSE</summary><div class="mini-in"><ol>
+<li>Aristotle says a friend is someone who understands «your silence, not only your words». How does this connect to Text 1.B — «The Unsaid»?</li>
+<li>The African proverb says a friend «knows the song of your heart». What is your «heart's song»? Does anyone know it?</li>
+<li>Dr. Brown says vulnerability is «the birthplace of connection». But in Text 1.A, Liam was afraid to be vulnerable. Why is vulnerability so difficult — and why is it necessary?</li>
+<li>The Samurai Code says: «Loyalty is not blind agreement. Loyalty is holding your friend to a higher standard.» Can you think of a situation where a friend showed you loyalty by disagreeing with you?</li>
+</ol></div></details>
+<details class="mini"><summary>C. DISCUSS & RELATE</summary><div class="mini-in"><ol>
+<li>Which of these four «voices» is closest to your own understanding of friendship? Why?</li>
+<li>Do you think social media helps or hurts true friendship? Use ideas from the texts to support your opinion.</li>
+<li>Is it possible to have a strong friendship without vulnerability? Why?</li>
+<li>In your culture, are there proverbs or sayings about friendship? Share one with the class (in English or with translation).</li>
+</ol><textarea placeholder="Your ideas…"></textarea></div></details>
+</div></details>
+
+<details class="section" id="language"><summary>FOR LANGUAGE SKILLS</summary><div class="content">
+<details class="mini"><summary>A. VOCABULARY FOCUS</summary><div class="mini-in">
+<p><strong>1. Match the word from the text with its definition:</strong></p>
+<table><tr><th>Слово</th><th>Определение</th></tr>
+<tr><td>1. soul</td><td>a) the quality of being honest and telling the truth</td></tr>
+<tr><td>2. trust</td><td>b) the place where something begins</td></tr>
+<tr><td>3. vulnerability</td><td>c) the spiritual part of a person</td></tr>
+<tr><td>4. honesty</td><td>d) strong belief that someone is good and reliable</td></tr>
+<tr><td>5. birthplace</td><td>e) the state of being open to emotional harm</td></tr></table>
+<p><strong>2. Synonyms and Antonyms:</strong></p><ul>
+<li>Find a synonym in the text for: <em>real, bravery, to have faith in.</em></li>
+<li>Find an antonym in the text for: <em>to enter, disagreement, enemy.</em></li></ul>
+<p><strong>3. Metaphors in the text:</strong></p><ul>
+<li>Aristotle uses a metaphor: friendship is a «slow-growing fruit».</li>
+<li>The African proverb uses a metaphor: friendship is a «song of the heart».</li>
+<li>Choose one of these metaphors. Explain it in your own words. Why is it powerful?</li></ul>
+<p><strong>4. Complete the sentences with words from the glossary:</strong></p>
+<ol type="a"><li>It takes time to build ______ in a relationship.</li><li>A true friend shows ______ even when it is difficult.</li><li>______ is not weakness; it is the courage to be real.</li><li>He ______ in me when everyone else gave up.</li></ol>
+<textarea placeholder="Your answers…"></textarea>
+</div></details>
+<details class="mini"><summary>B. GRAMMAR IN CONTEXT</summary><div class="mini-in">
+<p><strong>1. Defining relative clauses (определительные придаточные):</strong></p>
+<ul><li>Find in the text: «A friend is one WHO understands your silence.»</li><li>Find another example of a relative clause with <em>who</em> or <em>which</em>.</li><li>Write your own definition of a friend using a relative clause.</li></ul>
+<p><strong>2. Modal verbs for advice and necessity:</strong></p>
+<p>The Samurai Code says: «He does not give you what you want; he gives you what you NEED.»</p>
+<p>How does the meaning change if we say: «He SHOULD give you what you need»? What is the difference between <em>do/does</em> and <em>should</em> in this context?</p>
+<p><strong>3. Quoting and reporting:</strong> Choose one quote from the text and report it in indirect speech.</p>
+<p><strong>Example:</strong> Aristotle said that friendship was a single soul dwelling in two bodies.</p>
+<textarea placeholder="Your answer…"></textarea>
+</div></details>
+<details class="mini"><summary>C. BRAIN WORKOUT</summary><div class="mini-in">
+<p><strong>1. Сравнение и синтез (критическое мышление):</strong></p>
+<table><tr><th>Голос</th><th>Ключевая идея (2–3 слова)</th><th>Ключевое слово</th></tr>
+<tr><td>Aristotle</td><td></td><td></td></tr><tr><td>Yoruba proverb</td><td></td><td></td></tr><tr><td>Brené Brown</td><td></td><td></td></tr><tr><td>Bushido</td><td></td><td></td></tr></table>
+<p><strong>2. Ассоциативное мышление:</strong> Какая музыка, картина или фильм ассоциируется у тебя с одним из этих высказываний? Опиши кратко (2–3 предложения).</p>
+<p><strong>3. Скорость реакции (быстрое преобразование):</strong> Учитель называет понятие из левой колонки — ученики подбирают соответствующую цитату (или её часть) из правой.</p>
+<table><tr><th>Понятие</th><th>Цитата</th></tr>
+<tr><td>Trust</td><td>«watered with trust»</td></tr><tr><td>Vulnerability</td><td>«birthplace of connection»</td></tr>
+<tr><td>Loyalty</td><td>«holds you to a higher standard»</td></tr><tr><td>Being forgotten</td><td>«when you have forgotten the melody»</td></tr></table>
+</div></details>
+</div></details>
+
+<details class="section song" id="song"><summary>♫ A FRIEND'S CODE · THE SONG</summary><div class="content">
+<div class="card"><h3>Listen and sing along!</h3><audio controls src="assets/song.mp3"></audio><img class="song-art" src="assets/song_art.png" alt="A Friend's Code" onclick="openLB(this.src)">
+<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><a href="#lyrics" style="padding:8px 12px;border-radius:8px;background:#7650b8;color:#fff;text-decoration:none;font-weight:700">SHOW SONG LYRICS</a><a href="#songtasks" style="padding:8px 12px;border-radius:8px;border:1px solid #c8b9df;color:#5b4779;text-decoration:none;font-weight:700">SONG TASKS</a></div></div>
+<details class="mini" id="lyrics"><summary>♫ SONG LYRICS · ENGLISH + РУССКИЙ</summary><div class="mini-in"><div class="lyrics"><div class="lyrics-head"><div>ENGLISH</div><div>РУССКИЙ</div></div><div class="lyric-pair"><div><h4>A FRIEND'S CODE</h4></div><div><h4>КОД ДРУГА</h4></div></div><div class="lyric-pair"><div><h4>Voice 1 — Aristotle</h4><p>"Friendship is a single soul dwelling in two bodies.</p><p>It is not about being together all the time,</p><p>But about being connected even when you are apart.</p><p>A true friend understands your silence, not only your words.</p><p>The desire for friendship comes quickly,</p><p>But friendship itself is a slow-growing fruit.</p><p>It must be watered with trust</p><p>And ripened in the sun of shared experience."</p></div><div><h4>Голос 1 — Аристотель</h4><p>«Дружба — это одна душа, живущая в двух телах.</p><p>Она не в том, чтобы быть вместе всё время,</p><p>А в том, чтобы быть связанными, даже когда вы далеко.</p><p>Настоящий друг понимает твоё молчание, не только твои слова.</p><p>Желание дружбы приходит быстро,</p><p>Но сама дружба — это медленно зреющий плод.</p><p>Её нужно поливать доверием</p><p>И дать ей созреть на солнце общего опыта».</p></div></div><div class="lyric-pair"><div><h4>Voice 2 — Yoruba proverb</h4><p>"Hold a true friend with both hands.</p><p>Do not let go easily, because such a bond is rare.</p><p>A true friend knows the song of your heart.</p><p>And when you lose your way,</p><p>They can sing it back to you</p><p>Until you remember who you are."</p></div><div><h4>Голос 2 — Пословица йоруба</h4><p>«Держи настоящего друга обеими руками.</p><p>Не отпускай легко, потому что такая связь редка.</p><p>Настоящий друг знает песню твоего сердца.</p><p>И когда ты сбиваешься с пути,</p><p>Они могут спеть её тебе,</p><p>Пока ты не вспомнишь, кто ты есть».</p></div></div><div class="lyric-pair"><div><h4>Voice 3 — Brené Brown</h4><p>"Friendship is not about being perfect for each other.</p><p>It is about being real with each other.</p><p>Vulnerability is the birthplace of connection.</p><p>You cannot have a strong tie without the courage to say:</p><p>'I'm struggling. I need you.'</p><p>And the other person saying:</p><p>'I see you. I'm here.'</p><p>Being real is harder than being perfect,</p><p>But it is the only way to truly connect."</p></div><div><h4>Голос 3 — Брене Браун</h4><p>«Дружба — это не быть идеальными друг для друга.</p><p>Это быть настоящими друг с другом.</p><p>Уязвимость — это колыбель связи.</p><p>Крепкая связь невозможна без смелости сказать:</p><p>«Мне трудно. Ты мне нужен».</p><p>И услышать в ответ:</p><p>«Я вижу тебя. Я здесь».</p><p>Быть настоящим труднее, чем быть идеальным,</p><p>Но это единственный способ по-настоящему соединиться».</p></div></div><div class="lyric-pair"><div><h4>Voice 4 — Bushido</h4><p>"A true friend is one who walks in</p><p>When the rest of the world walks out.</p><p>They do not give you what you want;</p><p>They give you what you need —</p><p>Honesty, even when it hurts.</p><p>Loyalty is not blind agreement.</p><p>Loyalty is holding your friend to a higher standard</p><p>Because you believe in who they can become.</p><p>A friend who challenges you</p><p>Is often the one who cares the most."</p></div><div><h4>Голос 4 — Бусидо</h4><p>«Настоящий друг — это тот, кто входит,</p><p>Когда весь остальной мир выходит.</p><p>Они дают тебе не то, что ты хочешь;</p><p>Они дают тебе то, что тебе нужно —</p><p>Честность, даже когда она ранит.</p><p>Верность — это не слепое согласие.</p><p>Верность — это держать своего друга на высокой планке,</p><p>Потому что ты веришь в того, кем он может стать.</p><p>Друг, который бросает тебе вызов,</p><p>Часто заботится больше всех».</p></div></div><div class="lyric-pair"><div><h4>Final</h4><p>"To me, real friendship means</p><p>Being seen, being heard,</p><p>And being loved — not for who you pretend to be,</p><p>But for who you truly are."</p></div><div><h4>Финал</h4><p>«Для меня настоящая дружба —</p><p>Это быть увиденным, быть услышанным</p><p>И быть любимым — не за того, кем ты притворяешься,</p><p>А за того, кто ты есть на самом деле».</p></div></div></div></div></details>
+<details class="mini"><summary>GLOSSARY TO THE SONG</summary><div class="mini-in"><table><tr><th>Слово / Словосочетание</th><th>Транскрипция</th><th>Перевод</th></tr><tr><td>soul</td><td>[soʊl]</td><td>душа</td></tr><tr><td>to dwell</td><td>[dwel]</td><td>обитать, находиться</td></tr><tr><td>to understand</td><td>[ˌʌndərˈstænd]</td><td>понимать</td></tr><tr><td>silence</td><td>[ˈsaɪləns]</td><td>тишина, молчание</td></tr><tr><td>desire</td><td>[dɪˈzaɪər]</td><td>желание</td></tr><tr><td>slow-growing</td><td>[sloʊ ˈɡroʊɪŋ]</td><td>медленно растущий</td></tr><tr><td>fruit</td><td>[fruːt]</td><td>плод</td></tr><tr><td>trust</td><td>[trʌst]</td><td>доверие</td></tr><tr><td>shared</td><td>[ʃerd]</td><td>разделённый, общий</td></tr><tr><td>experience</td><td>[ɪkˈspɪriəns]</td><td>опыт</td></tr><tr><td>to hold</td><td>[hoʊld]</td><td>держать</td></tr><tr><td>rare</td><td>[rer]</td><td>редкий</td></tr><tr><td>vulnerability</td><td>[ˌvʌlnərəˈbɪləti]</td><td>уязвимость</td></tr><tr><td>birthplace</td><td>[ˈbɜːrθpleɪs]</td><td>колыбель, место рождения</td></tr><tr><td>connection</td><td>[kəˈnekʃn]</td><td>связь</td></tr><tr><td>courage</td><td>[ˈkɜːrɪdʒ]</td><td>смелость</td></tr><tr><td>to struggle</td><td>[ˈstrʌɡl]</td><td>бороться, испытывать трудности</td></tr><tr><td>loyalty</td><td>[ˈlɔɪəlti]</td><td>верность, преданность</td></tr><tr><td>blind</td><td>[blaɪnd]</td><td>слепой</td></tr><tr><td>agreement</td><td>[əˈɡriːmənt]</td><td>согласие</td></tr><tr><td>standard</td><td>[ˈstændərd]</td><td>стандарт, планка</td></tr><tr><td>to believe in</td><td>[bɪˈliːv ɪn]</td><td>верить в</td></tr><tr><td>to challenge</td><td>[ˈtʃælɪndʒ]</td><td>бросать вызов</td></tr><tr><td>true</td><td>[truː]</td><td>настоящий, верный</td></tr><tr><td>bond</td><td>[bɑːnd]</td><td>связь, узы</td></tr><tr><td>to be seen</td><td>[biː siːn]</td><td>быть увиденным</td></tr></table></div></details>
+<details class="mini" id="songtasks"><summary>♫ SONG TASKS</summary><div class="mini-in">
+<h3>EXERCISE 1. The Four Voices of Friendship</h3>
+<p><em>Instruction:</em> The song gives us four voices, each with a different idea of friendship.</p>
+<p><strong>Part A. Match the voice with its main idea:</strong></p>
+<table><tr><th>Voice</th><th>Main idea</th></tr>
+<tr><td>1. Aristotle</td><td>a) A true friend knows the song of your heart and helps you remember who you are.</td></tr>
+<tr><td>2. Yoruba proverb</td><td>b) A true friend walks in when others walk out and gives you honesty, even when it hurts.</td></tr>
+<tr><td>3. Brené Brown</td><td>c) Friendship is about being real, not perfect. Vulnerability is the key to connection.</td></tr>
+<tr><td>4. Bushido</td><td>d) Friendship is one soul in two bodies — a bond that grows slowly with trust and shared experience.</td></tr></table>
+<p><strong>Part B.</strong> Which voice speaks to you the most? Why? Write 2–3 sentences.</p>
+<textarea placeholder="Your answer…"></textarea>
+
+<h3>EXERCISE 2. The Friend's Code — Your Version</h3>
+<p><em>Instruction:</em> In the song, each voice gives a piece of advice about friendship. Now it's your turn.</p>
+<p>Create your own «Friend's Code» — 3–5 rules for being a good friend.</p>
+<p>You can start with:</p>
+<ul><li>«A true friend is someone who…»</li><li>«A friend never…»</li><li>«A friend always…»</li></ul>
+<p><strong>Example:</strong></p>
+<ol><li>A true friend is someone who listens without judging.</li><li>A friend never makes you feel small for being honest.</li><li>A friend always shows up when you need them, even if it's just to sit in silence.</li></ol>
+<p><strong>Your turn:</strong></p><textarea placeholder="Your Friend's Code…"></textarea>
+</div></details>
+</div></details>
+
+<details class="section" id="beyond"><summary>BEYOND THE TEXT · CREATE & SHARE</summary><div class="content"><details class="mini" open><summary>Creative Task — choose ONE</summary><div class="mini-in">
+<ol>
+<li><strong>Создай свой «Кодекс друга»:</strong> Напиши 5 правил настоящей дружбы от себя. Используй идеи из всех трёх текстов модуля (1.A, 1.B, 1.C) и свой собственный опыт. Оформи красиво — можно как постер, как запись в дневнике, как страницу из соцсети.</li>
+<li><strong>Письмо (глубокое):</strong> Выбери один из четырёх «голосов». Напиши письмо этому человеку (или культуре) от имени современного подростка. Поблагодари, поспорь, задай вопрос. (80–100 слов).</li>
+<li><strong>Исследование (без ИИ):</strong> Найди пословицу или высказывание о дружбе из своей культуры (или другой, кроме уже представленных). Принеси в класс, объясни её смысл на английском. Почему она важна?</li>
+<li><strong>ИИ-задание (факультативно):</strong> Выбери одну из цитат из текста. Создай изображение, которое её иллюстрирует. Придумай промпт сам или используй пример:
+<p><em>EN:</em> «A single soul dwelling in two bodies. Two teenagers sitting back to back, connected by glowing light between them. Soft colours, magical realism style.»</p>
+<p><em>RU:</em> «Одна душа в двух телах. Два подростка сидят спиной к спине, между ними светящаяся связь. Мягкие цвета, стиль магического реализма.»</p></li>
+<li><strong>Творческий синтез:</strong> Соедини идеи из всех трёх текстов модуля в один короткий рассказ (6–8 предложений) о дружбе, которая прошла через маски, непонимание и стала настоящей.</li>
+</ol>
+<textarea placeholder="Your creative work…"></textarea>
+</div></details></div></details>
+
+<div class="lb" id="lb" onclick="closeLB()"><span class="x">×</span><img id="lbimg" src="" alt=""></div>
+<script>
+function openLB(src){document.getElementById('lbimg').src=src;document.getElementById('lb').classList.add('show')}
+function closeLB(){document.getElementById('lb').classList.remove('show')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()})
+</script>
+</div></body></html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LANGUAGE OF THE SOUL — Module 7: Let's Have Fun</title>
+<style>
+:root {
+  --navy:#071b2b; --purple:#5b2a86; --teal:#146579; --gold:#8b5a16;
+  --cream:#fbfaf7; --ink:#17212b; --line:#ddd7cc;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#f4f1eb;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.shell{display:grid;grid-template-columns:245px 1fr;min-height:100vh}
+aside{background:#fff;border-right:1px solid #e1ddd5;position:sticky;top:0;height:100vh;padding:22px 18px;overflow:auto}
+.brand{background:var(--navy);color:#fff;border-radius:0 0 14px 14px;margin:-22px -18px 22px;padding:22px 18px;font-weight:800;letter-spacing:.8px;font-size:20px}
+.brand span{color:#f4b51b}
+.module-label{font-size:13px;font-weight:800;color:#5b2a86;letter-spacing:.8px}
+aside h1{font-size:22px;line-height:1.05;margin:7px 0 22px;color:#472070}
+.nav-item{display:block;padding:11px 12px;border-radius:10px;margin:5px 0;color:#17212b;text-decoration:none;font-weight:700}
+.nav-item.active{background:#5b2a86;color:#fff}
+.nav-item:hover{background:#eee7f4}
+main{max-width:1250px;width:100%;margin:0 auto;padding:30px 34px 50px}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:0;background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 8px 30px rgba(0,0,0,.06);margin-bottom:22px}
+.hero-copy{padding:38px 38px 34px}
+.kicker{color:#5b2a86;font-weight:800;font-size:17px;letter-spacing:1px}
+.hero h2{font-family:Georgia,serif;font-size:52px;line-height:.95;margin:12px 0 18px;color:var(--navy)}
+.hero p{font-size:18px;line-height:1.55;max-width:620px}
+.focus{margin-top:24px;padding:18px 20px;background:#fff0cf;border-radius:14px;border:1px solid #f0d89e}
+.focus b{color:#654000}
+.hero-img{min-height:330px;background:url("blocks/block1/assets/the-worst-movie.png") center/cover no-repeat}
+.module-card{background:#fff;border:1px solid var(--line);border-radius:18px;margin:18px 0;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.05)}
+.module-card.purple{border-color:#cdb9df}
+.module-card.teal{border-color:#afd3dc}
+.module-card.gold{border-color:#d9c3a0}
+.card-top{display:grid;grid-template-columns:60px 1fr 40px;gap:18px;align-items:center;padding:20px 22px 12px}
+.number{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:22px}
+.purple .number{background:#5b2a86} .teal .number{background:#146579} .gold .number{background:#8b5a16}
+.card-title-wrap h2{margin:0 0 7px;font-size:25px;line-height:1.1}
+.purple .card-title-wrap h2{color:#5b2a86} .teal .card-title-wrap h2{color:#146579} .gold .card-title-wrap h2{color:#8b5a16}
+.card-title-wrap p{margin:0;font-size:16px;line-height:1.45}
+.toggle{border:0;background:transparent;font-size:34px;cursor:pointer;color:#555;transform:translateY(-3px)}
+.quick-row{display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding:8px 22px 20px;font-size:14px;font-weight:700;color:#4b4b4b}
+.open-btn{margin-left:auto;text-decoration:none;color:#fff;padding:10px 16px;border-radius:9px;font-size:13px}
+.purple .open-btn{background:#5b2a86} .teal .open-btn{background:#146579} .gold .open-btn{background:#8b5a16}
+.frame-wrap{display:none;border-top:1px solid #e3ded5;background:#faf9f6;padding:10px}
+.frame-wrap.open{display:block}
+iframe{display:block;width:100%;height:1100px;border:0;border-radius:12px;background:#fff}
+.summary{background:#eee9f6;border:1px solid #d8cbe8;border-radius:18px;padding:24px 28px;margin-top:22px;display:flex;gap:30px;align-items:flex-start}
+.summary h3{margin:0 0 10px;color:#5b2a86}
+.summary ul{margin:0;padding-left:22px;line-height:1.65}
+footer{background:var(--navy);color:#fff;padding:14px 20px;display:flex;justify-content:space-between;position:sticky;bottom:0}
+footer a{color:#fff;text-decoration:none;border:1px solid #718091;border-radius:18px;padding:8px 16px;font-size:13px}
+@media(max-width:900px){
+ .shell{grid-template-columns:1fr} aside{position:relative;height:auto} .hero{grid-template-columns:1fr} .hero-img{min-height:240px} main{padding:18px} .hero h2{font-size:40px}
+}
+</style>
+<script>
+function toggleBlock(id, btn){
+  const el=document.getElementById(id);
+  const open=el.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);
+  btn.textContent=open?'⌃':'⌄';
+}
+</script>
+</head>
+<body>
+<div class="shell">
+<aside>
+  <div class="brand">◉ LANGUAGE <span>OF THE SOUL</span></div>
+  <div class="module-label">MODULE 7</div>
+  <h1>LET'S HAVE FUN</h1>
+  <a class="nav-item active" href="#top">⌂ Overview</a>
+  <a class="nav-item" href="#block-01">01 The Worst Movie</a>
+  <a class="nav-item" href="#block-02">02 The Missing Band</a>
+  <a class="nav-item" href="#block-03">03 The Show Must Go On</a>
+</aside>
+<main id="top">
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="kicker">MODULE 7</div>
+      <h2>LET'S HAVE FUN</h2>
+      <p>Stories, songs, and moments that make us laugh, think, and feel. This module brings together friendship, creativity, music, performance and the joy of shared experience.</p>
+      <div class="focus"><b>VALUABLE FOCUS:</b><br>Sometimes the most interesting stories are right in front of us — we just need to learn how to notice them.</div>
+    </div>
+    <div class="hero-img"></div>
+  </section>
+
+  
+    <section class="module-card purple" id="block-01">
+      <div class="card-top">
+        <div class="number">01</div>
+        <div class="card-title-wrap">
+          <h2>THE WORST MOVIE EVER MADE</h2>
+          <p>A funny story about friendship, creativity, filming and the spectacular disaster of making a movie.</p>
+        </div>
+        <button class="toggle" onclick="toggleBlock('frame-01', this)" aria-expanded="false">⌄</button>
+      </div>
+      <div class="quick-row">
+        <span>📖 Story</span><span>🎧 Audio</span><span>🎬 Video</span><span>♫ Song</span>
+        <a class="open-btn" href="blocks/block1/index.html" target="_blank">OPEN BLOCK 1 ↗</a>
+      </div>
+      <div class="frame-wrap" id="frame-01">
+        <iframe src="blocks/block1/index.html" title="THE WORST MOVIE EVER MADE"></iframe>
+      </div>
+    </section>
+    
+    <section class="module-card teal" id="block-02">
+      <div class="card-top">
+        <div class="number">02</div>
+        <div class="card-title-wrap">
+          <h2>THE MYSTERY OF THE MISSING BAND</h2>
+          <p>An old ticket, a forgotten band and a mystery that connects the past with the present.</p>
+        </div>
+        <button class="toggle" onclick="toggleBlock('frame-02', this)" aria-expanded="false">⌄</button>
+      </div>
+      <div class="quick-row">
+        <span>📖 Story</span><span>🎧 Audio</span><span>🎬 Video</span><span>♫ Song</span>
+        <a class="open-btn" href="blocks/block2/Module_7_Block_2_The_Mystery_of_the_Missing_Band.html" target="_blank">OPEN BLOCK 2 ↗</a>
+      </div>
+      <div class="frame-wrap" id="frame-02">
+        <iframe src="blocks/block2/Module_7_Block_2_The_Mystery_of_the_Missing_Band.html" title="THE MYSTERY OF THE MISSING BAND"></iframe>
+      </div>
+    </section>
+    
+    <section class="module-card gold" id="block-03">
+      <div class="card-top">
+        <div class="number">03</div>
+        <div class="card-title-wrap">
+          <h2>THE SHOW MUST GO ON</h2>
+          <p>Three voices, three stories, music, performance and the moments that make a show unforgettable.</p>
+        </div>
+        <button class="toggle" onclick="toggleBlock('frame-03', this)" aria-expanded="false">⌄</button>
+      </div>
+      <div class="quick-row">
+        <span>📖 Story</span><span>🎧 Audio</span><span>🎬 Video</span><span>♫ Song</span>
+        <a class="open-btn" href="blocks/block3/Module_7_Block_3_The_Show_Must_Go_On.html" target="_blank">OPEN BLOCK 3 ↗</a>
+      </div>
+      <div class="frame-wrap" id="frame-03">
+        <iframe src="blocks/block3/Module_7_Block_3_The_Show_Must_Go_On.html" title="THE SHOW MUST GO ON"></iframe>
+      </div>
+    </section>
+    
+
+  <section class="summary">
+    <div style="font-size:48px">🏆</div>
+    <div>
+      <h3>IN THIS MODULE, YOU WILL:</h3>
+      <ul>
+        <li>Read and listen to entertaining stories.</li>
+        <li>Learn and use new vocabulary in context.</li>
+        <li>Practise listening, speaking, reading and writing.</li>
+        <li>Explore songs and their deeper meanings.</li>
+        <li>Develop creativity, reflection and critical thinking.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+</div>
+<footer>
+  <a href="../">← PREVIOUS MODULE</a>
+  <span>LANGUAGE OF THE SOUL · MODULE 7</span>
+  <a href="#">NEXT MODULE →</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Module 8 — Technology · Block 4 · The Highest and the Hardest</title>
+<style>
+:root{--navy:#071827;--navy2:#102f45;--teal:#3d6870;--green:#294e49;--cream:#fbf8f0;--gold:#c79b4b;--ink:#182832;--rose:#8e5268;--purple:#5a527f;--line:#d8d2c6;--sand:#eee7d8;--night:#182b3b}
+*{box-sizing:border-box} body{margin:0;background:#e9e5dc;color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
+.top{background:var(--navy);color:#fff;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5}.brand{font:700 20px Arial,sans-serif;letter-spacing:.08em;color:#f2b632}.nav{font:700 13px Arial,sans-serif;opacity:.9}
+.page{max-width:1320px;margin:auto;background:var(--cream);box-shadow:0 0 30px #0002}
+.hero{display:grid;grid-template-columns:42% 58%;min-height:470px;background:var(--cream)}.heroText{padding:48px 40px;background:linear-gradient(90deg,#fbf8f0,#f3eee4)}
+.tag{font:700 14px Arial,sans-serif;letter-spacing:.04em;color:#294e49}.badge{display:inline-block;background:#5c6657;color:#fff;border-radius:9px;padding:7px 11px;margin-right:10px;font:bold 22px Arial}
+h1{font:700 52px/1.03 Georgia;margin:38px 0 18px;color:#102333;letter-spacing:.01em}.ornament{color:var(--gold);font-size:18px}.subtitle{font-style:italic;font-size:23px;color:#4d625c;border-top:1px solid var(--gold);padding-top:18px}.heroNote{margin-top:20px;font-size:17px;color:#5c625e;max-width:410px}.heroImg{overflow:hidden;position:relative}.heroImg img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}.zoomHint{position:absolute;right:16px;bottom:16px;background:#0009;color:#fff;padding:8px 12px;border-radius:20px;font:12px Arial}
+.layout{display:grid;grid-template-columns:250px 1fr}.sidebar{background:linear-gradient(180deg,#071827,#0d2a40 70%,#1a3743);color:#fff;padding:20px 14px 14px;min-height:100%;font-family:Arial,sans-serif}.sideTitle{font-weight:800;color:#f2b632;font-size:13px;letter-spacing:.05em;padding:4px 8px 12px}.sidebar a{display:block;color:#fff;text-decoration:none;padding:11px 10px;border-radius:9px;margin:3px 0;font-size:14px}.sidebar a:hover{background:#ffffff14}.sidebar a.active{background:#8d7242}.sideImage{margin:18px -14px -14px;height:225px;overflow:hidden}.sideImage img{width:100%;height:100%;object-fit:cover;display:block}.mainContent{min-width:0;background:var(--cream)}
+.grid3{display:grid;grid-template-columns:1fr 1.45fr 1fr;gap:16px;padding:24px}.card,.section{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 2px 8px #0000000a}.cardHead{padding:13px 18px;background:var(--green);color:#fff;font:bold 16px Arial;letter-spacing:.04em}.cardHead.blue{background:var(--navy2)}.cardHead.teal{background:var(--teal)}.cardBody{padding:18px}.btn{display:inline-block;background:var(--green);color:#fff;padding:10px 16px;border-radius:8px;font:bold 13px Arial;text-decoration:none;border:0;cursor:pointer}audio{width:100%;margin-top:10px}.audioPart{margin:9px 0;padding:10px 12px;background:#f5f2eb;border-radius:9px}.audioPart strong{font:700 12px Arial;color:#314f4b}
+.section{margin:0 24px 18px}summary{cursor:pointer;list-style:none;padding:16px 20px;font:bold 20px Arial;color:#17352e;background:#f1ede4}summary::-webkit-details-marker{display:none}summary:after{content:'⌄';float:right}details[open]>summary:after{content:'⌃'}.content{padding:20px 24px}.story p{font-size:17px;margin:0 0 15px}.lead{background:#eef2ee;border-left:5px solid var(--teal);padding:17px;border-radius:10px;margin-bottom:18px}.content details{margin:12px 0;border:1px solid #e2ddd3;border-radius:10px;overflow:hidden}.content details summary{font-size:16px;background:#f6f3ec}.table{width:100%;border-collapse:collapse;font-size:15px}.table th,.table td{border-bottom:1px solid #ddd;padding:9px;text-align:left;vertical-align:top}.table th{background:#f3f0e8}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:0 24px 18px}.two .section{margin:0}.pink summary{background:#f8edf1;color:#7a3c55}.purple summary{background:#f0eef8;color:#453a6e}.exercise{padding:14px;background:#faf9f5;border-radius:10px;margin:11px 0}.question{margin:10px 0}.match td:first-child{width:35%}
+.song{margin:0 24px 18px;border:1px solid #b8ccce;border-radius:14px;overflow:hidden;background:#fff}.songHead{background:var(--teal);color:#fff;padding:15px 20px;font:bold 20px Arial;color:#fff}.song>summary.songHead{color:#fff;list-style:none;cursor:pointer}.song>summary.songHead:after{color:#fff}.song[open]>summary.songHead{border-bottom:1px solid #b8ccce}.songGrid{display:grid;grid-template-columns:34% 66%}.songCell{padding:20px;border-right:1px solid #ddd;min-width:0}.songCell:first-child .songImg{display:block;margin-top:16px}.songCell:last-child{border-right:0}.songImg{width:100%;height:auto;max-height:420px;min-height:0;object-fit:contain;cursor:zoom-in;border-radius:8px}.lyrics{display:grid;grid-template-columns:1fr 1fr;gap:22px}.lyric-part{margin-bottom:17px}.lyric-part h4{color:var(--teal);margin:0 0 5px;font:700 14px Arial;text-transform:uppercase}.lyric-part p{margin:3px 0;font-size:14px}.project{background:#eef5f2;border:1px solid #c1d5cf;border-radius:12px;padding:18px}
+.beyond{background:#edf1e9}.note{background:#f4eee2;border-left:4px solid var(--gold);padding:14px 16px;border-radius:8px}.photoStrip{padding:0 24px 18px}.photoStrip img{width:100%;max-height:390px;object-fit:cover;border-radius:12px;cursor:zoom-in}
+footer{background:var(--navy);color:#fff;padding:20px 28px;display:flex;justify-content:space-between;font:bold 13px Arial} footer a{color:#f2b632;text-decoration:none;cursor:pointer}
+@media(max-width:900px){.layout,.hero,.grid3,.two,.songGrid{grid-template-columns:1fr}.sidebar{display:none}.heroImg{min-height:330px}.heroText{padding:32px 24px}h1{font-size:42px}.lyrics{grid-template-columns:1fr}.top{position:static}}</style>
+<style>
+.photo-pop{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;pointer-events:auto;background:transparent!important;}
+.photo-pop img{display:block!important;max-width:90vw!important;max-height:90vh!important;width:auto!important;height:auto!important;object-fit:contain!important;box-shadow:0 10px 30px rgba(0,0,0,.25)!important;border-radius:10px!important;background:#fff!important;cursor:zoom-out!important;}
+.photo-pop-close{position:fixed;right:18px;top:14px;z-index:2147483648;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#263746;font:32px/38px Arial;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.18);}
+</style></head>
+<body>
+<div class="top"><div class="brand">LANGUAGE<br/>OF THE SOUL</div><div class="nav">THE JOURNEY   •   MODULE 8: TECHNOLOGY   •   BLOCK 4</div></div>
+<div class="page">
+<section class="hero">
+<div class="heroText">
+<div class="tag"><span class="badge">04</span> THE JOURNEY  •  MODULE 8: TECHNOLOGY</div>
+<h1>THE HIGHEST<br/>AND THE HARDEST</h1>
+<div class="ornament">◆</div>
+<div class="subtitle">La Rinconada — a journey that changes the way we see ordinary life</div>
+<div class="heroNote">A documentary reflection on gold, survival, childhood, safety — and the value of the things we often take for granted.</div>
+</div>
+<div class="heroImg"><img alt="La Rinconada and Petya and Iris in their camper van" class="zoomable" src="assets/hero-highest.png"/><div class="zoomHint">Click to enlarge</div></div>
+</section>
+<div class="layout">
+<aside class="sidebar">
+<div class="sideTitle">BLOCK 4 CONTENTS</div>
+<a class="active" href="#story">📖 The Story</a>
+<a href="#audio">🎧 Audio Text</a>
+<a href="#glossary">📚 Glossary</a>
+<a href="#heart">♥ For the Heart and Mind</a>
+<a href="#language">✎ For Language Skills</a>
+<a href="#song">♫ Count Your Blessings</a>
+<a href="#beyond">◎ Beyond the Text</a>
+<div class="sideImage"><img alt="Mountain village at dusk" src="assets/mountain-village.png"/></div>
+</aside>
+<main class="mainContent">
+<div class="grid3">
+<div class="card"><div class="cardHead">▣ THE STORY</div><div class="cardBody"><p>Read the documentary narrative, learn new vocabulary and explore the lesson.</p><a class="btn" href="#story">START READING →</a></div></div>
+<div class="card" id="audio"><div class="cardHead blue">◉ AUDIO TEXT</div><div class="cardBody"><p>Listen to the four audio parts of the text.</p>
+<div class="audioPart"><strong>PART 1 · The Highest City</strong><audio controls="" preload="metadata" src="assets/audio-1.mp3"></audio></div>
+<div class="audioPart"><strong>PART 2 · A Deadly Dream</strong><audio controls="" preload="metadata" src="assets/audio-2.mp3"></audio></div>
+<div class="audioPart"><strong>PART 3 · No Childhood, No Future</strong><audio controls="" preload="metadata" src="assets/audio-3.mp3"></audio></div>
+<div class="audioPart"><strong>PART 4 · What the City Has / The Lesson</strong><audio controls="" preload="metadata" src="assets/audio-4.mp3"></audio></div>
+</div></div>
+<div class="card"><div class="cardHead teal">◈ VISUAL</div><div class="cardBody"><p>The contrast at the heart of the story: a harsh mining settlement and a quiet moment after the journey.</p><img alt="La Rinconada at dusk" class="songImg zoomable" src="assets/mountain-village.png" style="min-height:180px;height:180px"/></div></div>
+</div>
+<details class="section" id="story" open="True">
+<summary>📖 THE STORY</summary><div class="content story">
+<div class="lead"><strong>Level:</strong> Medium / Difficult   ·   <strong>Genre:</strong> Documentary narrative / Travel reflection<br/><strong>Value focus:</strong> True wealth is not gold. It is clean air, safety, a healthy childhood and the possibility of living without risk to life.</div>
+<details><summary>LEAD-IN</summary><div class="content"><ol><li>What is the most extreme place you have ever heard of?</li><li>If someone offered you a job that paid well but was very dangerous, would you take it? Why?</li><li>What does the phrase “to count your blessings” mean?</li></ol></div></details>
+<h2>Part 1: The Highest City</h2>
+<p>In the Peruvian Andes, more than 5,000 metres above sea level, lies a place called La Rinconada. It is the highest permanent settlement in the world. But “settlement” is a generous word. It is a mining town, built on the edge of a glacier, where the air is so thin that every breath feels like a struggle.</p>
+<p>There are no paved roads. There is no running water or sewage system. There is no police force to speak of. And yet, nearly 50,000 people live here — because beneath the frozen ground lies gold.</p>
+<h2>Part 2: A Deadly Dream</h2>
+<p>For centuries, this gold has attracted fortune seekers from all over Peru. They come with a dream: to find a nugget, become rich, and escape. But the dream is a trap.</p>
+<p>The gold is hidden in the mountains. To reach it, miners work in terrible conditions — no safety equipment, no fresh air, just sweat and explosives. They are not paid a salary. Instead, they work for two weeks without pay. On the 15th day, they can take as much rock as they can carry. If they are lucky, it contains gold. If not, they have worked for nothing.</p>
+<p>Most of them find nothing.</p>
+<p>The real poison, however, is the mercury. Miners use mercury to extract gold from the rock. The liquid metal binds to the gold. Then they burn it off, breathing in the toxic fumes. The mercury enters their lungs, their blood, their brains. It causes tremors, memory loss, and madness. It poisons the water and the soil. And it never goes away.</p>
+<h2>Part 3: No Childhood, No Future</h2>
+<p>What makes La Rinconada even more heartbreaking is the presence of children everywhere.</p>
+<p>Young boys and girls work alongside adults. School is a luxury that few can afford. Childhood is not a time for play and learning — it is a time for survival.</p>
+<p>At 1:06, the camera shows where the ore is processed. Families live in makeshift shelters, right next to the areas where rock is crushed and mercury is burned. The air is thick with dust and poison. The floors are covered with toxic mud. Children play in the same spaces where adults handle mercury with their bare hands.</p>
+<p>Petya and Iris walk through these streets, their faces pale. The lack of oxygen at 5,100 metres makes every step hard. But the heaviness they feel is not just from the altitude. It is from seeing what humans will do to survive — and what they will do to their own children.</p>
+<h2>Part 4: What the City Has (and Hasn't)</h2>
+<p>What is there in the city? A small square. A few shops selling basic supplies. A church. But no hospital that can treat mercury poisoning. No school that can give these children a future. No playgrounds, no libraries, no parks.</p>
+<p>The people are not evil. They are desperate. They know the gold is killing them, but they see no other way. As one miner says in the video, “We come for the gold. But the gold never lets us leave.”</p>
+<h2>Part 5: The Lesson</h2>
+<p>After leaving La Rinconada, Petya and Iris are silent for a long time. The contrast with their own lives — and with the lives of their viewers — is too sharp to ignore.</p>
+<p>Back in their camper van, Iris finally speaks. Her voice is quiet, almost a whisper:</p>
+<div class="note">“We complain so much about what we don't have. A bigger house. A newer phone. More money. But we have clean air to breathe. We have safe food to eat. We have a future. These people have nothing — and they are not complaining. They are just trying to survive.”</div>
+<p>Petya nods. He says, “This is not the only place like this in the world. We have seen others. But this one... this one stays with you.”</p>
+<p>They do not tell their viewers to feel guilty. They do not ask for donations. They simply share what they saw, hoping that it will make people <em>count their blessings</em>.</p>
+<p>Because sometimes, the most valuable thing you can own is not gold. It is the ability to take a deep, clean breath — and to know that you are one of the lucky ones.</p>
+</div></details>
+<details class="section" id="glossary"><summary>📚 GLOSSARY</summary><div class="content"><table class="table"><thead><tr><th>Word / Phrase</th><th>American transcription</th><th>Translation</th></tr></thead><tbody>
+<tr><td>permanent settlement</td><td>[ˈpɜːrmənənt ˈsetlmənt]</td><td>постоянное поселение</td></tr><tr><td>sewage system</td><td>[ˈsuːɪdʒ ˈsɪstəm]</td><td>канализация</td></tr><tr><td>fortune seeker</td><td>[ˈfɔːrtʃən ˈsiːkər]</td><td>искатель удачи</td></tr><tr><td>trap</td><td>[træp]</td><td>ловушка</td></tr><tr><td>equipment</td><td>[ɪˈkwɪpmənt]</td><td>оборудование, снаряжение</td></tr><tr><td>explosives</td><td>[ɪkˈsploʊɪvz]</td><td>взрывчатка</td></tr><tr><td>salary</td><td>[ˈsæləri]</td><td>зарплата</td></tr><tr><td>mercury</td><td>[ˈmɜːrkjəri]</td><td>ртуть</td></tr><tr><td>to extract</td><td>[ɪkˈstrækt]</td><td>извлекать</td></tr><tr><td>toxic fumes</td><td>[ˈtɑːksɪk fjuːmz]</td><td>токсичные испарения</td></tr><tr><td>tremor</td><td>[ˈtremər]</td><td>дрожь, тремор</td></tr><tr><td>madness</td><td>[ˈmædnəs]</td><td>безумие</td></tr><tr><td>heartbreaking</td><td>[ˈhɑːrtbreɪkɪŋ]</td><td>разрывающий сердце</td></tr><tr><td>makeshift shelter</td><td>[ˈmeɪkʃɪft ˈʃeltər]</td><td>временное жильё</td></tr><tr><td>altitude</td><td>[ˈæltɪtuːd]</td><td>высота</td></tr><tr><td>to be desperate</td><td>[tuː biː ˈdespərət]</td><td>быть в отчаянии</td></tr><tr><td>contrast</td><td>[ˈkɑːntræst]</td><td>контраст</td></tr><tr><td>to count your blessings</td><td>[tuː kaʊnt jɔːr ˈblesɪŋz]</td><td>ценить то, что у тебя есть</td></tr><tr><td>to survive</td><td>[tə sərˈvaɪv]</td><td>выживать</td></tr>
+</tbody></table></div></details>
+<div class="two" id="heart">
+<details class="section pink"><summary>♥ FOR THE HEART AND MIND</summary><div class="content">
+<h3>A. Comprehension Check</h3><div class="question">1. Where is La Rinconada and why is it famous?</div><div class="question">2. Why is it difficult to breathe in this city?</div><div class="question">3. How do miners get paid? Why is this system unfair?</div><div class="question">4. How does mercury poisoning affect people's health?</div><div class="question">5. What is shown at timestamp 1:03 and 1:06?</div><div class="question">6. What does the city have, and what is it missing?</div><div class="question">7. What lesson did Petya and Iris learn after visiting La Rinconada?</div>
+<h3>B. Think &amp; Analyse</h3><div class="question">1. The text says, “The dream is a trap.” Why is the dream of finding gold a trap for the people of La Rinconada?</div><div class="question">2. Why do people stay in such a dangerous place? What forces them to stay?</div><div class="question">3. Petya and Iris do not ask for donations or tell viewers to feel guilty. Why do you think they choose to just “share what they saw”?</div><div class="question">4. The miner says, “We come for the gold. But the gold never lets us leave.” What does this mean?</div>
+<h3>C. Discuss &amp; Relate</h3><div class="question">1. What are three “ordinary” things you are grateful for after reading this text?</div><div class="question">2. Do you think it is ethical to buy gold, knowing it might come from places like La Rinconada? Why?</div><div class="question">3. Can one person make a difference in situations like this? If yes, how?</div>
+</div></details>
+<details class="section purple" id="language"><summary>✎ FOR LANGUAGE SKILLS</summary><div class="content">
+<h3>A. Vocabulary Focus</h3><div class="exercise"><strong>1. Match the word with its definition.</strong><table class="table match"><tr><th>Word</th><th>Definition</th></tr><tr><td>1. mercury</td><td>a) a temporary place to live</td></tr><tr><td>2. trap</td><td>b) a poisonous liquid metal</td></tr><tr><td>3. makeshift shelter</td><td>c) the height above sea level</td></tr><tr><td>4. altitude</td><td>d) a situation that is difficult to escape from</td></tr><tr><td>5. to survive</td><td>e) to stay alive</td></tr></table></div>
+<div class="exercise"><strong>2. Complete the sentences with words from the glossary:</strong><br/>a) The city has no running water or a ___________ system.<br/>b) Miners use ___________ to extract gold from rock.<br/>c) The ___________ at 5,000 metres makes it hard to breathe.<br/>d) The video shows children working in ___________ conditions.<br/>e) After visiting, Iris said we should ___________.</div>
+<div class="exercise"><strong>3. Find synonyms in the text for:</strong><br/>poisonous → ___________<br/>very sad → ___________<br/>lack of something → ___________</div>
+<h3>B. Grammar in Context (Passive &amp; Conditional)</h3><div class="exercise"><strong>Rewrite in the Passive Voice:</strong><br/>1. Miners use mercury to extract gold. → Mercury ___________ to extract gold.<br/>2. The miners breathe in toxic fumes. → Toxic fumes ___________ in by the miners.<br/>3. The gold poisons the water and soil. → The water and soil ___________ by the gold.</div>
+<div class="exercise"><strong>Complete the Conditional Sentences:</strong><br/>2. If the miners ___________ (have) safety equipment, fewer people ___________ (get) sick.<br/>2. If there ___________ (be) a hospital, many lives ___________ (save).<br/>2. If you ___________ (visit) La Rinconada, you ___________ (understand) what true poverty means.</div>
+<h3>C. Brain Workout</h3><div class="exercise"><strong>1. Ethical Dilemma:</strong> Imagine you inherit a gold ring. You later learn the gold might come from a mine like La Rinconada. Do you keep it, sell it, or do something else? Discuss in small groups.</div><div class="exercise"><strong>2. Visualisation:</strong> Close your eyes. Imagine you are standing in La Rinconada. What do you see, hear, and smell? Write down 5 descriptive sentences.</div><div class="exercise"><strong>3. The Ripple Effect:</strong> Petya and Iris did not ask for donations. They just shared a story. How can a story be more powerful than money?</div>
+</div></details>
+</div>
+<details class="song" id="song">
+<summary class="songHead">♫ COUNT YOUR BLESSINGS</summary>
+<div class="songGrid">
+<div class="songCell"><h3>Listen to the song</h3><p>Read along with the lyrics and reflect on the message.</p><audio controls="" preload="metadata" src="assets/song-count-your-blessings.wav"></audio><div class="note" style="margin-top:16px">The song turns the journey to La Rinconada into a reflection on gratitude: clean water, food, safety, a future — and every free breath.</div><img alt="Count Your Blessings song cover" class="songImg zoomable" src="assets/song-cover.png"/></div>
+<div class="songCell"><details><summary>LYRICS</summary><div class="content"><div class="lyrics"><div><h3>English</h3>
+<div class="lyric-part"><h4>Verse 1</h4><p>Five thousand metres high, the air is thin</p><p>A child with rocks, where toys have never been</p><p>They’re breathing mercury just to stay alive</p><p>While I complain my coffee is not right</p></div><div class="lyric-part"><h4>Pre-chorus</h4><p>I never saw the poison in the air</p><p>I never knew how much I had to spare</p></div><div class="lyric-part"><h4>Chorus</h4><p>So I’ll count my blessings, one by one</p><p>Clean water running, morning sun</p><p>A plate of food, a bed to sleep</p><p>A dream to follow, a soul to keep</p><p>I used to want a little more</p><p>Now I just stand and thank the Lord</p><p>For every breath that comes for free</p><p>That city on the hill taught me</p></div><div class="lyric-part"><h4>Verse 2</h4><p>No hospital, no school, no future there</p><p>Just golden chains and dusty, cold despair</p><p>A miner's hands are shaking from the poison deep inside</p><p>But he still smiles when he puts his child to bed at night</p></div><div class="lyric-part"><h4>Pre-chorus</h4><p>I held my own heart closer after that</p><p>I took a breath and finally let go of the lack</p></div><div class="lyric-part"><h4>Chorus</h4><p>And I’ll count my blessings, one by one</p><p>Clean water running, morning sun</p><p>A plate of food, a bed to sleep</p><p>A dream to follow, a soul to keep</p><p>I used to want a little more</p><p>Now I just stand and thank the Lord</p><p>For every breath that comes for free</p><p>That city on the hill taught me</p></div><div class="lyric-part"><h4>Bridge</h4><p>Iris whispered in the van that night</p><p>“We have so much, and we never saw the light”</p><p>Not to feel guilty, just to see —</p><p>The smallest things are luxuries</p></div><div class="lyric-part"><h4>Outro</h4><p>So count your blessings…</p><p>Not because you must…</p><p>But because you can…</p><p>A deep clean breath…</p><p>A pair of hands…</p><p>That city on the hill…</p><p>Taught me to understand.</p><p><strong>We are the lucky ones.</strong></p></div>
+</div><div><h3>Русский перевод</h3><div class="lyric-part"><h4>Куплет 1</h4><p>Пять тысяч метров высоты, воздух разрежён</p><p>Ребёнок с камнями, где игрушек не было никогда</p><p>Они вдыхают ртуть, чтобы просто выжить</p><p>А я жалуюсь, что мой кофе не так заварен</p></div><div class="lyric-part"><h4>Распевка</h4><p>Я никогда не замечал яд в воздухе</p><p>Я никогда не знал, сколько у меня есть лишнего</p></div><div class="lyric-part"><h4>Припев</h4><p>Так я буду ценить свои блага одно за другим</p><p>Чистую воду из-под крана, утреннее солнце</p><p>Тарелку еды, кровать, чтобы спать</p><p>Мечту, за которой идти, и душу, которую хранить</p><p>Раньше я хотел чуть больше</p><p>А теперь просто стою и благодарю небо</p><p>За каждый вдох, который даётся бесплатно</p><p>Тот город на холме научил меня</p></div><div class="lyric-part"><h4>Куплет 2</h4><p>Нет больницы, нет школы, нет будущего там</p><p>Только золотые цепи и холодная, пыльная безнадёжность</p><p>Руки шахтёра трясутся от яда, который глубоко внутри</p><p>Но он всё равно улыбается, когда укладывает своего ребёнка спать</p></div><div class="lyric-part"><h4>Распевка</h4><p>Я прижал своё сердце ближе после того дня</p><p>Я вздохнул и наконец отпустил чувство нехватки</p></div><div class="lyric-part"><h4>Припев</h4><p>И я буду ценить свои блага одно за другим</p><p>Чистую воду из-под крана, утреннее солнце</p><p>Тарелку еды, кровать, чтобы спать</p><p>Мечту, за которой идти, и душу, которую хранить</p><p>Раньше я хотел чуть больше</p><p>А теперь просто стою и благодарю небо</p><p>За каждый вдох, который даётся бесплатно</p><p>Тот город на холме научил меня</p></div><div class="lyric-part"><h4>Бридж</h4><p>Ирис прошептала в фургоне той ночью:</p><p>«У нас так много есть, а мы никогда не замечали света»</p><p>Не чтобы чувствовать вину, а просто чтобы увидеть —</p><p>Самая маленькая вещь может быть роскошью</p></div><div class="lyric-part"><h4>Аутро</h4><p>Так цени свои блага…</p><p>Не потому что ты должен…</p><p>А потому что ты можешь…</p><p>Глубокий чистый вдох…</p><p>Пара рук…</p><p>Тот город на холме…</p><p>Научил меня понимать.</p><p><strong>Мы — счастливчики.</strong></p></div></div></div></div></details></div>
+</div>
+<div class="content">
+<details class="songTasks"><summary>🎵 EXERCISES TO THE SONG “COUNT YOUR BLESSINGS”</summary><div class="content">
+<div class="exercise"><strong>EXERCISE 1. The City on the Hill</strong><p><em>Instruction:</em> The song was inspired by a visit to La Rinconada, a city high in the Andes where life is incredibly hard. Read the lines from the song and match them with the reality of La Rinconada.</p><table class="table"><tr><th>Line from the Song</th><th>What it refers to in La Rinconada</th></tr><tr><td>“Five thousand metres high, the air is thin”</td><td>The city is at a very high altitude, making it hard to breathe.</td></tr><tr><td>“A child with rocks, where toys have never been”</td><td>____________________________</td></tr><tr><td>“They’re breathing mercury just to stay alive”</td><td>____________________________</td></tr><tr><td>“No hospital, no school, no future there”</td><td>____________________________</td></tr><tr><td>“A miner's hands are shaking from the poison deep inside”</td><td>____________________________</td></tr></table></div>
+<div class="exercise"><strong>EXERCISE 2. The Change Within</strong><p><em>Instruction:</em> The song describes a change — from complaining to gratitude. Answer the questions about this change.</p><ol><li>Before visiting La Rinconada, the singer said: “I complain my coffee is not right.” What kind of small things do you sometimes complain about? Write down 2–3 examples.</li><li>After visiting the city, the singer says: “I used to want a little more. Now I just stand and thank the Lord.” Why do you think seeing La Rinconada changed him? Have you ever had an experience that made you feel more grateful? Describe it briefly.</li><li>In the bridge, Iris says: “Not to feel guilty, just to see — the smallest things are luxuries.” What is the difference between feeling guilty and just seeing? What is one small thing in your life that is actually a luxury? Why?</li></ol></div>
+<div class="exercise"><strong>EXERCISE 3. Your Own “Blessings”</strong><p><em>Instruction:</em> The song is called “Count Your Blessings.” Now it's your turn to count yours.</p><p><strong>Part A. Make a list.</strong> Write down 5 blessings in your life — things you are grateful for. They can be big or small. Try to think of things you usually take for granted.</p><p><strong>Part B. Share one.</strong> Choose one blessing from your list and explain in 2–3 sentences why it matters to you.</p></div>
+</div></details></div>
+</details>
+<details class="section beyond" id="beyond"><summary>🌍 BEYOND THE TEXT</summary><div class="content"><p><strong>Choose ONE task:</strong></p><ol><li><strong>A Letter of Gratitude:</strong> Write a letter to your future self, listing 5 things you are grateful for (clean water, safety, school, etc.) that the children of La Rinconada do not have.</li><li><strong>Social Media Post (Petya's Voice):</strong> Write a short social media post for Petya English after visiting La Rinconada. Use a photo caption style (max 150 words).</li><li><strong>Research:</strong> Quickly research Fairtrade or ethically sourced gold. Is there such a thing? Present your findings in 5 bullet points.</li><li><strong>AI Image Prompt:</strong> Write a prompt for an AI image generator to create a visual for this text (e.g., a child carrying rocks against a mountain backdrop).</li></ol></div></details>
+</main></div>
+<footer><a class="block-nav" data-dir="prev" href="../block3/index.html">‹ PREVIOUS BLOCK</a><span>MODULE 8 · TECHNOLOGY · BLOCK 4</span><a class="block-nav" data-dir="next" href="../index.html">NEXT BLOCK ›</a></footer>
+</div>
+
+
+<script>
+(function(){
+  function reportHeight(){const h=Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,900);if(window.parent!==window)window.parent.postMessage({type:'block-height',height:h},'*');}
+  let pop=null;
+  function closePhoto(){if(pop){pop.remove();pop=null;} document.body.classList.remove('photo-open');}
+  function openPhoto(img){
+    closePhoto();
+    pop=document.createElement('div'); pop.className='photo-pop';
+    const close=document.createElement('button'); close.className='photo-pop-close'; close.type='button'; close.textContent='×'; close.setAttribute('aria-label','Close image');
+    const big=document.createElement('img'); big.src=img.currentSrc||img.src; big.alt=img.alt||'';
+    pop.appendChild(close); pop.appendChild(big); document.body.appendChild(pop);
+    close.addEventListener('click',closePhoto);
+    pop.addEventListener('click',e=>{if(e.target===pop)closePhoto();});
+    big.addEventListener('click',e=>{e.stopPropagation();closePhoto();});
+  }
+  document.addEventListener('DOMContentLoaded',()=>{
+    document.querySelectorAll('img').forEach(img=>{
+      if(img.closest('.photo-pop')||img.classList.contains('no-zoom')) return;
+      img.classList.add('zoomable');
+    });
+    document.addEventListener('click',e=>{
+      const img=e.target.closest('img.zoomable');
+      if(img && !img.closest('.photo-pop')){e.preventDefault();e.stopPropagation();openPhoto(img);}
+    },true);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closePhoto();});
+    document.querySelectorAll('details').forEach(d=>{if(!d.closest('.hero')&&!d.classList.contains('keep-open'))d.open=false;});
+    reportHeight();setTimeout(reportHeight,300);setTimeout(reportHeight,1000);
+    if(window.ResizeObserver)new ResizeObserver(reportHeight).observe(document.body);
+    document.querySelectorAll('.block-nav').forEach(a=>a.addEventListener('click',e=>{if(window.parent!==window){e.preventDefault();window.parent.postMessage({type:'switch-block',dir:a.dataset.dir},'*');}}));
+  });
+  window.addEventListener('message',e=>{if(e.data&&e.data.type==='request-height')reportHeight();});
+})();
+</script></body></html>

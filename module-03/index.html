@@ -1,0 +1,924 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Module 3 · School Days and Work · Complete Module</title><style>
+*{box-sizing:border-box} body{margin:0;background:#eef1f3;color:#18242c;font-family:Arial,sans-serif}.module-shell{max-width:1220px;margin:auto;background:#fff;min-height:100vh}.module-hero{padding:44px 42px;background:#173746;color:#fff}.module-hero .eyebrow{color:#e7b93f;font-weight:700;letter-spacing:.12em;font-size:13px}.module-hero h1{font:56px/1 Georgia,serif;margin:14px 0}.module-hero p{max-width:800px;font-size:18px}.nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #d9e0e3;padding:12px 24px;display:flex;gap:10px;flex-wrap:wrap}.nav a{color:#173746;text-decoration:none;border:1px solid #cbd5da;border-radius:22px;padding:7px 12px;font-weight:700;font-size:13px}.module-block{padding:22px 0 34px;border-bottom:12px solid #eef1f3}.block-label{margin:0 28px 12px;padding:10px 15px;background:#173746;color:#fff;border-radius:10px;font-weight:700;letter-spacing:.04em}.module-block .wrap{max-width:none;margin:0;min-height:0}.module-block footer{display:none!important}.module-block body{background:transparent}.module-block img{max-width:100%}</style><style>
+:root{--navy:#0d2a3a;--gold:#d7a52b;--ink:#17212b;--muted:#5d6872;--cream:#f7f4ee;--line:#dfe4e7;--blue:#e9f1f6}
+*{box-sizing:border-box}
+body{margin:0;background:#f5f6f7;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+.wrap{max-width:1120px;margin:0 auto;background:white;min-height:100vh}
+.hero{background:var(--navy);color:white;display:grid;grid-template-columns:1.05fr 1.4fr;min-height:340px}
+.hero-copy{padding:38px 42px;display:flex;flex-direction:column;justify-content:center}
+.kicker{color:#f0c44c;font-weight:700;letter-spacing:.12em;font-size:13px;text-transform:uppercase}
+h1{font-family:Georgia,serif;font-size:58px;line-height:.98;margin:14px 0 16px}
+.subtitle{font-family:Georgia,serif;font-style:italic;font-size:19px;color:#e8edf0}
+.hero img{width:100%;height:100%;object-fit:cover}
+.tags{display:flex;flex-wrap:wrap;gap:10px;padding:12px 26px;border-bottom:1px solid var(--line)}
+.tag{border:1px solid #cfd7dc;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:700;background:white}
+main{padding:26px 26px 60px}
+.card{border:1px solid var(--line);border-radius:18px;margin:18px 0;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(20,35,45,.04)}
+.card h2{margin:0;padding:18px 22px;background:#fbfbfa;font-size:21px}
+.card-body{padding:22px}
+.story-layout{display:grid;grid-template-columns:1.3fr .8fr;gap:26px}
+.story{white-space:pre-line;font-family:Georgia,serif;font-size:18px}
+.story-image{width:100%;border-radius:14px;display:block}
+audio,video{width:100%;margin-top:12px}
+.callout{border-left:5px solid var(--gold);background:var(--blue);padding:16px 18px;border-radius:8px}
+h3{margin-top:24px;color:var(--navy)}
+ol,ul{padding-left:26px}
+li{margin:8px 0}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+th{background:#eef3f6}
+.song-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.lyrics{white-space:pre-line;background:#faf8f3;padding:18px;border-radius:12px;font-family:Georgia,serif}
+.small{color:var(--muted);font-size:14px}
+.reflection{display:grid;grid-template-columns:1fr .8fr;gap:24px;align-items:center}
+.try{width:100%;border-radius:14px}
+footer{padding:24px 30px;background:var(--navy);color:#dbe4e9;font-size:13px}
+@media(max-width:800px){.hero,.story-layout,.song-grid,.reflection{grid-template-columns:1fr}h1{font-size:44px}.hero img{max-height:330px}}
+
+details.collapsible {
+  margin: 18px 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(20,35,45,.04);
+  overflow: hidden;
+}
+details.collapsible > summary {
+  list-style: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 18px 22px;
+  background: #fbfbfa;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--ink);
+  position: relative;
+  padding-right: 55px;
+}
+details.collapsible > summary::-webkit-details-marker { display:none; }
+details.collapsible > summary::after {
+  content: "+";
+  position: absolute;
+  right: 22px;
+  top: 14px;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--gold);
+}
+details.collapsible[open] > summary::after { content: "−"; }
+details.collapsible .card-body { padding: 22px; }
+</style><style>
+:root{--navy:#0d2a3a;--gold:#d7a52b;--ink:#17212b;--muted:#5d6872;--cream:#f7f4ee;--line:#dfe4e7;--blue:#e9f1f6}
+*{box-sizing:border-box}
+body{margin:0;background:#f5f6f7;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+.wrap{max-width:1120px;margin:0 auto;background:white;min-height:100vh}
+.hero{background:var(--navy);color:white;display:grid;grid-template-columns:1.05fr 1.4fr;min-height:340px}
+.hero-copy{padding:38px 42px;display:flex;flex-direction:column;justify-content:center}
+.kicker{color:#f0c44c;font-weight:700;letter-spacing:.12em;font-size:13px;text-transform:uppercase}
+h1{font-family:Georgia,serif;font-size:54px;line-height:.98;margin:14px 0 16px}
+.subtitle{font-family:Georgia,serif;font-style:italic;font-size:18px;color:#e8edf0}
+.hero img{width:100%;height:100%;object-fit:cover}
+.tags{display:flex;flex-wrap:wrap;gap:10px;padding:12px 26px;border-bottom:1px solid var(--line)}
+.tag{border:1px solid #cfd7dc;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:700;background:white}
+main{padding:26px 26px 60px}
+details.collapsible, details.sub{border:1px solid var(--line);border-radius:18px;margin:18px 0;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(20,35,45,.04)}
+details.collapsible>summary, details.sub>summary{list-style:none;cursor:pointer;margin:0;padding:18px 22px;background:#fbfbfa;font-size:21px;font-weight:700;color:var(--ink);position:relative;padding-right:55px}
+details.collapsible>summary::-webkit-details-marker, details.sub>summary::-webkit-details-marker{display:none}
+details.collapsible>summary::after, details.sub>summary::after{content:"+";position:absolute;right:22px;top:14px;font-size:28px;font-weight:400;color:var(--gold)}
+details.collapsible[open]>summary::after, details.sub[open]>summary::after{content:"−"}
+.card-body{padding:22px}
+.sub{margin:14px 0!important;border-radius:14px!important}
+.sub>summary{font-size:18px!important;background:#f7f8f8!important;padding:14px 18px!important}
+.sub-body{padding:18px}
+.story-layout{display:grid;grid-template-columns:1.25fr .85fr;gap:26px}
+.story{white-space:pre-line;font-family:Georgia,serif;font-size:18px}
+.story-image,.wide-image,.try{width:100%;border-radius:14px;display:block}
+.callout{border-left:5px solid var(--gold);background:var(--blue);padding:16px 18px;border-radius:8px}
+h3{margin-top:24px;color:var(--navy)}
+ol,ul{padding-left:26px}
+li{margin:8px 0}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+th{background:#eef3f6}
+.song-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.lyrics{white-space:pre-line;background:#faf8f3;padding:18px;border-radius:12px;font-family:Georgia,serif}
+.small{color:var(--muted);font-size:14px}
+.reflection{display:grid;grid-template-columns:1fr .8fr;gap:24px;align-items:center}
+audio,video{width:100%;margin-top:12px}
+.note{font-size:14px;color:var(--muted);background:#f8f8f7;border-radius:10px;padding:12px 14px}
+footer{padding:24px 30px;background:var(--navy);color:#dbe4e9;font-size:13px}
+@media(max-width:800px){.hero,.story-layout,.song-grid,.reflection{grid-template-columns:1fr}h1{font-size:43px}.hero img{max-height:330px}}
+</style><style>
+body{margin:0;background:#f3f5f6;color:#18242c;font:16px/1.65 Arial,sans-serif}
+.wrap{max-width:1120px;margin:auto;background:white;min-height:100vh}
+.hero{display:grid;grid-template-columns:1.05fr 1.45fr;background:#172f3d;color:white}
+.hero img{width:100%;height:100%;object-fit:cover}
+.hero div{padding:42px}
+.k{color:#e7b93f;font-weight:700;letter-spacing:.12em;font-size:13px}
+h1{font:52px/1 Georgia,serif;margin:15px 0}
+h2,h3{color:#173746}
+.tags{padding:12px 28px;border-bottom:1px solid #ddd}
+.tag{display:inline-block;border:1px solid #ccd5da;border-radius:20px;padding:5px 11px;margin:3px;font-size:12px;font-weight:700}
+main{padding:26px}
+details{border:1px solid #d9e0e3;border-radius:16px;margin:16px 0;overflow:hidden}
+summary{cursor:pointer;padding:17px 20px;background:#fafaf8;font-size:20px;font-weight:700}
+.sub-body{padding:20px}
+.sub{margin:14px 0}
+.sub summary{font-size:18px}
+img.wide{width:100%;border-radius:14px;display:block;margin:10px 0 18px}
+audio,video{width:100%;margin:8px 0 18px}
+.callout{background:#eef4f6;border-left:5px solid #d7a52b;padding:15px 18px;border-radius:8px}
+.quote{font:18px/1.7 Georgia,serif;background:#faf7ef;padding:18px;border-radius:12px}
+footer{background:#172f3d;color:#dbe4e9;padding:22px 28px;font-size:13px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}h1{font-size:42px}}
+
+.table-wrap{overflow-x:auto;margin:16px 0 22px}
+table{border-collapse:collapse;width:100%;font-size:15px;background:#fff}
+th,td{border:1px solid #d5dde1;padding:10px 12px;vertical-align:top;text-align:left}
+th{background:#eef4f6;font-weight:700;color:#173746}
+tr:nth-child(even) td{background:#fafcfc}
+.song-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #d5dde1;border-radius:12px;overflow:hidden}
+.song-grid .cell{padding:18px;border-bottom:1px solid #d5dde1}
+.song-grid .head{background:#173746;color:#fff;font-weight:700}
+.song-grid .en{border-right:1px solid #d5dde1}
+.song-grid .voice{grid-column:1/-1;background:#f1f5f6;font-weight:700;color:#173746;padding:11px 16px}
+@media(max-width:800px){.song-grid{grid-template-columns:1fr}.song-grid .en{border-right:0}}
+</style></head><body><div class="module-shell"><header class="module-hero"><div class="eyebrow">MODULE 3 · SCHOOL DAYS AND WORK</div><h1>SCHOOL DAYS AND WORK</h1><p>Complete module · Blocks 1–3</p><p>Read · Listen · Watch · Think · Create</p></header><nav class="nav"><a href="#block1">1 · The Test</a><a href="#block2">2 · A Tale of Two Schools</a><a href="#block3">3 · What Is Education For?</a></nav><section class="module-block" id="block1"><div class="block-label">BLOCK 1 · THE TEST</div><div class="wrap">
+<header class="hero">
+<div class="hero-copy">
+<div class="kicker">Module 3 · Schooldays and Work · Block 01</div>
+<h1>THE TEST</h1>
+<div class="subtitle">A realistic story about courage, persistence and learning in a different way.</div>
+</div>
+<img alt="A student and a teacher talking after a test" src="block1/story_image.jpg"/>
+</header>
+<div class="tags">
+<span class="tag">LEVEL: EASY</span><span class="tag">READ · LISTEN · THINK · CREATE</span>
+<span class="tag">SCHOOL &amp; EDUCATION</span><span class="tag">COURAGE · PERSISTENCE</span>
+</div>
+<main>
+<details class="collapsible"><summary>📖 THE STORY</summary><div class="card-body">
+<div class="story-layout">
+<div>
+<div class="callout"><b>Genre:</b> Realistic first-person narrative<br/><b>Value focus:</b> A teacher who sees potential in a student, not a mistake. The courage to be “not good enough.”</div>
+<h3>LEAD-IN</h3>
+<ol>
+<li>What subject is the most difficult for you? How do you feel before a test in that subject?</li>
+<li>Is it possible to be “bad at maths” but still smart? Why?</li>
+<li>Look at the title: “The Test”. What kind of test could it be — a school test or something else?</li>
+</ol>
+<div class="story">I used to believe I was stupid.
+
+Not in every subject. I could write essays. I could draw. But maths? Numbers danced on the page and laughed at me. I was the slowest in class. Everyone else finished the test in twenty minutes. I sat there, staring at the clock, my paper still white.
+
+My teacher was Mr. Harrison. He was strict. His glasses were thick. His voice was loud. When I got a D on a test, he sighed. Not angrily. Just… tired. Like he had given up on me.
+
+I gave up on myself too.
+
+Then came the final exam.
+
+I studied for three weeks. Every night. My mother made flashcards. My father tried to help, but he was worse at maths than me. I still failed. When I saw the grade — 34% — I felt nothing. I was used to it.
+
+After class, Mr. Harrison said, “Stay.”
+
+I waited by his desk. He didn't speak for a long time. He just looked at my test paper. Then he said something I never expected.
+
+“You know,” he said quietly, “you didn't get the right answers. But your working was not careless. You tried different methods. You thought. That is harder to teach than memorising formulas.”
+
+I didn't understand. “But I failed.”
+
+He took off his glasses and rubbed his eyes. “When I was your age, I failed everything. Not because I was lazy. Because I was afraid. Afraid of being wrong. Afraid of looking stupid. So I stopped trying.”
+
+He looked at me. Really looked.
+
+“You kept trying. Even when you were sure you would fail. Do you understand how rare that is?”
+
+I didn't know what to say.
+
+“Grades measure performance,” he said. “They don't measure courage. They don't measure persistence. They don't measure how many times you fall and get up again.”
+
+He handed me my paper.
+
+“This is not an F,” he said. “This is twenty-seven weeks of not giving up. That's an A in my book.”
+
+I walked home that day feeling lighter. I still couldn't solve quadratic equations. But maybe I wasn't stupid. Maybe I was just learning in a different way.
+
+Maybe that was enough.</div>
+</div>
+<div><img alt="The student and Mr. Harrison" class="story-image" src="block1/story_image.jpg"/></div>
+</div>
+</div></details>
+<details class="collapsible"><summary>🎧 LISTEN</summary><div class="card-body">
+<p>Listen to the story <b>“The Test”</b>.</p>
+<audio controls="" preload="metadata"><source src="block1/story_audio.wav" type="audio/wav"/></audio>
+<p class="small">Audio: “АУДИО THE TEST.wav”</p>
+</div></details>
+<details class="collapsible"><summary>🎬 WATCH</summary><div class="card-body">
+<video controls="" preload="metadata"><source src="block1/story_video.mp4" type="video/mp4"/></video>
+<p class="small">Video: “Видео The Test.mp4”</p>
+</div></details>
+<details class="collapsible"><summary>📚 GLOSSARY</summary><div class="card-body">
+<table><thead><tr><th>Word / Phrase</th><th>American pronunciation</th><th>Russian</th></tr></thead>
+<tbody><tr><td>stupid</td><td>[ˈstuːpɪd]</td><td>глупый</td></tr><tr><td>essay</td><td>[ˈeseɪ]</td><td>эссе, сочинение</td></tr><tr><td>to dance</td><td>[dæns]</td><td>танцевать</td></tr><tr><td>to stare</td><td>[ster]</td><td>пристально смотреть</td></tr><tr><td>clock</td><td>[klɑːk]</td><td>часы</td></tr><tr><td>strict</td><td>[strɪkt]</td><td>строгий</td></tr><tr><td>thick</td><td>[θɪk]</td><td>толстый</td></tr><tr><td>to sigh</td><td>[saɪ]</td><td>вздыхать</td></tr><tr><td>to give up on</td><td>[ɡɪv ʌp ɑːn]</td><td>махнуть рукой, потерять веру</td></tr><tr><td>final exam</td><td>[ˈfaɪnl ɪɡˈzæm]</td><td>выпускной экзамен</td></tr><tr><td>flashcard</td><td>[ˈflæʃkɑːrd]</td><td>карточка для запоминания</td></tr><tr><td>grade</td><td>[ɡreɪd]</td><td>оценка</td></tr><tr><td>to fail</td><td>[feɪl]</td><td>провалить, не сдать</td></tr><tr><td>to be used to</td><td>[biː juːst tuː]</td><td>привыкнуть к</td></tr><tr><td>to expect</td><td>[ɪkˈspekt]</td><td>ожидать</td></tr><tr><td>working (n)</td><td>[ˈwɜːrkɪŋ]</td><td>решение, ход работы</td></tr><tr><td>careless</td><td>[ˈkerləs]</td><td>небрежный</td></tr><tr><td>method</td><td>[ˈmeθəd]</td><td>метод</td></tr><tr><td>to memorise</td><td>[ˈmeməraɪz]</td><td>заучивать наизусть</td></tr><tr><td>formula</td><td>[ˈfɔːrmjələ]</td><td>формула</td></tr><tr><td>to rub</td><td>[rʌb]</td><td>тереть</td></tr><tr><td>lazy</td><td>[ˈleɪzi]</td><td>ленивый</td></tr><tr><td>afraid</td><td>[əˈfreɪd]</td><td>испуганный</td></tr><tr><td>wrong</td><td>[rɔːŋ]</td><td>неправильный</td></tr><tr><td>rare</td><td>[rer]</td><td>редкий</td></tr><tr><td>to measure</td><td>[ˈmeʒər]</td><td>измерять</td></tr><tr><td>performance</td><td>[pərˈfɔːrməns]</td><td>успеваемость, результат</td></tr><tr><td>courage</td><td>[ˈkɜːrɪdʒ]</td><td>смелость</td></tr><tr><td>persistence</td><td>[pərˈsɪstəns]</td><td>настойчивость</td></tr><tr><td>to hand</td><td>[hænd]</td><td>вручать</td></tr><tr><td>quadratic equation</td><td>[kwɑːˈdrætɪk ɪˈkweɪʒn]</td><td>квадратное уравнение</td></tr><tr><td>to solve</td><td>[sɑːlv]</td><td>решать</td></tr><tr><td>to give up</td><td>[ɡɪv ʌp]</td><td>сдаваться</td></tr></tbody></table>
+</div></details>
+<details class="collapsible"><summary>❤️ FOR THE HEART AND MIND</summary><div class="card-body">
+<h3>A. Comprehension Check</h3><ol><li>What subject was difficult for the narrator?</li><li>How did Mr. Harrison usually react to his low grades?</li><li>How long did the narrator study for the final exam?</li><li>What grade did he get?</li><li>What did Mr. Harrison ask him to do after class?</li><li>What did Mr. Harrison say about the narrator's “working” (his process)?</li><li>What did Mr. Harrison confess about his own school years?</li><li>What did Mr. Harrison say grades cannot measure?</li></ol>
+<h3>B. Think &amp; Analyse</h3><ol><li>The narrator says: “I gave up on myself too.” Why did he give up? What made him believe he was stupid?</li><li>Mr. Harrison says: “When I was your age, I failed everything. Not because I was lazy. Because I was afraid.” Why is this confession important? How does it change the narrator's view of his teacher?</li><li>At the end, Mr. Harrison says: “This is twenty-seven weeks of not giving up. That's an A in my book.” What does “in my book” mean here? Whose “book” matters more — the school's or Mr. Harrison's?</li><li>The narrator still can't solve quadratic equations. But he feels “lighter.” What has changed?</li></ol>
+<h3>C. Discuss &amp; Relate</h3><ol><li>Have you ever had a teacher who believed in you when you didn't believe in yourself? What did they say or do?</li><li>Is it possible to measure courage or persistence with a grade? Should schools try?</li><li>Mr. Harrison was “strict” and “loud” — but he was also kind. Can strictness and kindness exist together? Give examples.</li><li>In your culture, is there enough respect for students who are “slow but persistent”? Or is speed valued more?</li></ol>
+</div></details>
+<details class="collapsible"><summary>🧠 FOR LANGUAGE SKILLS</summary><div class="card-body">
+<h3>A. Vocabulary Focus</h3>
+<ol>
+<li>Find the opposites (antonyms) in the glossary:
+<ul><li>stupid → _______</li><li>careless → _______</li><li>to give up → _______</li><li>rare → _______</li></ul></li>
+<li>Complete the phrases from the text:
+<ul><li>to give up ___ someone</li><li>to be used ___ something</li><li>to be afraid ___ being wrong</li><li>to stare ___ the clock</li></ul></li>
+<li>Fill in the blanks with words from the glossary:
+<ul><li>She studied all night because she was afraid to ______ the exam.</li><li>His ______ in maths are very high — he's the best student.</li><li>It's ______ to meet someone who never gives up.</li><li>The teacher ______ deeply and said, “Let's try again.”</li><li>You don't need to ______ everything; understanding is more important.</li></ul></li>
+<li>Make your own sentences with: <i>strict</i>; <i>to give up on</i>; <i>courage</i>.</li>
+</ol>
+<h3>B. Grammar in Context</h3>
+<ol>
+<li>Comparatives and Superlatives:
+<ul><li>Find in the text: “I was the SLOWEST in class.”</li><li>Find in the text: “My father was WORSE at maths than me.”</li><li>Mr. Harrison was ______ (strict) than other teachers.</li><li>This was ______ (difficult) test I had ever taken.</li><li>He didn't give up. That's ______ (important) than a perfect score.</li></ul></li>
+<li>Adverbs of manner:
+<ul><li>The narrator studied for three weeks. How? Find the word that describes how he studied.</li><li>Mr. Harrison spoke quietly. Form the adverb from <i>quiet</i>.</li><li>He was careless → He worked ______.</li></ul></li>
+<li>Used to / Be used to:
+<ul><li>Find: “I was used to it.”</li><li>I used to fail maths. / I am used to failing maths.</li><li>When I was young, I ______ (believe) that grades defined me.</li><li>Now I ______ (not / give up) easily.</li></ul></li>
+<li>Second Conditional:
+<ul><li>If Mr. Harrison hadn't spoken to me, I ______ (probably / give up) school.</li><li>If I were a teacher, I ______ (not / judge) students only by their test scores.</li><li>Write one Second Conditional sentence about your own school experience.</li></ul></li>
+</ol>
+<h3>C. Brain Workout</h3>
+<ol>
+<li>Reverse perspective: Imagine you are Mr. Harrison, 30 years later. You see your former student at a supermarket. He is a successful artist. Write TWO sentences of what you would say to him.</li>
+<li>Memory Chain: continue the cooperative recall chain from the story.</li>
+<li>Metaphor making: “Numbers danced on the page and laughed at me.” Create your own metaphor for a difficult subject. Begin with “For me, history is...”, “For me, grammar is...”, or “For me, PE is...”</li>
+<li>Emotional timeline: mark the narrator’s emotions before the final exam, after seeing the grade, when Mr. Harrison said “Stay”, during his confession, and on the way home. Use one word for each emotion.</li>
+</ol>
+</div></details>
+<details class="collapsible"><summary>🌱 BEYOND THE TEXT</summary><div class="card-body">
+<ol><li>Imagine you are the narrator, 10 years later. Write a short letter to Mr. Harrison. What do you want to thank him for? What are you doing now? (80–100 words)</li><li>Write a short paragraph about a time you failed at something — but learned something more important than success. It can be sports, art, a relationship, anything.</li><li>Interview a teacher (optional, with permission): “What is more satisfying — a student who gets straight As, or a student who never gives up?” Report their answer in English.</li><li>Create an image that captures the moment Mr. Harrison looks at the narrator and says: “You kept trying. Do you understand how rare that is?”</li><li>This story celebrates persistence over speed. Make a list of 3–5 professions or skills where “slow learning” might actually be an advantage. Explain why.</li></ol>
+</div></details>
+<details class="collapsible"><summary>✏️ TRY — A MOMENT TO THINK</summary><div class="card-body reflection">
+<div>
+<p>The story ends with a quiet change: the narrator still cannot solve quadratic equations, but he no longer sees himself as stupid.</p>
+<div class="callout"><b>Key idea:</b> A result can describe performance at one moment. It does not describe the whole person.</div>
+</div>
+<img alt="A worn pencil and eraser on paper with the word TRY" class="try" src="block1/try_image.png"/>
+</div></details>
+<details class="collapsible"><summary>🎵 MORE THAN THIS GRADE</summary><div class="card-body">
+<p>This song grows directly out of “The Test”. <b>English and Russian lyrics are intentionally separated.</b></p>
+<audio controls="" preload="metadata"><source src="block1/song_audio.mp3" type="audio/mpeg"/></audio>
+<div class="song-grid">
+<div><h3>ENGLISH VERSION</h3><div class="lyrics">Verse 1
+My paper was empty, my heart was the same
+A thirty-four percent, just a number, a shame
+I thought I was nothing, just a boy who can't learn
+Till he looked at me softly and my world took a turn
+
+Chorus
+You are more than this grade, more than this test
+More than the fears that live in your chest
+The numbers don't see how you fight and you fall
+And you get back up, giving your all
+
+Verse 2
+He said “When I was your age, I failed everything
+Not 'cause I was lazy, but scared of the sting
+Of looking like a fool, of getting it wrong
+But you kept on trying, and that makes you strong”
+
+Chorus
+You are more than this grade, more than this test
+More than the fears that live in your chest
+The numbers don't see how you fight and you fall
+And you get back up, giving your all
+
+Bridge
+An 'A' in my book for the weeks I survived
+For the courage to try even when I'm deprived
+Of the right answers — but I've got the fight
+And that is the thing that will carry me right
+
+Outro
+This is not an F, it's a promise to stay
+I'll keep on trying, come what may.</div></div>
+<div><h3>РУССКИЙ ВАРИАНТ</h3><div class="lyrics">Куплет 1
+Моя работа была пуста, моё сердце было таким же
+Тридцать четыре процента, просто цифра, позор
+Я думал, я ничто, мальчик,
+Который не может учиться
+Пока он не посмотрел на меня мягко,
+И мой мир не перевернулся
+
+Распевка
+Он сказал: “Я вижу тебя,
+Я вижу все битвы, которые ты вёл
+И сражения, о которых никто не знает”
+
+Припев
+Ты больше, чем эта оценка, больше, чем этот тест
+Больше, чем страхи, что живут в твоей груди
+Цифры не видят, как ты падаешь и встаёшь
+Мужество, которое нужно,
+Чтобы просто открыть глаза
+
+Куплет 2
+“Когда я был в твоём возрасте, я проваливал всё
+Не потому что был ленивым,
+А потому что боялся укуса
+Боялся выглядеть дураком, боялся ошибиться
+Но ты продолжал пытаться,
+И это делает тебя сильным”
+
+Распевка
+“Ты не сдался, когда думал, что сломаешься
+Такого человека я горжусь, что помог создать”
+
+Припев
+Ты больше, чем эта оценка,
+Больше, чем этот тест
+Больше, чем страхи, что живут в твоей груди
+Цифры не видят, как ты падаешь и встаёшь
+Мужество, которое нужно,
+чтобы просто открыть глаза
+
+Бридж
+Пятёрка по моей шкале за недели,
+Которые я выжил
+За мужество пытаться, даже когда я лишён
+Правильных ответов — но у меня есть борьба
+И это то, что понесёт меня вперёд
+
+Аутро
+Это не двойка, это обещание остаться
+Я буду продолжать пытаться, что бы ни случилось
+Я буду продолжать пытаться, что бы ни случилось</div></div>
+</div>
+</div></details>
+<details class="collapsible"><summary>🎤 AFTER THE SONG — CLASS PROJECT</summary><div class="card-body">
+<h3>“I Am More Than a Grade”</h3>
+<p><b>Type:</b> Creative writing + video (or collage)<br/>
+<b>Duration:</b> 1 week<br/>
+<b>Integration:</b> English + self-esteem + psychological well-being</p>
+<div class="callout"><b>Your Mission:</b> Create a short video or a digital collage (1 minute) using the song “More Than This Grade” as the soundtrack. Find or take photos that represent who you are BEYOND your grades.</div>
+<h3>What can you include?</h3>
+<ul><li>Your hobbies (drawing, sports, music, dancing)</li><li>Your talents (cooking, helping others, making people laugh)</li><li>Your qualities (kindness, patience, courage, creativity)</li><li>A moment you were proud of that had nothing to do with school</li></ul>
+<h3>Step by step</h3><ol><li>Create a short video or a digital collage (1 minute) using the song “More Than This Grade” as the soundtrack. Find or take photos that represent who you are BEYOND your grades.</li><li>Include, for example: your hobbies; your talents; your qualities; a moment you were proud of that had nothing to do with school.</li><li>Step 1: Find 6–10 photos that show different parts of who you are.</li><li>Step 2: Arrange them in any order you like.</li><li>Step 3: Add the song as the soundtrack.</li><li>Step 4: At the end, add one sentence in English completing: “I am more than a grade because...”</li></ol>
+<p><b>Examples:</b></p>
+<ul>
+<li>“I am more than a grade because I am the one who helps my little brother with his homework.”</li>
+<li>“I am more than a grade because I never give up, even when things are hard.”</li>
+<li>“I am more than a grade because I make people laugh when they are sad.”</li>
+</ul>
+<h3>Teacher note</h3>
+<ul>
+<li>Help students separate their self-worth from school grades.</li>
+<li>Create a safe atmosphere — some students may be vulnerable around this topic.</li>
+<li>Students do not need to show their grades in the video.</li>
+</ul>
+<h3>Alternative formats</h3>
+<ul><li>Paper collage with a class presentation under the song.</li><li>A letter to your future self: “Dear Me, remember that you are more than a grade...”</li></ul>
+<h3>Class Wall of “I Am More Than”</h3>
+<p>Each student writes one sentence completing: <b>“I am more than a grade because...”</b> The class can read the sentences aloud or silently.</p>
+</div></details>
+</main>
+<footer>MODULE 3 · SCHOOLDAYS AND WORK · BLOCK 01 · THE TEST</footer>
+</div></section><section class="module-block" id="block2"><div class="block-label">BLOCK 2 · A TALE OF TWO SCHOOLS</div><div class="wrap">
+<header class="hero">
+<div class="hero-copy">
+<div class="kicker">Module 3 · Schooldays and Work · Block 02</div>
+<h1>A TALE OF TWO SCHOOLS</h1>
+<div class="subtitle">Two teenagers. Two education systems. One important question: What kind of life do you want to build?</div>
+</div>
+<img alt="Two contrasting school experiences" src="block2/hero_two_schools.png"/>
+</header>
+<div class="tags">
+<span class="tag">LEVEL: MEDIUM</span>
+<span class="tag">READ · LISTEN · THINK · CREATE</span>
+<span class="tag">COMPARATIVES &amp; SUPERLATIVES</span>
+<span class="tag">SECOND CONDITIONAL</span>
+<span class="tag">SCHOOL SYSTEMS</span>
+</div>
+<main>
+<details class="collapsible">
+<summary>📖 THE TEXT</summary>
+<div class="card-body">
+<div class="callout">
+<b>Genre:</b> Comparative portrait / Parallel stories<br/>
+<b>Value focus:</b> There is no perfect system. Every system has strengths and weaknesses. What matters is not only where you study, but how you relate to learning and to yourself.
+</div>
+<h3>LEAD-IN</h3>
+<ol><li>Imagine a school where you study 12 hours a day, six days a week. What would be good about it? What would be difficult?</li><li>Imagine a school with no exams, no grades, and a 5-hour day. Would you like to study there? Why?</li><li>What do you think is the most important purpose of school?</li></ol>
+<details class="sub"><summary>PART 1: JI-HOON — SEOUL, SOUTH KOREA</summary><div class="sub-body"><div class="story-layout"><div><div class="story">Ji-hoon wakes up at 6 a.m. He is in school by 7:30. His first class is Korean literature. His last class ends at 4:30 p.m. But he does not go home. He goes to a hagwon — a private academy — for two more hours of maths. Then another hour of English. He gets home at 9 p.m. He eats, showers, and studies until midnight. Sometimes later.
+
+«My parents say this is normal,» Ji-hoon says. «Everyone does it. If you want a good university, you must study harder than everyone else.»
+
+South Korea has one of the highest education rankings in the world. Korean students are among the best in maths and science. But they are also among the most tired.
+
+Ji-hoon has never missed a day of school in four years. His exam scores are excellent. He will probably get into a top university.
+
+«I don't hate school,» Ji-hoon says. «I just don't remember the last time I wasn't tired.»
+
+When the interviewer asks him what he does for fun, he pauses for a long time.
+
+«I used to play the guitar,» he says quietly. «In middle school. But I stopped. There was no time.»
+
+He doesn't say it sadly. He says it like a fact. Like saying «the sky is blue» or «water is wet».</div>
+<audio controls="" preload="metadata"><source src="block2/part1_ji_hoon.wav" type="audio/wav"/></audio>
+<p class="small">Audio: Part 1 — Ji-hoon</p></div>
+<div><img alt="Ji-hoon's side of the school comparison" class="story-image" src="block2/hero_two_schools.png"/></div></div></div></details>
+<details class="sub"><summary>PART 2: ELINA — HELSINKI, FINLAND</summary><div class="sub-body"><div class="story-layout"><div><div class="story">Elina wakes up at 8:30. Her school starts at 9:15. She walks there with her friends. No uniform. No heavy backpack. Her first class is art. Then maths — but not from a textbook. They measure the shadows of trees in the schoolyard.
+
+There are no standardized tests in Finland. No school rankings. No private tutoring. Students rarely get homework. The school day is short — about five hours.
+
+«We have a saying,» Elina says. «Let everyone blossom in their own time.»
+
+Finland has one of the highest education rankings in the world. It also has one of the happiest students.
+
+«Do I want to go to university?» Elina thinks. «Maybe. Or maybe art school. Or maybe I'll travel first. I have time.»
+
+She plays guitar in a park with her friends every Friday. She is not very good yet. But she is learning.</div>
+<audio controls="" preload="metadata"><source src="block2/part2_elina_helsinki.wav" type="audio/wav"/></audio>
+<p class="small">Audio: Part 2 — Elina, Helsinki</p></div>
+<div><img alt="Elina walking to school in Helsinki" class="story-image" src="block2/elina_school.png"/></div></div></div></details>
+<details class="sub"><summary>PART 3: THE QUESTION</summary><div class="sub-body"><div class="story"><p>Two countries. Two teenagers. Both are 16.
+
+Ji-hoon has discipline, knowledge, and a clear path. He has sacrificed his hobbies, his sleep, his weekends. But he has opportunity.
+
+Elina has freedom, creativity, and mental health. She has time to discover who she is. But sometimes she worries: Am I learning enough? Will I be able to compete?
+
+Who is better prepared for life?</p></div>
+<audio controls="" preload="metadata"><source src="block2/part3_question.wav" type="audio/wav"/></audio>
+<p class="small">Audio: Part 3 — The Question</p></div></details>
+<details class="sub"><summary>PART 4: THE TRUTH</summary><div class="sub-body"><div class="story"><p>There is no easy answer.
+
+Ji-hoon's system gives him focus and determination. But it takes his childhood — not suddenly, not cruelly, just… day by day. One missed guitar lesson. One Sunday of studying. Another Sunday.
+
+Elina's system gives her space to grow. But space can feel empty sometimes. She envies Ji-hoon his certainty. He envies her her free time. They don't know each other, but they are both asking the same question:
+
+Am I doing this right?
+
+Maybe the question itself is wrong.
+
+Maybe it's not: Which system is better?
+
+Maybe it's: What kind of life do you want to build?</p></div>
+<audio controls="" preload="metadata"><source src="block2/part4_truth.wav" type="audio/wav"/></audio>
+<p class="small">Audio: Part 4 — The Truth</p></div></details>
+</div>
+</details>
+<details class="collapsible">
+<summary>🎬 WATCH</summary>
+<div class="card-body">
+<h3>Video 1 — A Tale of Two Schools</h3>
+<video controls="" preload="metadata"><source src="block2/story_video.mp4" type="video/mp4"/></video>
+<p class="small">Video: “Видео A Tale of 2 Schools 1.mp4”</p>
+<h3>Video 2 — Elina, Helsinki</h3>
+<video controls="" preload="metadata"><source src="block2/elina_video.mp4" type="video/mp4"/></video>
+<p class="small">Video: “Видео Элина.mp4”</p>
+</div>
+</details>
+<details class="collapsible">
+<summary>❤️ FOR THE HEART AND MIND</summary>
+<div class="card-body">
+<h3>A. Comprehension Check</h3><ol><li>What time does Ji-hoon wake up? When does he come home?</li><li>What is a hagwon?</li><li>What is the leading cause of death among Korean teenagers?</li><li>What time does Elina's school start? How does she get there?</li><li>What do Elina and her classmates do in maths class?</li><li>Does Finland have standardized tests? Do students get much homework?</li><li>What is the Finnish saying mentioned in the text?</li><li>What does Ji-hoon NOT have in his life? (Give two examples from the text.)</li><li>What does Elina sometimes worry about?</li></ol>
+<h3>B. Think &amp; Analyse</h3><ol><li>The text says: «South Korea has one of the highest education rankings… and one of the highest student stress levels.» Why do you think these two things exist together?</li><li>Elina's school has no uniforms, no rankings, short days. Does this mean it is «easier»? Is «easy» the same as «good»?</li><li>Ji-hoon's best friend is the student next to him — but he doesn't know his name. What does this detail tell you about his life?</li><li>The text asks: «Who is better prepared for life?» What is your answer? Why?</li><li>The final paragraph says: «Maybe the question is wrong.» What is the «right» question, according to the text?</li></ol>
+<h3>C. Discuss &amp; Relate</h3><ol><li>Which system is closer to your own school experience — Korea or Finland? What would you like to change about your school?</li><li>Ji-hoon has discipline and knowledge. Elina has freedom and creativity. If you had to choose, which is more important for a good life?</li><li>The Finnish saying is: «Let everyone blossom in their own time.» Is this possible in a competitive world? Should schools protect students from competition — or prepare them for it?</li><li>Do you think it is possible to have both: high academic standards AND low student stress? Can you think of any country or school that does this well?</li><li>At 16, Ji-hoon knows exactly what he needs to do to succeed. Elina is unsure about her future. Which one is more «successful» at 16? Does it matter?</li></ol>
+</div>
+</details>
+<details class="collapsible">
+<summary>📚 GLOSSARY</summary>
+<div class="card-body">
+<table>
+<thead><tr><th>Word / Phrase</th><th>American pronunciation</th><th>Russian</th></tr></thead>
+<tbody><tr><td>academy</td><td>[əˈkædəmi]</td><td>академия, частная школа</td></tr><tr><td>normal</td><td>[ˈnɔːrml]</td><td>нормальный</td></tr><tr><td>university</td><td>[ˌjuːnɪˈvɜːrsəti]</td><td>университет</td></tr><tr><td>ranking</td><td>[ˈræŋkɪŋ]</td><td>рейтинг</td></tr><tr><td>stress</td><td>[stres]</td><td>стресс</td></tr><tr><td>tired</td><td>[ˈtaɪərd]</td><td>уставший</td></tr><tr><td>uniform</td><td>[ˈjuːnɪfɔːrm]</td><td>школьная форма</td></tr><tr><td>backpack</td><td>[ˈbækpæk]</td><td>рюкзак</td></tr><tr><td>to measure</td><td>[ˈmeʒər]</td><td>измерять</td></tr><tr><td>shadow</td><td>[ˈʃædoʊ]</td><td>тень</td></tr><tr><td>schoolyard</td><td>[ˈskuːljɑːrd]</td><td>школьный двор</td></tr><tr><td>standardized test</td><td>[ˈstændərdaɪzd test]</td><td>стандартизированный тест</td></tr><tr><td>tutoring</td><td>[ˈtuːtərɪŋ]</td><td>репетиторство</td></tr><tr><td>rarely</td><td>[ˈrerli]</td><td>редко</td></tr><tr><td>saying</td><td>[ˈseɪɪŋ]</td><td>поговорка</td></tr><tr><td>to blossom</td><td>[ˈblɑːsəm]</td><td>расцветать</td></tr><tr><td>to miss a day</td><td>[mɪs ə deɪ]</td><td>пропустить день</td></tr><tr><td>excellent</td><td>[ˈeksələnt]</td><td>отличный</td></tr><tr><td>probably</td><td>[ˈprɑːbəbli]</td><td>вероятно</td></tr><tr><td>top</td><td>[tɑːp]</td><td>лучший, ведущий</td></tr><tr><td>hobby</td><td>[ˈhɑːbi]</td><td>хобби</td></tr><tr><td>to sacrifice</td><td>[ˈsækrɪfaɪs]</td><td>жертвовать</td></tr><tr><td>certainty</td><td>[ˈsɜːrtnti]</td><td>уверенность, определённость</td></tr><tr><td>to envy</td><td>[ˈenvi]</td><td>завидовать</td></tr><tr><td>determination</td><td>[dɪˌtɜːrmɪˈneɪʃn]</td><td>решимость, целеустремлённость</td></tr><tr><td>space</td><td>[speɪs]</td><td>пространство, свобода</td></tr><tr><td>to prepare</td><td>[prɪˈper]</td><td>готовить(ся)</td></tr><tr><td>discipline</td><td>[ˈdɪsəplɪn]</td><td>дисциплина</td></tr><tr><td>opportunity</td><td>[ˌɑːpərˈtuːnəti]</td><td>возможность</td></tr><tr><td>childhood</td><td>[ˈtʃaɪldhʊd]</td><td>детство</td></tr><tr><td>freedom</td><td>[ˈfriːdəm]</td><td>свобода</td></tr><tr><td>creativity</td><td>[ˌkriːeɪˈtɪvəti]</td><td>креативность</td></tr><tr><td>mental health</td><td>[ˈmentl helθ]</td><td>психическое здоровье</td></tr><tr><td>to worry</td><td>[ˈwɜːri]</td><td>беспокоиться</td></tr><tr><td>to compete</td><td>[kəmˈpiːt]</td><td>соревноваться</td></tr><tr><td>truth</td><td>[truːθ]</td><td>правда</td></tr><tr><td>maybe</td><td>[ˈmeɪbi]</td><td>возможно</td></tr></tbody>
+</table>
+</div>
+</details>
+<details class="collapsible">
+<summary>🧠 FOR LANGUAGE SKILLS</summary>
+<div class="card-body">
+<h3>A. Vocabulary Focus</h3>
+<h4>1. Comparatives and Superlatives from the text</h4>
+<p>Find and write the correct forms:</p>
+<table><thead><tr><th>Adjective</th><th>Comparative</th><th>Superlative</th></tr></thead>
+<tbody>
+<tr><td>high</td><td>higher</td><td>__________</td></tr>
+<tr><td>_______</td><td>happier</td><td>happiest</td></tr>
+<tr><td>good</td><td>_______</td><td>best</td></tr>
+<tr><tr><td>difficult</td><td>_______</td><td>most difficult</td></tr>
+</tr></tbody></table>
+<h4>2. Synonyms</h4>
+<p>Find a word in the text that means:</p>
+<ul>
+<li>very tired → _______</li>
+<li>excellent, very good → _______</li>
+<li>not often → _______</li>
+<li>the best, number one → _______</li>
+</ul>
+<h4>3. Antonyms</h4>
+<p>Match the word with its opposite:</p>
+<table><thead><tr><th>Word</th><th>Opposite</th></tr></thead>
+<tbody>
+<tr><td>1. to hate</td><td>a) bottom</td></tr>
+<tr><td>2. top</td><td>b) work</td></tr>
+<tr><td>3. freedom</td><td>c) to love</td></tr>
+<tr><td>4. discipline</td><td>d) captivity</td></tr>
+</tbody></table>
+<h4>4. Fill in the blanks with words from the glossary</h4>
+<ol>
+<li>In some countries, ________ tests determine which university you can enter.</li>
+<li>Many students go to private _______ after regular school hours.</li>
+<li>She has many _______: painting, dancing, and photography.</li>
+<li>School should prepare students for _______, not just exams.</li>
+<li>He _______ school only once last year, when he was sick.</li>
+</ol>
+<h4>5. Make your own sentences with</h4>
+<ul><li><i>stress</i></li><li><i>to worry about</i></li><li><i>opportunity</i></li><li><i>maybe</i></li></ul>
+<h3>B. Grammar in Context</h3>
+<h4>1. Comparatives and Superlatives — practice</h4>
+<p>Complete the sentences using information from the text:</p>
+<ol>
+<li>South Korea has __________ (high) education rankings than many countries.</li>
+<li>Finland has __________ (happy) students in the world.</li>
+<li>Ji-hoon's school day is __________ (long) than Elina's.</li>
+<li>Elina's homework is __________ (light) than Ji-hoon's.</li>
+<li>The Korean system is __________ (competitive) of the two.</li>
+</ol>
+<h4>2. As...as — expressing equality</h4>
+<p>Write sentences using <i>as...as</i>:</p>
+<ul>
+<li>Ji-hoon's scores / excellent / Elina's scores.</li>
+<li>Elina's school day / long / Ji-hoon's school day.<br/>→ Elina's school day is not as long as Ji-hoon's school day.</li>
+<li>Finland's system / stressful / Korea's system.<br/>→ Finland's system is not as stressful as Korea's system.</li>
+<li>Ji-hoon / free time / Elina.<br/>→ Ji-hoon does not have as much free time as Elina.</li>
+</ul>
+<div class="note">The source material itself notes that the text does not directly compare Ji-hoon's and Elina's scores, so the first example should be treated carefully.</div>
+<h4>3. Making comparisons with nouns</h4>
+<ul>
+<li>Korea has <b>more</b> homework <b>than</b> Finland.</li>
+<li>Finland has <b>less</b> stress <b>than</b> Korea.</li>
+<li>Korea has <b>more</b> pressure <b>than</b> any other country.</li>
+<li>Finland has <b>fewer</b> exams <b>than</b> Korea.</li>
+</ul>
+<p>Complete:</p>
+<ol>
+<li>Ji-hoon has ________ (little) free time ________ Elina.</li>
+<li>Finland has ________ (few) private academies ________ South Korea.</li>
+<li>Elina has ________ (many) hobbies ________ Ji-hoon.</li>
+</ol>
+<h4>4. Modifying comparatives</h4>
+<p>We can use <i>much / a lot / far / a little / a bit</i> before comparatives.</p>
+<p><b>Example:</b> The Korean system is <b>much more</b> competitive than the Finnish system.</p>
+<ol>
+<li>Finland's approach is __________ (a lot / relaxed) than Korea's.</li>
+<li>Ji-hoon's schedule is __________ (far / intense) than Elina's.</li>
+<li>Elina's worries are __________ (a little / vague) than Ji-hoon's.</li>
+</ol>
+<h4>5. Second Conditional — imagining alternatives</h4>
+<ol>
+<li>If Ji-hoon lived in Finland, he ________ (have) more free time.</li>
+<li>If Elina studied in Seoul, she ________ (feel) much more pressure.</li>
+<li>If I ________ (can) design my own school, I ________ (create) a system that combines both.</li>
+</ol>
+<h3>C. Brain Workout</h3>
+<h4>1. Comparison matrix</h4>
+<p>Fill in the table with information from the text:</p>
+<table>
+<thead><tr><th></th><th>Ji-hoon (Korea)</th><th>Elina (Finland)</th></tr></thead>
+<tbody>
+<tr><td>Wake-up time</td><td>________________</td><td>________________</td></tr>
+<tr><td>School start</td><td>________________</td><td>________________</td></tr>
+<tr><td>School day length</td><td>________________</td><td>________________</td></tr>
+<tr><td>Homework</td><td>________________</td><td>________________</td></tr>
+<tr><td>Exams / tests</td><td>________________</td><td>________________</td></tr>
+<tr><td>Stress level (high/medium/low)</td><td>________________</td><td>________________</td></tr>
+<tr><td>Hobbies</td><td>________________</td><td>________________</td></tr>
+<tr><td>Future plans</td><td>________________</td><td>________________</td></tr>
+</tbody></table>
+<h4>2. Pros and Cons — debate preparation</h4>
+<p>In pairs, prepare arguments for ONE side:</p>
+<ul>
+<li><b>Team Korea:</b> «A competitive system with long hours and high pressure is better.»</li>
+<li><b>Team Finland:</b> «A relaxed system with freedom and creativity is better.»</li>
+</ul>
+<p>Each team must find:</p>
+<ul><li>2 arguments FOR their system</li><li>1 counter-argument to the opposing system</li></ul>
+<h4>3. Empathy task — write a diary entry</h4>
+<ol><li>Choose: You are Ji-hoon OR Elina.</li><li>Write 3–4 sentences from their diary on a Sunday evening.</li></ol>
+<h4>4. Metaphor challenge</h4>
+<p>Complete the metaphor:</p>
+<ul>
+<li>«School in Korea is like a ______ because ______.»</li>
+<li>«School in Finland is like a ______ because ______.»</li>
+</ul>
+<p><b>Example:</b> «School in Korea is like a marathon because you must keep running and never stop.»</p>
+<h4>5. Speed debate</h4>
+<p>Teacher gives the statement: <b>«Childhood is more important than academic success.»</b></p>
+<ul><li>One minute — students who AGREE speak.</li><li>One minute — students who DISAGREE speak.</li><li>One minute — final thoughts.</li></ul>
+</div>
+</details>
+<details class="collapsible">
+<summary>🌱 BEYOND THE TEXT</summary>
+<div class="card-body">
+<h3>Choose ONE task</h3>
+<ol>
+<li><b>Letter to Ji-hoon or Elina:</b> Write a short letter to one of them. Ask questions about their life. Share something about your own school experience. (80–100 words)</li>
+<li><b>Design your ideal school:</b> Imagine you can create a new school. It can combine the best parts of any system. Describe:
+<ul>
+<li>What time does school start and end?</li>
+<li>What subjects are compulsory?</li>
+<li>How are students assessed?</li>
+<li>What is the most important value of your school?</li>
+</ul>
+Use comparatives: «In my school, students have MORE freedom THAN in Korea, but they also have MORE structure THAN in Finland...»</li>
+<li><b>Research task:</b> Choose one country not mentioned in the text (Japan, Germany, Singapore, Canada, etc.). Find one interesting fact about its education system. Bring it to class and share. Is it more like Korea or Finland?</li>
+<li><b>AI image (optional):</b> Create an image that represents the contrast between the two systems.
+<div class="callout">Example prompt: «Split screen illustration. Left side: A teenage boy in a crowded Seoul classroom, studying late at night under fluorescent lights, surrounded by books, exhausted. Right side: A teenage girl in a bright, airy Helsinki classroom, painting at an easel, sunlight streaming through large windows. Contrast between pressure and freedom, but both images should feel respectful, not judgmental. Style: realistic digital painting, emotional contrast.»</div></li>
+<li><b>The “Perfect System” debate essay:</b> Write a short argumentative paragraph (100 words) answering the question: «Should we make our education system MORE competitive or LESS competitive?» Use at least 3 comparatives and 2 examples from the text.</li>
+<li><b>Interview:</b> Ask a parent or relative: «Was your school experience more like Ji-hoon's or Elina's?» Report their answer in English. What do they think about your school compared to theirs?</li>
+</ol>
+</div>
+</details>
+<details class="collapsible">
+<summary>🎵 TWO SCHOOLS, ONE QUESTION</summary>
+<div class="card-body">
+<img alt="Two schools, one question" class="wide-image" src="block2/two_schools_song_image.png"/>
+<p>This song turns the contrast between Ji-hoon's and Elina's school experiences into a shared question.</p>
+<audio controls="" preload="metadata"><source src="block2/song_audio.mp3" type="audio/mpeg"/></audio>
+<p class="small">Audio: “TWO SCHOOLS, ONE QUESTION.mp3”</p>
+<div class="song-grid">
+<div>
+<h3>ENGLISH VERSION</h3>
+<div class="lyrics">Voice 1 — Ji-hoon, tired, quiet
+I wake at six, I study late
+The sky is dark, I cannot wait
+For a day when I can rest my head
+And dream of something else instead
+
+Voice 2 — Elina, soft, free
+I walk to school with morning light
+My backpack’s light, my steps are light
+The trees are tall, the sun is gold
+I have a story to be told
+
+Voice 1
+They say it’s normal, everyone does
+To work so hard, to give up what was
+My childhood, my joy, my quiet time
+For a grade, a name, a climb
+
+Voice 2
+They say it’s normal to be free
+To learn at your own pace, you see
+No tests, no fear, no heavy load
+Just learning on a different road
+
+Both — together, quietly
+Two schools, one question in the air
+Which one is right? Do we even care?
+We study hard or we study free
+But who are we? Who will we be?
+
+Outro
+Two schools, one heart…
+Two schools, one start…</div>
+</div>
+<div>
+<h3>РУССКИЙ ВАРИАНТ</h3>
+<div class="lyrics">Голос 1 — Чи Хун, уставший, тихий
+Я встаю в шесть, я учусь до ночи,
+Небо темно, я не могу дождаться
+Дня, когда я смогу отдохнуть
+И мечтать о чём-то другом
+
+Голос 2 — Элина, мягкая, свободная
+Я иду в школу с утренним светом,
+Мой рюкзак лёгкий, мои шаги лёгкие,
+Деревья высоки, солнце золотое,
+У меня есть история, которую я могу рассказать
+
+Голос 1
+Они говорят, это нормально, все так делают
+Так усердно работать, отказаться от того, что было
+Моё детство, моя радость, моё тихое время
+Ради оценки, имени, подъёма
+
+Голос 2
+Они говорят, это нормально — быть свободным
+Учиться в своём темпе, понимаешь?
+Никаких тестов, никакого страха, никакого груза
+Просто обучение на другой дороге
+
+Вместе
+Две школы, один вопрос в воздухе
+Какая правильная? Нам вообще не всё равно?
+Мы учимся усердно или мы учимся свободно
+Но кто мы? Кем мы станем?
+
+Аутро
+Две школы, одно сердце…
+Две школы, одно начало…</div>
+</div>
+</div>
+</div>
+</details>
+<details class="collapsible">
+<summary>🎤 EXERCISES AFTER THE SONG</summary>
+<div class="card-body">
+<h3>EXERCISE 1. Two Desks, Two Worlds</h3>
+<p><b>Instruction:</b> The song describes two very different school experiences: Ji-hoon's and Elina's. Now imagine you are a student in each of these worlds.</p>
+<div class="callout">
+<b>Part A. Complete the table:</b>
+<table>
+<thead><tr><th></th><th>Ji-hoon's school (Korea)</th><th>Elina's school (Finland)</th></tr></thead>
+<tbody>
+<tr><td>Wake-up time</td><td>6:00 AM</td><td>8:30 AM</td></tr>
+<tr><td>Homework</td><td>________________</td><td>________________</td></tr>
+<tr><td>Free time</td><td>________________</td><td>________________</td></tr>
+<tr><td>Feelings</td><td>________________</td><td>________________</td></tr>
+</tbody>
+</table>
+<p><b>Part B.</b> Which desk would you choose? Write 2–3 sentences explaining why.</p>
+</div>
+<h3>EXERCISE 2. Emoji Diary — A Day in Two Schools</h3>
+<p><b>Instruction:</b> Imagine you are a student in Korea (Ji-hoon's school) and then in Finland (Elina's school). Write a short diary entry for each day using only emojis and ONE sentence per school.</p>
+<p><b>Example for Korea:</b><br/>📚📈🕒😴🤯 — “I studied all day. I'm exhausted.”</p>
+<p><b>Your turn:</b></p>
+<p><b>Korea:</b><br/>____________________________________________________________________</p>
+<p><b>Finland:</b><br/>____________________________________________________________________</p>
+</div>
+</details>
+</main>
+<footer>MODULE 3 · SCHOOLDAYS AND WORK · BLOCK 02 · A TALE OF TWO SCHOOLS</footer>
+</div></section><section class="module-block" id="block3"><div class="block-label">BLOCK 3 · WHAT IS EDUCATION FOR?</div><div class="wrap">
+<header class="hero"><div><div class="k">MODULE 3 · SCHOOL DAYS AND WORK · BLOCK 03</div>
+<h1>WHAT IS EDUCATION FOR?</h1>
+<p>A philosophical collage: pedagogy, human rights, ancient wisdom and a folk story.</p></div>
+<img alt="Four voices about education" src="block3/hero_voices.jfif"/></header>
+<div class="tags"><span class="tag">LEVEL: ADVANCED / AUTHENTIC</span>
+<span class="tag">READ · LISTEN · THINK · CREATE</span>
+<span class="tag">EDUCATION &amp; VALUES</span>
+<span class="tag">CRITICAL THINKING</span></div>
+<main>
+<div class="callout"><b>Value focus:</b> Education is not preparation only for exams; it is preparation for life. Its purpose is not to fill a bucket, but to light a fire.</div>
+<img alt="Education as a fire and a living process" class="wide" src="block3/education_fire.png"/>
+<details class="sub"><summary>LEAD-IN:</summary><div class="sub-body"><p>You have spent over 10 years in education. If someone asked you «What is school FOR?» — what would you say?</p>
+<p>Look at the four voices below. They come from:</p>
+<p>A British educationalist</p>
+<p>A Pakistani activist</p>
+<p>An ancient Chinese philosopher</p>
+<p>An anonymous folk story</p>
+<p>What do you think they might have in common?</p>
+<p>Before you read, complete this sentence in your notebook:</p>
+<p>«The purpose of education is ________________________________________.»</p></div></details><details class="sub"><summary>THE TEXT · FIVE VOICES</summary><div class="sub-body"><h3>VOICE 1. Sir Ken Robinson (British educationalist, 1950–2020)</h3>
+<audio controls="" preload="metadata" src="block3/voice1_ken_robinson.wav"></audio>
+<p>«Many highly talented, brilliant, creative people think they're not — because the thing they were good at at school wasn't valued, or was actually stigmatised. Our education system has mined our minds in the way that we strip-mine the earth: for a particular commodity. And for the future, it won't serve us. We have to rethink the fundamental principles on which we're educating our children.</p>
+<p>There is a wonderful story. A little girl was in a drawing lesson. She was six, and she was at the back, drawing. The teacher said, «What are you drawing?» And the girl said, «I'm drawing a picture of God.» And the teacher said, «But nobody knows what God looks like.» And the girl said, «They will in a minute.»</p>
+<p>Children are not afraid to be wrong. But by the time they are adults, most children have lost that capacity. They have become frightened of being wrong. We run our schools like factories. We stigmatise mistakes. And the result is that we are educating people out of their creative capacities.»</p>
+<h3>VOICE 2. Malala Yousafzai (Pakistani activist, Nobel Prize laureate, 1997–)</h3>
+<audio controls="" preload="metadata" src="block3/voice2_malala.wav"></audio>
+<p>«One child, one teacher, one book, one pen can change the world.»</p>
+<p>«When I was in Swat, I saw that education was a weapon against fear. The Taliban were afraid of books. They were afraid of girls going to school. Why? Because education gives you the power to question. To question authority. To question tradition. To question your own fate.</p>
+<p>Some people think that education is about getting a job. It is that, but it is also much more. Education is freedom. It is the right to choose your own path. It is the right to say: I am more than what others expect of me.</p>
+<p>I speak not for myself, but for those without a voice… those who have fought for their right to learn, to live in equality, peace, and dignity.»</p>
+<h3>VOICE 3. Confucius (Chinese philosopher, 551–479 BC)</h3>
+<audio controls="" preload="metadata" src="block3/voice3_confucius.wav"></audio>
+<p>«I hear and I forget. I see and I remember. I do and I understand.»</p>
+<p>«Education breeds confidence. Confidence breeds hope. Hope breeds peace.»</p>
+<p>«The will to learn, not the score, is the true mark of a scholar. A man who has made a mistake and does not correct it is making another mistake.»</p>
+<p>«Do not impose on others what you yourself do not desire. In this way, education becomes humanity.»</p>
+<h3>VOICE 4. A Folk Story (Traditional, origin unknown)</h3>
+<audio controls="" preload="metadata" src="block3/voice4_folk_story.wav"></audio>
+<p>A young woman approached a master potter.</p>
+<p>«I want to learn from you,» she said. «How long will it take?»</p>
+<p>The master smiled. «If you study with me for one year, you will be a beginner. If you study with me for ten years, you will be skilled. If you study with me your whole life, you will become a vessel that others can drink from.»</p>
+<p>The woman was confused. «But I just want to make pots. Good pots. Why must I study my whole life?»</p>
+<p>The master picked up a lump of clay. «This clay is you,» he said. «The pot is your work. But the water inside the pot — that is your spirit. If you only learn technique, you will make empty pots. If you learn patience, humility, and love, your pots will hold water that quenches the thirst of others.»</p>
+<p>He placed the clay in her hands.</p>
+<p>«Education is not about becoming a potter. It is about becoming a vessel.»</p>
+<h3>VOICE 5. A Modern Voice (You)</h3>
+<audio controls="" preload="metadata" src="block3/voice5_modern_voice.wav"></audio>
+<p>After reading these four voices, return to your sentence from the Lead-In.</p>
+<p>Would you change it now? Write your final definition:</p>
+<p>«To me, the purpose of education is ________________________________________.»</p></div></details><details class="sub"><summary>📚 GLOSSARY</summary><div class="sub-body"><div class="table-wrap"><table><tr><th>Слово / Словосочетание</th><th>Транскрипция</th><th>Перевод</th></tr><tr><td>talented</td><td>[ˈtæləntɪd]</td><td>талантливый</td></tr><tr><td>brilliant</td><td>[ˈbrɪljənt]</td><td>блестящий, гениальный</td></tr><tr><td>to value</td><td>[ˈvæljuː]</td><td>ценить</td></tr><tr><td>to stigmatise</td><td>[ˈstɪɡmətaɪz]</td><td>клеймить, считать постыдным</td></tr><tr><td>to mine</td><td>[maɪn]</td><td>добывать (полезные ископаемые)</td></tr><tr><td>to strip-mine</td><td>[ˈstrɪp maɪn]</td><td>разрабатывать открытым способом</td></tr><tr><td>commodity</td><td>[kəˈmɑːdəti]</td><td>товар, сырьё</td></tr><tr><td>to serve</td><td>[sɜːrv]</td><td>служить</td></tr><tr><td>fundamental</td><td>[ˌfʌndəˈmentl]</td><td>основополагающий</td></tr><tr><td>principle</td><td>[ˈprɪnsəpl]</td><td>принцип</td></tr><tr><td>capacity</td><td>[kəˈpæsəti]</td><td>способность</td></tr><tr><td>frightened</td><td>[ˈfraɪtnd]</td><td>испуганный</td></tr><tr><td>factory</td><td>[ˈfæktəri]</td><td>фабрика, завод</td></tr><tr><td>creative</td><td>[kriˈeɪtɪv]</td><td>творческий</td></tr><tr><td>weapon</td><td>[ˈwepən]</td><td>оружие</td></tr><tr><td>authority</td><td>[əˈθɔːrəti]</td><td>авторитет, власть</td></tr><tr><td>tradition</td><td>[trəˈdɪʃn]</td><td>традиция</td></tr><tr><td>fate</td><td>[feɪt]</td><td>судьба</td></tr><tr><td>dignity</td><td>[ˈdɪɡnəti]</td><td>достоинство</td></tr><tr><td>to breed</td><td>[briːd]</td><td>порождать, взращивать</td></tr><tr><td>confidence</td><td>[ˈkɑːnfɪdəns]</td><td>уверенность</td></tr><tr><td>hope</td><td>[hoʊp]</td><td>надежда</td></tr><tr><td>peace</td><td>[piːs]</td><td>мир</td></tr><tr><td>will</td><td>[wɪl]</td><td>воля, желание</td></tr><tr><td>score</td><td>[skɔːr]</td><td>балл, оценка</td></tr><tr><td>scholar</td><td>[ˈskɑːlər]</td><td>учёный, ученик</td></tr><tr><td>to impose</td><td>[ɪmˈpoʊz]</td><td>навязывать</td></tr><tr><td>to desire</td><td>[dɪˈzaɪər]</td><td>желать</td></tr><tr><td>humanity</td><td>[hjuːˈmænəti]</td><td>человечность, гуманность</td></tr><tr><td>master</td><td>[ˈmæstər]</td><td>мастер</td></tr><tr><td>potter</td><td>[ˈpɑːtər]</td><td>гончар</td></tr><tr><td>skilled</td><td>[skɪld]</td><td>искусный, умелый</td></tr><tr><td>vessel</td><td>[ˈvesl]</td><td>сосуд</td></tr><tr><td>confused</td><td>[kənˈfjuːzd]</td><td>сбитый с толку</td></tr><tr><td>lump</td><td>[lʌmp]</td><td>комок</td></tr><tr><td>clay</td><td>[kleɪ]</td><td>глина</td></tr><tr><td>technique</td><td>[tekˈniːk]</td><td>техника, мастерство</td></tr><tr><td>patience</td><td>[ˈpeɪʃns]</td><td>терпение</td></tr><tr><td>humility</td><td>[hjuːˈmɪləti]</td><td>смирение, скромность</td></tr><tr><td>to quench</td><td>[kwentʃ]</td><td>утолять (жажду)</td></tr><tr><td>thirst</td><td>[θɜːrst]</td><td>жажда</td></tr></table></div></div></details><details class="sub"><summary>FOR THE HEART AND MIND</summary><div class="sub-body"><p>A. Comprehension Check:</p>
+<p>According to Ken Robinson, what happens to creative children in traditional schools?</p>
+<p>What metaphor does he use to describe the education system?</p>
+<p>What did the six-year-old girl say she was drawing? What does this story illustrate?</p>
+<p>What did the Taliban fear, according to Malala?</p>
+<p>What does Malala say education is — beyond getting a job?</p>
+<p>What three things does Confucius say education breeds?</p>
+<p>What is «the true mark of a scholar» according to Confucius?</p>
+<p>In the folk story, what does the master say the student will become after one year, ten years, a lifetime?</p>
+<p>What is the difference between «making pots» and «becoming a vessel»?</p>
+<p>B. Think &amp; Analyse:</p>
+<p>Ken Robinson says: «We are educating people out of their creative capacities.» Do you agree? Have you seen this happen?</p>
+<p>Malala says: «Education is a weapon against fear.» Why would the Taliban be afraid of girls going to school? What is the connection between literacy and power?</p>
+<p>Confucius says: «Do not impose on others what you yourself do not desire. In this way, education becomes humanity.» How does this connect to the idea of empathy in education?</p>
+<p>The master potter says: «If you only learn technique, you will make empty pots.» What are the «empty pots» in modern education? What is the difference between a skilled graduate and a wise human being?</p>
+<p>All four voices challenge the idea that education is only about exams and jobs. What do they offer instead? Create a table:</p><div class="table-wrap"><table><tr><th>Voice</th><th>Education is NOT about…</th><th>Education IS about…</th></tr><tr><td>Ken Robinson</td><td></td><td></td></tr><tr><td>Malala</td><td></td><td></td></tr><tr><td>Confucius</td><td></td><td></td></tr><tr><td>Folk story</td><td></td><td></td></tr></table></div>
+<p>C. Discuss &amp; Relate:</p>
+<p>Look back at your Lead-In definition of education. Has it changed? How?</p>
+<p>Ken Robinson's little girl said: «They will in a minute.» When was the last time you were unafraid to be wrong? Can that courage be taught?</p>
+<p>Malala speaks for those «without a voice.» In your country, who still struggles for the right to education? What barriers exist?</p>
+<p>Confucius said: «A man who has made a mistake and does not correct it is making another mistake.» Why is it so hard to admit mistakes in school culture?</p>
+<p>The potter says education is about «becoming a vessel that others can drink from.» Who has been a «vessel» for you? A teacher, a parent, a friend? What did they give you?</p></div></details><details class="sub"><summary>FOR LANGUAGE SKILLS</summary><div class="sub-body"><p>A. Vocabulary Focus:</p><div class="table-wrap"><table><tr><th>Verb</th><th>Noun (person)</th><th>Noun (abstract)</th></tr><tr><td>to educate</td><td>educator</td><td></td></tr><tr><td>to create</td><td>creator</td><td></td></tr><tr><td>to inspire</td><td></td><td>inspiration</td></tr><tr><td>to value</td><td></td><td>value</td></tr><tr><td>to humiliate</td><td></td><td>humiliation</td></tr></table></div>
+<p>Word formation — nouns from verbs:</p>
+<p>Synonyms in context:</p>
+<p>Find a word in Ken Robinson's text that means: to be ashamed of, to mark as disgraceful — __________</p>
+<p>Find a word in Malala's text that means: to question, to challenge — __________</p>
+<p>Find a word in Confucius' text that means: to give birth to, to cause — _______</p>
+<p>Find a word in the folk story that means: a container, a person who holds something valuable — __________</p>
+<p>Metaphors in the text:</p>
+<p>Ken Robinson: «We strip-mine the earth for a particular commodity.» What is the «commodity»? What is lost in this process?</p>
+<p>Malala: «Education is a weapon.» What kind of weapon? What is its target?</p>
+<p>Folk story: «The clay is you. The pot is your work. The water is your spirit.» Explain each part of this metaphor.</p>
+<p>Complete the sentences with words from the glossary:
+a) Schools should __________ creativity, not punish it.
+b) Many students are __________ of making mistakes.
+c) Education should teach __________, not just facts.
+d) With __________ and practice, anyone can become skilled.
+e) A good teacher does not __________ their own beliefs on students.</p>
+<p>B. Grammar in Context:</p>
+<p>Complex sentences with relative clauses:</p>
+<p>Find in Malala's speech: «I speak not for myself, but for those without a voice… those who have fought for their right to learn.»</p>
+<p>Identify the relative clause. What does it add to the meaning?</p>
+<p>Write your own sentence about a group of people you admire, using who.</p>
+<p>Passive voice for emphasis:</p>
+<p>Ken Robinson: «The thing they were good at… wasn't valued, or was actually stigmatised.»</p>
+<p>Why is passive voice used here? Who is NOT mentioned? What is the effect?</p>
+<p>Transform into active: «The system did not value their talents.» How does the emphasis change?</p>
+<p>Infinitive of purpose:</p>
+<p>Confucius: «Do not impose on others what you yourself do not desire. In this way, education becomes humanity.»</p>
+<p>What is the purpose of education? Answer using to + verb:</p>
+<p>Education exists __________ (prepare) us for exams. (No — according to these texts!)</p>
+<p>Education exists __________ (help) us become human.</p>
+<p>Second Conditional — imagining a different education:</p>
+<p>If schools __________ (encourage) mistakes, students __________ (not be) so afraid.</p>
+<p>If I __________ (can) redesign my school, I __________ (make) creativity the core subject.</p>
+<p>If Malala __________ (not fight) for her education, she __________ (not become) a Nobel laureate.</p>
+<p>Comparatives and Superlatives — synthesis:</p>
+<p>Write three sentences comparing the ideas in this text:</p>
+<p>Ken Robinson's critique of schools is __________ (direct) than Confucius' advice.</p>
+<p>Malala's experience was __________ (dangerous) than any of the other voices.</p>
+<p>The folk story is __________ (gentle) in its teaching, but __________ (deep) in its meaning.</p>
+<p>C. Brain Workout:</p>
+<p>Synthesis matrix (критическое мышление):
+Choose ONE quotation from each voice. Write it in the table. Then summarise the core message in ONE word.</p>
+<p>The potter's metaphor — extended:
+The master says: «The clay is you. The pot is your work. The water is your spirit.»</p>
+<p>Continue the metaphor:</p>
+<p>The kiln (печь для обжига) is __________</p>
+<p>The crack in the pot is __________</p>
+<p>The person who drinks from the vessel is __________</p>
+<p>Ken Robinson's little girl — imagine:
+That six-year-old girl is now 25. What does she do? Write 2-3 sentences about her life. Did school crush her creativity — or did she protect it?</p>
+<p>Silent debate:
+In pairs. One sheet of paper. Write the statement:</p>
+<p>«The purpose of education is to produce workers for the economy.»</p>
+<p>Person A writes ONE argument FOR this statement. Passes to Person B.
+Person B writes ONE argument AGAINST this statement. Passes back.
+Continue for 4 rounds. Then read the whole conversation aloud.</p>
+<p>The Confucius challenge:
+Confucius said: «I hear and I forget. I see and I remember. I do and I understand.»</p>
+<p>Think of something you truly understand — not just know for a test. How did you learn it? Did you hear it, see it, or do it? Share with a partner.</p></div></details><details class="sub"><summary>BEYOND THE TEXT</summary><div class="sub-body"><p>Choose ONE task:</p>
+<p>Complete the sentence (Voice 5):
+Return to your definition of education from the Lead-In. Write your final, revised version. Then expand it into a short paragraph (100 words). Use at least 5 words from the glossary.</p>
+<p>A letter to Ken Robinson, Malala, or Confucius:
+Write a short letter to one of these thinkers. Thank them, argue with them, or ask them a question about modern education. What would you want them to know about your school?</p>
+<p>The potter's question — personal reflection:
+The master asks: «Do you want to make pots, or do you want to become a vessel?»
+Write a short reflection (80-100 words) answering this question for yourself — not about your future job, but about who you want to be.</p>
+<p>Research a voice:
+Choose ONE of the four voices and research them further:</p>
+<p>Watch a Ken Robinson TED talk</p>
+<p>Read Malala's full speech at the UN</p>
+<p>Find three more Confucius quotes about learning</p>
+<p>Find another version of the potter's apprentice story from another culture</p>
+<p>Bring your findings to class.</p>
+<p>AI image (optional):
+Create an image inspired by the folk story of the potter and the vessel.</p>
+<p>Example prompt: «An elderly master potter sitting at a wooden wheel, his hands gently shaping clay. A young woman sits across from him, her hands also in the clay, learning. The studio is filled with warm golden light, dust floating in the air. On the shelves behind them — not just perfect pots, but cracked ones, misshapen ones, each beautiful in its own way. Style: soft digital painting, meditative atmosphere, Studio Ghibli warmth, graphic novel aesthetic.»</p>
+<p>The Malala question:
+Malala said: «Education is the right to choose your own path.»
+Write a short speech (1 minute) answering this question:</p>
+<p>«Does our school give us the right to choose our own path, or does it choose for us?»</p>
+<p>You may agree or disagree. Be honest.</p>
+<p>Curate your own Voice 6:
+Find ONE more voice about the purpose of education. It can be from any culture, any century. It can be a poem, a song, a film scene, a conversation with a grandparent. Add it to this collection. Write a short introduction explaining why it belongs here.</p></div></details>
+<details><summary>🎬 WATCH</summary><div class="sub-body">
+<video controls="" preload="metadata" src="block3/education_video.mp4"></video>
+</div></details>
+<details><summary>🎵 WHAT IS EDUCATION FOR?</summary><div class="sub-body"><img alt="Objects representing education" class="wide" src="block3/education_objects.png"/><audio controls="" preload="metadata" src="block3/song.mp3"></audio><div class="song-grid"><div class="voice">Voice 1 — Ken Robinson</div><div class="cell head en">ENGLISH</div><div class="cell head">РУССКИЙ</div><div class="cell en">"Children are not afraid to be wrong.<br/>But by the time they are adults,<br/>Most children have lost that capacity.<br/>We run our schools like factories.<br/>We stigmatise mistakes.<br/>And the result is that we are educating people<br/>Out of their creative capacities."</div><div class="cell">«Дети не боятся ошибаться.<br/>Но к тому времени, как они становятся взрослыми,<br/>большинство детей утрачивают эту способность.<br/>Мы управляем школами как фабриками.<br/>Мы клеймим ошибки.<br/>И в результате мы отучаем людей<br/>от их творческих способностей».</div></div><div class="song-grid"><div class="voice">Voice 2 — Malala</div><div class="cell head en">ENGLISH</div><div class="cell head">РУССКИЙ</div><div class="cell en">"Education is a weapon against fear.<br/>It gives you the power to question.<br/>To question authority. To question tradition.<br/>To question your own fate.<br/>Education is freedom.<br/>It is the right to say:<br/>I am more than what others expect of me."</div><div class="cell">«Образование — это оружие против страха.<br/>Оно даёт тебе силу задавать вопросы.<br/>Подвергать сомнению авторитеты.<br/>Подвергать сомнению традиции.<br/>Подвергать сомнению свою собственную судьбу.<br/>Образование — это свобода.<br/>Это право сказать:<br/>я больше, чем то, что другие от меня ожидают».</div></div><div class="song-grid"><div class="voice">Voice 3 — Confucius</div><div class="cell head en">ENGLISH</div><div class="cell head">РУССКИЙ</div><div class="cell en">"I hear and I forget. I see and I remember.<br/>I do and I understand.<br/>The will to learn, not the score,<br/>Is the true mark of a scholar.<br/>A man who has made a mistake<br/>And does not correct it<br/>Is making another mistake."</div><div class="cell">«Я слышу и забываю. Я вижу и запоминаю.<br/>Я делаю и понимаю.<br/>Воля к учению, а не баллы —<br/>вот истинный признак учёного.<br/>Человек, который совершил ошибку<br/>и не исправляет её,<br/>совершает другую ошибку».</div></div><div class="song-grid"><div class="voice">Voice 4 — Folk story, the potter</div><div class="cell head en">ENGLISH</div><div class="cell head">РУССКИЙ</div><div class="cell en">"The clay is you. The pot is your work.<br/>But the water inside the pot —<br/>That is your spirit.<br/>If you only learn technique,<br/>You will make empty pots.<br/>If you learn patience, humility, and love,<br/>Your pots will hold water<br/>That quenches the thirst of others.<br/>Education is not about becoming a potter.<br/>It is about becoming a vessel."</div><div class="cell">«Глина — это ты. Горшок — твоя работа.<br/>Но вода внутри горшка —<br/>это твой дух.<br/>Если ты выучишь только технику,<br/>ты будешь делать пустые горшки.<br/>Если ты научишься терпению, смирению и любви,<br/>твои горшки будут держать воду,<br/>которая утолит жажду других.<br/>Образование — это не о том, чтобы стать гончаром.<br/>Это о том, чтобы стать сосудом».</div></div><div class="song-grid"><div class="voice">Final</div><div class="cell head en">ENGLISH</div><div class="cell head">РУССКИЙ</div><div class="cell en">"Education is not about filling a bucket.<br/>It is about lighting a fire."</div><div class="cell">«Образование — это не о том, чтобы наполнить ведро.<br/>Это о том, чтобы зажечь огонь».<br/>.</div></div></div></details><details><summary>🎤 EXERCISES TO THE SONG</summary><div class="sub-body">
+<p><b>EXERCISE 1. The Object That Speaks</b></p>
+<p>In the song, four different voices speak about education. Each uses a powerful image: a factory, a weapon, a vessel, a fire.</p>
+<ol><li>Choose one image that resonates with you the most.</li><li>Draw it simply.</li><li>Write one sentence explaining what it means to you.</li></ol>
+<p><b>EXERCISE 2. The Emoji Dictionary</b></p>
+<p>Choose three emojis that best represent education: 📚 🔥 🕯️ 🤔 🌱 💡. Write one sentence explaining each choice.</p>
+<p><b>EXERCISE 3. The Question at the End</b></p>
+<p>“Education is not about filling a bucket. It is about lighting a fire.” Write 3–4 sentences: What is education for you — a bucket or a fire? Why?</p>
+</div></details>
+</main>
+<footer>MODULE 3 · SCHOOL DAYS AND WORK · BLOCK 03 · WHAT IS EDUCATION FOR?</footer>
+</div></section></div></body></html>

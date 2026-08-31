@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 7 · Block 3 · The Show Must Go On</title>
+<style>
+:root{--navy:#0b2030;--purple:#5b2a83;--green:#08724d;--blue:#173e63;--brown:#7a3f18;--gold:#f2bd2e;--cream:#fffaf1;--ink:#17232d}
+*{box-sizing:border-box}
+body{margin:0;background:#f1ebe2;color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.5}
+.page{max-width:1500px;margin:auto;background:var(--cream);min-height:100vh;padding:20px}
+.grid{display:grid;grid-template-columns:280px 1fr;gap:22px}
+.sidebar{background:#fff;border-radius:18px;padding:16px;box-shadow:0 5px 20px #0001;position:sticky;top:15px;height:max-content}
+.brand{background:var(--navy);color:#fff;border-radius:14px;padding:18px;font-weight:900;font-size:22px}
+.brand span{color:#ffd32f}
+.module{padding:18px 8px 12px;color:var(--purple);font-weight:900;font-size:24px}
+.lesson{background:#ffd342;border-radius:14px;padding:14px;color:#2d1740;font-weight:900;font-size:19px}
+.meta{padding:12px 8px;color:#4b5660;font-size:14px}
+.nav a{display:block;padding:11px 12px;margin:4px 0;border-radius:10px;text-decoration:none;color:#26343d;font-weight:700}
+.nav a.active{background:var(--purple);color:#fff}
+.side-photo{margin-top:15px;border-radius:14px;overflow:hidden}
+.side-photo img{width:100%;display:block}
+.hero{display:grid;grid-template-columns:1fr 1.45fr;gap:22px;align-items:center}
+.hero-text h1{font-family:Georgia,serif;font-size:56px;line-height:.98;margin:0;color:#172a3a}
+.rule{height:4px;background:var(--gold);width:80%;margin:22px 0}
+.hero-text p{font-family:Georgia,serif;font-size:21px;font-style:italic;color:#28624d}
+.hero-image{border-radius:18px;overflow:hidden;box-shadow:0 8px 25px #0002}
+.hero-image img{width:100%;height:380px;object-fit:cover;display:block}
+.media-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:20px 0}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 18px #0001}
+.card h2{margin:0;padding:12px 15px;color:#fff;font-size:17px;font-weight:900}
+.lead h2{background:var(--green)} .video h2{background:var(--brown)} .audio h2{background:var(--blue)}
+.card-body{padding:15px}
+audio,video{width:100%;margin-top:10px}
+.voice-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.voice{background:#fff;border:1px solid #e3e5e7;border-radius:12px;padding:13px}
+.voice h3{margin:0 0 5px;color:var(--blue)}
+details{background:#fff;border-radius:14px;overflow:hidden;margin:14px 0;box-shadow:0 4px 18px #0001}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;color:#fff;padding:13px 16px;font-size:18px;font-weight:900}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"⌄";font-size:24px}
+details[open] summary::after{content:"⌃"}
+.story summary{background:var(--green)} .song summary{background:var(--purple)} .glossary summary{background:#8a3d1d}
+.heart summary{background:#8a2044} .language summary{background:#4631a2} .beyond summary{background:#087f93}
+.audio-text summary{background:#173e63} .videos summary{background:#7a3f18}
+.body{padding:20px}
+.story-text{white-space:pre-line;font-size:17px}
+.song-player{margin-bottom:14px}
+.song-grid{border:1px solid #eadcf6;border-radius:12px;overflow:hidden}
+.song-head,.song-row{display:grid;grid-template-columns:1fr 1fr}
+.song-head{background:#f2e9fa;color:var(--purple);font-weight:900}
+.song-head>div,.song-row>div{padding:12px 15px}
+.song-row:nth-child(even){background:#fcfaff}
+.song-row>div+div{border-left:1px solid #eadcf6}
+.song-row b{display:block;color:var(--purple);margin-bottom:4px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border:1px solid #ddd;padding:9px;text-align:left}
+.table th{background:#f2e9df;color:#7a3f18}
+.worksheet{white-space:pre-line;font-family:Georgia,serif}
+.song-work summary{background:#6b3a91}
+.footer{display:flex;justify-content:space-between;margin-top:22px}
+button{padding:10px 14px;border-radius:9px;border:1px solid #9aa5ad;background:#fff;font-weight:800}
+@media(max-width:1000px){.grid,.hero,.media-row,.voice-grid{grid-template-columns:1fr}.sidebar{position:static}.hero-text h1{font-size:42px}}
+@media(max-width:650px){.page{padding:10px}.song-head,.song-row{grid-template-columns:1fr}.song-row>div+div{border-left:0;border-top:1px solid #eadcf6}.hero-image img{height:250px}}
+</style>
+</head>
+<body>
+<div class="page"><div class="grid">
+<aside class="sidebar">
+<div class="brand">LANGUAGE<br><span>OF THE SOUL</span></div>
+<div class="module">MODULE 7<br>LET'S HAVE FUN</div>
+<div class="lesson">03 · THE SHOW MUST GO ON</div>
+<div class="meta"><b>Level:</b> Advanced<br><b>Genre:</b> Collage / interview — street musician, festival organizer, spectator<br><b>Value:</b> True art is not a perfect show in an expensive hall. It is the moment when one person touches another person's soul, even when it rains and the instrument is out of tune.</div>
+<nav class="nav">
+<a class="active" href="#story">📖 The Text</a>
+<a href="#voices">🎧 Three Voices</a>
+<a href="#videos">▶ Videos</a>
+<a href="#song">♫ The Song</a>
+<a href="#glossary">📚 Glossary</a>
+<a href="#heart">♥ For the Heart and Mind</a>
+<a href="#language">✎ For Language Skills</a>
+<a href="#beyond">✦ Beyond the Text</a>
+</nav>
+<div class="side-photo"><img src="hero.png" alt="The Show Must Go On"></div>
+</aside>
+
+<main>
+<section class="hero">
+<div class="hero-text">
+<h1>THE SHOW<br>MUST GO ON</h1>
+<div class="rule"></div>
+<p>Three voices. Three stories. One idea: the most powerful performances are the ones that make us feel.</p>
+</div>
+<div class="hero-image"><img src="hero.png" alt="The Show Must Go On"></div>
+</section>
+
+<div class="media-row">
+<section class="card lead">
+<h2>💭 LEAD-IN</h2>
+<div class="card-body"><div style="white-space:pre-line">1. What&#x27;s the most memorable live performance you&#x27;ve ever seen? Why did it stay with you?<br>2. Have you ever stopped to listen to a street performer? What made you stop?<br>3. The phrasal verb &quot;to turn out&quot; can mean to happen in a particular way, but also to come to an event. What&#x27;s the best event you&#x27;ve ever turned out for?</div></div>
+</section>
+<section class="card audio">
+<h2>🎧 AUDIO TEXT</h2>
+<div class="card-body"><p>Listen to the three voices separately.</p><a href="#voices">Open the three voice recordings ↓</a></div>
+</section>
+<section class="card video">
+<h2>▶ VIDEO</h2>
+<div class="card-body"><p>Three video parts accompany the material.</p><a href="#videos">Open the videos ↓</a></div>
+</section>
+</div>
+
+<details class="story" id="story" open>
+<summary>📖 THE TEXT</summary>
+<div class="body"><div class="story-text">We asked three people about performances that changed them. Their answers were very different — but they all shared one thing: the memory of a moment that couldn&#x27;t be repeated.<br>THE SHOW MUST GO ON<br>VOICE 1 — Leo, 58, street musician<br>&quot;I&#x27;ve been playing saxophone on street corners for thirty years. People think I do it because I have no other choice. But I&#x27;ve been offered gigs in clubs. I&#x27;ve turned them all down.<br>Why? Because on the street, everything is real. You can&#x27;t hide. If you&#x27;re bad, people walk away. If you&#x27;re good, they stop. Sometimes they cry. Sometimes they dance. Once, an old woman listened to me play &#x27;Summertime&#x27; and told me it was the song her husband proposed to her with. He&#x27;d been gone ten years. She held my hand and thanked me.<br>Those moments can&#x27;t be planned. They can&#x27;t be recorded. They just happen. And then they&#x27;re gone. But they&#x27;re never forgotten.&quot;<br>Leo was asked if he ever wanted to be famous.<br>&quot;Fame? No. Fame is a cage. I&#x27;ve seen famous musicians — they&#x27;re surrounded by people but alone. Me? I&#x27;m alone on the street, but connected to everyone who stops. I wouldn&#x27;t turn my life in for anything else.&quot;<br>VOICE 2 — Marta, 34, festival organizer<br>&quot;Ten years ago, I started a festival in a tiny village. No big names. No sponsors. Just local musicians, poets, anyone who wanted to share something. The first year, about fifty people turned up. It rained. The sound system was turned off by the wind. Everything that could go wrong, went wrong.<br>But at the end, we were all soaking wet, sitting in a circle, singing. No stage. No lights. Just voices.<br>Now the festival is famous. Thousands of people turn up every year. Big bands want to play. Sponsors offer money. I&#x27;ve turned most of them down. If it becomes too professional, it&#x27;ll lose its soul.<br>Every year, I worry: will the magic turn up again? And every year, it does. Because magic isn&#x27;t made by equipment. It&#x27;s made by people who are brave enough to share.&quot;<br>VOICE 3 — Sam, 22, student<br>&quot;I saw something last week that I still can&#x27;t explain.<br>I was walking home late at night. The streets were empty. Then I heard music. Not from a club or a bar — from an alley. I turned the corner and saw a woman playing violin. No case for money. No audience. Just her, playing in the dark.<br>I stood and listened. She played for about ten minutes. Then she stopped, looked at me, smiled, and walked away. She didn&#x27;t say a word.<br>I&#x27;ve been to hundreds of concerts. Big stages, famous bands, incredible productions. But that moment — that random, unexpected moment — was the most honest performance I&#x27;ve ever seen. It wasn&#x27;t turned on for anyone. It just was.<br>I still don&#x27;t know who she was. But I think that&#x27;s the point. Some performances aren&#x27;t meant to be understood. They&#x27;re meant to be felt.&quot;<br>THE FRIENDS&#x27; VERDICT<br>We told Mike, Dave, and the Narrator about these stories.<br>Mike: &quot;So what&#x27;s the moral? That we should become street musicians?&quot;<br>Dave: &quot;No. The moral is that the best performances can&#x27;t be planned. They just turn up when you least expect them.&quot;<br>Narrator: &quot;Like our movie?&quot;<br>Mike: &quot;Exactly. It was terrible. But it was real. And people felt something.&quot;<br>Dave: &quot;They felt laughter. That counts.&quot;<br>Narrator: &quot;Maybe that&#x27;s what all performances should do — make you feel something. Even if it&#x27;s just laughing at your friends.&quot;<br>Mike grinned. &quot;Then our movie was a masterpiece.&quot;<br>And for once, we all agreed.</div></div>
+</details>
+
+<details class="audio-text" id="voices">
+<summary>🎧 AUDIO — THREE VOICES</summary>
+<div class="body">
+<div class="voice-grid">
+<div class="voice"><h3>VOICE 1 — Leo</h3><div>58 · street musician</div><audio controls preload="metadata" src="leo.wav"></audio></div>
+<div class="voice"><h3>VOICE 2 — Marta</h3><div>34 · festival organizer</div><audio controls preload="metadata" src="marta.wav"></audio></div>
+<div class="voice"><h3>VOICE 3 — Sam</h3><div>22 · student</div><audio controls preload="metadata" src="sam.wav"></audio></div>
+</div>
+</div>
+</details>
+
+<details class="videos" id="videos">
+<summary>▶ VIDEO — THREE PARTS</summary>
+<div class="body">
+<div class="voice-grid">
+<div class="voice"><h3>VIDEO 1</h3><video controls preload="metadata" poster="hero.png" src="video1.mp4"></video></div>
+<div class="voice"><h3>VIDEO 2</h3><video controls preload="metadata" poster="hero.png" src="video2.mp4"></video></div>
+<div class="voice"><h3>VIDEO 3</h3><video controls preload="metadata" poster="hero.png" src="video3.mp4"></video></div>
+</div>
+</div>
+</details>
+
+<details class="song" id="song">
+<summary>♫ THE SHOW MUST GO ON — SONG</summary>
+<div class="body">
+<div class="song-player"><audio controls preload="metadata" src="song.mp3"></audio></div>
+<div class="song-grid">
+<div class="song-head"><div>ENGLISH LYRICS</div><div>ПЕРЕВОД (РУССКИЙ)</div></div>
+<div class="song-row"><div><b>Verse 1</b><div>I’ve been playing on this street for thirty years<br>People walk, they stop, they disappear<br>They don’t see the face, they hear the sound<br>A saxophone that cries without a crown</div></div><div><b>Куплет 1</b><div>Я играю на этой улице тридцать лет<br>Люди идут, останавливаются, исчезают<br>Они не видят лица, они слышат звук<br>Саксофон, который плачет без короны</div></div></div><div class="song-row"><div><b>Pre-chorus</b><div>I’ve been offered stages, lights and fame<br>But I turned them down to keep my name<br>Not a name in lights — a name in air<br>A melody that lingers everywhere</div></div><div><b>Распевка</b><div>Мне предлагали сцены, свет и славу<br>Но я отказался, чтобы сохранить своё имя<br>Не имя в огнях — имя в воздухе<br>Мелодия, которая остаётся повсюду</div></div></div><div class="song-row"><div><b>Chorus</b><div>The show must go on — not for the crowd<br>Not for the money, not for the loud<br>But for the old lady who stops and cries<br>For the child who looks up with wondering eyes<br>The show must go on — because it’s true<br>And the street will always be my rue</div></div><div><b>Припев</b><div>Шоу должно продолжаться — не для толпы<br>Не для денег, не для громких криков<br>А для пожилой женщины, которая останавливается и плачет<br>Для ребёнка, который смотрит вверх с изумлёнными глазами<br>Шоу должно продолжаться — потому что это правда<br>И улица всегда будет моим домом</div></div></div><div class="song-row"><div><b>Verse 2</b><div>I built a stage without a plan<br>Just a field, some friends, a sound — and then it began<br>It rained, it failed, the speakers died<br>But we sat in a circle, and we tried</div></div><div><b>Куплет 2</b><div>Я построила сцену без плана<br>Просто поле, друзья, звук — и всё началось<br>Шёл дождь, всё провалилось, динамики умерли<br>Но мы сели в круг и пытались</div></div></div><div class="song-row"><div><b>Pre-chorus</b><div>They offered money, offered fame<br>I turned it down, it wasn’t the same<br>The soul of the festival is not in gold<br>It’s in the stories that are told</div></div><div><b>Распевка</b><div>Они предлагали деньги, предлагали славу<br>Я отказалась, это было не то<br>Душа фестиваля не в золоте<br>Она в историях, которые рассказывают</div></div></div><div class="song-row"><div><b>Chorus</b><div>The show must go on — not for the crowd<br>Not for the money, not for the loud<br>But for the old lady who stops and cries<br>For the child who looks up with wondering eyes<br>The show must go on — because it’s true<br>And the street will always be my rue</div></div><div><b>Припев</b><div>Шоу должно продолжаться — не для толпы<br>Не для денег, не для громких криков<br>А для пожилой женщины, которая останавливается и плачет<br>Для ребёнка, который смотрит вверх с изумлёнными глазами<br>Шоу должно продолжаться — потому что это правда<br>И улица всегда будет моим домом</div></div></div><div class="song-row"><div><b>Bridge</b><div>One night I turned into an alleyway<br>And heard a violin begin to play<br>No money, no stage, no waiting crowd<br>Just music rising, quiet and proud</div></div><div><b>Бридж</b><div>Однажды ночью я свернул в переулок<br>И услышал, как скрипка начала играть<br>Ни денег, ни сцены, ни ожидающей толпы<br>Просто музыка, поднимающаяся, тихая и гордая</div></div></div><div class="song-row"><div><b>Final Chorus</b><div>The show must go on — not for the crowd<br>Not for the money, not for the loud<br>But for the moment that stops your breath<br>And reminds you that you’re not afraid of death<br>The show must go on — because it’s true<br>And the street will always be my rue</div></div><div><b>Финальный припев</b><div>Шоу должно продолжаться — не для толпы<br>Не для денег, не для громких криков<br>А для момента, который перехватывает дыхание<br>И напоминает, что ты не боишься смерти<br>Шоу должно продолжаться — потому что это правда<br>И улица всегда будет моим домом</div></div></div><div class="song-row"><div><b>Outro</b><div>She played alone… for no one… for everything…</div></div><div><b>Аутро</b><div>Она играла одна… ни для кого… для всего…</div></div></div>
+</div>
+</div>
+</details>
+
+<details class="glossary" id="glossary">
+<summary>📚 GLOSSARY</summary>
+<div class="body">
+<table class="table"><thead><tr><th>Word / Phrase</th><th>Pronunciation</th><th>Перевод</th></tr></thead>
+<tbody><tr><td><b>to turn down</b></td><td>[tɜːrn daʊn]</td><td>отклонять</td></tr><tr><td><b>to turn up</b></td><td>[tɜːrn ʌp]</td><td>появляться, приходить</td></tr><tr><td><b>to turn on</b></td><td>[tɜːrn ɑːn]</td><td>включать</td></tr><tr><td><b>to turn off</b></td><td>[tɜːrn ɔːf]</td><td>выключать</td></tr><tr><td><b>to turn out</b></td><td>[tɜːrn aʊt]</td><td>оказываться, приходить (на мероприятие)</td></tr><tr><td><b>to turn in (one&#x27;s life)</b></td><td>[tɜːrn ɪn]</td><td>обменять, сдать</td></tr><tr><td><b>saxophone</b></td><td>[ˈsæksəfoʊn]</td><td>саксофон</td></tr><tr><td><b>street corner</b></td><td>[striːt ˈkɔːrnər]</td><td>угол улицы</td></tr><tr><td><b>gig</b></td><td>[ɡɪɡ]</td><td>концерт, выступление (разг.)</td></tr><tr><td><b>to propose</b></td><td>[prəˈpoʊz]</td><td>делать предложение (выйти замуж)</td></tr><tr><td><b>fame</b></td><td>[feɪm]</td><td>слава</td></tr><tr><td><b>cage</b></td><td>[keɪdʒ]</td><td>клетка</td></tr><tr><td><b>festival</b></td><td>[ˈfestɪvl]</td><td>фестиваль</td></tr><tr><td><b>sponsor</b></td><td>[ˈspɑːnsər]</td><td>спонсор</td></tr><tr><td><b>soul</b></td><td>[soʊl]</td><td>душа</td></tr><tr><td><b>equipment</b></td><td>[ɪˈkwɪpmənt]</td><td>оборудование</td></tr><tr><td><b>alley</b></td><td>[ˈæli]</td><td>переулок</td></tr><tr><td><b>violin</b></td><td>[ˌvaɪəˈlɪn]</td><td>скрипка</td></tr><tr><td><b>audience</b></td><td>[ˈɔːdiəns]</td><td>публика, аудитория</td></tr><tr><td><b>random</b></td><td>[ˈrændəm]</td><td>случайный</td></tr><tr><td><b>unexpected</b></td><td>[ˌʌnɪkˈspektɪd]</td><td>неожиданный</td></tr><tr><td><b>honest</b></td><td>[ˈɑːnɪst]</td><td>честный, искренний</td></tr><tr><td><b>moral</b></td><td>[ˈmɔːrəl]</td><td>мораль</td></tr><tr><td><b>masterpiece</b></td><td>[ˈmæstərpiːs]</td><td>шедевр</td></tr></tbody></table>
+</div>
+</details>
+
+<details class="heart" id="heart">
+<summary>♥ FOR THE HEART AND MIND</summary>
+<div class="body"><div class="worksheet">FOR THE HEART AND MIND<br>A. Comprehension Check:<br>How long has Leo been playing saxophone on the streets?<br>Why does Leo prefer the street to clubs?<br>What happened when he played &quot;Summertime&quot; for an old woman?<br>Why did Marta start her festival?<br>What went wrong at the first festival?<br>Why has Marta turned down most sponsors?<br>What did Sam see in the alley late at night?<br>How was that experience different from the concerts he&#x27;d been to?<br>What do the friends agree on at the end?<br>B. Think &amp; Analyse:<br>Leo says: &quot;Fame is a cage.&quot; What does he mean? Do you agree?<br>Marta says: &quot;Magic isn&#x27;t made by equipment. It&#x27;s made by people who are brave enough to share.&quot; What kind of bravery does performing require?<br>Sam&#x27;s experience was &quot;random&quot; and &quot;unexpected.&quot; Why are unplanned moments sometimes more powerful than planned ones?<br>The friends conclude that their terrible movie was a &quot;masterpiece&quot; because it made people feel something. Is that enough to make something art?<br>All three voices talk about connection — between performer and listener. Why is that connection so important?<br>C. Discuss &amp; Relate:<br>Have you ever had a moment like Sam&#x27;s — an unexpected performance that moved you?<br>If you could perform for anyone, anywhere, where would it be and what would you do?<br>Is there a difference between art that is &quot;perfect&quot; and art that is &quot;honest&quot;? Which do you prefer?</div></div>
+</details>
+
+<details class="language" id="language">
+<summary>✎ FOR LANGUAGE SKILLS</summary>
+<div class="body"><div class="worksheet">FOR LANGUAGE SKILLS<br>A. Vocabulary Focus (Phrasal verbs with TURN):<br>Match the phrasal verb with its meaning from the text:<br>Phrasal Verb<br>Meaning<br>1. turn down<br>a) appear, arrive<br>2. turn up<br>b) reject<br>3. turn on<br>c) switch off<br>4. turn off<br>d) switch on<br>5. turn out<br>e) come to an event<br>6. turn in<br>f) exchange<br>Find examples in the text for each meaning:<br>a) turn down (reject): ______________________________b) turn up (appear): ______________________________c) turn off (switch off): ______________________________d) turn out (come to an event): ___________________________<br>Fill in the blanks with the correct form of TURN + particle:<br>a) He ______ several job offers because he loved playing on the street.b) About fifty people ______ for the first festival.c) The sound system was ______ by the wind.d) Thousands ______ every year now.e) I wouldn&#x27;t ______ my life ______ for anything else.<br>B. Grammar in Context (Passive Voice):<br>Identify the passive structures in the text:<br>a) &quot;I&#x27;ve been offered gigs in clubs.&quot; — Tense: ______b) &quot;They can&#x27;t be planned.&quot; — Tense: ______ (with modal)c) &quot;They can&#x27;t be recorded.&quot; — Tense: ______d) &quot;They&#x27;re surrounded by people.&quot; — Tense: ______e) &quot;The sound system was turned off by the wind.&quot; — Tense: ______f) &quot;It wasn&#x27;t turned on for anyone.&quot; — Tense: ______<br>Change these active sentences to passive:<br>a) Someone had offered him gigs in clubs.→ Gigs in clubs ______ ______ offered to him.<br>b) The wind turned off the sound system.→ The sound system ______ ______ off by the wind.<br>c) People will remember those moments.→ Those moments ______ ______ remembered.<br>d) You can&#x27;t plan magic.→ Magic ______ ______ planned.<br>Complete with the correct passive form:<br>a) The festival ______ (start) ten years ago.b) Big bands ______ (turn down) every year.c) The music ______ (hear) from the alley.d) No words ______ (exchange) between them.<br>C. Brain Workout:<br>Rewrite Leo&#x27;s story: In pairs, retell Leo&#x27;s story as if you were Leo. Use at least three passive constructions.<br>Marta&#x27;s dilemma: Marta has to decide whether to accept a big sponsor. In groups, debate: should she take the money or keep the festival small? Use conditionals and passive voice.<br>Sam&#x27;s memory: Write a short poem or paragraph about Sam&#x27;s experience from the perspective of the violinist. Why was she playing alone at night?</div></div>
+</details>
+
+<details class="beyond" id="beyond">
+<summary>✦ BEYOND THE TEXT</summary>
+<div class="body"><div class="worksheet">BEYOND THE TEXT<br>Choose ONE:<br>Interview a performer: Find a street musician, actor, or any performer (or imagine one) and write a short interview with them. Use at least five phrasal verbs with TURN.<br>Your own &quot;unexpected performance&quot;: Describe a real or imagined moment when you saw or heard something beautiful unexpectedly.<br>Festival poster: Design a poster for Marta&#x27;s festival. Include the name, date, and a slogan. Use passive voice in the slogan (e.g., &quot;Music will be played, stories will be shared&quot;).<br>AI image (optional): Create an image of the woman playing violin in the empty alley at night, with Sam watching from the corner.<br>The friends&#x27; next idea: Mike, Dave, and the Narrator decide to create their own &quot;unexpected performance.&quot; What do they do? Write a short scene (5-6 sentences).</div></div>
+</details>
+
+<details class="song-work">
+<summary>♫ SONG WORKSHEET — THE SHOW MUST GO ON</summary>
+<div class="body"><div class="worksheet">УПРАЖНЕНИЯ К ПЕСНЕ «THE SHOW MUST GO ON<br>EXERCISE 1. Three Voices, Three Stories. Instruction: In the song, three different people speak about art. Each of them understands «the show» differently.<br>Part A. Match each character with their definition of «the show»:<br>Character<br>What «the show» means to them<br>1. Leo (street musician)<br>a) The show is in the people, in the connections, and in the simple act of sharing.<br>2. Marta (festival organizer)<br>b) The show is not about fame or money. It&#x27;s about the moment that stops your breath.<br>3. Sam (student)<br>c) The show is the truth of the street — real, honest, and for anyone who stops to listen.<br>Part B. Which of these three characters do you feel closest to? Why? Write 2-3 sentences.<br>EXERCISE 2. The Stage Without a Stage/ Instruction: The song says that art can happen anywhere — on a street, in a field, in an alley at night.<br>Have you ever seen or heard a performance that wasn&#x27;t on a real stage? Where was it?<br>What makes a performance «real» — is it the place, the audience, or the feeling?<br>Do you think a musician playing alone in an alley is «performing» if no one is watching? Why?<br>Write a short paragraph (4-5 sentences) answering one of these questions.<br>EXERCISE 3. The Moment That Stops Your Breath. Instruction: The final line of the song says: «She played alone… for no one… for everything…»<br>Part A. Reflect on the meaning of this line.<br>How can someone play «for no one» and «for everything» at the same time?<br>What does this line tell you about the true purpose of art?<br>Have you ever seen or experienced something so beautiful that you didn&#x27;t need anyone else to share it with? Describe it.<br>Part B. Complete the sentence in your own words: «For me, art is not about… It is about…»</div></div>
+</details>
+
+<div class="footer"><button>← PREVIOUS BLOCK</button><button>MODULE 7 COMPLETE →</button></div>
+</main>
+</div></div>
+</body></html>

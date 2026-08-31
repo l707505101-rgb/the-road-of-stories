@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Module 1 · Strong Ties · Block 1 — The Mask Party</title>
+<style>
+:root{--navy:#243b53;--purple:#7550b7;--gold:#b9873c;--cream:#f8f1e6;--ink:#28343d;--muted:#6b747b;--line:#ddd2c4;--white:#fffdf9}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:#eeeae3;color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+.wrap{max-width:1180px;margin:auto;background:var(--white);min-height:100vh}
+.hero{display:grid;grid-template-columns:1.05fr 1.35fr .52fr;min-height:430px;margin:0 14px;border-radius:0 0 18px 18px;overflow:hidden;background:#203850;color:white}
+.hero-copy{padding:38px 30px 28px;display:flex;flex-direction:column;justify-content:center}
+.kicker{font:700 11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#e8cb94}
+h1{font-size:58px;line-height:.95;margin:15px 0 18px;font-style:italic}
+.hero-copy p{font-size:17px;line-height:1.5;color:#f5f0e9}
+.hero-img{background:#ddd center/cover no-repeat}
+.hero-journey{background:#faf4e8;color:#243b53;padding:30px 18px;display:flex;flex-direction:column;justify-content:center}
+.hero-journey h3{margin:0 0 18px;font-size:18px;font-style:italic}
+.hero-journey a{color:#243b53;text-decoration:none;border-bottom:1px dotted #cdbfa9;padding:10px 0;font-weight:700;font-size:14px}
+.hero-journey a:before{content:"◇";color:var(--gold);margin-right:10px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;padding:10px 14px}
+.nav a{background:#fff;border:1px solid var(--line);border-radius:20px;padding:8px 13px;text-decoration:none;color:#3e4750;font:700 12px Arial}
+.section{margin:12px 14px;border:1px solid var(--line);border-radius:13px;background:#fff;overflow:hidden;box-shadow:0 4px 13px rgba(35,55,70,.05)}
+.section>summary{cursor:pointer;list-style:none;padding:15px 18px;background:#faf7f2;color:var(--navy);font-size:20px;font-weight:700}
+.section>summary::-webkit-details-marker{display:none}.section>summary:before{content:"▸";color:var(--purple);margin-right:8px}
+.section[open]>summary:before{content:"▾"}
+.content{padding:18px}
+.card{border:1px solid var(--line);border-radius:11px;padding:15px;margin:12px 0;background:#fffdfa}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:17px}
+.read-layout{display:grid;grid-template-columns:1.35fr .65fr;gap:16px}
+.story{font-size:17px;line-height:1.7}.story p{margin:0 0 12px}
+.lead{background:#f8f1e6;padding:15px;border-radius:10px}
+.media{width:100%;border-radius:9px;border:1px solid #d7ccbf;display:block;cursor:pointer}
+.full{max-height:520px;object-fit:contain;background:#f5f2ed}
+.thumb{height:180px;object-fit:cover}.song-image{height:auto;max-height:430px;object-fit:contain;background:#f5f2ed}
+audio{width:100%;margin:8px 0}
+video{width:100%;max-height:520px;background:#111;border-radius:9px}
+details.item{border:1px solid var(--line);border-radius:9px;margin:9px 0;background:#fff}
+details.item summary{cursor:pointer;padding:11px 13px;color:#4d3a76;font-weight:700}
+.inside{padding:11px 14px 15px;line-height:1.55}
+table{width:100%;border-collapse:collapse;margin:10px 0}th,td{border:1px solid var(--line);padding:8px;text-align:left}th{background:#f8f1e6}
+input,textarea{width:100%;padding:8px;border:1px solid #cfc5b8;border-radius:7px;font:14px Georgia}
+textarea{min-height:90px}
+.song{background:#fbf8ff;border-color:#d8c6ef}
+.song-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+button,.jump{border:1px solid #c7b5e3;background:#7650b8;color:white;border-radius:8px;padding:9px 13px;font-weight:700;cursor:pointer;text-decoration:none}
+.jump.secondary{background:#fff;color:#5b438d}
+.lyrics p{margin:6px 0}.ru{color:#6b5c70;font-style:italic}
+.small{font:12px Arial;color:var(--muted)}
+.lightbox{position:fixed;inset:0;background:rgba(20,27,35,.82);display:none;align-items:center;justify-content:center;padding:20px;z-index:10}
+.lightbox img{max-width:94vw;max-height:92vh;object-fit:contain;background:#fff;border-radius:10px}
+.lightbox.show{display:flex}
+.close{position:absolute;right:22px;top:14px;color:white;font:700 28px Arial;cursor:pointer}
+@media(max-width:780px){
+.hero{grid-template-columns:1fr;min-height:0}.hero-copy{padding:28px 22px}.hero-img{height:300px}.hero-journey{padding:20px 22px}
+h1{font-size:47px}.read-layout{grid-template-columns:1fr}.nav{padding:9px}
+}
+
+.lyrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.lyrics-col{padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fffdfa;line-height:1.55}
+.lyrics-col:first-child{border-top:3px solid var(--purple)}
+.lyrics-col:last-child{border-top:3px solid var(--gold)}
+.lyrics-col h3{margin:0 0 14px;color:var(--navy);font-size:18px}
+.lyrics-col h4{margin:15px 0 6px;color:#5b4779;font-size:15px}
+.lyrics-col p{margin:0 0 8px}
+@media(max-width:780px){.lyrics-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="hero-copy">
+    <div class="kicker">MODULE 1 · STRONG TIES · BLOCK 1</div>
+    <h1>The Mask Party</h1>
+    <p>A story about honesty, real feelings and the beginning of a real friendship.</p>
+  </div>
+  <div class="hero-img" style="background-image:url('assets/mask_party_hero.png')"></div>
+  <aside class="hero-journey">
+    <h3>Your Journey</h3>
+    <a href="#lead">LOOK & THINK</a>
+    <a href="#story">READ</a>
+    <a href="#listen">LISTEN</a>
+    <a href="#mind">THINK</a>
+    <a href="#language">CREATE</a>
+    <a href="#song">SING</a>
+    <a href="#beyond">SHARE</a>
+  </aside>
+</header>
+
+<nav class="nav">
+<a href="#lead">Lead-in</a><a href="#story">Story</a><a href="#listen">Listening</a>
+<a href="#mind">Heart & Mind</a><a href="#language">Language Skills</a><a href="#song">Song</a><a href="#beyond">Beyond the Text</a>
+</nav>
+
+<details class="section" id="lead" open>
+<summary>LOOK & THINK · Lead-in</summary>
+<div class="content">
+<div class="lead"><p><strong>1.</strong> Look at these emojis: 😊 😐 🎭. Which one do you use when you don’t want to show your real feelings?</p>
+<p><strong>2.</strong> Is it easier to be yourself at home or at school? Why?</p></div>
+</div>
+</details>
+
+<details class="section" id="story" open>
+<summary>READ · THE MASK PARTY</summary>
+<div class="content read-layout">
+<div class="story">
+<p>Everyone at Oakwood High loved the Mask Party. The rule was simple: wear a real mask and act like a different person.</p>
+<p>Liam was happy about it. He was usually quiet and shy. Tonight, his mask was «Funny Liam». He laughed loudly and told jokes.</p>
+<p>He saw Mia. She was usually very kind and her smile was real. Tonight, she was quiet. Liam, as «Funny Liam», walked to her.</p>
+<p>«Why so serious?» he asked with a big smile.</p>
+<p>Mia looked at him. «I’m just tired, Liam,» she said softly. «Tired of pretending. So tonight I decided to be just me. And I think… you are tired too.»</p>
+<p>Liam stopped smiling. Her words were true. He felt very tired. He didn’t want to joke anymore.</p>
+<p>He slowly took off his mask. His face was calm and a little sad. He just stood there — his real, quiet self.</p>
+<p>Mia smiled. It was a warm, real smile. «Hi, Liam,» she said. «Nice to meet the real you.»</p>
+<p>That night, they didn’t dance or tell secrets. They just talked quietly, without masks. It was the beginning of a real friendship.</p>
+</div>
+<div>
+<img class="media full" src="assets/mask_party_alt.png" alt="The Mask Party" onclick="openLightbox(this.src)">
+<details class="item"><summary>GLOSSARY</summary>
+<div class="inside">
+<table><tr><th>Word / phrase</th><th>American pronunciation</th><th>Russian</th></tr>
+<tr><td>mask</td><td>[mæsk]</td><td>маска</td></tr><tr><td>rule</td><td>[ruːl]</td><td>правило</td></tr><tr><td>to wear</td><td>[wer]</td><td>носить, надевать</td></tr><tr><td>to act</td><td>[ækt]</td><td>вести себя, притворяться</td></tr><tr><td>different</td><td>[ˈdɪfrənt]</td><td>другой</td></tr><tr><td>quiet</td><td>[ˈkwaɪət]</td><td>тихий, спокойный</td></tr><tr><td>shy</td><td>[ʃaɪ]</td><td>застенчивый</td></tr><tr><td>loudly</td><td>[ˈlaʊdli]</td><td>громко</td></tr><tr><td>joke</td><td>[dʒoʊk]</td><td>шутка</td></tr><tr><td>kind</td><td>[kaɪnd]</td><td>добрый</td></tr><tr><td>real</td><td>[riːl]</td><td>настоящий</td></tr><tr><td>serious</td><td>[ˈsɪriəs]</td><td>серьёзный</td></tr><tr><td>tired</td><td>[ˈtaɪərd]</td><td>уставший</td></tr><tr><td>to pretend</td><td>[prɪˈtend]</td><td>притворяться</td></tr><tr><td>to decide</td><td>[dɪˈsaɪd]</td><td>решать</td></tr><tr><td>true</td><td>[truː]</td><td>правдивый, верный</td></tr><tr><td>to take off</td><td>[teɪk ɔːf]</td><td>снимать (маску, одежду)</td></tr><tr><td>calm</td><td>[kɑːm]</td><td>спокойный</td></tr><tr><td>sad</td><td>[sæd]</td><td>грустный</td></tr><tr><td>warm</td><td>[wɔːrm]</td><td>тёплый</td></tr><tr><td>without</td><td>[wɪˈðaʊt]</td><td>без</td></tr><tr><td>beginning</td><td>[bɪˈɡɪnɪŋ]</td><td>начало</td></tr><tr><td>friendship</td><td>[ˈfrendʃɪp]</td><td>дружба</td></tr>
+</table></div></details>
+</div></div>
+</details>
+
+<details class="section" id="listen">
+<summary>LISTEN · STORY + VIDEO</summary>
+<div class="content">
+<div class="card">
+<h3>🎧 Listen to the story</h3>
+<audio controls src="assets/mask_story.wav"></audio>
+<details class="item"><summary>TRANSCRIPT</summary><div class="inside">Listen first without reading. Then open the story above and compare.</div></details>
+</div>
+<div class="card">
+<h3>🎬 Watch the story</h3>
+<video controls src="assets/mask_party.mp4" poster="assets/mask_party_hero.png"></video>
+</div>
+</div>
+</details>
+
+<details class="section" id="mind">
+<summary>♥ FOR THE HEART AND MIND</summary>
+<div class="content">
+<details class="item"><summary>A. Comprehension Check</summary><div class="inside">
+<ol><li>What was the rule of the Mask Party?</li><li>What was Liam usually like? (quiet / shy / loud?)</li><li>What mask did Liam wear at the party?</li><li>What did Mia decide to do that night?</li><li>How did Liam feel after Mia’s words?</li><li>What did Liam do with his mask?</li><li>How did Mia smile at the end?</li><li>What did Liam and Mia do together that night?</li></ol>
+</div></details>
+<details class="item"><summary>B. Think & Analyse</summary><div class="inside">
+<ol><li>Why was Liam «happy» about the party at the beginning?</li><li>Why did Mia say «I think you are tired too»? What did she understand?</li><li>Liam took off his mask. Was it easy or difficult for him? Why do you think so?</li><li>What is stronger: a friendship that starts with fun or a friendship that starts with honesty? Why?</li></ol>
+</div></details>
+<details class="item"><summary>C. Discuss & Relate</summary><div class="inside">
+<ol><li>When do you feel you can be 100% yourself? Describe that place or those people.</li><li>Is it sometimes useful to «wear a mask»? Give an example.</li><li>What helps you to trust a new person?</li></ol>
+<textarea placeholder="Your ideas…"></textarea></div></details>
+</div>
+</details>
+
+<details class="section" id="language">
+<summary>FOR LANGUAGE SKILLS</summary>
+<div class="content">
+<details class="item"><summary>A. Vocabulary Focus</summary><div class="inside">
+<p><strong>1.</strong> Find the opposites in the glossary:</p>
+<ul><li>loudly — ______</li><li>different — ______</li><li>sad — ______</li></ul>
+<p><strong>2.</strong> Fill in the blanks with words from the glossary:</p>
+<p>a) After a long day at school, I feel ______.</p><p>b) It is not good to ______ your feelings all the time.</p><p>c) Her smile was ______ and kind.</p>
+<p><strong>3.</strong> Make your own sentences with: <em>to take off, without, true.</em></p>
+<textarea placeholder="Write your sentences…"></textarea>
+</div></details>
+<details class="item"><summary>B. Grammar in Context</summary><div class="inside">
+<p><strong>1.</strong> Past Simple: Find all the verbs in Past Simple in the first two paragraphs. Write them in two columns: regular and irregular.</p>
+<table><tr><th>Regular</th><th>Irregular</th></tr><tr><td><input></td><td><input></td></tr><tr><td><input></td><td><input></td></tr></table>
+<p><strong>2.</strong> Present Simple for usual states: Look at «He was usually quiet and shy.» What does <em>usually</em> mean? Make a sentence about yourself using <em>usually</em>.</p>
+<textarea placeholder="Your sentence…"></textarea>
+</div></details>
+<details class="item"><summary>C. Brain Workout</summary><div class="inside">
+<ol><li>Перевёрнутый текст: Возьми лист с текстом, переверни вверх ногами. Найди и прочитай вслух последнее предложение. О чём оно?</li>
+<li>Цепочка памяти (Memory Chain): Первый ученик говорит: «At the party, Liam wore a mask.» Второй повторяет и добавляет: «At the party, Liam wore a mask and laughed loudly.» Третий добавляет ещё один факт. Кто сможет повторить самую длинную цепочку?</li>
+<li>Ассоциации: Как слово MASK связано со словом SLEEP? Придумай одну идею.</li></ol>
+</div></details>
+</div>
+</details>
+
+<details class="section song" id="song">
+<summary>♫ TAKE OFF YOUR MASK · THE SONG</summary>
+<div class="content">
+<div class="card">
+<h3>Listen and sing along!</h3>
+<audio controls src="assets/pretty_faces.mp3"></audio>
+<img class="media song-image" src="assets/mask_party_alt.png" alt="Take Off Your Mask" onclick="openLightbox(this.src)">
+<div class="song-actions"><a class="jump" href="#songlyrics">SHOW SONG LYRICS</a><a class="jump secondary" href="#songtasks">SONG TASKS</a></div>
+</div>
+<details class="item" id="songlyrics"><summary>♫ SONG LYRICS · ENGLISH + РУССКИЙ</summary>
+<div class="inside">
+<div class="lyrics-grid">
+<div class="lyrics-col">
+<h3>ENGLISH</h3>
+<h4>Verse 1</h4>
+<p>Everyone's laughing behind pretty faces<br>Dancing in circles in crowded spaces<br>I put on a smile that I practiced for years<br>But inside I'm drowning in all of my fears</p>
+<h4>Chorus</h4>
+<p>Take off your mask, let me see who you are<br>You don't have to hide, you don't have to be far<br>The truest connection is born in the dark<br>When two people finally uncover their hearts</p>
+<h4>Verse 2</h4>
+<p>She looked at me softly, she said without words<br>“You're tired of acting, I've seen and I've heard”<br>The silence between us was louder than sound<br>A brave little crack where the light can come through</p>
+<h4>Chorus</h4>
+<p>Take off your mask, let me see who you are<br>You don't have to hide, you don't have to be far<br>The truest connection is born in the dark<br>When two people finally uncover their hearts</p>
+<h4>Outro</h4>
+<p>Nice to meet you, the real you, at last<br>No more pretending, no more outcast<br>Just two human beings, breathing the same air<br>Without any masks, without any care.</p>
+</div>
+<div class="lyrics-col">
+<h3>РУССКИЙ</h3>
+<h4>Куплет 1</h4>
+<p>Все смеются за красивыми лицами<br>Танцуют кругами в битком набитых залах<br>Я надеваю улыбку, которую репетировал годами<br>Но внутри я тону в своих страхах</p>
+<h4>Распевка</h4>
+<p>Затем она мягко посмотрела на меня и сказала без звука<br>«Ты устал притворяться, я тебя видела»</p>
+<h4>Припев</h4>
+<p>Сними свою маску, дай мне увидеть, кто ты<br>Тебе не нужно прятаться, тебе не нужно быть далеко<br>Самая настоящая связь рождается в темноте<br>Когда два человека наконец открывают свои сердца</p>
+<h4>Куплет 2</h4>
+<p>Чем громче они кричали, тем меньше я себя чувствовал<br>Марионетка на ниточках, тень, стена<br>Но она стояла тихо, без костюма, без игры<br>И прошептала правду, которую я не мог назвать</p>
+<h4>Распевка</h4>
+<p>«Ты нёс что-то слишком тяжёлое<br>Но я вижу тебя прямо сейчас, и я останусь здесь»</p>
+<h4>Припев</h4>
+<p>Сними свою маску, дай мне увидеть, кто ты<br>Тебе не нужно прятаться, тебе не нужно быть далеко<br>Самая настоящая связь рождается в темноте<br>Когда два человека наконец открывают свои сердца</p>
+<h4>Бридж</h4>
+<p>Я медленно потянулся вверх, мои пальцы были холодны<br>И отпустил историю, которую так тщательно продавал<br>Ни смеха, ни внимания, ни остроумных реплик<br>Просто тишина, просто дыхание, просто трещина в темноте</p>
+<h4>Аутро</h4>
+<p>Приятно познакомиться с настоящим тобой, наконец<br>Никакого больше притворства, никакого изгоя<br>Просто два человеческих существа, дышащие одним воздухом<br>Без всяких масок, без всякой заботы.</p>
+</div>
+</div>
+</div>
+</details>
+</details>
+<details class="item" id="songtasks"><summary>♫ SONG TASKS</summary>
+<div class="inside">
+<h3>EXERCISE 1. The Masks We Wear</h3>
+<p>Complete the table:</p>
+<table><tr><th>Situation</th><th>The mask I wear</th><th>What I hide underneath</th></tr>
+<tr><td>At school with classmates</td><td></td><td></td></tr><tr><td>At home with family</td><td></td><td></td></tr><tr><td>On social media</td><td></td><td></td></tr><tr><td>With my closest friends</td><td></td><td></td></tr></table>
+<p>Choose ONE situation and write 2–3 sentences about why you wear that mask.</p><textarea></textarea>
+<h3>EXERCISE 2. The Emoji of My True Self</h3><p>Choose 3–5 emojis that represent the real you — not the mask you show to others. Then write 3–4 sentences explaining what each emoji means.</p><textarea></textarea>
+<h3>EXERCISE 3. A Letter to Someone Who Saw You</h3><p>Write a short letter (4–5 sentences) to that person or to yourself about what that moment meant.</p><textarea></textarea>
+</div></details>
+</div>
+</details>
+
+<details class="section" id="beyond">
+<summary>BEYOND THE TEXT · CREATE & SHARE</summary>
+<div class="content">
+<details class="item"><summary>Creative Task — choose ONE</summary><div class="inside">
+<ol>
+<li><strong>Письмо (WhatsApp):</strong> Напиши короткое сообщение (2–3 предложения), которое Лиам отправил Мие на следующий день после вечеринки. Используй 2 слова из глоссария.</li>
+<li><strong>Комикс (без ИИ):</strong> Нарисуй простой комикс из 3–4 кадров по сюжету рассказа. Добавь облачка с диалогами на английском.</li>
+<li><strong>ИИ-задание:</strong> Создай изображение к этому рассказу с помощью нейросети. Придумай свой промпт или используй предложенный в исходном материале.</li>
+</ol>
+<textarea placeholder="Your creative idea / draft…"></textarea>
+</div></details>
+</div>
+</details>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()"><span class="close">×</span><img id="lightboxImg" src="" alt=""></div>
+<script>
+function openLightbox(src){document.getElementById('lightboxImg').src=src;document.getElementById('lightbox').classList.add('show')}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('show')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()})
+</script>
+</div></body></html>

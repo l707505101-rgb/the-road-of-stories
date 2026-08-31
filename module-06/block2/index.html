@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Module 6 · Food and Health · The Smoothie Experiment</title>
+<style>
+:root{--navy:#082033;--cream:#fbf8f2;--warm:#a85b2a;--gold:#d3a34a;--sage:#6d8066;--ink:#20262b;--line:#ded7cc;--soft:#f3ede4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+.wrap{max-width:1180px;margin:auto;padding:22px}
+.top{background:var(--navy);color:#fff;border-radius:18px 18px 0 0;display:grid;grid-template-columns:1fr 1.1fr;overflow:hidden}
+.top-copy{padding:34px 34px 30px}
+.eyebrow{font-size:14px;font-weight:800;letter-spacing:1.5px;color:#e6c06a}
+h1{font-family:Georgia,serif;font-size:52px;line-height:.98;margin:12px 0 14px}
+.subtitle{font-family:Georgia,serif;font-size:20px;color:#f1dfb1;font-style:italic}
+.focus{margin-top:24px;padding:16px 18px;border-left:4px solid var(--gold);background:rgba(255,255,255,.07);font-size:16px}
+.top-img{min-height:360px;background:#fff url('assets/header-white.png') center/cover no-repeat}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+.pill{background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:20px;font-size:13px;font-weight:800}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;margin:16px 0;overflow:hidden;box-shadow:0 5px 18px rgba(30,20,10,.05)}
+summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:900;font-size:21px;color:var(--navy);display:flex;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:'+';margin-left:auto;font-size:28px;color:var(--warm)}
+details[open] summary:after{content:'−'}
+.content{padding:4px 22px 24px}
+.content h3{color:var(--warm);margin:20px 0 8px}
+.content p{margin:8px 0}
+.lead{background:#fff8e7;border-radius:12px;padding:14px 18px;border:1px solid #ecd9a8}
+.story-text{max-width:900px;margin:auto;font-family:Georgia,serif;font-size:17px}
+.story-text p{margin:0 0 13px}
+.story-img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center top;border-radius:12px;margin:12px 0 18px;cursor:zoom-in;background:#fff}
+.media{background:var(--soft);border-radius:14px;padding:18px}
+audio,video{width:100%;display:block}
+audio{margin-top:8px}
+.glossary{width:100%;border-collapse:collapse;font-size:15px}
+.glossary th,.glossary td{border:1px solid var(--line);padding:9px 10px;text-align:left}
+.glossary th{background:#f0e7db;color:var(--navy)}
+.exercise{background:#fcfbf8;border-left:4px solid #d4b06a;padding:14px 17px;margin:12px 0;border-radius:8px}
+.exercise b{color:var(--navy)}
+.song-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.song-col{background:#fffdf9;border:1px solid var(--line);border-radius:12px;padding:16px}
+.song-col h3{margin-top:0}
+.songline{margin:0 0 8px}
+.songline:empty{height:8px}
+.chorus{font-weight:800}
+.smoothie-img{display:block;width:100%;max-width:850px;margin:0 auto 18px;border-radius:12px;cursor:zoom-in;background:#fff}
+.note{font-size:13px;color:#666;text-align:center}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.86);display:none;align-items:center;justify-content:center;padding:30px;z-index:50}
+.lightbox.open{display:flex}
+.lightbox img{max-width:94vw;max-height:90vh;border-radius:8px}
+.lightbox button{position:absolute;right:24px;top:18px;background:#fff;border:0;border-radius:50%;width:42px;height:42px;font-size:25px;cursor:pointer}
+footer{margin-top:20px;padding:15px 20px;background:var(--navy);color:#fff;border-radius:12px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.top{grid-template-columns:1fr}.top-img{min-height:260px}h1{font-size:40px}.song-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div class="top-copy">
+  <div class="eyebrow">MODULE 6 · FOOD AND HEALTH · BLOCK 02</div>
+  <h1>THE SMOOTHIE<br>EXPERIMENT</h1>
+  <div class="subtitle">A humorous story about healthy living</div>
+  <div class="focus"><b>STORY FOCUS</b><br>Health is good, but friends and laughter are even better. Sometimes a “superfood” can become a super-disaster.</div>
+ </div>
+ <div class="top-img"></div>
+</header>
+
+<div class="meta">
+ <span class="pill">LEVEL: MEDIUM</span><span class="pill">READ · LISTEN · THINK · CREATE</span><span class="pill">FOOD VOCABULARY</span><span class="pill">KITCHEN VERBS</span><span class="pill">CONDITIONALS</span>
+</div>
+
+<details class="card" open>
+ <summary>📖 THE STORY</summary>
+ <div class="content">
+  <img class="story-img" src="assets/story-scene.jpg" alt="Three friends drinking a strange smoothie while a blender smokes" onclick="zoom(this.src)">
+  <div class="lead">
+   <b>Before you read:</b>
+   <ol>
+    <li>Have you ever tried to make a healthy smoothie? What did you put in it?</li>
+    <li>What's the strangest thing you've ever eaten or drunk?</li>
+    <li>The phrasal verb <i>to give out</i> can mean to stop working. When was the last time something “gave out” on you?</li>
+   </ol>
+  </div>
+  <div class="story-text">
+   <p>After the pie incident, we decided we needed to be healthier. Mike announced it one morning.</p>
+   <p>“Guys, I've been reading. If we don't change our eating habits, we'll be dead by fifty.”</p>
+   <p>Dave didn't look up from his book.</p>
+   <p>“If you don't change your eating habits, you'll be dead by fifty. I had salad yesterday.”</p>
+   <p>Mike ignored him. “I bought a blender. We're going to make smoothies. Super healthy ones. If we drink one every day, we'll live forever.”</p>
+   <p>Narrator: “That seems unlikely.”</p>
+   <p>Mike: “Don't give me your negativity!”</p>
+   <p>He pulled out bags of groceries. Spinach, kale, avocado, banana, protein powder, chia seeds, ginger, and something green that none of us recognized.</p>
+   <p>“What's that?” Dave asked.</p>
+   <p>“The cashier said it's wheatgrass. Very healthy.”</p>
+   <p>“It looks like lawn clippings.”</p>
+   <p>“That's because it IS lawn clippings,” Mike said proudly. “Well, basically.”</p>
+   <p>Dave sighed. “If I drink this and die, I'm blaming you.”</p>
+   <p>We gathered in the kitchen. Mike threw everything into the blender. Spinach, kale, avocado, banana, protein powder, chia seeds, ginger, and a handful of wheatgrass. Then he added almond milk.</p>
+   <p>“Are you sure about the proportions?” I asked.</p>
+   <p>Mike waved his hand. “If you follow recipes, you're not an artist. I'm an artist.”</p>
+   <p>He pressed the button.</p>
+   <p>The blender made a sound like a dying robot. Then it stopped. Smoke came out.</p>
+   <p>Mike: “Uh oh.”</p>
+   <p>Dave: “I think the blender just gave out. It gave up. It gave its life for your experiment.”</p>
+   <p>Mike poured the contents into glasses anyway. The smoothie was brownish-green. It looked like something from a swamp. It smelled like a field after rain — but not in a good way.</p>
+   <p>We stared at it.</p>
+   <p>Mike: “If I drink this, what will happen?”</p>
+   <p>Dave: “If you drink this, you'll probably give birth to a tree.”</p>
+   <p>Narrator: “Maybe we should give in and just have coffee.”</p>
+   <p>But Mike was determined. He picked up his glass, closed his eyes, and drank.</p>
+   <p>For a moment, nothing happened. Then his face went through stages: surprise, confusion, horror, and then... peace.</p>
+   <p>“It's not that bad,” he whispered.</p>
+   <p>Dave and I looked at each other. Dave took a tiny sip. His eyes widened.</p>
+   <p>“It tastes like... if a salad and a garden hose had a baby.”</p>
+   <p>I tried it. He was right. It was grassy, chunky, and somehow bitter and sweet at the same time. It was the strangest thing I'd ever tasted.</p>
+   <p>But we drank it. All of it. Because Mike had made it, and we weren't going to give up on him.</p>
+   <p>For the rest of the day, we felt weird. Clean, but weird. Like our insides had been power-washed.</p>
+   <p>Mike's phone rang. It was his grandmother.</p>
+   <p>“Darling, I heard you're making smoothies. If you add an apple, they taste much better.”</p>
+   <p>Mike looked at the empty glasses. The apple sat untouched on the counter.</p>
+   <p>We burst out laughing. If we had added the apple, it might have been delicious. But then we wouldn't have this story.</p>
+   <p>And honestly? The story was worth it.</p>
+  </div>
+ </div>
+</details>
+
+<details class="card">
+ <summary>🎧 LISTEN TO THE STORY</summary>
+ <div class="content">
+  <div class="media">
+   <p><b>Listen to “The Smoothie Experiment”.</b></p>
+   <audio controls preload="metadata" src="assets/story-audio.wav"></audio>
+  </div>
+ </div>
+</details>
+
+<details class="card">
+ <summary>🎬 WATCH</summary>
+ <div class="content">
+  <div class="media">
+   <video controls preload="metadata" poster="assets/story-scene.jpg" src="assets/video.mp4"></video>
+  </div>
+ </div>
+</details>
+
+<details class="card">
+ <summary>📚 GLOSSARY</summary>
+ <div class="content">
+  <table class="glossary">
+   <thead><tr><th>English word / phrase</th><th>Transcription</th><th>Russian equivalent</th></tr></thead>
+   <tbody>
+    <tr><td>smoothie</td><td>[ˈsmuːði]</td><td>смузи</td></tr>
+    <tr><td>kale</td><td>[keɪl]</td><td>кале (листовая капуста)</td></tr>
+    <tr><td>spinach</td><td>[ˈspɪnɪtʃ]</td><td>шпинат</td></tr>
+    <tr><td>avocado</td><td>[ˌævəˈkɑːdoʊ]</td><td>авокадо</td></tr>
+    <tr><td>wheatgrass</td><td>[ˈwiːtɡræs]</td><td>пророщенная пшеница</td></tr>
+    <tr><td>chia seeds</td><td>[ˈtʃiːə siːdz]</td><td>семена чиа</td></tr>
+    <tr><td>cinnamon</td><td>[ˈsɪnəmən]</td><td>корица</td></tr>
+    <tr><td>blender</td><td>[ˈblendər]</td><td>блендер</td></tr>
+    <tr><td>to blend</td><td>[blend]</td><td>смешивать</td></tr>
+    <tr><td>to sip</td><td>[sɪp]</td><td>пить маленькими глотками</td></tr>
+    <tr><td>to measure</td><td>[ˈmeʒər]</td><td>отмерять</td></tr>
+    <tr><td>to throw in</td><td>[θroʊ ɪn]</td><td>добавить, бросить (в смесь)</td></tr>
+    <tr><td>colour of a swamp</td><td>[ˈkʌlər əv ə swɑːmp]</td><td>цвет болота</td></tr>
+    <tr><td>taste</td><td>[teɪst]</td><td>вкус</td></tr>
+    <tr><td>smell</td><td>[smel]</td><td>запах</td></tr>
+    <tr><td>thick</td><td>[θɪk]</td><td>густой</td></tr>
+    <tr><td>chunky</td><td>[ˈtʃʌŋki]</td><td>комковатый</td></tr>
+    <tr><td>frothy</td><td>[ˈfrɔːθi]</td><td>пенистый</td></tr>
+    <tr><td>healthy</td><td>[ˈhelθi]</td><td>полезный, здоровый</td></tr>
+    <tr><td>kitchen disaster</td><td>[ˈkɪtʃɪn dɪˈzæstər]</td><td>кулинарная катастрофа</td></tr>
+   </tbody>
+  </table>
+ </div>
+</details>
+
+<details class="card">
+ <summary>❤️ FOR THE HEART AND MIND</summary>
+ <div class="content">
+  <h3>A. Comprehension Check</h3>
+  <ol>
+   <li>Why did Mike decide they needed to be healthier?</li>
+   <li>What ingredients did he buy for the smoothies?</li>
+   <li>What happened when Mike turned on the blender?</li>
+   <li>How did Dave describe the taste of the smoothie?</li>
+   <li>Did they finish the smoothies?</li>
+   <li>How did they feel for the rest of the day?</li>
+   <li>What did Mike's grandmother suggest?</li>
+   <li>What had they forgotten to add?</li>
+  </ol>
+  <h3>B. Think &amp; Analyse</h3>
+  <ol>
+   <li>Mike said: “If you follow recipes, you're not an artist.” Do you agree? Is cooking art or science?</li>
+   <li>Dave joked: “If you drink this, you'll probably give birth to a tree.” What type of conditional is this? Is it real or imaginary?</li>
+   <li>The narrator says: “If we had added the apple, it might have been delicious. But then we wouldn't have this story.” Is a good story worth a bad smoothie?</li>
+   <li>Why do you think they drank the whole thing even though it was strange?</li>
+  </ol>
+  <h3>C. Discuss &amp; Relate</h3>
+  <ol>
+   <li>Have you ever tried a “health food” that tasted terrible? What was it?</li>
+   <li>Why do people sometimes force themselves to eat healthy things even if they don't like them?</li>
+   <li>Is it better to follow recipes exactly or experiment? What are the risks and rewards of each approach?</li>
+  </ol>
+ </div>
+</details>
+
+<details class="card">
+ <summary>🧠 FOR LANGUAGE SKILLS</summary>
+ <div class="content">
+  <h3>A. Vocabulary Focus — FOOD VOCABULARY</h3>
+  <div class="exercise"><b>EXERCISE 1. Ingredients of Disaster.</b> Match the ingredient with its description:
+   <table class="glossary" style="margin-top:12px"><thead><tr><th>Ingredient</th><th>Description</th></tr></thead><tbody>
+    <tr><td>1. kale</td><td>a) a green leafy vegetable, often used in salads</td></tr>
+    <tr><td>2. spinach</td><td>b) a green fruit with a large seed and creamy texture</td></tr>
+    <tr><td>3. avocado</td><td>c) small seeds that swell in liquid</td></tr>
+    <tr><td>4. chia seeds</td><td>d) young grass of the wheat plant, used in smoothies</td></tr>
+    <tr><td>5. cinnamon</td><td>e) a sweet spice, often used in baking</td></tr>
+   </tbody></table>
+   <p><b>Complete the sentences:</b></p>
+   <ol><li>The smoothie was too thick because of the ________.</li><li>The smell of ________ reminded them of grandma's kitchen.</li><li>They added ________ to make it healthier.</li></ol>
+  </div>
+
+  <div class="exercise"><b>EXERCISE 2. Describing the Smoothie</b>
+   <p><b>Part A. Match adjectives with opposites:</b></p>
+   <table class="glossary"><thead><tr><th>Adjective</th><th>Opposite</th></tr></thead><tbody>
+    <tr><td>1. sweet</td><td>a) bitter</td></tr><tr><td>2. fresh</td><td>b) mild</td></tr><tr><td>3. thick</td><td>c) thin</td></tr><tr><td>4. spicy</td><td>d) stale</td></tr>
+   </tbody></table>
+   <p><b>Part B.</b> Write 3 sentences describing the smoothie from the song. Use: <i>colour, smell, taste, texture.</i></p>
+  </div>
+
+  <div class="exercise"><b>EXERCISE 3. Kitchen Verbs</b>
+   <p>Match the verb with its meaning:</p>
+   <table class="glossary"><thead><tr><th>Verb</th><th>Meaning</th></tr></thead><tbody>
+    <tr><td>1. to throw in</td><td>a) to drink slowly</td></tr><tr><td>2. to sip</td><td>b) to add without measuring</td></tr><tr><td>3. to blend</td><td>c) to mix together</td></tr><tr><td>4. to measure</td><td>d) to become extremely hot</td></tr>
+   </tbody></table>
+   <p><b>Complete the sentences:</b></p>
+   <ol><li>They ________ all the ingredients into the blender.</li><li>Mike ________ the smoothie carefully.</li><li>The blender started to ________.</li></ol>
+  </div>
+
+  <h3>B. Grammar in Context — Conditionals</h3>
+  <div class="exercise"><b>1. Identify the conditional types:</b>
+   <ol type="a"><li>“If we don't change our eating habits, we'll be dead by fifty.” — Type ____</li><li>“If you don't change your eating habits, you'll be dead by fifty.” — Type ____</li><li>“If I drink this, what will happen?” — Type ____</li><li>“If you drink this, you'll probably give birth to a tree.” — Type ____</li><li>“If you add an apple, they taste much better.” — Type ____</li><li>“If we had added the apple, it might have been delicious.” — Type ____</li></ol>
+  </div>
+  <div class="exercise"><b>2. Complete the sentences with the correct form:</b>
+   <ol type="a"><li>If Mike ________ (read) the recipe, the smoothie ________ (be) better.</li><li>If you ________ (add) an apple next time, it ________ (taste) great.</li><li>If I ________ (know) it would be so strange, I ________ (not / drink) it.</li><li>If the blender ________ (not / give out), we ________ (make) another one.</li></ol>
+  </div>
+  <div class="exercise"><b>3. Create your own conditional sentences about food:</b>
+   <ol type="a"><li>First Conditional: ______________________________</li><li>Second Conditional: ______________________________</li><li>Third Conditional: ______________________________</li></ol>
+  </div>
+
+  <h3>C. Brain Workout</h3>
+  <ol>
+   <li>Invent a smoothie: Create your own “disaster smoothie” recipe with at least 5 strange ingredients. Give it a name.</li>
+   <li>Role play: In pairs, act out the scene where Mike's grandmother calls. One is Mike, one is Grandma.</li>
+   <li>The blender's last words: Write 2–3 sentences from the perspective of the blender as it gave out. What did it think of the smoothie?</li>
+  </ol>
+ </div>
+</details>
+
+<details class="card">
+ <summary>🌱 BEYOND THE TEXT</summary>
+ <div class="content">
+  <p><b>Choose ONE:</b></p>
+  <ol>
+   <li><b>A review:</b> Write a funny 1-star review for the smoothie on a health app. (“Tastes like lawn clippings, but at least my insides are clean.”)</li>
+   <li><b>Grandma's recipe:</b> Write Grandma's actual apple smoothie recipe that she should have given them.</li>
+   <li><b>A sequel:</b> What happens when they try again with the apple? Write 4–5 sentences.</li>
+   <li><b>AI image (optional):</b> Create an image of the three friends drinking the brownish-green smoothie with horrified but determined expressions, while the blender smokes in the background.</li>
+  </ol>
+ </div>
+</details>
+
+<details class="card">
+ <summary>♫ THE SMOOTHIE SONG</summary>
+ <div class="content">
+  <img class="smoothie-img" src="assets/smoothie-image.png" alt="Brownish-green smoothie and a red apple" onclick="zoom(this.src)">
+  <div class="media">
+   <p><b>Listen to the song:</b> “THE SMOOTHIE SONG”</p>
+   <audio controls preload="metadata" src="assets/song.mp3"></audio>
+  </div>
+  <div class="song-grid">
+   <div class="song-col"><h3>THE SMOOTHIE SONG</h3>
+    <p class="songline"><b>Verse 1</b></p>
+    <p class="songline">Mike said “We need to be healthy”</p><p class="songline">Dave rolled his eyes and said “Really?”</p><p class="songline">I just stood there, watching the show</p><p class="songline">As the kale and spinach began to grow</p>
+    <p class="songline"><b>Pre-chorus</b></p>
+    <p class="songline">Wheatgrass, chia, avocado too</p><p class="songline">We threw it all in — what could go wrong?</p><p class="songline">(Everything!)</p>
+    <p class="songline chorus">Chorus</p>
+    <p class="songline chorus">We made a smoothie!</p><p class="songline chorus">It was brown and green!</p><p class="songline chorus">The colour of a swamp, the smell of a dream!</p><p class="songline chorus">We took a sip — oh no, oh dear!</p><p class="songline chorus">It tasted like a garden! With a hint of fear!</p>
+    <p class="songline"><b>Verse 2</b></p>
+    <p class="songline">The blender screamed, the blender died</p><p class="songline">Smoke came out — we all cried</p><p class="songline">But Mike was brave, Mike was bold</p><p class="songline">He said “It's not that bad, I'm told”</p>
+    <p class="songline"><b>Pre-chorus</b></p>
+    <p class="songline">We drank it all, we felt so clean</p><p class="songline">Like our insides had been pressure-washed clean!</p>
+    <p class="songline chorus">[Chorus]</p>
+    <p class="songline chorus">We made a smoothie!</p><p class="songline chorus">It was brown and green!</p><p class="songline chorus">The colour of a swamp, the smell of a dream!</p><p class="songline chorus">We took a sip — oh no, oh dear!</p><p class="songline chorus">It tasted like a garden! With a hint of fear!</p>
+    <p class="songline"><b>Bridge</b></p>
+    <p class="songline">Grandma called: “Hello, my dear!</p><p class="songline">If you add an apple, the taste will clear!”</p><p class="songline">We looked at the apple — it sat there alone</p><p class="songline">And we laughed till we couldn't even groan!</p>
+    <p class="songline"><b>Final Chorus</b></p>
+    <p class="songline chorus">We made a smoothie!</p><p class="songline chorus">It was brown and green!</p><p class="songline chorus">We forgot the apple! It should have been seen!</p><p class="songline chorus">We drank it anyway, we didn't care!</p><p class="songline chorus">Because that's the story that we’ll always share!</p>
+    <p class="songline"><b>Outro</b></p><p class="songline">Smoothie… smoothie… maybe next time… with apple!</p>
+   </div>
+   <div class="song-col"><h3>ПЕСНЯ О СМУЗИ</h3>
+    <p class="songline"><b>Куплет 1</b></p>
+    <p class="songline">Майк сказал: «Нам нужно быть здоровыми»</p><p class="songline">Дейв закатил глаза и сказал: «Правда?»</p><p class="songline">Я просто стоял и смотрел на шоу</p><p class="songline">Пока кале и шпинат начали расти</p>
+    <p class="songline"><b>Распевка</b></p>
+    <p class="songline">Витграсс, чиа, авокадо тоже</p><p class="songline">Мы бросили всё это — что могло пойти не так?</p><p class="songline">(Всё!)</p>
+    <p class="songline chorus">Припев</p>
+    <p class="songline chorus">Мы сделали смузи!</p><p class="songline chorus">Он был коричнево-зелёным!</p><p class="songline chorus">Цветом как болото, запахом как мечта!</p><p class="songline chorus">Мы сделали глоток — о нет, о боже!</p><p class="songline chorus">На вкус как сад! С оттенком страха!</p>
+    <p class="songline"><b>Куплет 2</b></p>
+    <p class="songline">Блендер закричал, блендер умер</p><p class="songline">Пошёл дым — мы все плакали</p><p class="songline">Но Майк был храбрым, Майк был смелым</p><p class="songline">Он сказал: «Не так уж плохо, мне кажется»</p>
+    <p class="songline"><b>Распевка</b></p>
+    <p class="songline">Мы выпили всё, мы чувствовали себя такими чистыми</p><p class="songline">Словно наши внутренности помыли под давлением!</p>
+    <p class="songline chorus">Припев</p>
+    <p class="songline chorus">Мы сделали смузи!</p><p class="songline chorus">Он был коричнево-зелёным!</p><p class="songline chorus">Цветом как болото, запахом как мечта!</p><p class="songline chorus">Мы сделали глоток — о нет, о боже!</p><p class="songline chorus">На вкус как сад! С оттенком страха!</p>
+    <p class="songline"><b>Бридж</b></p>
+    <p class="songline">Бабушка позвонила: «Привет, мой дорогой!</p><p class="songline">Если добавить яблоко, вкус станет чистым!»</p><p class="songline">Мы посмотрели на яблоко — оно лежало одинокое</p><p class="songline">И мы смеялись, пока не могли даже стонать!</p>
+    <p class="songline"><b>Финальный припев</b></p>
+    <p class="songline chorus">Мы сделали смузи!</p><p class="songline chorus">Он был коричнево-зелёным!</p><p class="songline chorus">Мы забыли яблоко! Его нужно было добавить!</p><p class="songline chorus">Мы всё равно его выпили, нам было всё равно!</p><p class="songline chorus">Потому что это история, которой мы всегда будем делиться!</p>
+    <p class="songline"><b>Аутро</b></p><p class="songline">Смузи… смузи… может, в следующий раз… с яблоком!</p>
+   </div>
+  </div>
+  <div class="note">English lyrics are on the left; the Russian translation is directly opposite for convenient reading.</div>
+ </div>
+</details>
+
+<footer>
+ <span>MODULE 6 · FOOD AND HEALTH · BLOCK 02</span>
+ <span>Read · Listen · Think · Create</span>
+</footer>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeZoom()">
+ <button onclick="event.stopPropagation();closeZoom()">×</button>
+ <img id="zoomimg" src="" alt="">
+</div>
+<script>
+function zoom(src){document.getElementById('zoomimg').src=src;document.getElementById('lightbox').classList.add('open')}
+function closeZoom(){document.getElementById('lightbox').classList.remove('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeZoom()})
+</script>
+</body>
+</html>

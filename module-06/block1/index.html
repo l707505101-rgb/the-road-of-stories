@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Module 6 · Food and Health · Grandma's Secret Ingredient</title>
+<style>
+:root{--navy:#082033;--cream:#fbf8f2;--warm:#a85b2a;--gold:#d3a34a;--sage:#6d8066;--ink:#20262b;--line:#ded7cc;--soft:#f3ede4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+.wrap{max-width:1180px;margin:auto;padding:22px}
+.top{background:var(--navy);color:#fff;border-radius:18px 18px 0 0;display:grid;grid-template-columns:1fr 1.1fr;overflow:hidden}
+.top-copy{padding:34px 34px 30px}
+.eyebrow{font-size:14px;font-weight:800;letter-spacing:1.5px;color:#e6c06a}
+h1{font-family:Georgia,serif;font-size:52px;line-height:.98;margin:12px 0 14px}
+.subtitle{font-family:Georgia,serif;font-size:20px;color:#f1dfb1;font-style:italic}
+.focus{margin-top:24px;padding:16px 18px;border-left:4px solid var(--gold);background:rgba(255,255,255,.07);font-size:16px}
+.top-img{min-height:360px;background:#fff url('assets/header-white.png') center/cover no-repeat}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+.pill{background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:20px;font-size:13px;font-weight:800}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;margin:16px 0;overflow:hidden;box-shadow:0 5px 18px rgba(30,20,10,.05)}
+summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:900;font-size:21px;color:var(--navy);display:flex;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:'+';margin-left:auto;font-size:28px;color:var(--warm)}
+details[open] summary:after{content:'−'}
+.content{padding:4px 22px 24px}
+.content h3{color:var(--warm);margin:20px 0 8px}
+.content p{margin:8px 0}
+.lead{background:#fff8e7;border-radius:12px;padding:14px 18px;border:1px solid #ecd9a8}
+.story-text{max-width:900px;font-family:Georgia,serif;font-size:17px}
+.story-text p{margin:0 0 13px}
+.story-img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center top;border-radius:12px;margin:12px 0;cursor:zoom-in;background:#fff}
+.media{background:var(--soft);border-radius:14px;padding:18px}
+audio,video{width:100%;display:block}
+audio{margin-top:8px}
+.glossary{width:100%;border-collapse:collapse;font-size:15px}
+.glossary th,.glossary td{border:1px solid var(--line);padding:9px 10px;text-align:left}
+.glossary th{background:#f0e7db;color:var(--navy)}
+.exercise{background:#fcfbf8;border-left:4px solid #d4b06a;padding:14px 17px;margin:12px 0;border-radius:8px}
+.exercise b{color:var(--navy)}
+.song-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.song-col{background:#fffdf9;border:1px solid var(--line);border-radius:12px;padding:16px}
+.song-col h3{margin-top:0}
+.songline{margin:0 0 8px}
+.songline:empty{height:8px}
+.chorus{font-weight:800}
+.pie{display:block;width:100%;max-width:800px;margin:0 auto 15px;border-radius:12px;cursor:zoom-in}
+button.close-note{border:0;background:none;color:#7b7b7b}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.86);display:none;align-items:center;justify-content:center;padding:30px;z-index:50}
+.lightbox.open{display:flex}
+.lightbox img{max-width:94vw;max-height:90vh;border-radius:8px}
+.lightbox button{position:absolute;right:24px;top:18px;background:#fff;border:0;border-radius:50%;width:42px;height:42px;font-size:25px;cursor:pointer}
+.note{font-size:13px;color:#666;text-align:center}
+footer{margin-top:20px;padding:15px 20px;background:var(--navy);color:#fff;border-radius:12px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.top{grid-template-columns:1fr}.top-img{min-height:260px}h1{font-size:40px}.song-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div class="top-copy">
+  <div class="eyebrow">MODULE 6 · FOOD AND HEALTH · BLOCK 01</div>
+  <h1>GRANDMA'S<br>SECRET INGREDIENT</h1>
+  <div class="subtitle">A warm family story with humour</div>
+  <div class="focus"><b>STORY FOCUS</b><br>Sometimes the perfect recipe isn't about exact proportions — it's about memories and love.</div>
+ </div>
+ <div class="top-img"></div>
+</header>
+
+<div class="meta">
+ <span class="pill">LEVEL: SIMPLE</span><span class="pill">READ · LISTEN · THINK · CREATE</span><span class="pill">PHRASAL VERBS WITH GIVE</span><span class="pill">CONDITIONALS</span>
+</div>
+
+<details class="card" open>
+ <summary>📖 THE STORY</summary>
+ <div class="content">
+  <img class="story-img" src="assets/story-image.png" alt="Three friends making a chaotic apple pie" onclick="zoom(this.src)">
+  <div class="lead">
+   <b>Before you read:</b>
+   <ol>
+    <li>Do you have a favourite family recipe? Who makes it best?</li>
+    <li>What happens when you try to cook something without the recipe?</li>
+    <li>The phrasal verb <i>to give up</i> means to stop trying. When was the last time you almost gave up in the kitchen?</li>
+   </ol>
+  </div>
+  <div class="story-text"><p>After our travels, we decided to have a quiet weekend at home. Mike had an idea.</p><p>“My grandmother&#x27;s apple pie,” he said. “It&#x27;s the best in the world. If you try it, you&#x27;ll understand what happiness tastes like.”</p><p>Dave raised an eyebrow. “Can you make it?”</p><p>“Of course! She gave me the recipe. If I follow it exactly, it will be perfect.”</p><p>Famous last words.</p><p>We went to the supermarket. Mike gave the list to Dave, who checked everything twice. Flour, sugar, butter, apples, cinnamon. “If we forget something,” Dave said, “we&#x27;ll have to go back.” So we didn&#x27;t forget.</p><p>Back at Mike&#x27;s apartment, we started. The kitchen was small, but we didn&#x27;t give up. Mike read the recipe aloud:</p><p>“Mix flour and butter until it looks like breadcrumbs.”</p><p>We mixed. It looked like breadcrumbs. Good.</p><p>“Add sugar and a pinch of salt.”</p><p>We added. Still good.</p><p>“Add cold water and form a dough.”</p><p>Mike added the water. Too much water. The dough became soup. “If I add more flour,” he said, “it will be fine.” He added flour. Too much flour. Now it was a dry lump.</p><p>Dave sighed. “If you had measured the water, this wouldn&#x27;t have happened.”</p><p>Mike didn&#x27;t give in. “It&#x27;s fine! We can fix it!”</p><p>He added more butter. Then more flour. Then more water. The dough looked confused. We were confused.</p><p>Narrator: “Maybe we should give up and buy a pie?”</p><p>Mike: “Real men don&#x27;t give up!”</p><p>Finally, after an hour of wrestling, we had something shaped like a pie. It went into the oven.</p><p>Thirty minutes later, we took it out. It looked… interesting. Some parts were burned. Some parts were still dough. But it smelled like apples and cinnamon.</p><p>We cut a slice. Mike took the first bite. His face went through many emotions: hope, doubt, surprise, then a smile.</p><p>“It tastes like…” he paused. “It tastes like my grandmother&#x27;s kitchen. Not exactly her pie. But the feeling.”</p><p>Dave tried it. “If you hadn&#x27;t added that extra water, it might have been terrible. But this chaos… it&#x27;s actually good.”</p><p>We ate the whole thing. It was imperfect, lopsided, burned in places. But it was ours. And it was delicious.</p><p>Later, Mike called his grandmother. “Grandma, what&#x27;s your secret ingredient?”</p><p>She laughed. “Love, dear. And a little bit of chaos. If you don&#x27;t make mistakes, you don&#x27;t make memories.”</p><p>Mike grinned. “Then we made a lot of memories.”</p></div>
+ </div>
+</details>
+
+<details class="card">
+ <summary>🎧 LISTEN TO THE STORY</summary>
+ <div class="content">
+  <div class="media">
+   <p><b>Listen to “Grandma's Secret Ingredient”.</b></p>
+   <audio controls preload="metadata" src="assets/story-audio.wav"></audio>
+  </div>
+ </div>
+</details>
+
+<details class="card">
+ <summary>🎬 WATCH</summary>
+ <div class="content">
+  <div class="media">
+   <video controls preload="metadata" poster="assets/story-image.png" src="assets/video.mp4"></video>
+  </div>
+ </div>
+</details>
+
+<details class="card">
+ <summary>📚 GLOSSARY</summary>
+ <div class="content">
+  <table class="glossary">
+   <thead><tr><th>Word / Phrase</th><th>Transcription</th><th>Russian</th></tr></thead>
+   <tbody><tr><td>to give up</td><td>[ɡɪv ʌp]</td><td>сдаваться, бросать</td></tr><tr><td>to give in</td><td>[ɡɪv ɪn]</td><td>уступать, сдаваться под давлением</td></tr><tr><td>to give out</td><td>[ɡɪv aʊt]</td><td>раздавать; заканчиваться (о запасах)</td></tr><tr><td>to give away</td><td>[ɡɪv əˈweɪ]</td><td>отдавать, выдавать (секрет)</td></tr><tr><td>to give back</td><td>[ɡɪv bæk]</td><td>возвращать</td></tr><tr><td>recipe</td><td>[ˈresəpi]</td><td>рецепт</td></tr><tr><td>ingredient</td><td>[ɪnˈɡriːdiənt]</td><td>ингредиент</td></tr><tr><td>flour</td><td>[flaʊər]</td><td>мука</td></tr><tr><td>butter</td><td>[ˈbʌtər]</td><td>масло</td></tr><tr><td>dough</td><td>[doʊ]</td><td>тесто</td></tr><tr><td>breadcrumbs</td><td>[ˈbredkrʌmz]</td><td>хлебные крошки</td></tr><tr><td>pinch</td><td>[pɪntʃ]</td><td>щепотка</td></tr><tr><td>lump</td><td>[lʌmp]</td><td>комок</td></tr><tr><td>to wrestle</td><td>[ˈresl]</td><td>бороться, сражаться</td></tr><tr><td>burned</td><td>[bɜːrnd]</td><td>подгоревший</td></tr><tr><td>slice</td><td>[slaɪs]</td><td>кусок, ломтик</td></tr><tr><td>lopsided</td><td>[ˌlɑːpˈsaɪdɪd]</td><td>кривой, несимметричный</td></tr><tr><td>secret ingredient</td><td>[ˈsiːkrət ɪnˈɡriːdiənt]</td><td>секретный ингредиент</td></tr></tbody>
+  </table>
+ </div>
+</details>
+
+<details class="card">
+ <summary>❤️ FOR THE HEART AND MIND</summary>
+ <div class="content">
+  <h3>A. Comprehension Check</h3>
+  <ol><li>What did Mike want to make?</li><li>Who gave him the recipe?</li><li>What went wrong with the dough?</li><li>How did Mike try to fix it?</li><li>What did the finished pie look like?</li><li>How did it taste?</li><li>What did Mike&#x27;s grandmother say was the secret ingredient?</li></ol>
+  <h3>B. Think & Analyse</h3>
+  <ol><li>Mike said: “If I follow it exactly, it will be perfect.” Why do you think it wasn’t perfect?</li><li>Dave said: “If you had measured the water, this wouldn’t have happened.” What type of conditional is this? What does it express?</li><li>The grandmother said: “If you don’t make mistakes, you don’t make memories.” Do you agree? Why?</li></ol>
+  <h3>C. Discuss & Relate</h3>
+  <ol><li>Have you ever tried to cook something and it went wrong? What happened?</li><li>Is there a food that reminds you of your childhood or family?</li><li>Why do you think “imperfect” food made with love can taste better than perfect food from a shop?</li></ol>
+ </div>
+</details>
+
+<details class="card">
+ <summary>🧠 FOR LANGUAGE SKILLS</summary>
+ <div class="content">
+  <h3>A. Vocabulary Focus — Phrasal verbs with GIVE</h3>
+  <div class="exercise"><b>1. Match.</b><br>
+   1. give up — a) stop resisting, yield<br>
+   2. give in — b) stop trying<br>
+   3. give out — c) distribute or stop functioning<br>
+   4. give away — d) reveal a secret<br>
+   5. give back — e) return something
+  </div>
+  <div class="exercise"><b>2. Fill in the blanks with the correct form of GIVE + particle.</b>
+   <ol type="a"><li>After three hours of cooking, they almost ______.</li><li>Mike didn&#x27;t ______ to Dave&#x27;s doubts; he kept going.</li><li>If you ______ the recipe, it won&#x27;t be a secret anymore.</li><li>The oven ______ halfway through, but the pie was already done.</li><li>Can you ______ my baking tray? I lent it to you last week.</li></ol></div>
+  <div class="exercise"><b>3.</b> Make your own sentences with three different phrasal verbs from the list.</div>
+
+  <h3>B. Grammar in Context — Conditionals</h3>
+  <div class="exercise"><b>1. Zero Conditional:</b> Find “If you don't make mistakes, you don't make memories.”<br>Complete: If you ______ (mix) flour and water, you ______ (get) dough.</div>
+  <div class="exercise"><b>2. First Conditional:</b> Find “If I follow it exactly, it will be perfect.”<br>Complete: If we ______ (forget) something, we ______ (have) to go back.</div>
+  <div class="exercise"><b>3. Third Conditional:</b> Find “If you had measured the water, this wouldn't have happened.”<br>Complete: If Mike ______ (not / add) too much water, the dough ______ (be) perfect.</div>
+  <div class="exercise"><b>4. Identify the conditional types.</b>
+   <ol type="a"><li>“If you try it, you’ll understand what happiness tastes like.” — Type _____</li><li>“If I add more flour, it will be fine.” — Type _____</li><li>“If you had measured the water, this wouldn’t have happened.” — Type _____</li></ol></div>
+  <h3>C. Brain Workout</h3>
+  <ol><li>Chain story: In groups, continue: “If Mike’s grandmother had been there, she would have…”</li><li>Recipe translation: Take a simple recipe from your culture and explain it in English using conditionals. (“If you want it spicy, add…”)</li><li>Role play: In pairs, act out Mike calling his grandmother to tell her about the pie disaster.</li></ol>
+ </div>
+</details>
+
+<details class="card">
+ <summary>🌱 BEYOND THE TEXT</summary>
+ <div class="content">
+  <p><b>Choose ONE:</b></p>
+  <ol><li>Write a recipe: Write your own recipe for something simple (sandwich, salad, etc.). Use conditionals.</li><li>Grandma&#x27;s letter: Write a short letter from Mike&#x27;s grandmother to him after the phone call.</li><li>AI image (optional): Create an image of the three friends with their lopsided, chaotic pie — proud smiles, flour on faces, the pie looking gloriously imperfect.</li><li>Your own kitchen disaster: Write a short paragraph about a time you (or someone you know) had a kitchen disaster.</li></ol>
+  <img class="pie" src="assets/pie-image.png" alt="Apple pie" onclick="zoom(this.src)">
+  <div class="note">Click the image to enlarge.</div>
+ </div>
+</details>
+
+<details class="card">
+ <summary>♫ FLOUR AND LOVE</summary>
+ <div class="content">
+  <img class="pie" src="assets/pie-image.png" alt="Apple pie" onclick="zoom(this.src)">
+  <div class="media">
+   <p><b>Listen to the song:</b> “FLOUR AND LOVE”</p>
+   <audio controls preload="metadata" src="assets/song.mp3"></audio>
+  </div>
+  <div class="song-grid">
+   <div class="song-col"><h3>FLOUR AND LOVE</h3><p class='songline'>FLOUR AND LOVE</p><p class='songline'>Verse 1</p><p class='songline'>We had a recipe, we had a plan</p><p class='songline'>Grandma&#x27;s apple pie — the best in the land</p><p class='songline'>Mike read the list, Dave measured twice</p><p class='songline'>I just stood there, covered in spice</p><p class='songline'>Pre-chorus</p><p class='songline'>The butter was cold, the flour went wrong</p><p class='songline'>The dough turned into a sad little song</p><p class='songline'>Chorus</p><p class='songline'>But we laughed, and we laughed, and we laughed some more</p><p class='songline'>With flour on our faces and our hearts on the floor</p><p class='songline'>We didn’t make a masterpiece, we made a mess</p><p class='songline'>But that’s the recipe for happiness!</p><p class='songline'>Verse 2</p><p class='songline'>We added more butter, we added more salt</p><p class='songline'>The kitchen looked like a flour assault</p><p class='songline'>Dave raised an eyebrow, Mike stayed proud</p><p class='songline'>I just sneezed and sneezed aloud</p><p class='songline'>Pre-chorus</p><p class='songline'>The oven was hot, the pie was a mess</p><p class='songline'>But the smell of cinnamon made us bless</p><p class='songline'>Chorus</p><p class='songline'>But we laughed, and we laughed, and we laughed some more</p><p class='songline'>With flour on our faces and our hearts on the floor</p><p class='songline'>We didn’t make a masterpiece, we made a mess</p><p class='songline'>But that’s the recipe for happiness!</p><p class='songline'>Bridge </p><p class='songline'>I picked up the phone, I called her late</p><p class='songline'>&quot;Grandma, what’s the secret? Don’t make me wait&quot;</p><p class='songline'>She laughed so warm, she said &quot;My dear</p><p class='songline'>The secret is love — and a little bit of fear!&quot;</p><p class='songline'>(She always said fear — but I think she meant cheer!)</p><p class='songline'>Final Chorus </p><p class='songline'>We laughed, and we laughed, and we laughed some more!</p><p class='songline'>With flour on our faces and our hearts on the floor!</p><p class='songline'>We didn’t make a masterpiece, we made a mess!</p><p class='songline'>But that’s the recipe!</p><p class='songline'>That’s the recipe!</p><p class='songline'>That’s the recipe for happiness!</p><p class='songline'>Outro </p><p class='songline'>Flour and love… flour and love…</p><p class='songline'>That’s all we really need… enough…</p></div>
+   <div class="song-col"><h3>МУКА И ЛЮБОВЬ</h3><p class='songline'>Куплет 1</p><p class='songline'>У нас был рецепт, у нас был план</p><p class='songline'>Бабушкин пирог — лучшее, что есть на земле</p><p class='songline'>Майк читал список, Дейв дважды всё отмерял</p><p class='songline'>А я просто стоял, весь в муке и специях</p><p class='songline'>Распевка</p><p class='songline'>Масло было холодным, мука рассыпалась</p><p class='songline'>Тесто превратилось в печальную песенку</p><p class='songline'>Припев</p><p class='songline'>Но мы смеялись, смеялись и смеялись ещё громче</p><p class='songline'>С мукой на лицах и сердцами на полу</p><p class='songline'>Мы не создали шедевр — мы создали хаос</p><p class='songline'>Но это и есть рецепт счастья!</p><p class='songline'>Куплет 2</p><p class='songline'>Мы добавили масла, добавили соли</p><p class='songline'>Кухня стала похожа на поле битвы с мукой</p><p class='songline'>Дейв поднял бровь, Майк был горд</p><p class='songline'>Я просто чихал и чихал вслух</p><p class='songline'>Распевка</p><p class='songline'>Духовка была горячей, пирог был ужасен</p><p class='songline'>Но запах корицы заставил нас благословить этот день</p><p class='songline'>Припев</p><p class='songline'>Но мы смеялись, смеялись и смеялись ещё громче</p><p class='songline'>С мукой на лицах и сердцами на полу</p><p class='songline'>Мы не создали шедевр — мы создали хаос</p><p class='songline'>Но это и есть рецепт счастья!</p><p class='songline'>Бридж </p><p class='songline'>Я взял телефон, позвонил ей поздно ночью</p><p class='songline'>«Бабушка, в чём секрет? Не заставляй меня ждать»</p><p class='songline'>Она так тепло засмеялась и сказала: «Дорогой</p><p class='songline'>Секрет — это любовь и немного страха!»</p><p class='songline'>(Она всегда говорила «страх», но я думаю, она имела в виду «веселье»!)</p><p class='songline'>Финальный припев </p><p class='songline'>Мы смеялись, смеялись и смеялись ещё громче!</p><p class='songline'>С мукой на лицах и сердцами на полу!</p><p class='songline'>Мы не создали шедевр — мы создали хаос!</p><p class='songline'>Но это и есть рецепт!</p><p class='songline'>Это и есть рецепт!</p><p class='songline'>Это и есть рецепт счастья!</p><p class='songline'>Аутро </p><p class='songline'>Мука и любовь… мука и любовь…</p><p class='songline'>Это всё, что нам действительно нужно… достаточно…</p></div>
+  </div>
+ </div>
+</details>
+
+<footer>
+ <span>MODULE 6 · FOOD AND HEALTH · BLOCK 01</span>
+ <span>Read · Listen · Think · Create</span>
+</footer>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeZoom()">
+ <button onclick="event.stopPropagation();closeZoom()">×</button>
+ <img id="zoomimg" src="" alt="">
+</div>
+<script>
+function zoom(src){document.getElementById('zoomimg').src=src;document.getElementById('lightbox').classList.add('open')}
+function closeZoom(){document.getElementById('lightbox').classList.remove('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeZoom()})
+</script>
+</body>
+</html>

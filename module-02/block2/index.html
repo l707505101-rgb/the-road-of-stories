@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Module 2 · Living and Spending · Block 2 · Dear Future Me</title>
+<style>
+:root{
+  --navy:#18304a;--navy2:#2b4d68;--ink:#26323b;--muted:#69737a;
+  --paper:#fffdf9;--cream:#f5ecde;--sand:#e7d9c3;--gold:#b98a45;
+  --line:#d8cbb8;--blue:#edf2f7;--green:#eef3e9;--lilac:#f2eef7;
+  --rose:#f7ece8;--warm:#fbf3e6;--shadow:0 10px 28px rgba(25,40,55,.09);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#e9e5de;color:var(--ink);font:16px/1.58 Georgia,"Times New Roman",serif}
+main{max-width:1180px;margin:auto;padding:18px 14px 52px}
+.hero{
+  min-height:405px;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);
+  background:#faf6ee;display:grid;grid-template-columns:minmax(370px,1fr) minmax(380px,1.05fr) 245px;
+}
+.hero-copy{padding:32px 30px 34px;background:#faf6ee;display:flex;flex-direction:column;justify-content:center}
+.kicker{font:700 .78rem/1.2 Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:var(--navy)}
+h1{font:italic 700 clamp(3.2rem,6.2vw,5.5rem)/.9 Georgia,serif;color:var(--navy);margin:24px 0 17px}
+.hero-copy p{font-size:1.04rem;max-width:480px;margin:0;color:#37414a}
+.hero-tag{display:inline-block;margin-top:18px;padding:7px 12px;border:1px solid #c7a66d;border-radius:18px;color:#7d6035;font:700 .75rem Arial,sans-serif;background:#fffaf0;width:max-content}
+.hero-art{display:flex;align-items:center;justify-content:center;background:#fff;padding:16px;overflow:hidden}
+.hero-art button{border:0;background:transparent;padding:0;width:100%;height:100%;cursor:zoom-in}
+.hero-art img{width:100%;height:100%;object-fit:contain;display:block}
+.journey{background:rgba(249,242,230,.98);color:var(--navy);padding:25px 18px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid #cdbda8}
+.journey h3{text-align:center;margin:0 0 14px;font-size:1.2rem}
+.journey a{display:flex;gap:10px;align-items:center;padding:9px 2px;color:inherit;text-decoration:none;border-bottom:1px dashed #cdbda8;font-weight:700}
+.icon{width:25px;text-align:center;color:var(--gold);font-family:Arial,sans-serif}
+.route{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}
+.route a{background:#fffaf1;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font:700 .75rem Arial,sans-serif;color:var(--navy);text-decoration:none}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 5px 18px rgba(0,0,0,.045);padding:20px}
+.card.blue{background:var(--blue)}.card.green{background:var(--green)}.card.lilac{background:var(--lilac)}
+.card.rose{background:var(--rose)}.card.warm{background:var(--warm)}
+.section-head{display:flex;gap:11px;align-items:flex-start}
+.badge{width:45px;height:45px;border-radius:50%;background:#e7edf3;color:var(--navy);display:grid;place-items:center;font:1.25rem Arial,sans-serif;flex:0 0 auto}
+.badge.gold{background:#f5ead5;color:#8a652e}.badge.green{background:#e0eadc;color:#55724d}
+.badge.purple{background:#e8dff0;color:#75547d}.badge.rose{background:#f1dcd7;color:#a65e50}
+h2{margin:0 0 5px;color:var(--navy);font-size:1.55rem}
+h3{margin:0 0 7px;color:var(--navy)}.small{color:var(--muted);font-size:.92rem}
+.btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:9px 15px;border-radius:20px;background:var(--navy);color:#fff;border:0;text-decoration:none;font:bold .76rem Arial,sans-serif;cursor:pointer}
+.btn.light{background:#fff;border:1px solid var(--line);color:var(--navy)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.before{display:grid;grid-template-columns:170px repeat(3,1fr);background:#f8f0e3;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:14px 0}
+.before-title{padding:18px 16px;background:#e6d8c3;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.question{padding:16px;border-left:1px dashed #c9b79f}.qnum{font:bold .75rem Arial,sans-serif;color:var(--gold)}
+.media-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.reading{background:#fffdf8;border-radius:12px;padding:18px;border:1px solid #e3d8c8}
+.reading p{margin:0 0 13px}
+.callout{border-left:4px solid var(--gold);background:#fbf4e7;padding:12px 14px;border-radius:8px;margin:12px 0}
+.audio-card{background:#eef2f4;border:1px solid #cfd8de;border-radius:12px;padding:16px}
+audio{width:100%;margin-top:10px}
+.section{margin:12px 0}
+.section details{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.section summary{cursor:pointer;padding:15px 18px;font-weight:700;color:var(--navy);font-size:1.03rem;list-style:none}
+.section summary::-webkit-details-marker{display:none}
+.section summary:before{content:"＋";font:700 1.1rem Arial;color:var(--gold);display:inline-block;width:25px}
+.section details[open] summary:before{content:"−"}
+.content{padding:0 20px 20px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+ol{padding-left:24px}li{margin:6px 0}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left}
+th{background:#eee5d7}
+.word-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.word-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
+.word-card strong{color:var(--navy)}
+.task{background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:15px;margin:12px 0}
+.choices{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.choice{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;cursor:pointer;font:600 .84rem Arial,sans-serif;color:var(--navy)}
+.choice.selected{background:var(--navy);color:#fff;border-color:var(--navy)}
+.feedback{display:none;margin-top:10px;padding:10px 12px;border-radius:8px;background:#eef3e9;border:1px solid #cbd8c5;color:#4d6747}
+.feedback.show{display:block}
+input,textarea,select{font:inherit;border:1px solid #cbd5dc;border-radius:9px;padding:9px 10px;background:#fff;width:100%}
+textarea{min-height:120px;resize:vertical}
+.inline{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.song{background:var(--navy);color:#fff;border-radius:16px;padding:20px;margin:14px 0}
+.song h2{color:#fff}
+.song-intro{display:flex;justify-content:space-between;gap:15px;align-items:center}
+.song audio{width:100%;margin-top:12px}
+.song details{margin-top:14px;background:#fffdf8;color:var(--ink);border:1px solid rgba(255,255,255,.25);border-radius:12px;overflow:hidden}
+.song summary{cursor:pointer;padding:14px 17px;font-weight:700;color:var(--navy);list-style:none}
+.song summary::-webkit-details-marker{display:none}
+.song summary:before{content:"＋";font:700 1.1rem Arial;color:var(--gold);display:inline-block;width:25px}
+.song details[open] summary:before{content:"−"}
+.lyrics{padding:0 17px 17px}
+.lyrics-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.lyric{padding:15px;background:#fbfaf6}.lyric.ru{background:#eef2f4;border-left:1px solid #c9d1d5}
+.lyric-label{font-weight:700;color:var(--navy);margin-bottom:6px}.lyric.ru .lyric-label{color:#85653d}
+.project{background:linear-gradient(135deg,#f3eadc,#eaf0ea);border:1px solid #d6c9b6;border-radius:16px;padding:20px;margin:14px 0}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin:15px 0}
+.step{background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:13px;text-align:center}
+.step .num{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:50%;background:var(--gold);color:#fff;font:bold .7rem Arial,sans-serif;margin-bottom:7px}
+.video-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px}
+.video-wrap video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#111;border-radius:8px;display:block}
+.reflection{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#f7f0e4;border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:14px}
+.modal{position:fixed;inset:0;background:rgba(9,19,30,.78);display:none;align-items:center;justify-content:center;padding:24px;z-index:9999}
+.modal.open{display:flex}
+.modal-panel{max-width:min(1000px,96vw);max-height:92vh;background:#fffdf8;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);position:relative}
+.modal-panel img,.modal-panel video{display:block;max-width:100%;max-height:80vh;width:auto;height:auto;margin:auto;background:#111}
+.modal-title{padding:12px 15px 0;font-weight:700;color:var(--navy)}
+.modal-caption{padding:10px 15px;color:var(--muted);font-size:.9rem}
+.close{position:absolute;right:10px;top:8px;width:36px;height:36px;border:0;border-radius:50%;background:rgba(24,48,74,.9);color:#fff;font:700 22px Arial;cursor:pointer;z-index:2}
+footer{text-align:center;color:#756f67;margin-top:20px;font-size:.88rem}
+@media(max-width:1000px){
+  .hero{grid-template-columns:1fr 1fr}.journey{grid-column:1/-1;border-left:0;border-top:1px solid #cdbda8}
+  .hero-copy{min-height:330px}.hero-art{min-height:330px}
+  .before{grid-template-columns:1fr}.question{border-left:0;border-top:1px dashed #c9b79f}
+  .word-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr 1fr}
+}
+@media(max-width:700px){
+  .hero{grid-template-columns:1fr}.hero-copy{min-height:0;padding:26px 22px}.hero-art{min-height:270px}
+  .journey{grid-column:auto;padding:18px}.grid3,.media-row,.two,.lyrics-grid,.reflection{grid-template-columns:1fr}
+  .word-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}
+  main{padding:10px 8px 40px}
+}
+</style>
+</head>
+<body>
+<main>
+
+<header class="hero">
+  <div class="hero-copy">
+    <div class="kicker">MODULE 2 · LIVING AND SPENDING · BLOCK 2</div>
+    <h1>Dear Future Me</h1>
+    <p>Conscious spending · true value · money, time and the people we love</p>
+    <span class="hero-tag">A letter about what “rich” really means</span>
+  </div>
+  <div class="hero-art">
+    <button data-image="assets/hero.png" data-title="Dear Future Me"><img src="assets/hero.png" alt="A handwritten letter, pen, coins and a small money pouch"></button>
+  </div>
+  <nav class="journey">
+    <h3>Your Journey</h3>
+    <a href="#lead"><span class="icon">◉</span> READINESS</a>
+    <a href="#read"><span class="icon">▣</span> READ</a>
+    <a href="#listen"><span class="icon">◉</span> LISTEN</a>
+    <a href="#heart"><span class="icon">◇</span> THINK</a>
+    <a href="#language"><span class="icon">✎</span> PRACTISE</a>
+    <a href="#beyond"><span class="icon">✦</span> CREATE</a>
+    <a href="#reflection"><span class="icon">♡</span> SHARE</a>
+  </nav>
+</header>
+
+<div class="route">
+  <a href="#lead">Lead-in</a><a href="#read">The Letter</a><a href="#listen">Listening</a>
+  <a href="#heart">Heart & Mind</a><a href="#language">Language</a><a href="#song">Song</a>
+  <a href="#beyond">Beyond the Text</a><a href="#reflection">Reflection</a>
+</div>
+
+<section id="lead" class="before">
+  <div class="before-title">Before<br>You Read</div>
+  <div class="question"><div class="qnum">01 · ASK</div><strong>If you could write a letter to yourself in 10 years, what would you ask? What would you warn yourself about?</strong><textarea placeholder="Write a few ideas…"></textarea></div>
+  <div class="question"><div class="qnum">02 · THINK</div><strong>Do you think your attitude to money will change when you grow up? How?</strong><textarea placeholder="Write your prediction…"></textarea></div>
+  <div class="question"><div class="qnum">03 · LOOK</div><strong>Look at the title. Why do people write letters to their future selves?</strong><textarea placeholder="Your prediction…"></textarea></div>
+</section>
+
+<section id="read" class="media-row">
+  <div class="card">
+    <div class="section-head"><div class="badge">▣</div><div><h2>Read the Letter</h2><div class="small">Read for the turning point: when does buying stop feeling exciting?</div></div></div>
+    <div class="task"><strong>Reading mission:</strong> Find the moment when the writer moves from talking about a purchase to thinking about what really matters.</div>
+    <details>
+      <summary>OPEN THE LETTER</summary>
+      <div class="content reading">
+        <p><em>January 15, 2025</em></p>
+        <p><strong>Dear Future Me,</strong></p>
+        <p>I'm writing this at 3 a.m. I can't sleep. Today I bought something I'd saved for — new wireless headphones. $180. They sound amazing. Everyone at school wants them.</p>
+        <p>But here's the thing. When I took them out of the box, I felt… nothing. Just a quick “cool” and then I opened Instagram.</p>
+        <p>I remembered how, when I was a kid, a new pencil case could make me happy for weeks. Now I buy things, feel nothing, and immediately want more.</p>
+        <p>So I have questions for you, Future Me.</p>
+        <p>Do you still buy things to impress people you don't even like?<br>
+        Do you still scroll through ads at 2 a.m. and feel like your life is incomplete without some shiny gadget?<br>
+        Do you know the difference between wanting something and needing it?</p>
+        <p>I hope you've learned.</p>
+        <p>I hope you spend money on <strong>time</strong> with people you love, not just things.<br>
+        I hope you pay for <strong>experiences</strong> — concerts, trips, a cooking class with someone you care about.<br>
+        I hope you keep a “treasure box” like Grandma's cookie memories, not a shelf of gadgets you forgot about.</p>
+        <p>And I hope you're not in debt. Please, Future Me. <strong>Debt is a cage.</strong></p>
+        <p>Right now, I'm 16. I don't have much money. But I have something else: I still have time to become someone who spends wisely, kindly, freely.</p>
+        <p>I want to be rich. But not in the way the ads promise.</p>
+        <p>Yours,<br><strong>Me (16 years old)</strong></p>
+        <p><strong>P.S.</strong> If you're 26 and you still haven't called Grandma enough — call her. Tomorrow. She doesn't need headphones. She needs you.</p>
+      </div>
+    </details>
+  </div>
+
+  <div id="listen" class="card blue">
+    <div class="section-head"><div class="badge">◉</div><div><h2>Listen to the Letter</h2><div class="small">Listen and follow the text. Notice the changes in the writer's feelings.</div></div></div>
+    <div class="audio-card">
+      <strong>Dear Future Me · audio reading</strong>
+      <audio controls preload="metadata">
+        <source src="assets/letter_audio.wav" type="audio/wav">
+      </audio>
+      <div class="media-note"><span class="hint">LISTEN FOR: feelings</span><span class="hint">LISTEN FOR: questions</span><span class="hint">LISTEN FOR: hopes</span></div>
+    </div>
+    <div class="task">
+      <strong>After listening:</strong> Choose the three ideas you hear most clearly.
+      <div class="choices" data-group="listenideas">
+        <button class="choice" onclick="pick(this,'listenideas')">wanting vs needing</button>
+        <button class="choice" onclick="pick(this,'listenideas')">experiences</button>
+        <button class="choice" onclick="pick(this,'listenideas')">debt</button>
+        <button class="choice" onclick="pick(this,'listenideas')">school grades</button>
+      </div>
+      <div class="small" style="margin-top:8px">There is more than one correct choice.</div>
+    </div>
+  </div>
+</section>
+
+<section class="card warm">
+  <div class="section-head"><div class="badge gold">◇</div><div><h2>Look & Notice</h2><div class="small">The letter, the coins, the pen and the empty space all suggest a quiet moment of decision.</div></div></div>
+  <div class="media-row" style="margin-bottom:0">
+    <div>
+      <button class="btn light" data-image="assets/hero.png" data-title="Dear Future Me">CLICK TO ENLARGE THE IMAGE ↗</button>
+      <div class="task"><strong>Look closely:</strong> What objects in the image connect to the ideas of <em>money</em>, <em>writing</em> and <em>the future</em>? Write three words.</div>
+    </div>
+    <div class="task">
+      <strong>Predict before you check the letter:</strong>
+      <ol><li>Why might the writer be awake at 3 a.m.?</li><li>What might the coins represent?</li><li>What could make someone say, “I want to be rich” but mean something more than money?</li></ol>
+    </div>
+  </div>
+</section>
+
+<section id="heart" class="section">
+<details open>
+<summary>01 · FOR THE HEART & MIND · Understand → Think → Relate</summary>
+<div class="content">
+  <div class="two">
+    <div class="card">
+      <h3>A · Comprehension Check</h3>
+      <ol>
+        <li>What did the author buy? How much did it cost?</li>
+        <li>How did he feel after the purchase?</li>
+        <li>What did he remember about his childhood?</li>
+        <li>What three questions does he ask his future self?</li>
+        <li>What three things does he hope his future self spends money on?</li>
+        <li>What warning does he give about debt?</li>
+        <li>What is the P.S. about?</li>
+      </ol>
+      <button class="btn light" onclick="toggle('heartAnswers')">CHECK YOURSELF</button>
+      <div class="feedback" id="heartAnswers">
+        He bought wireless headphones for $180; he felt almost nothing; he remembered how a pencil case once made him happy for weeks; he asks about impressing people, scrolling through ads and wanting vs needing; he hopes for time with loved ones, experiences and a “treasure box” of memories; he calls debt “a cage”; the P.S. tells Future Me to call Grandma.
+      </div>
+    </div>
+    <div class="card lilac">
+      <h3>B · Think & Analyse</h3>
+      <ol>
+        <li>What does “rich” mean to the writer?</li>
+        <li>Why do you think he wrote the letter at 3 a.m.?</li>
+        <li>Compare Leo (Text 2.A) and the author of this letter. What do they have in common?</li>
+        <li>“Debt is a cage.” What does this metaphor mean? Can you create another metaphor for debt?</li>
+      </ol>
+      <textarea placeholder="Choose one question and write your answer…"></textarea>
+    </div>
+  </div>
+  <div class="task">
+    <h3>C · Discuss & Relate</h3>
+    <p><strong>Want or need?</strong> Choose a position, then explain it with an example.</p>
+    <div class="choices" data-group="wantneed">
+      <button class="choice" onclick="pick(this,'wantneed')">A want can become a need.</button>
+      <button class="choice" onclick="pick(this,'wantneed')">A need is necessary; a want is optional.</button>
+      <button class="choice" onclick="pick(this,'wantneed')">It depends on the situation.</button>
+    </div>
+    <textarea style="margin-top:10px" placeholder="My example / explanation…"></textarea>
+    <p><strong>Then discuss:</strong> Do experiences (concerts, trips) make us happier than things? Why? Why is calling Grandma at the end of a letter about money?</p>
+  </div>
+</div>
+</details>
+</section>
+
+<section id="language" class="section">
+<details>
+<summary>02 · FOR LANGUAGE SKILLS · Notice → Practise → Use</summary>
+<div class="content">
+  <div class="task">
+    <h3>A · Vocabulary Focus</h3>
+    <p><strong>1. Synonyms in context:</strong> Find the words in the letter.</p>
+    <div class="word-grid">
+      <div class="word-card">to try to make someone admire you → <strong>to impress</strong></div>
+      <div class="word-card">not complete → <strong>incomplete</strong></div>
+      <div class="word-card">money you owe → <strong>debt</strong></div>
+      <div class="word-card">a small electronic device → <strong>gadget</strong></div>
+    </div>
+  </div>
+
+  <div class="task">
+    <h3>2 · Verb Collocations</h3>
+    <p>Match the verbs with the nouns they go with in the text.</p>
+    <table><tr><th>Verb</th><th>Choose</th><th>Answer</th></tr>
+      <tr><td>to impress</td><td><select onchange="this.nextElementSibling.textContent=this.value==='people'?'✓ people':'Try again'"><option>—</option><option>people</option><option>money</option><option>ads</option><option>someone</option></select></td><td></td></tr>
+      <tr><td>to spend</td><td><select onchange="this.nextElementSibling.textContent=this.value==='money'?'✓ money':'Try again'"><option>—</option><option>money</option><option>ads</option><option>people</option><option>someone</option></select></td><td></td></tr>
+      <tr><td>to scroll</td><td><select onchange="this.nextElementSibling.textContent=this.value==='ads'?'✓ ads':'Try again'"><option>—</option><option>money</option><option>ads</option><option>people</option><option>someone</option></select></td><td></td></tr>
+      <tr><td>to care about</td><td><select onchange="this.nextElementSibling.textContent=this.value==='someone'?'✓ someone':'Try again'"><option>—</option><option>money</option><option>ads</option><option>people</option><option>someone</option></select></td><td></td></tr>
+    </table>
+  </div>
+
+  <div class="task">
+    <h3>3 · Word Formation</h3>
+    <table><tr><th>Verb</th><th>Noun</th><th>Adjective</th></tr>
+      <tr><td>to impress</td><td>impression</td><td><input id="wf1" placeholder="—"></td></tr>
+      <tr><td>—</td><td>experience</td><td>experienced</td></tr>
+      <tr><td>to promise</td><td><input id="wf2" placeholder="—"></td><td>promised</td></tr>
+    </table>
+    <button class="btn light" onclick="checkWF()">CHECK</button>
+    <div class="feedback" id="wfFeedback"></div>
+  </div>
+
+  <div class="task">
+    <h3>4 · Complete with glossary words</h3>
+    <div class="inline">
+      <input id="g1" placeholder="a) ______ headphones">
+      <input id="g2" placeholder="b) a new ______">
+      <input id="g3" placeholder="c) in ______">
+      <input id="g4" placeholder="d) spend money ______">
+    </div>
+    <button class="btn light" onclick="checkGlossary()">CHECK</button>
+    <div class="feedback" id="glossFeedback"></div>
+  </div>
+
+  <div class="task">
+    <h3>B · Grammar in Context</h3>
+    <p><strong>Future reference:</strong> The letter is written now about the future. Look for examples of present forms and <em>will</em>. Why might the writer mix forms?</p>
+    <p><strong>Conditionals:</strong> “If you're 26 and you still haven't called Grandma enough — call her.” What type is it? Then complete:</p>
+    <p>If I <input id="c1" style="width:90px" placeholder="have"> a million dollars, I <input id="c2" style="width:120px" placeholder="not buy"> a sports car. I <input id="c3" style="width:110px" placeholder="travel"> with my family.</p>
+    <button class="btn light" onclick="checkConditional()">CHECK</button>
+    <div class="feedback" id="condFeedback"></div>
+    <p style="margin-top:15px"><strong>Infinitive of purpose:</strong></p>
+    <p>He bought them <input id="p1" style="width:100px" placeholder="to impress"> people. Grandma needs him <input id="p2" style="width:80px" placeholder="to call"> her.</p>
+    <p>Write two things you save money <em>for</em>, using <strong>to + verb</strong>:</p>
+    <div class="inline"><input placeholder="I save money to…"><input placeholder="I save money to…"></div>
+  </div>
+
+  <div class="task">
+    <h3>C · Brain Workout</h3>
+    <p><strong>Reverse perspective:</strong> Imagine you are Future Me, 26 years old. Write two sentences back to your 16-year-old self.</p>
+    <textarea placeholder="Dear 16-year-old me…"></textarea>
+    <p><strong>Memory Chain:</strong> Start: “The author bought headphones for $180.” Add one new detail each time.</p>
+    <textarea placeholder="Student 1 → Student 2 → Student 3 → …"></textarea>
+    <p><strong>Metaphor making:</strong> Create your own metaphor for saving money, an impulsive buy, being rich, or sharing money with friends.</p>
+    <textarea placeholder="Saving money is… / An impulsive buy is… / Being rich is…"></textarea>
+  </div>
+</div>
+</details>
+</section>
+
+<section class="song" id="song">
+  <div class="song-intro">
+    <div><h2>♫ Dear Future Me</h2><div>Song connection: questions, hopes and the people who matter.</div></div>
+    <span class="hero-tag" style="margin:0;background:#fffaf0">LISTEN · THINK · WRITE</span>
+  </div>
+  <audio controls preload="metadata"><source src="assets/song.mp3" type="audio/mpeg"></audio>
+  <details>
+    <summary>SHOW SONG LYRICS</summary>
+    <div class="lyrics">
+      <div class="lyrics-grid">
+        <div class="lyric">
+          <div class="lyric-label">ENGLISH</div>
+          <p><strong>Dear Future Me,</strong><br>
+          I'm writing this at 3 a.m. I can't sleep.<br>
+          Today I bought something I'd saved for — new wireless headphones.<br>
+          They sound amazing.<br>
+          But when I took them out of the box, I felt… nothing.<br>
+          I remembered how, when I was a kid,<br>
+          a new pencil case could make me happy for weeks.<br>
+          Now I buy things, feel nothing,<br>
+          and immediately want more.</p>
+          <p>So I have questions for you, Future Me.<br>
+          Do you still buy things to impress people you don't even like?<br>
+          Do you still scroll through ads at 2 a.m.<br>
+          and feel like your life is incomplete without some shiny gadget?<br>
+          Do you know the difference between wanting something and needing it?</p>
+          <p>I hope you've learned.<br>
+          I hope you spend money on time with people you love, not just things.<br>
+          I hope you pay for experiences — concerts, trips,<br>
+          a cooking class with someone you care about.<br>
+          I hope you keep a “treasure box” like Grandma's cookie memories,<br>
+          not a shelf of gadgets you forgot about.</p>
+          <p>And I hope you're not in debt. Please, Future Me.<br>
+          Debt is a cage.</p>
+          <p>Right now, I'm 16. I don't have much money.<br>
+          But I have something else:<br>
+          I still have time to become someone who spends wisely, kindly, freely.<br>
+          I want to be rich.<br>
+          But not in the way the ads promise.</p>
+          <p>P.S. If you're 26 and you still haven't called Grandma enough —<br>
+          call her. Tomorrow.<br>
+          She doesn't need headphones.<br>
+          She needs you.</p>
+        </div>
+        <div class="lyric ru">
+          <div class="lyric-label">РУССКАЯ ВЕРСИЯ</div>
+          <p><strong>Дорогой Я в Будущем,</strong><br>
+          Я пишу это в 3 часа ночи. Не могу уснуть.<br>
+          Сегодня я купил то, на что копил — новые беспроводные наушники.<br>
+          Они звучат потрясающе.<br>
+          Но когда я достал их из коробки, я ничего не почувствовал.<br>
+          Я вспомнил, как в детстве новый пенал мог делать меня счастливым на недели.<br>
+          Теперь я покупаю вещи, ничего не чувствую и сразу хочу ещё.</p>
+          <p>Поэтому у меня есть вопросы к тебе, Я в Будущем.<br>
+          Ты всё ещё покупаешь вещи, чтобы впечатлить людей, которые тебе даже не нравятся?<br>
+          Ты всё ещё листаешь рекламу в 2 часа ночи и чувствуешь, что твоя жизнь неполна без какого-нибудь блестящего гаджета?<br>
+          Ты знаешь разницу между «хотеть» и «нуждаться»?</p>
+          <p>Надеюсь, ты научился.<br>
+          Надеюсь, ты тратишь деньги на время с теми, кого любишь, а не только на вещи.<br>
+          Надеюсь, ты платишь за впечатления — концерты, поездки, урок кулинарии с кем-то важным.<br>
+          Надеюсь, у тебя есть «коробка сокровищ», как бабушкины воспоминания о печенье,<br>
+          а не полка гаджетов, которые ты забыл.</p>
+          <p>И ещё: надеюсь, у тебя нет долгов. Пожалуйста, Я в Будущем.<br>
+          Долг — это клетка.</p>
+          <p>Сейчас мне 16. У меня не так много денег.<br>
+          Но у меня есть кое-что другое:<br>
+          у меня ещё есть время, чтобы стать тем, кто тратит мудро, по-доброму, свободно.<br>
+          Я хочу быть богатым.<br>
+          Но не так, как обещают в рекламе.</p>
+          <p>P.S. Если тебе 26 и ты всё ещё недостаточно звонил бабушке —<br>
+          позвони ей. Завтра.<br>
+          Ей не нужны наушники.<br>
+          Ты нужен ей.</p>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <div class="task" style="margin-bottom:0">
+    <h3>Song Tasks</h3>
+    <p><strong>Exercise 1 · Questions Without Answers.</strong> Write three questions you would ask your future self. Choose one and answer it as if you were ten years older.</p>
+    <div class="inline"><textarea placeholder="1. …"></textarea><textarea placeholder="2. …"></textarea></div>
+    <textarea placeholder="3. …"></textarea>
+    <textarea placeholder="My future-self answer…"></textarea>
+    <p><strong>Exercise 2 · The Letter You Never Wrote.</strong> Write 5–7 sentences to someone you love. Thank them, ask one question, or tell them something you've never said before. You do not have to send it.</p>
+    <textarea placeholder="Dear …"></textarea>
+  </div>
+</section>
+
+<section id="beyond" class="section">
+<details>
+<summary>03 · BEYOND THE TEXT · Choose ONE Path</summary>
+<div class="content">
+  <div class="grid3">
+    <div class="card"><h3>✉ Write Your Own Letter</h3><p>Write to your future self 10 years from now about money, time or happiness. Use at least 5 glossary words. <strong>100–120 words.</strong></p></div>
+    <div class="card green"><h3>↩ Reply to the Author</h3><p>Imagine you are Future Me, 26. What have you learned? What mistakes did you make? What advice would you give your 16-year-old self?</p></div>
+    <div class="card lilac"><h3>◌ Interview</h3><p>Ask two adults: “What do you wish you had known about money when you were 16?” Report their answers in English.</p></div>
+  </div>
+  <div class="two" style="margin-top:12px">
+    <div class="card warm"><h3>✦ Optional AI Image</h3><p>Create an image inspired by the letter: a teenager writing at night; a treasure box of memories vs a shelf of gadgets; or a visual metaphor for “Debt is a cage.”</p><details><summary>OPEN THE SOURCE PROMPT</summary><div class="content"><p><em>A teenager sitting at a desk late at night, writing a letter by lamplight. On one side of the room — a shelf with expensive gadgets, dusty and unused. On the other — a small box with photos and handwritten notes. Warm, nostalgic atmosphere, cinematic style.</em></p></div></details></div>
+    <div class="card rose"><h3>♡ The P.S. Mission</h3><p>The letter ends: “Call her. Tomorrow.” Call or visit someone you haven't thanked enough. Then write <strong>3 sentences in English</strong> about how it felt.</p><textarea placeholder="It felt…"></textarea></div>
+  </div>
+</div>
+</details>
+</section>
+
+<section class="project">
+  <div class="section-head"><div class="badge gold">▶</div><div><h2>Letter in Motion</h2><div class="small">Watch the visual interpretation of the story.</div></div></div>
+  <div class="video-wrap">
+    <video controls preload="metadata" poster="assets/hero.png">
+      <source src="assets/letter_video.mp4" type="video/mp4">
+    </video>
+    <button class="btn light" data-video="assets/letter_video.mp4" data-title="A Letter to My Future Self">OPEN VIDEO IN A LARGER PLAYER ↗</button>
+  </div>
+</section>
+
+<section id="reflection" class="reflection">
+  <div>
+    <h2>Reflection Time</h2>
+    <p>What does “rich” mean to you now?</p>
+    <ol>
+      <li>One idea from the letter I want to remember is…</li>
+      <li>One English word or structure I can now use is…</li>
+      <li>One thing I want my future self to know is…</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h3>My Reflection</h3>
+    <textarea id="reflection" placeholder="Write 3–5 sentences…"></textarea>
+    <button class="btn light" onclick="saveReflection()">SAVE REFLECTION</button>
+    <div class="feedback" id="reflectionFeedback"></div>
+  </div>
+</section>
+
+<footer>Module 2 · Living and Spending · Block 2 · Dear Future Me</footer>
+</main>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-panel">
+    <button class="close" onclick="closeModal()" aria-label="Close">×</button>
+    <div class="modal-title" id="modalTitle"></div>
+    <div id="modalBody"></div>
+    <div class="modal-caption" id="modalCaption"></div>
+  </div>
+</div>
+
+<script>
+const modal=document.getElementById('modal');
+const body=document.getElementById('modalBody');
+const title=document.getElementById('modalTitle');
+const caption=document.getElementById('modalCaption');
+
+function openImage(src,text){
+  body.innerHTML='';
+  title.textContent=text||'';
+  caption.textContent='Click outside the image or press Esc to close.';
+  const img=document.createElement('img');
+  img.src=src; img.alt=text||'';
+  body.appendChild(img);
+  modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function openVideo(src,text){
+  body.innerHTML='';
+  title.textContent=text||'';
+  caption.textContent='Use the controls to play, pause or change volume.';
+  const v=document.createElement('video');
+  v.src=src; v.controls=true; v.autoplay=true; v.playsInline=true;
+  body.appendChild(v);
+  modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  const v=body.querySelector('video');
+  if(v)v.pause();
+  modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+  body.innerHTML=''; document.body.style.overflow='';
+}
+document.querySelectorAll('[data-image]').forEach(b=>b.addEventListener('click',e=>{
+  e.preventDefault(); openImage(b.dataset.image,b.dataset.title);
+}));
+document.querySelectorAll('[data-video]').forEach(b=>b.addEventListener('click',e=>{
+  e.preventDefault(); openVideo(b.dataset.video,b.dataset.title);
+}));
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal()});
+
+function toggle(id){document.getElementById(id).classList.toggle('show')}
+function pick(el,group){
+  document.querySelectorAll('[data-group="'+group+'"] .choice').forEach(x=>x.classList.remove('selected'));
+  el.classList.add('selected');
+}
+function checkWF(){
+  const a=document.getElementById('wf1').value.trim().toLowerCase();
+  const b=document.getElementById('wf2').value.trim().toLowerCase();
+  const f=document.getElementById('wfFeedback'); f.classList.add('show');
+  f.textContent=(a==='impressive'&&b==='promise')?'Correct.':'Try: impressive · promise.';
+}
+function checkGlossary(){
+  const vals=[g1.value,g2.value,g3.value,g4.value].map(x=>x.trim().toLowerCase());
+  const f=document.getElementById('glossFeedback'); f.classList.add('show');
+  const ok=vals[0]==='wireless'&&vals[1]==='gadget'&&vals[2]==='debt'&&vals[3]==='wisely';
+  f.textContent=ok?'Excellent — all four fit the context.':'Check the glossary: wireless · gadget · debt · wisely.';
+}
+function checkConditional(){
+  const vals=[c1.value.trim().toLowerCase(),c2.value.trim().toLowerCase(),c3.value.trim().toLowerCase()];
+  const f=document.getElementById('condFeedback'); f.classList.add('show');
+  const ok=vals[0]==='had'&&vals[1].replace(/\s+/g,' ')==="wouldn't buy"&&vals[2]==='would travel';
+  f.textContent=ok?'Correct — this is a hypothetical Second Conditional pattern.':'Try: had · wouldn’t buy · would travel.';
+}
+function saveReflection(){
+  const v=document.getElementById('reflection').value.trim();
+  const f=document.getElementById('reflectionFeedback'); f.classList.add('show');
+  f.textContent=v?'Reflection saved for this session.':'Write a few sentences first.';
+}
+</script>
+<script>
+(function(){
+  let timer;
+  function sendHeight(){
+    clearTimeout(timer);
+    timer=setTimeout(function(){
+      try{
+        parent.postMessage({
+          type:'module2Height',
+          height:Math.max(document.body.scrollHeight,document.documentElement.scrollHeight)
+        },'*');
+      }catch(e){}
+    },60);
+  }
+  window.addEventListener('load',sendHeight);
+  document.addEventListener('toggle',sendHeight,true);
+  setTimeout(sendHeight,300);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Block 2 — The Porch Light in November</title>
+<style>
+:root{--navy:#101d2b;--navy2:#17293a;--cream:#f6f0e5;--paper:#fffaf2;--gold:#d3a54a;--green:#214f39;--purple:#5d4b78;--ink:#202832;--muted:#6d747b;--line:#ddd2c2}
+*{box-sizing:border-box} body{margin:0;background:#eee9df;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.topbar{height:68px;background:var(--navy);color:#fff;display:flex;align-items:center;padding:0 28px;gap:28px;position:sticky;top:0;z-index:10}
+.brand{font-family:Georgia,serif;color:#e5c16a;line-height:1.05;font-weight:700;letter-spacing:1px}
+.nav{display:flex;gap:24px;flex:1}.nav a{color:#f6efe4;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.8px}.nav a.active{color:#e5c16a;border-bottom:2px solid #e5c16a;padding-bottom:6px}
+.top-icons{display:flex;gap:8px}.icon-btn{background:transparent;border:1px solid #687482;color:#fff;border-radius:50%;width:34px;height:34px}
+.shell{max-width:1500px;margin:auto;display:grid;grid-template-columns:330px 1fr;min-height:calc(100vh - 68px)}
+.sidebar{background:var(--navy2);color:#fff}.hero-img{width:100%;height:255px;object-fit:cover;display:block}.side-inner{padding:24px}.module-no,.block-no{color:#e3bd61;font-weight:800;font-size:13px;letter-spacing:1.5px}.module-title{font:700 29px Georgia,serif;color:#fff;margin-top:3px}.chip{color:#e3bd61;font-size:28px;margin:14px 0 5px}.side-rule{height:1px;background:#40505f;margin:14px 0}.block-title{font:700 22px Georgia,serif;margin-top:5px}.quote{font:italic 15px Georgia,serif;color:#e3bd61;line-height:1.45;margin-top:14px}
+.menu{display:grid;gap:5px}.menu a{display:flex;justify-content:space-between;align-items:center;color:#eef1f3;text-decoration:none;padding:10px 9px;border-radius:8px;font-size:13px}.menu a.active{background:#d3a54a;color:#182432;font-weight:800}.earth{width:100%;margin-top:20px;border-radius:10px;opacity:.9}
+main{background:var(--cream);padding:34px 38px}.crumb{color:#9a7022;font-size:12px;font-weight:800;letter-spacing:1.3px}.title{font:700 52px Georgia,serif;margin:10px 0 3px;color:#172231}.ornament{color:#c59b46;letter-spacing:8px;margin:3px 0 8px}.subtitle{font:18px Georgia,serif;line-height:1.5;max-width:900px;margin:0 0 18px}
+.section-jump{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 20px}.jump{border:1px solid #d1c3ad;background:#fffaf0;color:#34404b;border-radius:999px;padding:7px 11px;text-decoration:none;font-size:11px;font-weight:800}
+.cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}.card{background:var(--paper);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:0 2px 8px #0000000d}.card-head{padding:12px 15px;color:#fff;font-weight:800;letter-spacing:.5px}.head-navy{background:var(--navy)}.head-green{background:linear-gradient(90deg,#214f39,#2d6749)}.head-purple{background:var(--purple)}.card-body{padding:16px;display:grid;grid-template-columns:1fr 150px;gap:14px;min-height:190px;align-items:center}.card-copy p{line-height:1.5;margin-top:0}.card-img{width:100%;height:155px;object-fit:cover;border-radius:9px}.cta{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:9px 12px;border-radius:7px;font-size:11px;font-weight:800}.video-box video{width:100%;height:155px;object-fit:cover;border-radius:9px;background:#111}.audio-wrap{grid-template-columns:1fr!important;display:block}.audio-title{font-weight:800;margin:0 0 5px}.audio-note{font-size:13px;color:var(--muted)}audio{width:100%;margin-top:12px}.media-note{font-size:11px;color:var(--muted)}
+.accordion{margin-top:18px;display:grid;gap:9px}.accordion details{background:var(--paper);border:1px solid var(--line);border-radius:11px;overflow:hidden}.accordion summary{list-style:none;cursor:pointer;padding:15px 17px;display:grid;grid-template-columns:35px 1fr 20px;align-items:center;gap:10px}.accordion summary::-webkit-details-marker{display:none}.acc-icon{font-size:22px}.acc-title{font-weight:900;font-size:14px}.acc-desc{font-size:12px;color:var(--muted);line-height:1.4}.chev{font-size:20px}.content{padding:0 20px 22px;border-top:1px solid var(--line)}h3{font:700 18px Georgia,serif;color:#263445;margin:20px 0 9px}.lead-in,.exercise,.story{background:#fffdf8;border-left:4px solid #d3a54a;padding:13px 17px;border-radius:6px;line-height:1.62}.story p{margin:0 0 12px}.story p:last-child{margin-bottom:0}.lead-in li,.exercise li{margin:7px 0}
+.glossary{width:100%;border-collapse:collapse;background:#fffdf8}.glossary th,.glossary td{padding:8px 10px;border-bottom:1px solid #e4dacb;text-align:left;font-size:13px}.glossary th{background:#eee5d7}.song{margin-top:18px;background:#fffaf2;border:1px solid var(--line);border-radius:13px;overflow:hidden}.song-head{background:var(--purple);color:#fff;padding:13px 16px;display:flex;justify-content:space-between;font-weight:800}.song-body{display:grid;grid-template-columns:190px 190px minmax(0,1fr);gap:18px;padding:16px;align-items:start}.song-img{width:100%;height:170px;object-fit:contain;background:#f7f3eb;border-radius:9px}.lyrics-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}.lyrics-grid>*{min-width:0;overflow-wrap:anywhere}.lyrics-grid .lyrics-col{min-width:0}.song-lyrics-details{margin-top:10px;border:1px solid #d8c9e3;border-radius:10px;background:#faf7fc}.song-lyrics-details summary{cursor:pointer;padding:10px 12px;font-weight:800;color:#4b3265}.song-lyrics-details .content{padding:12px;border-top:1px solid #e4dbea}.song-exercises{margin-top:12px;border:1px solid #d8cdbb;border-radius:10px;background:#fffaf2;overflow:hidden}.song-exercises>summary{cursor:pointer;padding:12px 14px;font-weight:800;color:#4b3265;background:#faf7fc}.song-exercises .content{padding:14px;border-top:1px solid #e4dbea}.pill{padding:10px 12px;border:1px solid #d8cdbb;border-radius:999px;background:#fff;text-decoration:none;color:#343b43;font-size:12px;font-weight:700}
+.footer{margin-top:20px;padding:15px;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;border-radius:12px}.footer a{border:1px solid #d3a54a;border-radius:8px;padding:8px 12px;text-decoration:none;color:#f3c75b;font-weight:800;font-size:12px}
+@media(max-width:1050px){.cards{grid-template-columns:1fr 1fr}.song-body{grid-template-columns:1fr 1fr}.song-img{height:200px}}
+@media(max-width:900px){.lyrics-grid{grid-template-columns:1fr}.shell{grid-template-columns:1fr}.sidebar{min-height:auto}.nav{display:none}main{padding:24px 16px}.title{font-size:43px}.cards{grid-template-columns:1fr}.song-body{grid-template-columns:1fr}.card-body{grid-template-columns:1fr}.card-img,.video-box video{height:220px}}</style>
+<style>
+.photo-pop{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;pointer-events:auto;background:transparent!important;}
+.photo-pop img{display:block!important;max-width:90vw!important;max-height:90vh!important;width:auto!important;height:auto!important;object-fit:contain!important;box-shadow:0 10px 30px rgba(0,0,0,.25)!important;border-radius:10px!important;background:#fff!important;cursor:zoom-out!important;}
+.photo-pop-close{position:fixed;right:18px;top:14px;z-index:2147483648;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#263746;font:32px/38px Arial;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.18);}
+</style></head>
+<body>
+<header class="topbar">
+<div class="brand">LANGUAGE<br/>OF THE SOUL</div>
+<nav class="nav"><a href="#top">HOME</a><a class="active" href="#top">THE JOURNEY</a><a href="#heart">THE WISDOM</a><a href="#language">THE PRACTICE</a><a href="#song">THE GIFT</a></nav>
+<div class="top-icons"><button class="icon-btn">◎</button><button class="icon-btn" onclick="document.getElementById('audio').scrollIntoView({behavior:'smooth'})">♪</button><button class="icon-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">☰</button></div>
+</header>
+<div class="shell" id="top">
+<aside class="sidebar">
+<img alt="A man sitting on a porch at night" class="hero-img" src="assets/hero-porch.png"/>
+<div class="side-inner">
+<div class="module-no">MODULE 8</div><div class="module-title">TECHNOLOGY</div>
+<div class="chip">▣</div><div class="side-rule"></div>
+<div class="block-no">BLOCK 2</div><div class="block-title">The Porch Light in November</div>
+<div class="quote">“The porch light in November means there’s still a way back home.”</div><div class="side-rule"></div>
+<div class="menu">
+<a class="active" href="#read"><span>📖 The Story</span><b>›</b></a>
+<a href="#video"><span>▶ Video</span><b>›</b></a>
+<a href="#audio"><span>🎧 Audio</span><b>›</b></a>
+<a href="#read"><span>📚 Read</span><b>›</b></a>
+<a href="#glossary"><span>▤ Glossary</span><b>›</b></a>
+<a href="#heart"><span>♥ For the Heart and Mind</span><b>›</b></a>
+<a href="#language"><span>✎ For Language Skills</span><b>›</b></a>
+<a href="#beyond"><span>☆ Beyond the Text</span><b>›</b></a>
+<a href="#song"><span>♫ Song: Porch Light in November</span><b>›</b></a>
+</div>
+<img alt="Empty porch with a light glowing in November" class="earth" src="assets/porch-empty.png"/>
+</div>
+</aside>
+<main>
+<div class="crumb">THE JOURNEY ◆ MODULE 8: TECHNOLOGY</div>
+<h1 class="title">The Porch Light in November</h1><div class="ornament">◆</div>
+<p class="subtitle">A story about family, waiting and home — and a song about the small light that keeps a way back open.</p>
+<div class="section-jump"><a class="jump" href="#read">READ</a><a class="jump" href="#glossary">GLOSSARY</a><a class="jump" href="#heart">HEART &amp; MIND</a><a class="jump" href="#language">LANGUAGE SKILLS</a><a class="jump" href="#beyond">BEYOND THE TEXT</a><a class="jump" href="#song">SONG</a></div>
+<section class="cards">
+<article class="card"><div class="card-head head-navy">📖 THE STORY</div><div class="card-body"><div class="card-copy"><p>Read the story, explore its symbols, learn new vocabulary and reflect on the meaning of home.</p><a class="cta" href="#read">START READING</a></div><img alt="Empty porch with a glowing light" class="card-img" src="assets/porch-empty.png"/></div></article>
+<article class="card" id="video"><div class="card-head head-green">▶ VIDEO</div><div class="card-body"><div class="card-copy"><p>Watch a short atmospheric video that introduces the story.</p></div><div class="video-box"><video controls="" poster="assets/hero-porch.png" preload="metadata"><source src="assets/video.mp4" type="video/mp4"/>Your browser does not support video playback.</video></div></div></article>
+<article class="card" id="audio"><div class="card-head head-purple">♫ AUDIO — THE PORCH LIGHT IN NOVEMBER</div><div class="card-body"><div class="audio-wrap"><p class="audio-title">Reading audio</p><p class="audio-note">Listen to the story while following the text.</p><audio controls="" preload="metadata"><source src="assets/reading.mp3" type="audio/mpeg"/>Your browser does not support audio playback.</audio><p class="media-note">Reading recording · 2:06</p></div></div></article>
+</section>
+<section class="accordion">
+<details id="read" open="True"><summary><span class="acc-icon">📖</span><span><span class="acc-title">READ: THE PORCH LIGHT IN NOVEMBER</span><br/><span class="acc-desc">A story about family, waiting and home.</span></span><span class="chev">⌄</span></summary><div class="content">
+<h3>LEAD-IN</h3><div class="lead-in"><ol><li>Is there a light in your home that someone left on for you?</li><li>What does “home” mean to you — a place, a person, or a feeling?</li><li>The phrasal verb <em>to leave on</em> means to keep something (like a light) burning. Why do people leave lights on for those they love?</li></ol></div>
+<h3>THE TEXT</h3><div class="story">
+<p>It was November. Cold. Grey. The kind of month that makes you want to stay inside.</p>
+<p>My brother, Jake, left three years ago. Not because he was angry. Not because we fought. He just… needed to go. He said he’d come back in a year or two.</p>
+<p>That was three years ago.</p>
+<p>I still remember the morning he left. His boots by the back door, mud still dried on them from the Fourth of July when we’d walked through the fields together. His jacket, thrown over the chair, as if he’d just stepped out for a minute.</p>
+<p>“I’ll follow in a year or two,” I said.</p>
+<p>He laughed and circled a date in blue on the calendar. We both pretended that date meant something.</p>
+<p>Every night since, I’ve left the porch light on. It’s a small thing, a single bulb in a glass case. But when November comes, and the days get short, that light feels like the only warm thing in the world.</p>
+<p>My father calls sometimes. He asks if I’m eating. If I’m sleeping. I change the subject to the trees, to the weather, to anything but the empty chair at the table.</p>
+<p>Because the truth is, I keep setting one more place. Every night. A plate, a fork, a glass. For a brother who isn’t here.</p>
+<p>I’ve driven past his exit a hundred times. Just to prove to myself that I still know the way. I sing along with the engine, the words I was too proud to say: “Come home.”</p>
+<p>The moths find the porch light. They circle it, confused, drawn to something warm. Every time I see one, I feel a little like that moth — circling a memory, waiting for something that might not come back.</p>
+<p>But I keep the light on.</p>
+<p>Because if he ever crosses that county line, if he ever sees that little glow from the road, he’ll know. The porch light in November means there’s still a way back home.</p>
+</div></div></details>
+<details id="glossary" open="True"><summary><span class="acc-icon">▤</span><span><span class="acc-title">GLOSSARY</span><br/><span class="acc-desc">Key vocabulary and expressions from the story.</span></span><span class="chev">⌄</span></summary><div class="content"><table class="glossary"><tr><th>English</th><th>American pronunciation</th><th>Russian</th></tr>
+<tr><td>porch light</td><td>[pɔːrtʃ laɪt]</td><td>свет на крыльце</td></tr><tr><td>boots</td><td>[buːts]</td><td>ботинки</td></tr><tr><td>dried mud</td><td>[draɪd mʌd]</td><td>высохшая грязь</td></tr><tr><td>jacket</td><td>[ˈdʒækɪt]</td><td>куртка</td></tr><tr><td>to circle</td><td>[ˈsɜːrkl]</td><td>обводить кружком / кружить вокруг</td></tr><tr><td>calendar</td><td>[ˈkælɪndər]</td><td>календарь</td></tr><tr><td>to leave on</td><td>[liːv ɑːn]</td><td>оставлять включённым</td></tr><tr><td>bulb</td><td>[bʌlb]</td><td>лампочка</td></tr><tr><td>empty chair</td><td>[ˈempti tʃer]</td><td>пустой стул</td></tr><tr><td>to set a place</td><td>[set ə pleɪs]</td><td>накрывать прибор</td></tr><tr><td>to drive past</td><td>[draɪv pæst]</td><td>проезжать мимо</td></tr><tr><td>exit</td><td>[ˈeksɪt]</td><td>съезд (с трассы)</td></tr><tr><td>moth</td><td>[mɔːθ]</td><td>мотылёк</td></tr><tr><td>to be drawn to</td><td>[biː drɔːn tuː]</td><td>быть притянутым к</td></tr><tr><td>county line</td><td>[ˈkaʊnti laɪn]</td><td>граница округа</td></tr><tr><td>glow</td><td>[ɡloʊ]</td><td>свечение</td></tr>
+</table></div></details>
+<details id="heart"><summary><span class="acc-icon">♥</span><span><span class="acc-title">FOR THE HEART AND MIND</span><br/><span class="acc-desc">Comprehension, analysis and personal connection.</span></span><span class="chev">⌄</span></summary><div class="content"><h3>A. COMPREHENSION CHECK</h3><div class="exercise"><ol>
+<li>When did the narrator's brother leave?</li><li>What did the brother say about coming back?</li><li>What does the narrator do every night?</li><li>What does the narrator's father ask about on the phone?</li><li>What does the narrator keep doing at the dinner table?</li><li>Why does the narrator drive past his brother's exit?</li><li>What do the moths do around the porch light?</li><li>What does the porch light in November mean?</li></ol></div>
+<h3>B. THINK &amp; ANALYSE</h3><div class="exercise"><ol><li>The narrator says: “We both pretended that date meant something.” Why do people pretend when they know the truth?</li><li>Why does the narrator change the subject when his father asks if he's eating and sleeping?</li><li>What does the moth represent in this story? Is the narrator like the moth?</li><li>The final line says: “The porch light in November means there's still a way back home.” Is “home” a place or a feeling?</li></ol></div>
+<h3>C. DISCUSS &amp; RELATE</h3><div class="exercise"><ol><li>Is there someone you are waiting for? How do you show them you are waiting?</li><li>Why is it hard to say “come home” to someone who left?</li><li>What small things do families do to show love without words?</li></ol></div>
+</div></details>
+<details id="language"><summary><span class="acc-icon">✎</span><span><span class="acc-title">FOR LANGUAGE SKILLS</span><br/><span class="acc-desc">Phrasal verbs, expressions, past tenses and creative practice.</span></span><span class="chev">⌄</span></summary><div class="content">
+<h3>A. VOCABULARY FOCUS — PHRASAL VERBS &amp; EXPRESSIONS</h3><div class="exercise"><ol><li>Find the phrasal verbs in the text:<ol type="a"><li><em>to leave on</em> — ___________</li><li><em>to drive past</em> — ___________</li><li><em>to change the subject</em> — ___________</li></ol></li><li>Complete the sentences with the correct word:<ol type="a"><li>Every night, I ______ the porch light ______ for my brother.</li><li>I keep ______ one more place at the table.</li><li>The moths are ______ to the warm light.</li><li>I ______ past his exit just to feel close to him.</li></ol></li><li>Make your own sentences with these expressions: <em>to leave on, to set a place, to be drawn to.</em></li></ol></div>
+<h3>B. GRAMMAR IN CONTEXT — PAST TENSES &amp; USED TO</h3><div class="exercise"><ol><li>Find examples of Past Simple and Past Continuous in the text:<ul><li>Past Simple (completed actions): ______, ______, ______</li><li>Past Continuous (background actions): ______, ______</li></ul></li><li><em>Used to</em> for past habits: “We used to walk through the fields together.” Complete: My brother ______ (leave) his boots by the back door.</li></ol></div>
+<h3>C. BRAIN WORKOUT</h3><div class="exercise"><ol><li><strong>The empty chair:</strong> Draw or describe the dinner table with the empty chair. What does it look like? What feelings does it create?</li><li><strong>Letter to a brother:</strong> Write a short letter (5–7 sentences) from the narrator to Jake, saying the words he was too proud to say.</li><li><strong>Memory chain:</strong> Students take turns adding one detail to the story of the day Jake left.</li></ol></div>
+</div></details>
+<details id="beyond"><summary><span class="acc-icon">☆</span><span><span class="acc-title">BEYOND THE TEXT</span><br/><span class="acc-desc">Creative tasks and personal connection.</span></span><span class="chev">⌄</span></summary><div class="content"><div class="exercise"><p><strong>Choose ONE:</strong></p><ol><li>A letter to Jake: Write the letter that the narrator never sent.</li><li>Your own “porch light”: Describe a small thing your family does that means “we are waiting for you” (a light, a plate, a phone call).</li><li>AI image prompt: Create an image of a porch light glowing in the November fog, with a moth circling it.</li><li>Song reflection: Listen to the song “Porch Light in November” (created by Suno). Write 5 sentences about what emotions it awakens in you.</li></ol></div></div></details>
+</section>
+<section class="song" id="song">
+<div class="song-head"><span>♫ PORCH LIGHT IN NOVEMBER</span><span>SONG • LYRICS</span></div>
+<div class="song-body">
+<img alt="Porch light in November" class="song-img" src="assets/porch-empty.png"/>
+<div><p><strong>Listen to the song and follow the lyrics in English and Russian.</strong></p><audio controls="" preload="metadata"><source src="assets/song.mp3" type="audio/mpeg"/>Your browser does not support audio playback.</audio><p class="media-note">Song audio</p></div>
+<div><details class="song-lyrics-details"><summary>♫ SHOW SONG LYRICS · ENGLISH + РУССКИЙ</summary><div class="content"><div class="lyrics-grid"><div class="lyrics-col"><h3>LYRICS — ENGLISH</h3><div class="story">
+<p><strong>Verse 1</strong><br/>You kept your boots by the back door<br/>Mud still dried from the Fourth of July<br/>Coffee ring ghosts on the counter<br/>Your jacket asleep on the chair</p>
+<p><strong>Pre-Chorus</strong><br/>I said I’d follow in a year or two<br/>You laughed and circled a date in blue</p>
+<p><strong>Chorus</strong><br/>Now the porch light in November<br/>Burns for you and flickers for me<br/>Every moth that finds it<br/>Feels a little like a memory<br/>I keep talking to the shadows<br/>As if they might be you coming home<br/>Porch light in November<br/>Shining on a house that’s grown alone</p>
+<p><strong>Verse 2</strong><br/>Your father called me this morning<br/>Said your mailbox is starting to lean<br/>Asked if I’m eating<br/>If I’m sleeping<br/>I changed the subject to the trees</p>
+<p><strong>Pre-Chorus</strong><br/>All this distance I can’t measure<br/>In miles or in old receipts</p>
+<p><strong>Chorus</strong><br/>So the porch light in November<br/>Burns for you and trembles for me<br/>Every moth that finds it<br/>Feels a little like a memory<br/>I keep setting one more place<br/>At this table carved from oak and hope<br/>Porch light in November<br/>Shining on a house that’s grown alone</p>
+<p><strong>Bridge</strong><br/>Some nights I drive past your exit (oh)<br/>Just to prove that I still know the way<br/>Sing along with the engine<br/>To the words I was too proud to say</p>
+<p><strong>Final Chorus</strong><br/>And the porch light in November<br/>Burns for you and whispers to me<br/>Every moth that finds it<br/>Feels a little like a memory<br/>If you ever cross that county line<br/>And see that little glow on the road<br/>Porch light in November<br/>Means there’s still a way back home</p>
+</div></div>
+<div class="lyrics-col"><h3>ПЕРЕВОД — РУССКИЙ</h3><div class="story">
+<p><strong>Куплет 1</strong><br/>Ты оставил ботинки у задней двери<br/>Грязь на них ещё с четвёртого июля<br/>Призраки кофейных колец на столе<br/>Твоя куртка уснула на стуле</p>
+<p><strong>Распевка</strong><br/>Я сказал: «Я последую через год или два»<br/>Ты засмеялся и обвёл дату синим</p>
+<p><strong>Припев</strong><br/>И теперь свет на крыльце в ноябре<br/>Горит для тебя и мерцает для меня<br/>Каждый мотылёк, что находит его<br/>Чувствуется немного как воспоминание<br/>Я продолжаю говорить с тенями<br/>Словно они могут быть тобой, идущим домой<br/>Свет на крыльце в ноябре<br/>Сияет на доме, который вырос одиноким</p>
+<p><strong>Куплет 2</strong><br/>Твой отец позвонил мне сегодня утром<br/>Сказал, твой почтовый ящик накренился<br/>Спросил, ем ли я<br/>Сплю ли я<br/>Я перевёл разговор на деревья</p>
+<p><strong>Распевка</strong><br/>Всё это расстояние, которое я не могу измерить<br/>Ни в милях, ни в старых квитанциях</p>
+<p><strong>Припев</strong><br/>И свет на крыльце в ноябре<br/>Горит для тебя и дрожит для меня<br/>Каждый мотылёк, что находит его<br/>Чувствуется немного как воспоминание<br/>Я продолжаю накрывать один лишний прибор<br/>За этим столом, вырезанным из дуба и надежды<br/>Свет на крыльце в ноябре<br/>Сияет на доме, который вырос одиноким</p>
+<p><strong>Бридж</strong><br/>Ночью я проезжаю мимо твоего съезда<br/>Просто чтобы доказать, что я всё ещё помню дорогу<br/>Пою вместе с мотором<br/>Слова, которые был слишком горд сказать</p>
+<p><strong>Припев</strong><br/>И свет на крыльце в ноябре<br/>Горит для тебя и шепчет мне<br/>Каждый мотылёк, что находит его<br/>Чувствуется немного как воспоминание<br/>Если ты когда-нибудь пересечёшь ту границу округа<br/>И увидишь это маленькое свечение с дороги<br/>Свет на крыльце в ноябре<br/>Значит, есть ещё путь домой</p>
+</div></div></div></div></details><a class="pill" href="#song-ex">Song Exercises ›</a></div>
+</div>
+<details class="song-exercises" id="song-ex"><summary>🎵 SONG EXERCISES</summary><div class="content"><div class="exercise">
+<p><strong>EXERCISE 1. The Language of Waiting.</strong></p><p>Match the symbol with its meaning: 1. The porch light — a) memories that are still present, like ghosts; 2. The boots by the door — b) the small gesture of hope that someone will return; 3. The coffee ring ghosts — c) the act of leaving — but also the possibility of return; 4. The empty chair — e) the person who is missing from the family; 5. The moth circling the light — d) someone who keeps circling around what they've lost. Then write 2–3 sentences: Which symbol touches you the most? Why?</p>
+<p><strong>EXERCISE 2. The Power of Small Gestures.</strong> Think about someone you miss. What is a “porch light” in your life? Do you have an “empty chair” in your life? What do you do to remember them? Write 4–5 sentences about one small gesture that means a lot to you.</p>
+<p><strong>EXERCISE 3. The Road Home.</strong> What does “home” mean in this song — a place, a person, or a feeling? Why is November significant? Have you ever felt “away from home” emotionally? Complete: “For me, the porch light in November is…”</p>
+</div></div></details>
+</section>
+<div class="footer"><a class="block-nav" data-dir="prev" href="../block1/index.html">◀ PREVIOUS BLOCK</a><span>BLOCK 2 • THE PORCH LIGHT IN NOVEMBER</span><a class="block-nav" data-dir="next" href="../block3/index.html">NEXT BLOCK ▶</a></div>
+</main></div>
+
+<script>
+(function(){
+  function reportHeight(){const h=Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,900);if(window.parent!==window)window.parent.postMessage({type:'block-height',height:h},'*');}
+  let pop=null;
+  function closePhoto(){if(pop){pop.remove();pop=null;} document.body.classList.remove('photo-open');}
+  function openPhoto(img){
+    closePhoto();
+    pop=document.createElement('div'); pop.className='photo-pop';
+    const close=document.createElement('button'); close.className='photo-pop-close'; close.type='button'; close.textContent='×'; close.setAttribute('aria-label','Close image');
+    const big=document.createElement('img'); big.src=img.currentSrc||img.src; big.alt=img.alt||'';
+    pop.appendChild(close); pop.appendChild(big); document.body.appendChild(pop);
+    close.addEventListener('click',closePhoto);
+    pop.addEventListener('click',e=>{if(e.target===pop)closePhoto();});
+    big.addEventListener('click',e=>{e.stopPropagation();closePhoto();});
+  }
+  document.addEventListener('DOMContentLoaded',()=>{
+    document.querySelectorAll('img').forEach(img=>{
+      if(img.closest('.photo-pop')||img.classList.contains('no-zoom')) return;
+      img.classList.add('zoomable');
+    });
+    document.addEventListener('click',e=>{
+      const img=e.target.closest('img.zoomable');
+      if(img && !img.closest('.photo-pop')){e.preventDefault();e.stopPropagation();openPhoto(img);}
+    },true);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closePhoto();});
+    document.querySelectorAll('details').forEach(d=>{if(!d.closest('.hero')&&!d.classList.contains('keep-open'))d.open=false;});
+    reportHeight();setTimeout(reportHeight,300);setTimeout(reportHeight,1000);
+    if(window.ResizeObserver)new ResizeObserver(reportHeight).observe(document.body);
+    document.querySelectorAll('.block-nav').forEach(a=>a.addEventListener('click',e=>{if(window.parent!==window){e.preventDefault();window.parent.postMessage({type:'switch-block',dir:a.dataset.dir},'*');}}));
+  });
+  window.addEventListener('message',e=>{if(e.data&&e.data.type==='request-height')reportHeight();});
+})();
+</script></body></html>

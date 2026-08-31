@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 7 — Let's Have Fun | Block 1</title>
+<style>
+:root {
+  --navy:#0d2638; --navy2:#17394f; --cream:#fbf7ef; --paper:#fffdf8;
+  --amber:#c99a43; --gold:#e0b86a; --ink:#26313a; --muted:#68727a;
+  --line:#dfd6c8; --soft:#f4ede2; --green:#3d7566;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(135deg,#f4efe6,#fbfaf7);color:var(--ink);
+font-family:Georgia,"Times New Roman",serif;line-height:1.62}
+.container{max-width:1120px;margin:auto;padding:26px 20px 48px}
+.topbar{background:var(--navy);color:#fff;border-radius:18px;padding:16px 22px;
+display:flex;justify-content:space-between;align-items:center;gap:18px;box-shadow:0 8px 24px #10243318}
+.module{font:700 13px/1 Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#f0d79c}
+.blockno{font:700 13px/1 Arial,sans-serif;background:#2d665a;padding:8px 11px;border-radius:9px}
+.hero{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:20px;
+overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;box-shadow:0 8px 28px #3b2b1a12}
+.hero-copy{padding:34px 34px 28px;background:linear-gradient(145deg,var(--navy),#173b51)}
+.kicker{font:700 13px/1 Arial,sans-serif;letter-spacing:.16em;color:#e5c77f;text-transform:uppercase}
+h1{font-size:clamp(38px,5vw,64px);line-height:.98;margin:14px 0;color:#fff;letter-spacing:.01em}
+.subtitle{font-size:20px;color:#e9dcc1;font-style:italic;margin:0 0 18px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.meta span{font:600 12px/1.2 Arial,sans-serif;border:1px solid #ffffff33;color:#fff;padding:8px 10px;border-radius:999px}
+.hero-image{min-height:340px;cursor:zoom-in;position:relative;background:#1d2930}
+.hero-image img{width:100%;height:100%;object-fit:cover;display:block}
+.zoomhint{position:absolute;right:12px;bottom:12px;background:#0d2638dd;color:#fff;
+padding:7px 10px;border-radius:999px;font:600 11px Arial,sans-serif}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 5px 18px #3b2b1a0d}
+.card-head{padding:15px 18px;background:var(--soft);border-bottom:1px solid var(--line);
+font:800 15px Arial,sans-serif;letter-spacing:.05em;color:var(--navy)}
+.card-body{padding:18px}
+details{background:var(--paper);border:1px solid var(--line);border-radius:13px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:14px 16px;font:800 14px Arial,sans-serif;color:var(--navy);
+background:linear-gradient(90deg,#f6efe3,#fffdf8)}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"＋";display:inline-block;margin-right:9px;color:var(--amber);font-weight:900}
+details[open] summary:before{content:"−"}
+details .inside{padding:4px 17px 17px}
+p{margin:9px 0}
+.lead-in{display:grid;gap:8px}
+.lead-in div{padding:10px 12px;border-left:3px solid var(--gold);background:#faf5ec;border-radius:8px}
+.audio-wrap{padding:15px;background:#f7f1e7;border-radius:12px}
+audio{width:100%}
+.media-title{font:800 13px Arial,sans-serif;color:var(--navy);margin-bottom:8px}
+video{width:100%;display:block;border-radius:12px;background:#101820}
+.song-label{color:#2f6a5a}
+pre{white-space:pre-wrap;font:500 16px/1.65 Georgia,"Times New Roman",serif;margin:0;color:#30363a}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{border-bottom:1px solid var(--line);padding:9px 8px;text-align:left;vertical-align:top}
+th{background:#f1e7d7;color:var(--navy);font-family:Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+tr:last-child td{border-bottom:0}
+.exercise ol,.exercise ul{padding-left:24px}
+.exercise li{margin:7px 0}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+.prompt{background:#eef5f1;border-left:4px solid var(--green);padding:12px 14px;border-radius:8px;margin:10px 0}
+.footer{margin-top:18px;text-align:center;color:var(--muted);font:600 11px Arial,sans-serif;letter-spacing:.06em}
+.modal{display:none;position:fixed;inset:0;background:#07131eee;z-index:50;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.modal.open{display:flex}
+.modal img{max-width:94vw;max-height:92vh;object-fit:contain;border-radius:12px;box-shadow:0 20px 70px #0008}
+.close{position:fixed;right:20px;top:16px;color:#fff;font:700 28px Arial}
+@media(max-width:780px){
+ .hero{grid-template-columns:1fr} .hero-image{min-height:250px}
+ .grid{grid-template-columns:1fr} .container{padding:14px 10px 34px}
+ .hero-copy{padding:26px 22px} h1{font-size:44px}
+ .match{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="topbar">
+    <div class="module">MODULE 7 · LET'S HAVE FUN</div>
+    <div class="blockno">01 · THE WORST MOVIE EVER MADE</div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="kicker">Story · Song · Language · Creativity</div>
+      <h1>THE WORST<br>MOVIE EVER MADE</h1>
+      <p class="subtitle">A funny story about making a movie with friends</p>
+      <div class="meta">
+        <span>LEVEL · SIMPLE</span><span>HUMOUR</span><span>FRIENDSHIP</span>
+        <span>MODERN TECHNOLOGY</span>
+      </div>
+    </div>
+    <div class="hero-image" onclick="openLightbox()" aria-label="Open image larger">
+      <img src="assets/the-worst-movie.png" alt="Three friends making a movie at home">
+      <div class="zoomhint">Click to enlarge</div>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <div class="card-head">📖 THE STORY</div>
+      <div class="card-body">
+        <p><strong>Value focus:</strong> It doesn't matter how bad the result is. What matters is that you did it together.</p>
+        <details open>
+          <summary>LEAD-IN</summary>
+          <div class="inside lead-in">
+            <div>1. Have you ever tried to make a video or film with friends? What happened?</div><div>2. What&#x27;s the worst movie you&#x27;ve ever seen? Was it so bad it was good?</div><div>3. The phrasal verb &quot;to turn out&quot; means to happen in a particular way. When was the last time something turned out completely differently from what you expected?</div>
+          </div>
+        </details>
+        <details>
+          <summary>READ THE STORY</summary>
+          <div class="inside"><p>It was a rainy Saturday. Mike was bored.</p><p>&quot;Guys,&quot; he announced, &quot;we&#x27;re going to make a movie.&quot;</p><p>Dave didn&#x27;t look up from his phone. &quot;A movie? With what? Our phones?&quot;</p><p>&quot;Yes! Modern technology! Everything can be filmed. If we work hard, it might even be shown at a festival!&quot;</p><p>Narrator: &quot;It wasn&#x27;t shown at any festival.&quot;</p><p>Mike: &quot;Don&#x27;t ruin my dream.&quot;</p><p>So we became filmmakers. Mike was the director, Dave was the cameraman, and I was the actor. The script was written in twenty minutes. It was about a detective who solves a mystery in a haunted house. The twist? The detective was the ghost all along.</p><p>&quot;It&#x27;s genius,&quot; Mike said. &quot;It&#x27;s never been done before.&quot;</p><p>&quot;It&#x27;s been done a million times,&quot; Dave said. &quot;But okay.&quot;</p><p>We turned on the camera and started filming. The first scene was shot in Mike&#x27;s living room. I was supposed to look scared. I tried my best, but I looked like someone who&#x27;d just seen a spider.</p><p>&quot;Cut!&quot; Mike yelled. &quot;You&#x27;re not scared! You&#x27;re confused!&quot;</p><p>&quot;I am confused,&quot; I said. &quot;Why are we doing this?&quot;</p><p>Dave: &quot;That&#x27;s the best question you&#x27;ve asked all day.&quot;</p><p>The filming continued. Every scene was ruined by something. The lights were turned off by accident. The cat walked into the shot. Mike&#x27;s mom turned up with cookies and waved at the camera. The audio was terrible — you could hear a plane flying overhead in every scene.</p><p>By Sunday evening, we had two hours of footage. Mike edited it all night. The next day, he gathered us to watch the final cut.</p><p>The movie was… something. The lighting was weird. The sound was worse. My &quot;scared&quot; face looked like I was constipated. Dave&#x27;s camerawork was so shaky that viewers might get seasick. And the twist? You couldn&#x27;t understand it because half the dialogue was covered by Mike&#x27;s mom saying &quot;COOKIES!&quot;</p><p>We sat in silence.</p><p>Dave: &quot;It&#x27;s the worst movie I&#x27;ve ever seen.&quot;</p><p>Mike: &quot;I know.&quot;</p><p>Narrator: &quot;So it&#x27;s a failure?&quot;</p><p>Mike: &quot;No! It&#x27;s the best worst movie ever made! This should be shown at a festival of bad movies!&quot;</p><p>And you know what? He was right. The movie was uploaded to YouTube. It got a thousand views in a week. People loved it. Comments said things like &quot;This is hilarious&quot; and &quot;I&#x27;ve never laughed so hard.&quot;</p><p>Mike was interviewed for a small blog. He was asked: &quot;How was this masterpiece created?&quot;</p><p>He said: &quot;It was made with love. And terrible lighting. And cookies.&quot;</p><p>The movie was never shown at a festival. But it turned out to be the most fun we&#x27;d ever had. And sometimes, that&#x27;s enough.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">🎧 LISTEN & WATCH</div>
+      <div class="card-body">
+        <div class="media-title">THE STORY · AUDIO</div>
+        <div class="audio-wrap"><audio controls preload="metadata" src="assets/story-audio.wav"></audio></div>
+        <div style="height:14px"></div>
+        <div class="media-title">THE WORST MOVIE · VIDEO</div>
+        <video controls preload="metadata" playsinline src="assets/the-worst-movie.mp4"></video>
+      </div>
+    </section>
+  </div>
+
+  <section class="card" style="margin-top:16px">
+    <div class="card-head song-label">♫ THE WORST MOVIE EVER MADE · SONG</div>
+    <div class="card-body">
+      <div class="audio-wrap"><audio controls preload="metadata" src="assets/the-worst-movie-song.mp3"></audio></div>
+      <details>
+        <summary>OPEN SONG LYRICS</summary>
+        <div class="inside"><pre>[Intro — acoustic guitar, casual, like a jam session]
+(One, two, three, four…)
+
+[Verse 1]
+We had a phone, we had a plan
+To make a movie, not a fan
+But the cat walked in, the lights went down
+And Mike&#x27;s mom appeared with cookies… from the town!
+
+[Pre-chorus]
+The camera shook, the sound was sad
+Our acting? Pretty bad!
+But we didn&#x27;t mind — we just laughed instead!
+
+[Chorus — playful, not loud]
+We made the worst movie ever!
+But we laughed and laughed together!
+Cut! Cut! Cut! (said, not shouted)
+We are the kings of bad cinema!
+(Just a silly song about a silly day…)
+
+[Verse 2]
+Dave bit his tongue, I sneezed so loud
+The script was lost, we were not proud
+But the YouTube comments made us smile
+«This is the best disaster in a while!»
+
+[Pre-chorus]
+No Oscars here, no golden frame
+Just good old friends and a silly game!
+
+[Chorus — playful, sing-along]
+We made the worst movie ever!
+But we laughed and laughed together!
+Cut! Cut! Cut! (said, not shouted)
+We are the kings of bad cinema!
+
+[Bridge — spoken-sung, quiet, with a smile]
+Perfect is boring… chaos is gold…
+This is the story that we always told…
+
+[Final Chorus — cheerful, a bit faster, but still relaxed]
+We made the worst movie ever!
+And we&#x27;ll do it again! Oh, never say never!
+Cut! Cut! Cut!
+We are the kings of bad cinema!
+(Stomp! Clap!) — we are the kings!
+(Stomp! Clap!) — of bad cinema!
+
+[Outro — fading, with laughter]
+Best… worst… ever…
+(Chuckling)</pre></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:16px">
+    <div class="card-head">📚 GLOSSARY</div>
+    <div class="card-body">
+      <details>
+        <summary>OPEN GLOSSARY · PHRASAL VERBS WITH TURN + KEY VOCABULARY</summary>
+        <div class="inside">
+          <table>
+            <thead><tr><th>Word / phrase</th><th>American pronunciation</th><th>Russian</th></tr></thead>
+            <tbody><tr><td><strong>to turn on</strong></td><td>[tɜːrn ɑːn]</td><td>включать</td></tr><tr><td><strong>to turn off</strong></td><td>[tɜːrn ɔːf]</td><td>выключать</td></tr><tr><td><strong>to turn up</strong></td><td>[tɜːrn ʌp]</td><td>появляться, увеличивать громкость</td></tr><tr><td><strong>to turn down</strong></td><td>[tɜːrn daʊn]</td><td>отклонять, уменьшать громкость</td></tr><tr><td><strong>to turn out</strong></td><td>[tɜːrn aʊt]</td><td>оказываться, получаться</td></tr><tr><td><strong>to turn into</strong></td><td>[tɜːrn ˈɪntə]</td><td>превращаться в</td></tr><tr><td><strong>to turn around</strong></td><td>[tɜːrn əˈraʊnd]</td><td>разворачиваться, менять направление</td></tr><tr><td><strong>movie</strong></td><td>[ˈmuːvi]</td><td>фильм</td></tr><tr><td><strong>director</strong></td><td>[dəˈrektər]</td><td>режиссёр</td></tr><tr><td><strong>cameraman</strong></td><td>[ˈkæmrəmæn]</td><td>оператор</td></tr><tr><td><strong>script</strong></td><td>[skrɪpt]</td><td>сценарий</td></tr><tr><td><strong>detective</strong></td><td>[dɪˈtektɪv]</td><td>детектив</td></tr><tr><td><strong>haunted house</strong></td><td>[ˈhɔːntɪd haʊs]</td><td>дом с привидениями</td></tr><tr><td><strong>twist</strong></td><td>[twɪst]</td><td>неожиданный поворот</td></tr><tr><td><strong>ghost</strong></td><td>[ɡoʊst]</td><td>призрак</td></tr><tr><td><strong>scene</strong></td><td>[siːn]</td><td>сцена</td></tr><tr><td><strong>to film</strong></td><td>[fɪlm]</td><td>снимать</td></tr><tr><td><strong>footage</strong></td><td>[ˈfʊtɪdʒ]</td><td>отснятый материал</td></tr><tr><td><strong>to edit</strong></td><td>[ˈedɪt]</td><td>монтировать</td></tr><tr><td><strong>shaky</strong></td><td>[ˈʃeɪki]</td><td>трясущийся</td></tr><tr><td><strong>seasick</strong></td><td>[ˈsiːsɪk]</td><td>страдающий морской болезнью</td></tr><tr><td><strong>dialogue</strong></td><td>[ˈdaɪəlɑːɡ]</td><td>диалог</td></tr><tr><td><strong>failure</strong></td><td>[ˈfeɪljər]</td><td>провал</td></tr><tr><td><strong>hilarious</strong></td><td>[hɪˈleriəs]</td><td>уморительный</td></tr><tr><td><strong>masterpiece</strong></td><td>[ˈmæstərpiːs]</td><td>шедевр</td></tr></tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="card exercise" style="margin-top:16px">
+    <div class="card-head">💛 FOR THE HEART AND MIND</div>
+    <div class="card-body">
+      <details>
+        <summary>A · COMPREHENSION CHECK</summary>
+        <div class="inside">
+          <ol>
+            <li>What did Mike want to do on the rainy Saturday?</li>
+            <li>What was the movie about?</li>
+            <li>What problems did they have while filming? Give three examples.</li>
+            <li>How long was the footage?</li>
+            <li>What did Mike's mom do during filming?</li>
+            <li>What did Dave think of the finished movie?</li>
+            <li>How did people react when it was uploaded to YouTube?</li>
+            <li>What did Mike say in the interview?</li>
+          </ol>
+        </div>
+      </details>
+      <details>
+        <summary>B · THINK & ANALYSE</summary>
+        <div class="inside">
+          <ol>
+            <li>Mike said: "If we work hard, it might even be shown at a festival!" Was he being realistic? Why do people sometimes have unrealistic dreams?</li>
+            <li>The movie was technically terrible, but people loved it. Why do you think that happened?</li>
+            <li>The narrator says: "It turned out to be the most fun we'd ever had." What made it fun, even though the movie was bad?</li>
+            <li>Mike called it "the best worst movie ever made." Can something be good because it's bad?</li>
+          </ol>
+        </div>
+      </details>
+      <details>
+        <summary>C · DISCUSS & RELATE</summary>
+        <div class="inside">
+          <ol>
+            <li>Have you ever done something that turned out terribly but was still fun? Share.</li>
+            <li>Why do people enjoy watching "so bad it's good" movies?</li>
+            <li>Is it better to try and fail, or never try at all?</li>
+          </ol>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="card exercise" style="margin-top:16px">
+    <div class="card-head">🧠 FOR LANGUAGE SKILLS</div>
+    <div class="card-body">
+      <details>
+        <summary>A · VOCABULARY FOCUS · PHRASAL VERBS WITH TURN</summary>
+        <div class="inside">
+          <p><strong>1. Match the phrasal verb with its meaning from the story.</strong></p>
+          <div class="match">
+            <div>1. turn on</div><div>a) appear, arrive</div>
+            <div>2. turn off</div><div>b) switch on</div>
+            <div>3. turn up</div><div>c) switch off</div>
+            <div>4. turn down</div><div>d) happen in a particular way</div>
+            <div>5. turn out</div><div>e) reject or reduce volume</div>
+            <div>6. turn into</div><div>f) transform</div>
+            <div>7. turn around</div><div>g) change direction</div>
+          </div>
+          <p><strong>2. Find the phrasal verbs in the text and write the sentences:</strong></p>
+          <p>a) turn on: ______________________________</p>
+          <p>b) turn off: ______________________________</p>
+          <p>c) turn up: ______________________________</p>
+          <p>d) turn out: ______________________________</p>
+          <p><strong>3. Fill in the blanks with the correct form of TURN + particle:</strong></p>
+          <p>a) Please ______ the lights. It's dark in here.</p>
+          <p>b) Can you ______ the music? It's too loud.</p>
+          <p>c) I invited him, but he never ______.</p>
+          <p>d) The movie ______ to be much better than we expected.</p>
+          <p>e) Their fun afternoon ______ a film project.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>B · GRAMMAR IN CONTEXT · PASSIVE VOICE</summary>
+        <div class="inside">
+          <p><strong>1. Identify the passive structures in the text:</strong></p>
+          <p>a) "The first scene was shot in Mike's living room." — Tense: ______</p>
+          <p>b) "The lights were turned off by accident." — Tense: ______</p>
+          <p>c) "Mike was interviewed for a small blog." — Tense: ______</p>
+          <p>d) "It was made with love." — Tense: ______</p>
+          <p><strong>2. Change these active sentences to passive:</strong></p>
+          <p>a) Someone uploaded the movie to YouTube.<br>→ The movie ______ ______ to YouTube.</p>
+          <p>b) People loved the comments.<br>→ The comments ______ ______ by people.</p>
+          <p>c) Mike's mom turned up with cookies.<br>→ Cookies ______ ______ up with by Mike's mom. (Be careful — this one is tricky!)</p>
+          <p>d) They shot every scene in the house.<br>→ Every scene ______ ______ in the house.</p>
+          <p><strong>3. Complete with the correct passive form:</strong></p>
+          <p>a) The script ______ (write) in twenty minutes.</p>
+          <p>b) The movie ______ (never / show) at a festival.</p>
+          <p>c) The audio ______ (ruin) by plane noise.</p>
+          <p>d) Mike ______ (ask) about the film in an interview.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>C · BRAIN WORKOUT</summary>
+        <div class="inside">
+          <ol>
+            <li><strong>Movie pitch:</strong> In groups, invent a terrible movie idea. Pitch it to the class in 30 seconds. Use at least one passive construction.</li>
+            <li><strong>Review writing:</strong> Write a one-star review of their movie from someone who took it seriously. Then write a five-star review from someone who loved how bad it was.</li>
+            <li><strong>Role play:</strong> Act out the scene where Mike's mom walks in with cookies during a dramatic moment.</li>
+          </ol>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="card exercise" style="margin-top:16px">
+    <div class="card-head">🌟 BEYOND THE TEXT</div>
+    <div class="card-body">
+      <details>
+        <summary>CHOOSE ONE CREATIVE TASK</summary>
+        <div class="inside">
+          <ol>
+            <li><strong>Write a scene:</strong> Write one short scene from their movie (the detective in the haunted house). Make it intentionally terrible.</li>
+            <li><strong>YouTube comments:</strong> Write three funny YouTube comments that their movie might have received.</li>
+            <li><strong>Mike's interview:</strong> Write the full imaginary interview with Mike from the small blog.</li>
+          </ol>
+          <div class="prompt"><strong>Optional AI image:</strong> Create an image of the three friends filming a "scary" scene in a living room, with Mike's mom walking in with cookies, waving at the camera.</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <div class="footer">MODULE 7 · LET'S HAVE FUN · BLOCK 01</div>
+</div>
+
+<div class="modal" id="lightbox" onclick="closeLightbox()">
+  <div class="close">×</div>
+  <img src="assets/the-worst-movie.png" alt="The Worst Movie Ever Made">
+</div>
+<script>
+function openLightbox(){document.getElementById('lightbox').classList.add('open')}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()})
+</script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MODULE 5 · HOLIDAYS — Complete Module · Blocks 1–3</title>
+<style>
+
+.module-shell{max-width:1240px;margin:0 auto;padding:24px 18px 50px}
+.module-cover{background:#092238;color:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 22px #00000012}
+.module-cover-inner{padding:34px 38px}
+.module-kicker{font-size:14px;font-weight:800;letter-spacing:1.5px;color:#f0c65a;text-transform:uppercase}
+.module-cover h1{font:800 56px/1 Georgia,serif;margin:12px 0 8px}
+.module-cover p{margin:0;color:#e9dfc9;font:italic 21px Georgia,serif}
+.module-intro{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px}
+.module-pill{background:#17384f;border:1px solid #31526a;border-radius:999px;padding:8px 13px;font-size:13px;font-weight:800}
+.module-nav{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 28px}
+.module-nav a{color:#183044;text-decoration:none;background:#fff;border:1px solid #d7d2c8;border-radius:999px;padding:9px 14px;font-weight:800;font-size:14px}
+.block-section{margin:30px 0 44px}
+.block-divider{height:4px;background:#d9aa3d;border-radius:4px;margin-bottom:18px}
+.block-label{font-size:14px;font-weight:800;letter-spacing:1.2px;color:#8c652d;text-transform:uppercase;margin-bottom:8px}
+.module-footer{text-align:center;color:#6d746f;font-size:13px;padding-top:8px}
+@media(max-width:800px){.module-cover h1{font-size:42px}.module-cover-inner{padding:28px 24px}}
+
+
+:root {
+  --navy:#092238; --navy2:#17364c; --gold:#d9aa3d; --cream:#fbf8f2; --ink:#183044;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#f6f3ec;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+.wrapper{max-width:1180px;margin:28px auto;padding:0 18px}
+.hero{display:grid;grid-template-columns:44% 56%;background:var(--navy);border-radius:0 0 16px 16px;overflow:hidden;color:white}
+.hero-copy{padding:34px 36px}
+.kicker{font-size:14px;font-weight:800;letter-spacing:1.3px;color:#f0c65a;text-transform:uppercase}
+h1{font-family:Georgia,serif;font-size:52px;line-height:.98;margin:18px 0 16px;letter-spacing:.5px}
+.subtitle{font:italic 20px Georgia,serif;color:#e9dfc9}
+.focus{margin-top:28px;border-left:5px solid var(--gold);background:#17384f;padding:16px 18px}
+.focus strong{display:block;margin-bottom:5px}
+.hero img{width:100%;height:100%;min-height:330px;object-fit:cover;object-position:center}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}
+.tag{background:white;border:1px solid #d7d2c8;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:800}
+details{background:white;border:1px solid #ddd7cc;border-radius:14px;margin:12px 0;overflow:hidden;box-shadow:0 2px 8px #00000008}
+summary{cursor:pointer;padding:18px 22px;font-size:20px;font-weight:800;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"＋";float:right;color:#9b6d2f}
+details[open] summary:after{content:"−"}
+.content{padding:0 22px 24px}
+.story p{font-size:17px;margin:0 0 14px}
+audio,video{width:100%;margin-top:8px}
+.table-wrap{overflow:auto}
+table{border-collapse:collapse;width:100%;min-width:650px}
+th,td{border-bottom:1px solid #e6e0d5;padding:9px 10px;text-align:left;vertical-align:top}
+th{background:#f2eee6}
+.song-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #ddd7cc;border-radius:10px;overflow:hidden}
+.song-grid>div{padding:10px 14px;border-bottom:1px solid #eee7dc}
+.song-grid .head{font-weight:800;background:#f2eee6}
+.note{background:#fbf3df;border-left:4px solid var(--gold);padding:12px 15px;border-radius:8px;margin:12px 0}
+@media(max-width:800px){.hero{grid-template-columns:1fr}h1{font-size:40px}.hero img{max-height:420px}.song-grid{grid-template-columns:1fr}}
+
+.song-columns{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+.song-column{border:1px solid #ddd7cc;border-radius:10px;overflow:hidden;background:#fff}
+.song-column-head{font-weight:800;background:#f2eee6;padding:12px 14px;border-bottom:1px solid #ddd7cc}
+.song-column>div:not(.song-column-head){padding:4px 14px}
+.song-column .song-title{font-family:Georgia,serif;font-size:22px;font-weight:800;padding-top:16px!important;padding-bottom:10px!important}
+.song-column .song-section{font-weight:800;color:#8b642d;padding-top:12px!important}
+.song-gap{height:8px}
+@media(max-width:800px){.song-columns{grid-template-columns:1fr}}
+
+:root{--navy:#092238;--navy2:#17364c;--gold:#d9aa3d;--cream:#fbf8f2;--ink:#183044;--line:#ddd7cc}
+*{box-sizing:border-box} body{margin:0;background:#f6f3ec;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.58}
+.wrapper{max-width:1180px;margin:28px auto;padding:0 18px}.hero{display:grid;grid-template-columns:44% 56%;background:var(--navy);border-radius:0 0 16px 16px;overflow:hidden;color:#fff}.hero-copy{padding:34px 36px}.kicker{font-size:14px;font-weight:800;letter-spacing:1.3px;color:#f0c65a;text-transform:uppercase}.hero h1{font-family:Georgia,serif;font-size:52px;line-height:.98;margin:18px 0 16px}.subtitle{font:italic 20px Georgia,serif;color:#e9dfc9}.focus{margin-top:28px;border-left:5px solid var(--gold);background:#17384f;padding:16px 18px}.focus strong{display:block;margin-bottom:5px}.hero img{width:100%;height:100%;min-height:330px;object-fit:cover;object-position:center}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}.tag{background:#fff;border:1px solid #d7d2c8;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:800}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin:12px 0;overflow:hidden;box-shadow:0 2px 8px #00000008}summary{cursor:pointer;padding:18px 22px;font-size:20px;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:#9b6d2f}details[open] summary:after{content:"−"}.content{padding:0 22px 24px}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.story-col{padding:18px;background:#fbfaf7;border:1px solid var(--line);border-radius:12px}.story-col h3{margin-top:0}.story-col p{margin:0 0 12px}
+.leadin,.exercise,.note{margin:16px 0;padding:16px 18px;background:var(--cream);border:1px solid #e4ded3;border-radius:10px}.exercise h3{margin-top:0}.note{border-left:4px solid var(--gold);background:#fbf3df}
+.song-image{display:block;width:100%;max-height:420px;object-fit:contain;background:#fff;border-radius:10px;margin:4px 0 18px}.song-columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}.song-column{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}.song-column-head{font-weight:800;background:#f2eee6;padding:12px 14px;border-bottom:1px solid var(--line)}.song-column .song-title{font-family:Georgia,serif;font-size:22px;font-weight:800;padding:16px 14px 10px}.song-column .song-section{font-weight:800;color:#8b642d;padding:12px 14px 4px}.song-line{padding:4px 14px}
+audio,video{width:100%;margin-top:8px} table{border-collapse:collapse;width:100%;margin:10px 0}th,td{border-bottom:1px solid #e6e0d5;padding:9px 10px;text-align:left;vertical-align:top}th{background:#f2eee6}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.small{font-size:14px;color:#5d6770}.answers{color:#49624d;font-size:14px}
+footer{padding:28px 4px 45px;text-align:center;color:#6d756f;font-size:13px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:40px}.story-grid,.song-columns,.two{grid-template-columns:1fr}.hero img{max-height:420px}}
+
+*{box-sizing:border-box}body{margin:0;background:#f4f1ea;color:#193047;font-family:Arial,Helvetica,sans-serif;line-height:1.58}
+.wrap{max-width:1180px;margin:28px auto;padding:0 18px}.hero{display:grid;grid-template-columns:55% 45%;background:#10273c;color:white;border-radius:0 0 18px 18px;overflow:hidden}
+.hero-copy{padding:38px 40px}.kicker{color:#e2b84e;font-weight:800;letter-spacing:1.4px;font-size:14px}.hero h1{font:800 48px/1 Georgia,serif;margin:18px 0}.subtitle{font:italic 20px Georgia,serif;color:#e9e1d0}
+.focus{margin-top:25px;padding:15px 18px;border-left:5px solid #d7aa43;background:#193b54}.hero img{width:100%;height:100%;min-height:330px;object-fit:cover}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 22px}.tag{padding:7px 12px;border:1px solid #d8d1c5;background:white;border-radius:999px;font-size:13px;font-weight:800}
+details{background:white;border:1px solid #ddd6ca;border-radius:14px;margin:12px 0;overflow:hidden;box-shadow:0 2px 9px #00000008}summary{padding:18px 22px;font-size:20px;font-weight:800;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:#9a702f}details[open] summary:after{content:"−"}.content{padding:0 22px 24px}
+.leadin,.exercise,.note{padding:16px 18px;background:#fbf7ed;border:1px solid #e3ddd1;border-radius:10px;margin:16px 0}.note{border-left:4px solid #d7aa43}.story{font-family:Georgia,serif;font-size:17px;max-width:980px}.story p{margin:0 0 15px}.story .scene{color:#253d51}.image{width:100%;max-height:480px;object-fit:contain;background:white;border-radius:10px;margin:8px 0 18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.songcols{display:grid;grid-template-columns:1fr 1fr;gap:18px}.songcol{border:1px solid #ddd6ca;border-radius:10px;overflow:hidden;background:white}.songhead{padding:12px 14px;background:#f0ece3;font-weight:800}.songtitle{padding:16px 14px 8px;font:800 22px Georgia,serif}.sec{padding:12px 14px 4px;color:#8c652d;font-weight:800}.line{padding:3px 14px}
+table{border-collapse:collapse;width:100%}th,td{padding:9px 10px;border-bottom:1px solid #e4dfd5;text-align:left;vertical-align:top}th{background:#f0ece3}audio,video{width:100%;margin-top:8px}.small{font-size:14px;color:#68737a}
+footer{text-align:center;padding:28px 4px 42px;color:#6e756f;font-size:13px}@media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:38px}.two,.songcols{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<div class="module-shell">
+
+<section class="module-cover">
+  <div class="module-cover-inner">
+    <div class="module-kicker">MODULE 5 · HOLIDAYS</div>
+    <h1>HOLIDAYS</h1>
+    <p>Three connected learning blocks · Read · Listen · Think · Create</p>
+    <div class="module-intro">
+      <span class="module-pill">BLOCK 01 · THE HAKA THAT GOT AWAY</span>
+      <span class="module-pill">BLOCK 02 · THE NOODLE CHALLENGE</span>
+      <span class="module-pill">BLOCK 03 · DOWN UNDER AND UPSIDE DOWN</span>
+    </div>
+  </div>
+</section>
+
+<nav class="module-nav" aria-label="Module blocks">
+  <a href="#block1">01 · The Haka That Got Away</a>
+  <a href="#block2">02 · The Noodle Challenge</a>
+  <a href="#block3">03 · Down Under and Upside Down</a>
+</nav>
+
+<section class="block-section" id="block1">
+  <div class="block-label">MODULE 5 · BLOCK 01</div>
+  <div class="block-divider"></div>
+  <div class="wrapper">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="kicker">MODULE 5 · HOLIDAYS · BLOCK 01</div>
+    <h1>THE HAKA<br>THAT GOT AWAY</h1>
+    <div class="subtitle">A funny New Zealand travel story</div>
+    <div class="focus"><strong>STORY FOCUS</strong>Don't be afraid to look silly when you try to understand another culture. Laughter brings people together.</div>
+  </div>
+  <img src="Картинка Танец Хака.png" alt="Three friends performing a funny haka">
+</section>
+
+<div class="tags">
+  <span class="tag">LEVEL: SIMPLE</span>
+  <span class="tag">READ · LISTEN · THINK · CREATE</span>
+  <span class="tag">PHRASAL VERBS WITH GET</span>
+  <span class="tag">PAST TENSES</span>
+</div>
+
+<details open><summary>📖 THE STORY</summary><div class="content story">
+<p>Last summer, three friends — Mike, Dave, and I — finally got to New Zealand. We had saved for two years. We wanted adventure, and we got more than we bargained for.
+
+Our second day, we visited a Maori village. It was amazing. The carvings, the stories, the food cooked in the ground. But the best part was the haka. The warriors stomped, their eyes went wide, their tongues stuck out. It was powerful. We were completely got by it.
+
+After the show, a Maori elder smiled at us. &quot;You three looked like you wanted to try,&quot; he said. &quot;Come on, we&#x27;ll teach you a simple one.&quot;
+
+Mike, who always thinks he&#x27;s a natural, was first. He puffed out his chest, tried to stomp, but his foot got tangled in a tree root. He didn&#x27;t fall, but he did a weird hop that made everyone laugh. He got over his embarrassment quickly and laughed too.
+
+Then it was Dave&#x27;s turn. Dave is very serious. He wanted to get it perfect. He practiced the tongue movement so hard that he accidentally bit his tongue. Not hard, but enough to make him squeak instead of roar. He got through the performance with tears in his eyes (from laughing at himself).
+
+Finally, it was my turn. I was so focused on not messing up that I forgot to breathe. I did the moves, I roared, and then… I sneezed. A huge, violent sneeze right in the middle of the haka. It was so unexpected that the Maori elders burst out laughing. One of them patted my back and said, &quot;That&#x27;s the most original haka we&#x27;ve ever seen!&quot;
+
+We spent the rest of the evening with them, eating and laughing. We didn&#x27;t master the haka, but we got along with everyone wonderfully. And we learned something: it&#x27;s not about being perfect. It&#x27;s about being brave enough to try, and to laugh when it all goes wrong.
+
+Later, Mike said, &quot;I can&#x27;t believe we got away with that. We must have looked like total idiots.&quot; But we didn&#x27;t feel like idiots. We felt like friends.</p>
+</div></details>
+
+<details><summary>🎧 LISTEN</summary><div class="content">
+<p>Listen to the complete story.</p>
+<audio controls preload="metadata" src="АУДИО THE HAKA THAT GOT AWAY.wav"></audio>
+</div></details>
+
+<details><summary>🎬 WATCH</summary><div class="content">
+<video controls preload="metadata" src="Видео The Haka.mp4"></video>
+</div></details>
+
+<details><summary>📚 GLOSSARY</summary><div class="content table-wrap">
+<table><thead><tr><th>Word / Phrase</th><th>Transcription</th><th>Translation</th></tr></thead><tbody><tr><td>to get (past: got)</td><td>[ɡet]</td><td>получать, добираться, становиться</td></tr><tr><td>to get into trouble</td><td>[ɡet ˈɪntə ˈtrʌbl]</td><td>попасть в беду</td></tr><tr><td>to get over</td><td>[ɡet ˈoʊvər]</td><td>оправиться от, преодолеть</td></tr><tr><td>to get through</td><td>[ɡet θruː]</td><td>пережить, справиться, пройти через</td></tr><tr><td>to get along with</td><td>[ɡet əˈlɔːŋ wɪð]</td><td>ладить с</td></tr><tr><td>to get away with</td><td>[ɡet ˈəweɪ wɪð]</td><td>сойти с рук, остаться безнаказанным</td></tr><tr><td>adventure</td><td>[ədˈventʃər]</td><td>приключение</td></tr><tr><td>to bargain for</td><td>[ˈbɑːrɡən fɔːr]</td><td>ожидать, рассчитывать на</td></tr><tr><td>carving</td><td>[ˈkɑːrvɪŋ]</td><td>резьба, скульптура</td></tr><tr><td>warrior</td><td>[ˈwɔːriər]</td><td>воин</td></tr><tr><td>to stomp</td><td>[stɑːmp]</td><td>топать</td></tr><tr><td>tongue</td><td>[tʌŋ]</td><td>язык</td></tr><tr><td>elder</td><td>[ˈeldər]</td><td>старейшина</td></tr><tr><td>natural</td><td>[ˈnætʃrəl]</td><td>прирождённый талант</td></tr><tr><td>to puff out</td><td>[pʌf aʊt]</td><td>выпячивать, надувать</td></tr><tr><td>to get tangled</td><td>[ɡet ˈtæŋɡld]</td><td>запутаться</td></tr><tr><td>root</td><td>[ruːt]</td><td>корень</td></tr><tr><td>hop</td><td>[hɑːp]</td><td>подскок</td></tr><tr><td>embarrassment</td><td>[ɪmˈbærəsmənt]</td><td>смущение</td></tr><tr><td>to squeak</td><td>[skwiːk]</td><td>пищать</td></tr><tr><td>to mess up</td><td>[mes ʌp]</td><td>испортить, облажаться</td></tr><tr><td>to sneeze</td><td>[sniːz]</td><td>чихать</td></tr><tr><td>violent</td><td>[ˈvaɪələnt]</td><td>сильный, яростный</td></tr><tr><td>to burst out laughing</td><td>[bɜːrst aʊt ˈlæfɪŋ]</td><td>разразиться смехом</td></tr><tr><td>to pat</td><td>[pæt]</td><td>похлопать</td></tr><tr><td>to master</td><td>[ˈmæstər]</td><td>овладеть, освоить</td></tr><tr><td>brave</td><td>[breɪv]</td><td>храбрый</td></tr><tr><td>idiot</td><td>[ˈɪdiət]</td><td>идиот</td></tr></tbody></table>
+</div></details>
+
+<details><summary>❤️ FOR THE HEART AND MIND</summary><div class="content">
+<h3>A. Comprehension Check</h3><ol><li>Where did the three friends go?</li><li>What impressed them most at the Maori village?</li><li>Who invited them to try the haka?</li><li>What happened to Mike when he tried to stomp?</li><li>What happened to Dave when he tried to do the tongue movement?</li><li>What happened to the narrator during his performance?</li><li>How did the Maori elders react?</li><li>What did the friends learn from this experience?</li></ol>
+<h3>B. Think &amp; Analyse</h3><ol><li>The elder said, &quot;That&#x27;s the most original haka we&#x27;ve ever seen!&quot; Was he being sarcastic or kind? Why do you think so?</li><li>The narrator says they didn&#x27;t feel like idiots; they felt like friends. What made them feel that way?</li><li>Why is it sometimes better to laugh at yourself than to be perfect?</li></ol>
+<h3>C. Discuss &amp; Relate</h3><ol><li>Have you ever had an embarrassing moment while traveling or trying something new? Share it.</li><li>Why do you think sharing a laugh with strangers can make you feel closer to them?</li><li>The friends &quot;got away with&quot; looking like idiots. What does this phrase mean here? Is it positive or negative?</li></ol>
+</div></details>
+
+<details><summary>🧠 FOR LANGUAGE SKILLS</summary><div class="content">
+<h3>A. Vocabulary Focus — Phrasal verbs with GET</h3>
+<div class="note"><strong>Match:</strong> got to · got over · got through · got along with · got away with</div>
+<ol>
+<li>got to (New Zealand) — a) managed to do something without punishment</li>
+<li>got over (his embarrassment) — b) arrived at</li>
+<li>got through (the performance) — c) had a good relationship</li>
+<li>got along with (everyone) — d) recovered from</li>
+<li>got away with (looking like idiots) — e) successfully completed something difficult</li>
+</ol>
+<h3>2. Fill in the blanks</h3><ol><li>We finally ______ to the airport after a long delay.</li><li>She was upset at first, but she ______ it quickly.</li><li>I don&#x27;t know how he ______ cheating on the test. The teacher saw everything!</li><li>It was a hard time, but we ______ it together.</li><li>Do you ______ your new classmates?</li></ol>
+<h3>B. Grammar in Context — Past Tenses</h3><ol><li>Past Simple vs Past Continuous: Find examples in the text — Past Simple (finished actions): ______, ______, ______; Past Continuous (background actions): ______, ______. Explain why each tense is used.</li><li>Past Perfect: Find: &quot;We had saved for two years.&quot; Why is Past Perfect used here? Complete: After they ______ (watch) the haka, they decided to try it themselves.</li><li>Put the verbs in brackets in the correct past tense: (a) While Mike ______ (try) to stomp, he ______ (get) tangled in a root. (b) Dave ______ (bite) his tongue because he ______ (practice) too hard. (c) We ______ (not / expect) to laugh so much, but it ______ (be) the best evening.</li></ol>
+<h3>C. Brain Workout</h3><ol><li>Retell the story: In pairs, retell the story from the perspective of the Maori elder. What did you think of these three funny tourists?</li><li>Act it out: In groups of three, act out the haka practice scene. Use the phrasal verbs from the lesson.</li><li>Write a sequel: What do you think happened the next day? Write 3–4 sentences using at least two phrasal verbs with get.</li></ol>
+</div></details>
+
+<details><summary>🌍 BEYOND THE TEXT</summary><div class="content"><ol><li>A postcard: Write a short, funny postcard from the narrator to his parents back home. Describe the haka disaster.</li><li>Social media post: Imagine Mike posts a photo of the group with the Maori elders. Write his caption. Use #HakaFail #BestTripEver.</li><li>AI image (optional): Create an image of the funniest moment — the narrator sneezing during the haka.</li><li>Your own story: Write a short paragraph about a time you tried to impress someone from another culture and it went wrong (or right).</li></ol></div></details>
+
+<details><summary>♫ THE BEST WORST HAKA</summary><div class="content">
+<p><strong>Listen to the song:</strong></p>
+<audio controls preload="metadata" src="Песня 1 Tongue-Stomp Haka.mp3"></audio>
+
+<div class="song-columns">
+  <div class="song-column">
+    <div class="song-column-head">ENGLISH</div>
+    <div class='song-title'>THE BEST WORST HAKA</div>
+<div class='song-gap'></div>
+<div class='song-section'>Verse 1</div>
+<div>We came to New Zealand to learn how to stomp</div>
+<div>To stick out our tongues and to roar like a champ</div>
+<div>But Mike tripped on a root, Dave bit his tongue</div>
+<div>And I sneezed so hard that my whole body swung</div>
+<div class='song-gap'></div>
+<div class='song-section'>Chorus</div>
+<div>And the elders just laughed, not at us, but with us</div>
+<div>We looked like a circus, a beautiful mess</div>
+<div>We didn&#x27;t master the haka that day</div>
+<div>But we mastered the art of laughing away</div>
+<div class='song-gap'></div>
+<div class='song-section'>Verse 2</div>
+<div>We sat by the fire and shared all their bread</div>
+<div>They taught us that courage is being misled</div>
+<div>You don&#x27;t have to be perfect, you just have to try</div>
+<div>And if you look stupid, at least you can cry — from laughing!</div>
+<div class='song-gap'></div>
+<div class='song-section'>Chorus</div>
+<div>And the elders just laughed, not at us, but with us</div>
+<div>We looked like a circus, a beautiful mess</div>
+<div>We didn&#x27;t master the haka that day</div>
+<div>But we mastered the art of laughing away</div>
+<div class='song-gap'></div>
+<div class='song-section'>Outro</div>
+<div>So here&#x27;s to the falls and the tongue-bites and sneezes</div>
+<div>Here&#x27;s to the friendship that never displeases</div>
+<div>We came for the haka, we left with much more</div>
+<div>A family of strangers on a faraway shore.</div>
+  </div>
+  <div class="song-column">
+    <div class="song-column-head">РУССКИЙ ПЕРЕВОД</div>
+    <div class='song-title'>ЛУЧШАЯ ХУДШАЯ ХАКА</div>
+<div class='song-gap'></div>
+<div>Топ! Топ! Хлоп!</div>
+<div>Топ! Топ! Хлоп!</div>
+<div class='song-gap'></div>
+<div class='song-section'>Куплет 1</div>
+<div>Мы приехали в Новую Зеландию научиться топать</div>
+<div>Высунуть языки и рычать как чемпионы</div>
+<div>Майк выпятил грудь как храбрый воин</div>
+<div>Но его нога нашла корень, и его история была рассказана</div>
+<div class='song-gap'></div>
+<div class='song-section'>Припев</div>
+<div>И мы пытались, и мы спотыкались, и мы падали лицом вниз</div>
+<div>Но старейшины просто смеялись, впуская нас в своё пространство</div>
+<div>Мы не освоили хаку в тот день</div>
+<div>Но мы освоили искусство смеяться над собой</div>
+<div class='song-gap'></div>
+<div class='song-section'>Куплет 2</div>
+<div>Дейв пошёл следующим, он был серьёзным и высоким</div>
+<div>Он тренировал язык, пока не прикусил его, бедняга</div>
+<div>Он пискнул как мышь, когда попытался рычать</div>
+<div>И превратил всю церемонию в комическую толпу</div>
+<div class='song-gap'></div>
+<div class='song-section'>Припев</div>
+<div>И мы пытались, и мы спотыкались, и мы падали лицом вниз</div>
+<div>Но старейшины просто смеялись, впуская нас в своё пространство</div>
+<div>Мы не освоили хаку в тот день</div>
+<div>Но мы освоили искусство смеяться над собой</div>
+<div class='song-gap'></div>
+<div class='song-section'>Куплет 3</div>
+<div>Потом настала моя очередь, я нервничал, понимаешь</div>
+<div>Я топал и рычал, и пытался быть свободным</div>
+<div>Но пришёл чих, такой сильный и дикий</div>
+<div>Что старейшины приветствовали меня, как своего собственного ребёнка</div>
+<div class='song-gap'></div>
+<div class='song-section'>Бридж</div>
+<div>Они сказали: &quot;Вы пришли сюда, чтобы выучить наш танец</div>
+<div>Но вы научили нас кое-чему, рискуя</div>
+<div>Перфекционизм скучен, но смех — это золото</div>
+<div>Самые храбрые — те, кто позволяют своим историям разворачиваться&quot;</div>
+<div class='song-gap'></div>
+<div class='song-section'>Припев</div>
+<div>И мы пытались, и мы спотыкались, и мы падали лицом вниз</div>
+<div>Но старейшины просто смеялись, впуская нас в своё пространство</div>
+<div>Мы не освоили хаку в тот день</div>
+<div>Но мы освоили искусство смеяться над собой</div>
+<div class='song-gap'></div>
+<div class='song-section'>Аутро</div>
+<div>Мы сидели у костра, мы делили их хлеб</div>
+<div>Никакими воинами мы не были, а стали новыми друзьями</div>
+<div>Так выпьем за падения, и за прикушенные языки, и за чихи</div>
+<div>Выпьем за дружбу, которая никогда не разочаровывает</div>
+<div>(Топ! Топ! Хлоп!)</div>
+<div>Выпьем за хаку, которая ускользнула!</div>
+  </div>
+</div>
+
+</div></details>
+
+</div>
+</section>
+
+<section class="block-section" id="block2">
+  <div class="block-label">MODULE 5 · BLOCK 02</div>
+  <div class="block-divider"></div>
+  <div class="wrapper"><section class="hero"><div class="hero-copy"><div class="kicker">MODULE 5 · HOLIDAYS · BLOCK 02</div>
+<h1>THE NOODLE<br>CHALLENGE</h1><div class="subtitle">A spicy food challenge in Chengdu</div>
+<div class="focus"><strong>STORY FOCUS</strong>Sometimes a little boasting, a lot of spice, and a glass of milk make the best travel memory.</div></div>
+<img src="noodle.png" alt="Three friends with spicy noodles on a white background"></section>
+<div class="tags"><span class="tag">LEVEL: MEDIUM</span><span class="tag">READ · LISTEN · THINK · CREATE</span><span class="tag">PHRASAL VERBS WITH GET</span><span class="tag">PAST TENSES</span></div><details><summary>📖 THE STORY</summary><div class="content"><div class="leadin"><h3>LEAD-IN</h3><ol><li>Have you ever boasted that you could do something, and then regretted it?</li><li>What’s the spiciest food you’ve ever tried? What happened?</li><li>The phrasal verb &quot;to get into&quot; can mean to become involved in something troublesome. What do you think &quot;to get into trouble&quot; means?</li></ol></div><img class="song-image" src="spicy-noodle.png" alt="The noodle challenge"><div class="story-grid"><div class="story-col"><h3>THE NOODLE CHALLENGE</h3><p><b>After New Zealand, we got the travel bug badly. The next year, Mike, Dave, and I decided to go to China. We wanted real adventure, not just tourist stuff. We got that — and a lot more.</b><br><span class='small'>После Новой Зеландии мы сильно «заболели путешествиями». На следующий год Майк, Дейв и я решили поехать в Китай. Мы хотели настоящих приключений, а не просто туристических развлечений. Мы их получили — и даже больше.</span></p><p><b>Our first week was amazing. We visited the Great Wall, got lost in the hutongs of Beijing, and got used to the chaos of Chinese streets. But the real test came on day eight.</b><br><span class='small'>Первая неделя была потрясающей. Мы посетили Великую Китайскую стену, заблудились в пекинских хутунах и привыкли к хаосу китайских улиц. Но настоящее испытание ждало нас на восьмой день.</span></p><p><b>We were at a night market in Chengdu. The smells were incredible — sizzling meat, strange spices, things we couldn’t identify. Dave, who had got over his seriousness from New Zealand, pointed at a stall.</b><br><span class='small'>Мы были на ночном рынке в Чэнду. Запахи были невероятными — шипящее мясо, странные специи, вещи, которые мы не могли определить. Дейв, который уже избавился от своей серьёзности после Новой Зеландии, указал на один прилавок.</span></p><p><b>&quot;Look! They’re selling scorpions on sticks!&quot;</b><br><span class='small'>«Смотрите! Они продают скорпионов на палочках!»</span></p><p><b>Mike, who never learns, puffed out his chest. &quot;I’ll eat anything. I once ate a ghost pepper. This is nothing.&quot;</b><br><span class='small'>Майк, который никогда не учится на своих ошибках, выпятил грудь. «Я съем что угодно. Однажды я съел перец-призрак. Это вообще ерунда».</span></p><p><b>I should have stopped him. But I didn’t.</b><br><span class='small'>Я должен был его остановить. Но не остановил.</span></p><p><b>We walked past stalls selling silk worms, chicken feet, and something that looked like a century egg (it was). Then we saw it: a noodle stall with a sign that said &quot;MALA XIANG GUO — SPICY LEVEL 5 — SIGN A WAIVER.&quot;</b><br><span class='small'>Мы прошли мимо прилавков, где продавали шелкопрядов, куриные лапки и что-то похожее на столетнее яйцо (это и было столетнее яйцо). И тут мы увидели её: лапшичную с табличкой «MALA XIANG GUO — ОСТРОТА УРОВНЯ 5 — ПОДПИШИТЕ РАСПИСКУ».</span></p><p><b>Mike’s eyes lit up. &quot;That’s for me.&quot;</b><br><span class='small'>Глаза Майка загорелись. «Это для меня».</span></p><p><b>The owner, a tiny woman with a big smile, warned him. &quot;Level 5 is very spicy. Foreigners usually take Level 1. You sure?&quot;</b><br><span class='small'>Хозяйка, маленькая женщина с широкой улыбкой, предупредила его: «Уровень 5 очень острый. Иностранцы обычно берут первый уровень. Ты уверен?»</span></p><p><b>Mike was sure. He got himself into trouble before I could say a word.</b><br><span class='small'>Майк был уверен. Он влип в историю ещё до того, как я успел что-либо сказать.</span></p><p><b>The bowl arrived. It was red. Not tomato red — volcanic red. Steam rose from it, and my eyes started watering just from the smell. Mike took his chopsticks, smiled at us, and shoved a huge bite into his mouth.</b><br><span class='small'>Принесли миску. Она была красной. Не томатно-красной — вулканически красной. От неё поднимался пар, и мои глаза начали слезиться уже от одного запаха. Майк взял палочки, улыбнулся нам и запихнул в рот огромный кусок.</span></p><p><b>For one second, nothing happened.</b><br><span class='small'>Секунду ничего не происходило.</span></p><p><b>Then his face turned the same colour as the soup. His eyes went wide. He grabbed his throat. He tried to speak, but only a squeak came out. Tears streamed down his face. He got through the first five seconds, but then he panicked. He grabbed a bottle of water and drank it all. It didn’t help. Spice doesn’t dissolve in water.</b><br><span class='small'>А потом его лицо стало такого же цвета, как суп. Глаза широко раскрылись. Он схватился за горло. Он попытался заговорить, но издал только писк. Слёзы текли по его лицу. Первые пять секунд он выдержал, но потом запаниковал. Он схватил бутылку воды и выпил её всю. Это не помогло. Острота не растворяется в воде.</span></p><p><b>The owner laughed and handed him a glass of milk. &quot;Milk helps,&quot; she said.</b><br><span class='small'>Хозяйка рассмеялась и протянула ему стакан молока. «Молоко помогает», — сказала она.</span></p><p><b>Mike drank it so fast that some got on his shirt. He sat there, breathing heavily, his face still red, his eyes still wet. Dave and I were crying — from laughter.</b><br><span class='small'>Майк выпил его так быстро, что немного молока попало ему на рубашку. Он сидел, тяжело дыша, с всё ещё красным лицом и мокрыми глазами. Мы с Дейвом плакали — от смеха.</span></p><p><b>&quot;Are you okay?&quot; Dave managed to ask between giggles.</b><br><span class='small'>«Ты в порядке?» — спросил Дейв, с трудом перестав хихикать.</span></p><p><b>Mike nodded weakly. &quot;I got more than I bargained for,&quot; he whispered.</b><br><span class='small'>Майк слабо кивнул. «Я получил больше, чем рассчитывал», — прошептал он.</span></p><p><b>We spent the next hour drinking milk and eating plain rice, while the owner and her family laughed with us. By the end, Mike had got over the burn, and we had got along with everyone so well that they gave us free dumplings.</b><br><span class='small'>Следующий час мы пили молоко и ели простой рис, а хозяйка и её семья смеялись вместе с нами. К концу Майк оправился от жжения, а мы так хорошо поладили со всеми, что они угостили нас бесплатными пельменями.</span></p><p><b>Later, as we walked back to the hotel, Mike said:</b><br><span class='small'>Позже, когда мы шли обратно в отель, Майк сказал:</span></p><p><b>&quot;I can’t believe I got away with that. I thought I’d never be able to eat anything again.&quot;</b><br><span class='small'>«Не могу поверить, что мне это сошло с рук. Я думал, что больше никогда не смогу ничего есть».</span></p><p><b>&quot;You’re just being dramatic,&quot; Dave said. &quot;You’re fine. Well, almost.&quot;</b><br><span class='small'>«Ты просто драматизируешь», — сказал Дейв. «Ты в порядке. Ну, почти».</span></p><p><b>We laughed all the way to the hotel. And for the rest of the trip, whenever someone said &quot;spicy,&quot; Mike would roll his eyes and ask for milk. When we stopped by the noodle stall to say goodbye, the owner waved and shouted, &quot;Hey, spicy boy! Next time — level six!&quot;</b><br><span class='small'>Мы смеялись всю дорогу до отеля. А до конца поездки, когда кто-нибудь произносил слово «острый», Майк закатывал глаза и просил молока. Когда мы остановились у лапшичной попрощаться, хозяйка помахала рукой и крикнула: «Эй, острый парень! В следующий раз — шестой уровень!»</span></p><p><b>Mike shook his head and smiled.</b><br><span class='small'>Майк покачал головой и улыбнулся.</span></p><p><b>&quot;No way. But thanks for the milk.&quot;</b><br><span class='small'>«Ни за что. Но спасибо за молоко».</span></p></div><div class="story-col"><h3>STORY NOTES</h3><p><b>Genre:</b> Humorous first-person travel story</p><p><b>Level:</b> Medium</p><p><b>Value focus:</b> Boasting can get you into trouble, but laughter and friendship can turn mistakes into warm memories.</p><p><b>Language focus:</b> Phrasal verbs with <i>get</i>; Past Simple, Past Continuous, Past Perfect.</p><div class="note">Read the English text first. Use the Russian version as support, not as a substitute for reading.</div></div></div></div></details><details><summary>🔊 AUDIO & VIDEO</summary><div class="content">
+<h3>Audio — The Noodle Challenge</h3><audio controls src="АУДИО THE NOODLE CHALLENGE.wav"></audio>
+<h3>Song audio</h3><audio controls src="THE NOODLE CHALLENGE.mp3"></audio>
+<h3>Video — The Noodle Challenge</h3><video controls preload="metadata" src="Видео The Noodle Challenge.mp4"></video>
+</div></details><details><summary>📚 GLOSSARY</summary><div class="content"><table><tr><th>Word / Phrase</th><th>Transcription</th><th>Russian</th></tr><tr><td>to get the travel bug</td><td>[ɡet ðə ˈtrævl bʌɡ]</td><td>заболеть путешествиями</td></tr><tr><td>to get lost</td><td>[ɡet lɔːst]</td><td>заблудиться</td></tr><tr><td>to get used to</td><td>[ɡet juːst tuː]</td><td>привыкнуть к</td></tr><tr><td>to get over</td><td>[ɡet ˈoʊvər]</td><td>оправиться от, преодолеть</td></tr><tr><td>to get into trouble</td><td>[ɡet ˈɪntə ˈtrʌbl]</td><td>влипнуть в историю</td></tr><tr><td>to get through</td><td>[ɡet θruː]</td><td>пережить, справиться</td></tr><tr><td>to get on (clothes)</td><td>[ɡet ɑːn]</td><td>попасть на (об одежде)</td></tr><tr><td>to get more than one bargained for</td><td>[ɡet mɔːr ðæn wʌn ˈbɑːrɡənd fɔːr]</td><td>получить сверх ожидаемого</td></tr><tr><td>to get along with</td><td>[ɡet əˈlɔːŋ wɪð]</td><td>ладить с</td></tr><tr><td>to get away with</td><td>[ɡet əˈweɪ wɪð]</td><td>сойти с рук</td></tr><tr><td>night market</td><td>[naɪt ˈmɑːrkɪt]</td><td>ночной рынок</td></tr><tr><td>sizzling</td><td>[ˈsɪzlɪŋ]</td><td>шипящий</td></tr><tr><td>scorpion</td><td>[ˈskɔːrpiən]</td><td>скорпион</td></tr><tr><td>ghost pepper</td><td>[ɡoʊst ˈpepər]</td><td>перец-призрак (очень острый)</td></tr><tr><td>silk worm</td><td>[sɪlk wɜːrm]</td><td>шелкопряд</td></tr><tr><td>century egg</td><td>[ˈsentʃəri eɡ]</td><td>столетнее яйцо</td></tr><tr><td>waiver</td><td>[ˈweɪvər]</td><td>расписка об отказе от претензий</td></tr><tr><td>volcanic</td><td>[vɑːlˈkænɪk]</td><td>вулканический</td></tr><tr><td>to water (eyes)</td><td>[ˈwɔːtər]</td><td>слезиться</td></tr><tr><td>to shove</td><td>[ʃʌv]</td><td>засунуть, запихнуть</td></tr><tr><td>to grab</td><td>[ɡræb]</td><td>схватить</td></tr><tr><td>to stream</td><td>[striːm]</td><td>течь ручьём</td></tr><tr><td>to dissolve</td><td>[dɪˈzɑːlv]</td><td>растворять(ся)</td></tr><tr><td>to giggle</td><td>[ˈɡɪɡl]</td><td>хихикать</td></tr><tr><td>to nod</td><td>[nɑːd]</td><td>кивать</td></tr><tr><td>to whisper</td><td>[ˈwɪspər]</td><td>шептать</td></tr><tr><td>dumpling</td><td>[ˈdʌmplɪŋ]</td><td>пельмень, димсам</td></tr></table></div></details><details><summary>❤️ FOR THE HEART AND MIND</summary><div class="content"><div class="exercise"><h3>A. Comprehension Check</h3><ol><li>Where did the friends go after New Zealand?</li><li>What did they do during their first week?</li><li>What did Mike boast about at the night market?</li><li>What warning did the stall owner give?</li><li>What happened when Mike ate the spicy noodles?</li><li>How did the owner help him?</li><li>How did Dave and the narrator react?</li><li>What did the family give them at the end?</li><li>What did Mike say later that night?</li></ol></div><div class="exercise"><h3>B. Think &amp; Analyse</h3><ol><li>The owner warned Mike, but he didn’t listen. Why do people sometimes ignore warnings?</li><li>Mike said, &quot;I got more than I bargained for.&quot; What does this expression mean in this context?</li><li>Why did the owner and her family laugh WITH them, not AT them? What does this say about the people they met?</li><li>The narrator says, &quot;He didn’t die. He learned.&quot; Is learning from mistakes better than being perfect? Why?</li></ol></div><div class="exercise"><h3>C. Discuss &amp; Relate</h3><ol><li>Have you ever boasted about something and then regretted it? What happened?</li><li>Why is it sometimes fun to laugh at ourselves with friends?</li><li>The friends &quot;got along&quot; with the locals even after the disaster. What makes people connect across cultures?</li></ol></div></div></details><details><summary>🧠 FOR LANGUAGE SKILLS</summary><div class="content">
+<div class="exercise"><h3>A. Vocabulary Focus — Phrasal verbs with GET</h3>
+<p><b>1. Match the phrasal verb with its meaning:</b></p>
+<table><tr><th>Phrasal verb</th><th>Meaning</th></tr>
+<tr><td>1. got the travel bug</td><td>a) became involved in a difficult situation</td></tr>
+<tr><td>2. got lost</td><td>b) became obsessed with travelling</td></tr>
+<tr><td>3. got used to</td><td>c) received more than expected</td></tr>
+<tr><td>4. got over</td><td>d) recovered from</td></tr>
+<tr><td>5. got into trouble</td><td>e) couldn’t find the way</td></tr>
+<tr><td>6. got through</td><td>f) had a good relationship</td></tr>
+<tr><td>7. got on (his shirt)</td><td>g) became accustomed to</td></tr>
+<tr><td>8. got more than he bargained for</td><td>h) managed to survive</td></tr>
+<tr><td>9. got along with</td><td>i) stained, landed on</td></tr>
+<tr><td>10. got away with</td><td>j) avoided punishment</td></tr></table>
+<p><b>2. Fill in the blanks with the correct form of GET + particle:</b></p>
+<ol type="a"><li>After the trip, I completely ______ the travel bug. I want to go everywhere!</li>
+<li>We ______ in the old city for two hours before finding the hotel.</li>
+<li>It took me a week to ______ the jet lag.</li><li>How did you ______ that stain? It won’t come out!</li>
+<li>She always ______ trouble when she opens her mouth.</li><li>I don’t know how he ______ cheating, but the teacher never noticed.</li>
+<li>Do you ______ your new roommate?</li><li>I thought it would be easy, but I ______ more than I bargained for.</li></ol>
+<p><b>3.</b> Make your own sentences with three different phrasal verbs from the list.</p></div>
+<div class="exercise"><h3>B. Grammar in Context — Past Tenses</h3>
+<p><b>1. Past Perfect:</b> Find: “Dave, who had got over his seriousness from New Zealand, pointed at a stall.” Why is Past Perfect used? Because he got over it <b>before</b> he pointed.</p>
+<p>Complete: Mike ______ (eat) a ghost pepper before, so he thought he could handle anything.</p>
+<p><b>2. Past Continuous:</b> Find: “We were walking past stalls when we saw it.” Why is Past Continuous used? It sets the scene for the main action.</p>
+<p>Complete: While we ______ (laugh), Mike ______ (try) to drink the milk.</p>
+<p><b>3. Put the verbs in brackets in the correct past tense:</b></p>
+<ol type="a"><li>Before we ______ (go) to China, we ______ (watch) many travel videos.</li>
+<li>While Mike ______ (eat) the noodles, his face ______ (turn) red.</li>
+<li>After he ______ (drink) the milk, he ______ (feel) a little better.</li>
+<li>We ______ (not / expect) to laugh so much, but it ______ (be) hilarious.</li></ol></div>
+<div class="exercise"><h3>C. Brain Workout</h3><ol><li>Retell the story from the point of view of the stall owner. What did she think of these crazy foreigners?</li>
+<li>Role play: In pairs, act out the scene at the noodle stall. One is Mike (in pain), one is the owner (trying not to laugh).</li>
+<li>Write a sequel: Imagine they go back to the same stall the next day. What happens? Write 4–5 sentences using at least two phrasal verbs.</li></ol></div>
+</div></details><details><summary>🎵 THE SONG — ENGLISH & RUSSIAN</summary><div class="content"><img class="song-image" src="spicy-noodle.png" alt="Friends facing the spicy noodle challenge"><div class="song-columns"><div class="song-column"><div class="song-column-head">ENGLISH</div><div class="song-title">THE NOODLE CHALLENGE / ИСПЫТАНИЕ ЛАПШОЙ</div><div class="song-section">Verse 1</div><div class="song-line">We were walking through the night market, smelling something strange</div><div class="song-line">Mike said &quot;I can eat anything, I’ve done it, I’m not afraid!&quot;</div><div class="song-line">He pointed at a noodle bowl, the colour red as fire</div><div class="song-line">&quot;Level five,&quot; the owner smiled, &quot;Are you sure you’re not a liar?&quot;</div><div class="song-section">Chorus</div><div class="song-line">Spicy! Spicy! Noodle challenge!</div><div class="song-line">Mike took a bite and he couldn’t manage!</div><div class="song-line">His face turned red, his eyes went wet!</div><div class="song-line">He grabbed his throat, he couldn’t forget!</div><div class="song-section">Verse 2</div><div class="song-line">Dave was laughing, I was too, the owner gave a shout</div><div class="song-line">&quot;Here’s some milk! Drink it fast, it helps to cool you out!&quot;</div><div class="song-line">Mike was crying, but he smiled, a lesson learned that day</div><div class="song-line">&quot;Next time I’ll just eat some rice, and I’ll be okay!&quot;</div><div class="song-section">Chorus</div><div class="song-line">Spicy! Spicy! Noodle challenge!</div><div class="song-line">Mike took a bite and he couldn’t manage!</div><div class="song-line">His face turned red, his eyes went wet!</div><div class="song-line">He grabbed his throat, he couldn’t forget!</div><div class="song-section">Bridge — slower, phone ringing</div><div class="song-line">Then his grandma called him on the phone:</div><div class="song-line">&quot;Darling, if you add an apple, you won’t feel so alone!&quot;</div><div class="song-line">We looked at the apple, sitting on the shelf</div><div class="song-line">And laughed so hard we forgot ourselves!</div><div class="song-section">Final Chorus</div><div class="song-line">Spicy! Spicy! Noodle challenge!</div><div class="song-line">Mike took a bite and he couldn’t manage!</div><div class="song-line">His face turned red, his eyes went wet!</div><div class="song-line">He grabbed his throat, he couldn’t forget!</div><div class="song-line">Spicy! Spicy! Noodle challenge!</div><div class="song-line">We’ll never forget that day in Chengdu!</div><div class="song-section">Outro</div><div class="song-line">Noodle challenge… noodle challenge…</div><div class="song-line">Next time… apple!</div></div><div class="song-column"><div class="song-column-head">РУССКИЙ ПЕРЕВОД</div><div class="song-title">THE NOODLE CHALLENGE / ИСПЫТАНИЕ ЛАПШОЙ</div><div class="song-section">Куплет 1</div><div class="song-line">Мы шли по ночному рынку, вдыхая странный запах</div><div class="song-line">Майк сказал: «Я могу съесть что угодно, я делал это, я не боюсь!»</div><div class="song-line">Он указал на миску с лапшой цвета красного огня</div><div class="song-line">«Пятый уровень», — улыбнулась хозяйка, — «Ты уверен, что не врун?»</div><div class="song-section">Припев</div><div class="song-line">Острый! Острый! Испытание лапшой!</div><div class="song-line">Майк откусил кусок и не справился!</div><div class="song-line">Его лицо покраснело, глаза стали мокрыми!</div><div class="song-line">Он схватился за горло, он не мог забыть!</div><div class="song-section">Куплет 2</div><div class="song-line">Дейв смеялся, я тоже, хозяйка крикнула:</div><div class="song-line">«Вот молоко! Пей быстро, оно поможет остыть!»</div><div class="song-line">Майк плакал, но улыбнулся — урок был усвоен в тот день</div><div class="song-line">«В следующий раз я просто съем рис, и со мной всё будет в порядке!»</div><div class="song-section">Припев</div><div class="song-line">Острый! Острый! Испытание лапшой!</div><div class="song-line">Майк откусил кусок и не справился!</div><div class="song-line">Его лицо покраснело, глаза стали мокрыми!</div><div class="song-line">Он схватился за горло, он не мог забыть!</div><div class="song-section">Бридж</div><div class="song-line">Затем ему позвонила бабушка:</div><div class="song-line">«Дорогой, если добавить яблоко, ты не будешь чувствовать себя таким одиноким!»</div><div class="song-line">Мы посмотрели на яблоко, лежащее на полке</div><div class="song-line">И так рассмеялись, что забыли себя!</div><div class="song-section">Финальный припев</div><div class="song-line">Испытание лапшой!</div><div class="song-line">Майк откусил кусок и не справился!</div><div class="song-line">Его лицо покраснело, глаза стали мокрыми!</div><div class="song-line">Он схватился за горло, он не мог забыть!</div><div class="song-line">Острый! Острый! Испытание лапшой!</div><div class="song-line">Мы никогда не забудем тот день в Чэнду!</div><div class="song-section">Аутро</div><div class="song-line">Испытание лапшой… испытание лапшой…</div><div class="song-line">В следующий раз… яблоко!</div></div></div></div></details><details><summary>🎤 EXERCISES AFTER THE SONG</summary><div class="content">
+<div class="exercise"><h3>EXERCISE 1. The Night Market — Vocabulary</h3>
+<p><b>Match the word with its meaning:</b></p>
+<table><tr><th>Word</th><th>Meaning</th></tr>
+<tr><td>1. night market</td><td>a) a small shop or table where things are sold</td></tr>
+<tr><td>2. stall</td><td>b) a place where people sell food at night</td></tr>
+<tr><td>3. spicy</td><td>c) having a strong, hot flavour</td></tr>
+<tr><td>4. challenge</td><td>d) a difficult task that tests you</td></tr>
+<tr><td>5. to manage</td><td>e) to succeed in doing something difficult</td></tr></table>
+<p><b>Complete the sentences:</b></p>
+<ol><li>They walked through the ________ and smelled something strange.</li>
+<li>The owner asked: “Are you sure you’re not a liar?” because it was a ________.</li>
+<li>Mike couldn’t ________ the spicy noodles.</li></ol></div>
+<div class="exercise"><h3>EXERCISE 2. Emoji Story</h3><p>Look at these emojis: 🍜🔥🌶️😭🥛🍏</p><p>Write a short summary of the song using only these emojis and ONE sentence.</p></div>
+<div class="exercise"><h3>EXERCISE 3. Your Own Food Challenge</h3><p>Have you ever tried something very spicy, sour, bitter, or strange? Share your story in 5 sentences:</p>
+<ul><li>Where were you?</li><li>What did you eat?</li><li>How did you feel?</li><li>Did you like it?</li></ul></div>
+</div></details><details><summary>🌎 BEYOND THE TEXT</summary><div class="content"><div class="exercise"><h3>Choose ONE</h3>
+<ol><li><b>A text message:</b> Write a text message Mike sent to his mother that night. (“Dear Mom, today I almost died. But I’m okay. Send milk.”)</li>
+<li><b>A review:</b> Write a funny review of the noodle stall on TripAdvisor from Mike’s perspective. (3–4 sentences)</li>
+<li><b>Your own spicy story:</b> Write a short paragraph about a time you (or someone you know) ate something too spicy.</li>
+<li><b>AI image (optional):</b> Create an image of Mike at the moment he realizes the noodles are too spicy — red face, tears, grabbing his throat, while friends laugh.</li></ol></div></div></details>
+<footer>MODULE 5 · HOLIDAYS · BLOCK 02 · THE NOODLE CHALLENGE</footer></div>
+</section>
+
+<section class="block-section" id="block3">
+  <div class="block-label">MODULE 5 · BLOCK 03</div>
+  <div class="block-divider"></div>
+  <div class="wrap"><section class="hero"><div class="hero-copy"><div class="kicker">MODULE 5 · HOLIDAYS · BLOCK 03</div>
+<h1>DOWN UNDER<br>AND UPSIDE DOWN</h1><div class="subtitle">Australia — where everything feels a little different</div>
+<div class="focus"><b>VALUE FOCUS</b><br>Sometimes, to see the world correctly, you need to stand on your head.</div></div>
+<img src="kangaroo-on-roof.png" alt="A kangaroo on the roof of a camper van at night"></section>
+<div class="tags"><span class="tag">LEVEL: ADVANCED</span><span class="tag">READ · LISTEN · THINK · CREATE</span><span class="tag">PHRASAL VERBS WITH GET</span><span class="tag">PAST TENSES</span></div><details><summary>📖 THE STORY</summary><div class="content"><div class="leadin"><h3>LEAD-IN</h3><ol><li>Australia is called &quot;the land down under.&quot; Why do you think it has this name?</li><li>What do you know about Australian animals? Which ones seem strangest to you?</li><li>The phrasal verb &quot;to get your head around something&quot; means to understand something difficult or strange. What is something you’ve had to &quot;get your head around&quot; in your life?</li></ol></div><img class="image" src="kangaroo-on-roof.png" alt="Kangaroo on a camper van roof"><div class="story"><h2>DOWN UNDER AND UPSIDE DOWN</h2><p>After China, we thought we had got used to surprises. But Australia? Australia was a whole new level of strange.</p><p>We landed in Sydney, and everything felt normal at first. Opera House. Harbour Bridge. Coffee. But then we started noticing things. The water in the toilet flushed backwards. (Okay, that&#x27;s a myth, but we convinced ourselves we saw it.) The seasons were backwards — Christmas in the summer! The birds laughed like mad scientists. And the animals… oh, the animals.</p><p>We rented a camper van and drove along the coast. Mike was obsessed with seeing a kangaroo. “I want to get a selfie with one,” he said. “How hard can it be?”</p><p>Dave, who had got wise after China, said nothing. He just raised an eyebrow.</p><p>Our first night, we camped near a beach. In the middle of the night, we heard a loud thump on the roof. Then another. Then what sounded like a party. Mike grabbed a torch and went outside. He came back with his face pale.</p><p>“There’s a kangaroo on the roof,” he whispered.</p><p>“A kangaroo?” I said. “On the roof?”</p><p>“It’s jumping. It’s having fun. I think it’s laughing at us.”</p><p>We didn’t sleep much that night. In the morning, we found huge scratches on the van. Mike loved it. “We got visited by a kangaroo! This is amazing!”</p><p>The next day, we drove into the bush. We saw koalas sleeping in trees like furry potatoes. We saw wombats that looked like they had got lost on their way to a rock concert. But the strangest thing was yet to come.</p><p>We stopped at a gas station in the middle of nowhere. An old man with a leathery face and a hat full of fishing lures saw us staring at a sign that said “Beware of Drop Bears.”</p><p>“What’s a drop bear?” Dave asked.</p><p>The old man grinned. “Nasty creatures. They drop from trees and attack tourists. You gotta wear forks in your hair to scare ’em off.”</p><p>Mike’s eyes went wide. “Forks?”</p><p>“Yep. They hate the reflection.”</p><p>We didn’t believe him, of course. But that night, as we sat by the campfire, every sound made us jump. Every falling leaf became a drop bear. We got ourselves into a state of pure paranoia.</p><p>Finally, Dave said, “I think that man was joking.”</p><p>We looked at each other and burst out laughing. We had got completely fooled. There’s no such thing as a drop bear. It’s an Aussie joke for tourists.</p><p>The next morning, as the sun rose over the eucalyptus trees, I sat outside the van and thought about this strange, upside-down country. Everything was different. The animals were weird. The people laughed at us. Even the sky seemed bluer.</p><p>But somehow, it felt right. It felt like the world was showing us that there’s more than one way to do things. More than one way to live.</p><p>I thought about our trips — New Zealand, China, now Australia. We had got lost, got into trouble, got laughed at, and got over it all. And we had got closer because of it.</p><p>As we drove away, Mike said, “I still can’t get my head around a country where the squirrels have pouches.”</p><p>“Kangaroos aren’t squirrels,” Dave said.</p><p>“I know. But they kind of are. If squirrels were seven feet tall and boxed for fun.”</p><p>We laughed. And I realized: you don’t travel to understand the world. You travel to understand that you don’t understand anything at all. And that’s okay.</p></div></div></details><details><summary>🔊 AUDIO & VIDEO</summary><div class="content">
+<h3>Audio — DOWN UNDER AND UPSIDE DOWN</h3><audio controls src="DOWN UNDER AND UPSIDE DOWN.wav"></audio>
+<h3>Video — DOWN UNDER AND UPSIDE DOWN</h3><video controls preload="metadata" src="DOWN UNDER AND UPSIDE DOWN.mp4"></video>
+</div></details><details><summary>📚 GLOSSARY</summary><div class="content"><table><tr><th>Word / Phrase</th><th>Transcription</th><th>Russian</th></tr><tr><td>to get your head around</td><td>[ɡet jɔːr hed əˈraʊnd]</td><td>понять (что-то сложное)</td></tr><tr><td>to get used to</td><td>[ɡet juːst tuː]</td><td>привыкнуть к</td></tr><tr><td>to get wise</td><td>[ɡet waɪz]</td><td>поумнеть, стать опытнее</td></tr><tr><td>to get visited</td><td>[ɡet ˈvɪzɪtɪd]</td><td>быть посещённым (неожиданно)</td></tr><tr><td>to get lost</td><td>[ɡet lɔːst]</td><td>заблудиться</td></tr><tr><td>to get into a state</td><td>[ɡet ˈɪntə ə steɪt]</td><td>впасть в состояние</td></tr><tr><td>to get fooled</td><td>[ɡet fuːld]</td><td>попасться на удочку, быть обманутым</td></tr><tr><td>to get over</td><td>[ɡet ˈoʊvər]</td><td>оправиться от, преодолеть</td></tr><tr><td>to get closer</td><td>[ɡet ˈkloʊzər]</td><td>сблизиться</td></tr><tr><td>to flush</td><td>[flʌʃ]</td><td>смывать (в туалете)</td></tr><tr><td>backwards</td><td>[ˈbækwərdz]</td><td>задом наперёд, в обратном направлении</td></tr><tr><td>myth</td><td>[mɪθ]</td><td>миф</td></tr><tr><td>to convince</td><td>[kənˈvɪns]</td><td>убедить</td></tr><tr><td>mad scientist</td><td>[mæd ˈsaɪəntɪst]</td><td>безумный учёный</td></tr><tr><td>camper van</td><td>[ˈkæmpər væn]</td><td>кемпер, дом на колёсах</td></tr><tr><td>obsessed</td><td>[əbˈsest]</td><td>одержимый</td></tr><tr><td>selfie</td><td>[ˈselfi]</td><td>селфи</td></tr><tr><td>to raise an eyebrow</td><td>[reɪz ən ˈaɪbraʊ]</td><td>поднять бровь (скептически)</td></tr><tr><td>thump</td><td>[θʌmp]</td><td>глухой удар</td></tr><tr><td>torch</td><td>[tɔːrtʃ]</td><td>фонарик</td></tr><tr><td>pale</td><td>[peɪl]</td><td>бледный</td></tr><tr><td>scratch</td><td>[skrætʃ]</td><td>царапина</td></tr><tr><td>furry</td><td>[ˈfɜːri]</td><td>пушистый, меховой</td></tr><tr><td>wombat</td><td>[ˈwɑːmbæt]</td><td>вомбат</td></tr><tr><td>gas station</td><td>[ɡæs ˈsteɪʃn]</td><td>заправка</td></tr><tr><td>leathery</td><td>[ˈleðəri]</td><td>кожистый, похожий на кожу</td></tr><tr><td>fishing lure</td><td>[ˈfɪʃɪŋ lʊr]</td><td>рыболовная приманка, блесна</td></tr><tr><td>drop bear</td><td>[drɑːp ber]</td><td>мифический «сумчатый леопард»</td></tr><tr><td>nasty</td><td>[ˈnæsti]</td><td>противный, опасный</td></tr><tr><td>fork</td><td>[fɔːrk]</td><td>вилка</td></tr><tr><td>reflection</td><td>[rɪˈflekʃn]</td><td>отражение</td></tr><tr><td>to scare off</td><td>[sker ɔːf]</td><td>отпугнуть</td></tr><tr><td>paranoia</td><td>[ˌpærəˈnɔɪə]</td><td>паранойя</td></tr><tr><td>eucalyptus</td><td>[ˌjuːkəˈlɪptəs]</td><td>эвкалипт</td></tr><tr><td>pouch</td><td>[paʊtʃ]</td><td>сумка (кенгуру)</td></tr></table></div></details><details><summary>❤️ FOR THE HEART AND MIND</summary><div class="content"><div class="exercise"><h3>A. Comprehension Check</h3><ol><li>Where did the friends go after China?</li><li>What strange things did they notice about Australia?</li><li>What happened on their first night camping?</li><li>How did Mike react to the kangaroo on the roof?</li><li>What is a &quot;drop bear&quot;? Did they find out it was real?</li><li>How did the old man at the gas station fool them?</li><li>What did the narrator realize while watching the sunrise?</li><li>What does Mike say about kangaroos at the end?</li></ol></div><div class="exercise"><h3>B. Think &amp; Analyse</h3><ol><li>The narrator says, &quot;You don’t travel to understand the world. You travel to understand that you don’t understand anything at all.&quot; What does this mean? Is it a sad or a freeing thought?</li><li>Why do you think Australians invented the &quot;drop bear&quot; myth? What does it say about their sense of humor?</li><li>The friends got fooled, got scared, and got laughed at. But they also got closer. Why do shared embarrassing moments strengthen friendship?</li><li>Mike says, &quot;I still can’t get my head around a country where the squirrels have pouches.&quot; What does this phrase mean? What things in life are hard for you to &quot;get your head around&quot;?</li></ol></div><div class="exercise"><h3>C. Discuss &amp; Relate</h3><ol><li>Have you ever been in a place where everything felt &quot;upside down&quot; — different from what you were used to? How did it feel?</li><li>Is it important to be able to laugh at yourself when you’re in a new culture? Why?</li><li>The narrator finds peace in not understanding everything. Do you agree that it’s okay not to know?</li></ol></div></div></details><details><summary>🧠 FOR LANGUAGE SKILLS</summary><div class="content"><div class="exercise"><h3>A. Vocabulary Focus — Phrasal verbs with GET</h3><p><b>1. Match the phrasal verb with its meaning from the story:</b></p><table><tr><th>Phrasal Verb</th><th>Meaning</th></tr><tr><td>1. get your head around</td><td>a) to be tricked</td></tr><tr><td>2. get used to</td><td>b) to become anxious or upset</td></tr><tr><td>3. get wise</td><td>c) to understand something complicated</td></tr><tr><td>4. get visited</td><td>d) to become accustomed</td></tr><tr><td>5. get lost</td><td>e) to receive an unexpected guest</td></tr><tr><td>6. get into a state</td><td>f) to lose your way</td></tr><tr><td>7. get fooled</td><td>g) to recover from</td></tr><tr><td>8. get over</td><td>h) to become experienced/smart</td></tr><tr><td>9. get closer</td><td>i) to strengthen a relationship</td></tr></table><p><b>2. Fill in the blanks with the correct form of GET + particle:</b></p><ol type="a"><li>After three weeks, I finally ______ the Australian accent.</li><li>She ______ about the drop bears and was terrified all night.</li><li>I still can’t ______ why the water flushes backwards here.</li><li>They ______ by the old man’s joke and believed everything.</li><li>We ______ in the bush for two hours before finding the road.</li><li>He never ______ his fear of kangaroos.</li><li>Traveling together ______ us a lot.</li></ol><p><b>3.</b> Find all the phrasal verbs with GET in the text and write them down with their context.</p></div><div class="exercise"><h3>1. Past Perfect (action before another past action)</h3><p>Find: &quot;Dave, who had got wise after China, said nothing.&quot; Explain why Past Perfect is used.</p><div style="white-space:pre-line">Complete: We ______ (not / sleep) much because the kangaroo ______ (jump) on the roof all night.</div></div><div class="exercise"><h3>2. Past Simple vs Past Continuous</h3><p>Find examples in the drop bear scene: Past Continuous (background): ______ ; Past Simple (interrupting action): ______</p></div><div class="exercise"><h3>3. Put the verbs in brackets in the correct past tense</h3><p></p><div style="white-space:pre-line">a) While we ______ (drive) through the bush, we ______ (see) three koalas.
+b) Before we ______ (arrive) in Australia, we ______ (watch) many documentaries.
+c) The old man ______ (grin) when he ______ (see) that we ______ (believe) him.
+d) By the time the sun ______ (rise), I ______ (sit) outside for an hour, thinking.</div></div><div class="exercise"><h3>C. Brain Workout</h3><ol><li>The &quot;Upside Down&quot; list: Make a list of things that are &quot;upside down&quot; in Australia compared to your country (seasons, animals, etc.).</li><li>Retell the drop bear story: In your own words, explain the drop bear myth to someone who has never heard of it. Use at least two phrasal verbs.</li><li>Philosophical reflection: The narrator says, &quot;You travel to understand that you don’t understand anything at all.&quot; Do you agree? Write 3–4 sentences expressing your opinion.</li></ol></div></div></details><details><summary>🎵 THE SONG — ENGLISH & RUSSIAN</summary><div class="content"><img class="image" src="kangaroo.png" alt="Kangaroo illustration"><div class="songcols"><div class="songcol"><div class="songhead">ENGLISH</div><div class="songtitle">UPSIDE DOWN WORLD / ПЕРЕВЁРНУТЫЙ МИР</div><div class="sec">Verse 1</div><div class="line">We drove into the red dirt land</div><div class="line">Where the sky is big and the birds don’t land</div><div class="line">Everything’s strange, everything’s new</div><div class="line">And the water spins the other way — it’s true!</div><div class="sec">Pre-chorus</div><div class="line">We thought we knew the world,</div><div class="line">we thought we had it right</div><div class="line">But Australia turned us upside down that night</div><div class="sec">Chorus</div><div class="line">Upside down, upside down</div><div class="line">The world is spinning all around!</div><div class="line">Kangaroo on the roof, a summer Christmas tree</div><div class="line">Nothing is as it seems, but that’s the key!</div><div class="sec">Verse 2</div><div class="line">They told us stories of drop bears</div><div class="line">Falling from trees with big scary stares</div><div class="line">We wore forks in our hair, oh what a fright</div><div class="line">But it was just a joke — they got us all right!</div><div class="sec">Pre-chorus</div><div class="line">We thought we knew the world,</div><div class="line">we thought we had it right</div><div class="line">But Australia turned us upside down that night</div><div class="sec">Chorus</div><div class="line">Upside down, upside down</div><div class="line">The world is spinning all around!</div><div class="line">Kangaroo on the roof, a summer Christmas tree</div><div class="line">Nothing is as it seems, but that’s the key!</div><div class="sec">Bridge</div><div class="line">The sun came up, the sky turned gold</div><div class="line">A story worth being told</div><div class="line">We didn’t plan it, but we learned</div><div class="line">That being lost is how you turn</div><div class="sec">Final Chorus</div><div class="line">Upside down, upside down</div><div class="line">We laughed until we hit the ground!</div><div class="line">Kangaroo on the roof, a summer Christmas tree</div><div class="line">Nothing is as it seems — and that’s the key!</div><div class="sec">Outro</div><div class="line">Upside down… upside down…</div><div class="line">We’ll never be the same… around…</div></div><div class="songcol"><div class="songhead">РУССКИЙ ВАРИАНТ</div><div class="songtitle">UPSIDE DOWN WORLD / ПЕРЕВЁРНУТЫЙ МИР</div><div class="sec">Куплет 1</div><div class="line">Мы въехали в край красной земли,</div><div class="line">Где небо большое, а птицы не садятся,</div><div class="line">Всё странно, всё ново,</div><div class="line">И вода крутится в другую сторону — это правда!</div><div class="sec">Распевка</div><div class="line">Мы думали, что знаем мир, мы думали, что всё поняли,</div><div class="line">Но Австралия перевернула нас той ночью</div><div class="sec">Припев</div><div class="line">Перевёрнутый мир, перевёрнутый мир,</div><div class="line">Мир кружится вокруг нас!</div><div class="line">Кенгуру на крыше, летнее Рождество,</div><div class="line">Ничто не так, как кажется — и в этом секрет!</div><div class="sec">Куплет 2</div><div class="line">Нам рассказывали истории</div><div class="line">О падающих медведях,</div><div class="line">Падающих с деревьев с большими страшными взглядами,</div><div class="line">Мы втыкали вилки в волосы, какой был страх,</div><div class="line">Но это была просто шутка — они нас всех разыграли!</div><div class="sec">Распевка</div><div class="line">Мы думали, что знаем мир,</div><div class="line">мы думали, что всё поняли,</div><div class="line">Но Австралия перевернула нас той ночью</div><div class="sec">Припев</div><div class="line">Перевёрнутый мир, перевёрнутый мир,</div><div class="line">Мир кружится вокруг нас!</div><div class="line">Кенгуру на крыше, летнее Рождество,</div><div class="line">Ничто не так, как кажется — и в этом секрет!</div><div class="sec">Бридж</div><div class="line">Взошло солнце, небо стало золотым,</div><div class="line">История, которую стоит рассказать,</div><div class="line">Мы не планировали, но мы поняли,</div><div class="line">Что, теряясь, мы обретаем себя</div><div class="sec">Финальный припев</div><div class="line">Перевёрнутый мир, перевёрнутый мир,</div><div class="line">Мы смеялись, пока не упали!</div><div class="line">Кенгуру на крыше, летнее Рождество,</div><div class="line">Ничто не так, как кажется — и в этом секрет!</div><div class="sec">Аутро</div><div class="line">Перевёрнутый… перевёрнутый…</div><div class="line">Мы уже никогда не будем прежними…</div></div></div><h3>Song audio</h3><audio controls src="UPSIDE DOWN WORLD.mp3"></audio></div></details><details><summary>🎤 EXERCISE AFTER THE SONG</summary><div class="content">
+<div class="exercise"><h3>Emoji Story</h3><p>Look at these emojis: 🦘🌏🔄🤣🌿🎄</p>
+<p>Write one sentence about the song using these emojis.</p>
+<p class="small"><b>Example:</b> We laughed, we saw the sun, and we came back different.</p></div>
+</div></details><details><summary>🌎 BEYOND THE TEXT</summary><div class="content"><div class="exercise"><h3>Choose ONE</h3><ol><li>A postcard from Australia: Write a postcard from Mike to his family. Tell them about the kangaroo on the roof and the drop bear story.</li><li>A travel blog entry: Write a short travel blog post titled &quot;Why Australia is Weird (and Wonderful).&quot;</li><li>Create your own myth: Invent a mythical Australian animal like the drop bear. Describe it, what it does, and how tourists should protect themselves.</li><li>AI image (optional): Create an image of the funniest moment — a kangaroo on the roof of a camper van at night, with scared faces peeking out the window.</li><li>Your own &quot;upside down&quot; story: Write about a time you felt completely disoriented in a new place — and what you learned from it.</li></ol></div></div></details><footer>MODULE 5 · HOLIDAYS · BLOCK 03 · DOWN UNDER AND UPSIDE DOWN</footer></div>
+</section>
+
+<div class="module-footer">MODULE 5 · HOLIDAYS · COMPLETE EDITION · BLOCKS 01–03</div>
+</div>
+</body>
+</html>

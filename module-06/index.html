@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MODULE 6 · FOOD AND HEALTH</title><style>
+:root{--navy:#082033;--cream:#fbf8f2;--gold:#d3a34a;--line:#ded7cc;--ink:#20262b;--warm:#a85b2a}
+*{box-sizing:border-box} body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.wrap{max-width:1240px;margin:auto;padding:24px}.hero{background:var(--navy);color:#fff;border-radius:20px;overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;min-height:350px}
+.hero-copy{padding:42px 42px 36px}.eyebrow{font-size:14px;font-weight:800;letter-spacing:1.7px;color:#e6c06a}.hero h1{font-family:Georgia,serif;font-size:62px;line-height:.95;margin:15px 0}.sub{font-family:Georgia,serif;font-size:22px;color:#f0dfb2;font-style:italic}.intro{margin-top:25px;max-width:620px;font-size:16px;line-height:1.6}.hero-art{background:#fff url('block1/assets/header-white.png') center/cover no-repeat;min-height:350px}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.tag{background:#fff;border:1px solid var(--line);border-radius:22px;padding:8px 13px;font-size:13px;font-weight:800}
+.block{background:#fff;border:1px solid var(--line);border-radius:17px;margin:16px 0;overflow:hidden;box-shadow:0 5px 18px rgba(30,20,10,.05)}summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;gap:14px;color:var(--navy);font-size:22px;font-weight:900}summary::-webkit-details-marker{display:none}summary:after{content:'+';margin-left:auto;font-size:30px;color:var(--warm)}details[open] summary:after{content:'−'}
+.label{font-size:12px;letter-spacing:1.3px;color:var(--warm);font-weight:900}.desc{font-size:14px;font-weight:500;color:#666;margin-top:3px}.frame-wrap{padding:0 10px 12px;background:#fff}.frame{width:100%;border:0;display:block;min-height:900px;background:#fff}footer{margin-top:18px;background:var(--navy);color:#fff;border-radius:13px;padding:16px 20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-art{min-height:260px}.hero h1{font-size:45px}.frame{min-height:1000px}}
+</style></head><body>
+<div class="wrap">
+<header class="hero"><div class="hero-copy"><div class="eyebrow">ENGLISH LANGUAGE COURSE · MODULE 6</div><h1>FOOD<br>AND HEALTH</h1><div class="sub">Stories, food, memories, choices and the people behind them</div><div class="intro">A complete three-block learning module. Each block opens separately, so students can move through the stories, listening, vocabulary, grammar, discussion, creative tasks and songs at their own pace.</div></div><div class="hero-art"></div></header>
+<div class="tags"><span class="tag">READ</span><span class="tag">LISTEN</span><span class="tag">WATCH</span><span class="tag">THINK</span><span class="tag">SPEAK</span><span class="tag">CREATE</span></div>
+<details class="block" open><summary><span><div class="label">BLOCK 01</div>GRANDMA'S SECRET INGREDIENT<div class="desc">A warm family story with humour</div></span></summary><div class="frame-wrap"><iframe class="frame" src="block1/index.html" title="block1"></iframe></div></details>
+<details class="block"><summary><span><div class="label">BLOCK 02</div>THE SMOOTHIE EXPERIMENT<div class="desc">Food, choices and an unexpected experiment</div></span></summary><div class="frame-wrap"><iframe class="frame" src="block2/index.html" title="block2"></iframe></div></details>
+<details class="block"><summary><span><div class="label">BLOCK 03</div>THE LAST SUPPER CLUB<div class="desc">Reviews, interview, phrasal verbs with GIVE and conditionals</div></span></summary><div class="frame-wrap"><iframe class="frame" src="block3/index.html" title="block3"></iframe></div></details>
+<footer><span>MODULE 6 · FOOD AND HEALTH</span><span>3 BLOCKS · READ · LISTEN · WATCH · THINK · CREATE</span></footer>
+</div>
+<script>
+function resizeFrame(f){try{const d=f.contentDocument||f.contentWindow.document; const h=Math.max(d.body.scrollHeight,d.documentElement.scrollHeight); f.style.height=(h+20)+'px';}catch(e){}}
+document.querySelectorAll('.frame').forEach(f=>{f.addEventListener('load',()=>{resizeFrame(f);setTimeout(()=>resizeFrame(f),500);setTimeout(()=>resizeFrame(f),1500);});});
+</script></body></html>
