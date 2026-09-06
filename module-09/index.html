@@ -1,20 +1,49 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GEMS OF THE COLLECTION — BONUS MODULE</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEMS OF THE COLLECTION</title>
 <style>
-:root{--cream:#f6f0e6;--paper:#fffdf8;--burg:#6d2430;--gold:#b88a3b;--ink:#33464b;--line:#ded3c3}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:#3e3934;font-family:Georgia,"Times New Roman",serif}.top{position:sticky;top:0;z-index:50;background:rgba(246,240,230,.97);border-bottom:1px solid var(--line);padding:12px 22px;display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--burg);font-weight:700}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;color:var(--burg);font-weight:700;cursor:pointer}.block-frame{width:100%;border:0;display:block;overflow:hidden;background:var(--cream)}.divider{height:18px;background:linear-gradient(90deg,#f6f0e6,#e8d7b7,#f6f0e6)}
-#globalLightbox{position:fixed;inset:0;background:rgba(25,20,18,.78);display:none;align-items:center;justify-content:center;padding:24px;z-index:99999}#globalLightbox.open{display:flex}.glb-card{position:relative;max-width:min(1200px,96vw);max-height:94vh;background:#fffdf8;border:1px solid #d8cdbd;border-radius:20px;padding:16px;box-shadow:0 30px 90px rgba(0,0,0,.35)}#globalPhoto{display:block;max-width:92vw;max-height:84vh;width:auto;height:auto;object-fit:contain;border-radius:12px}#globalTitle{text-align:center;color:var(--burg);font-weight:700;margin:6px 48px 2px;font-size:16px}#globalClose{position:absolute;right:10px;top:10px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:white;color:var(--burg);font-size:24px;cursor:pointer;z-index:2}
-</style></head><body>
-<header class="top"><div class="brand">💎 GEMS OF THE COLLECTION</div><nav class="nav"><button onclick="go(1)">BLOCK 1 · A LOVE STORY</button><button onclick="go(2)">BLOCK 2 · VARIA'S NEW NOSE</button><button onclick="go(3)">BLOCK 3 · THE HAPPY VIKING</button></nav></header>
-<section id="b1"><iframe id="frame1" class="block-frame" src="Block-1/index.html" title="Block 1 — A Love Story in Details"></iframe></section><div class="divider"></div>
-<section id="b2"><iframe id="frame2" class="block-frame" src="Block-2/index.html" title="Block 2 — Varia's New Nose"></iframe></section><div class="divider"></div>
-<section id="b3"><iframe id="frame3" class="block-frame" src="Block-3/index.html" title="Block 3 — The Happy Viking"></iframe></section>
-<div id="globalLightbox" aria-hidden="true"><div class="glb-card"><button id="globalClose" aria-label="Close">×</button><div id="globalTitle"></div><img id="globalPhoto" alt=""></div></div>
-<script>
-const lb=document.getElementById('globalLightbox'),photo=document.getElementById('globalPhoto'),title=document.getElementById('globalTitle');
-window.__openGlobalPhoto=function(src,t){photo.src=src;photo.alt=t||'Photo';title.textContent=t||'';lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};
-function closeGlobal(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');photo.removeAttribute('src');document.body.style.overflow=''}
-document.getElementById('globalClose').onclick=closeGlobal;lb.addEventListener('click',e=>{if(e.target===lb)closeGlobal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGlobal()});
-function resizeFrame(f){try{const d=f.contentDocument;const h=Math.max(d.body.scrollHeight,d.documentElement.scrollHeight);f.style.height=(h+4)+'px'}catch(e){f.style.height='1000px'}}
-['frame1','frame2','frame3'].forEach(id=>{const f=document.getElementById(id);f.addEventListener('load',()=>{resizeFrame(f);setTimeout(()=>resizeFrame(f),400);setTimeout(()=>resizeFrame(f),1200)})});
-function go(n){document.getElementById('b'+n).scrollIntoView({behavior:'smooth',block:'start'})}
-window.addEventListener('resize',()=>document.querySelectorAll('.block-frame').forEach(resizeFrame));
-</script></body></html>
+:root{--cream:#f6f0e6;--paper:#fffdf8;--burg:#6d2430;--gold:#b88a3b;--ink:#33464b;--green:#315b45;--line:#ded3c3;--shadow:0 18px 50px rgba(58,42,31,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:#3e3934;font-family:Georgia,"Times New Roman",serif}
+.top{position:sticky;top:0;z-index:50;background:rgba(246,240,230,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:12px 22px;display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--burg);font-weight:700}.back{color:var(--burg);font:700 13px Arial,sans-serif;letter-spacing:.08em;text-decoration:none;text-transform:uppercase;white-space:nowrap}.back:hover{text-decoration:underline}.nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.nav-link{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;color:var(--burg);font:700 12px Arial,sans-serif;letter-spacing:.03em;cursor:pointer;display:inline-block;text-decoration:none}.nav-link:hover{background:#f5ede3}
+.overview{max-width:1450px;margin:0 auto;padding:42px 24px 64px}.overview-head{text-align:center;max-width:900px;margin:0 auto 32px}.kicker{font:700 12px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}.overview-head h1{margin:10px 0 10px;font-size:clamp(42px,6vw,76px);font-weight:500;line-height:.98;color:var(--burg)}.overview-head p{margin:0 auto;color:#665d54;font-size:18px;line-height:1.55}.block-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.block-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:24px;background:var(--paper);padding:0;overflow:hidden;text-align:left;cursor:pointer;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease;text-decoration:none;color:inherit}.block-card:hover,.block-card:focus-visible{transform:translateY(-4px);box-shadow:0 24px 65px rgba(58,42,31,.16);outline:none}.block-image{display:block;width:100%;height:300px;object-fit:contain;object-position:center;background:#efe7db;padding:10px}.block-card:nth-child(1) .block-image{background:#f5eee5}.block-card:nth-child(2) .block-image{background:#f0f0eb}.block-card:nth-child(3) .block-image{background:#f0f2f0}.block-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}.block-no{font:700 11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}.block-body h2{margin:7px 0 8px;color:var(--burg);font-size:29px;font-weight:500;line-height:1.05}.block-body p{margin:0 0 18px;color:#655c54;line-height:1.5;flex:1}.enter{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;padding:10px 15px;border-radius:999px;background:var(--burg);color:#fff;font:700 13px Arial,sans-serif}.block-card:nth-child(3) .enter{background:var(--green)}
+.note{max-width:900px;margin:24px auto 0;text-align:center;color:#746b62;font:13px/1.5 Arial,sans-serif}
+@media(max-width:1000px){.block-grid{grid-template-columns:1fr 1fr}.block-image{height:260px}}@media(max-width:680px){.top{padding:10px 12px}.brand{font-size:14px}.nav{display:none}.overview{padding:28px 14px 46px}.block-grid{grid-template-columns:1fr}.block-image{height:240px}.overview-head h1{font-size:48px}.overview-head p{font-size:16px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="back" href="../road.html">← JOURNEY MAP</a>
+  <div class="brand">💎 GEMS OF THE COLLECTION</div>
+  <nav class="nav" aria-label="Module 9 blocks">
+    <a class="nav-link" href="Block-1/index.html">BLOCK 1 · A LOVE STORY</a>
+    <a class="nav-link" href="Block-2/index.html">BLOCK 2 · VARIA'S NEW NOSE</a>
+    <a class="nav-link" href="Block-3/index.html">BLOCK 3 · THE HAPPY VIKING</a>
+  </nav>
+</header>
+<section class="overview">
+  <div class="overview-head">
+    <div class="kicker">MODULE 9</div>
+    <h1>GEMS OF THE COLLECTION</h1>
+    <p>Three complete stories — three different worlds. Choose a story to enter.</p>
+  </div>
+  <div class="block-grid">
+    <a class="block-card" href="Block-1/index.html">
+      <img class="block-image" src="Block-1/assets/photos/05_new_place.jpg" alt="A Love Story in Details">
+      <div class="block-body"><div class="block-no">BLOCK 1</div><h2>A Love Story in Details</h2><p>A real story about love, family and the courage to build a life together.</p><span class="enter">ENTER THE STORY →</span></div>
+    </a>
+    <a class="block-card" href="Block-2/index.html">
+      <img class="block-image" src="Block-2/assets/images/hero.png" alt="Varia's New Nose">
+      <div class="block-body"><div class="block-no">BLOCK 2</div><h2>Varia's New Nose</h2><p>A real story about technology, compassion and one human decision to help.</p><span class="enter">ENTER THE STORY →</span></div>
+    </a>
+    <a class="block-card" href="Block-3/index.html">
+      <img class="block-image" src="Block-3/assets/images/hero.jpg" alt="The Happy Viking">
+      <div class="block-body"><div class="block-no">BLOCK 3</div><h2>The Happy Viking</h2><p>A biographical portrait about freedom, joy, humility and staying human.</p><span class="enter">ENTER THE STORY →</span></div>
+    </a>
+  </div>
+  <p class="note">Each story opens on its own full page, so the three worlds remain separate and easy to explore.</p>
+</section>
+</body>
+</html>
