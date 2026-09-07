@@ -58,7 +58,14 @@
 .final{background:linear-gradient(135deg,#eaf3f6 0%,#edf8ed 100%)}
 .final h2{font-size:30px}
 .final p{font-size:19px}
-</style></head><body><div class="wrap">
+/* V2 additions: video */
+.video-section{margin-top:18px;padding:20px;background:#eef5f7;border:1px solid #c8dce2;border-radius:18px}
+.video-section h2{margin:0 0 5px;color:var(--ink);font-size:25px}
+.video-section .video-lead{margin:0 0 12px;color:var(--muted);font-size:14px}
+.video-frame{display:flex;justify-content:center}
+.video-frame video{display:block;width:min(100%,520px);max-height:72vh;object-fit:contain;border-radius:14px;background:#111;box-shadow:0 10px 28px rgba(62,45,35,.12)}
+.video-task{margin-top:12px;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.video-task b{color:var(--ink)}</style></head><body><div class="wrap">
 <div class="topbar"><div>REAL MOMENTS ◆ THE HAPPY VIKING</div><button class="menu" onclick="openModal('navModal')">MODULE MENU</button></div>
 <section class="hero">
 <div class="card hero-copy"><div class="brand">THE HAPPY VIKING</div><span class="ribbon">GEMS OF THE COLLECTION · BLOCK 3</span><h1>THE HAPPY VIKING</h1><div class="hero-sub">Haaland's story of joy, courage and staying human</div><p>Biographical narrative · Portrait of an athlete</p><p class="muted">Level: Intermediate / Advanced</p><button class="smallbtn" onclick="scrollToId('story')">START THE JOURNEY →</button></div>
@@ -90,7 +97,20 @@
 <img alt="The Lesson" class="zoomable" src="assets/images/lesson.jpg"/>
 <div class="buttons"><button class="smallbtn" onclick="openChapter(6)">› READ</button></div>
 </article></div></section>
-<section class="below" id="media">
+<section class="video-section card" id="watch">
+  <h2>WATCH · HAALAND IN ACTION</h2>
+  <p class="video-lead">Watch the short video and notice the energy, confidence and joy of the game.</p>
+  <div class="video-frame">
+    <video controls playsinline preload="metadata">
+      <source src="assets/video/haaland-action.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+  </div>
+  <div class="video-task">
+    <b>Before you watch:</b> What makes a great athlete memorable beyond the result?
+    <b>After watching:</b> Choose one quality you noticed.
+  </div>
+</section><section class="below" id="media">
 <div class="panel audio"><h2>LISTEN · THE STORY</h2><p class="muted">Six chapter recordings are supplied separately, one for each part of the journey.</p><div class="audio-box"><strong>The Happiest Man on the Pitch</strong><audio controls="" id="aud1" src="assets/audio/happiest.mp3"></audio></div><div class="audio-box"><strong>A Strange Path to Glory</strong><audio controls="" id="aud2" src="assets/audio/path.mp3"></audio></div><div class="audio-box"><strong>The Human Side</strong><audio controls="" id="aud3" src="assets/audio/human.mp3"></audio></div><div class="audio-box"><strong>The Viking Row</strong><audio controls="" id="aud4" src="assets/audio/viking-row.mp3"></audio></div><div class="audio-box"><strong>The Secret of His Joy</strong><audio controls="" id="aud5" src="assets/audio/joy.mp3"></audio></div><div class="audio-box"><strong>The Lesson</strong><audio controls="" id="aud6" src="assets/audio/lesson.mp3"></audio></div></div>
 <div class="panel gloss"><h2>GLOSSARY</h2><details class="gloss-details"><summary>OPEN GLOSSARY</summary><div class="glossary-mini"><div class="gloss-row"><div>Word / Phrase</div><div>American IPA</div><div>Перевод</div></div><div class="gloss-row"><div>pure joy</div><div>[pjʊr dʒɔɪ]</div><div>чистая радость</div></div><div class="gloss-row"><div>contagious</div><div>[kənˈteɪdʒəs]</div><div>заразительный</div></div><div class="gloss-row"><div>to console</div><div>[kənˈsoʊl]</div><div>утешать</div></div><div class="gloss-row"><div>meme</div><div>[miːm]</div><div>мем</div></div><div class="gloss-row"><div>ego</div><div>[ˈiːɡoʊ]</div><div>эго, самолюбие</div></div><div class="gloss-row"><div>self-irony</div><div>[self ˈaɪrəni]</div><div>самоирония</div></div><div class="gloss-row"><div>to offend</div><div>[əˈfend]</div><div>обижать, оскорблять</div></div><div class="gloss-row"><div>heartbreaking</div><div>[ˈhɑːrtbreɪkɪŋ]</div><div>душераздирающий</div></div><div class="gloss-row"><div>to kneel</div><div>[niːl]</div><div>встать на колени</div></div><div class="gloss-row"><div>ritual</div><div>[ˈrɪtʃuəl]</div><div>ритуал</div></div><div class="gloss-row"><div>to row</div><div>[roʊ]</div><div>грести</div></div><div class="gloss-row"><div>longship</div><div>[ˈlɔːŋʃɪp]</div><div>драккар (корабль викингов)</div></div><div class="gloss-row"><div>frenzy</div><div>[ˈfrenzi]</div><div>неистовство</div></div><div class="gloss-row"><div>humble</div><div>[ˈhʌmbl]</div><div>скромный</div></div><div class="gloss-row"><div>grateful</div><div>[ˈɡreɪtfl]</div><div>благодарный</div></div><div class="gloss-row"><div>lotus position</div><div>[ˈloʊtəs pəˈzɪʃn]</div><div>поза лотоса</div></div><div class="gloss-row"><div>to cherish</div><div>[ˈtʃerɪʃ]</div><div>дорожить, лелеять</div></div><div class="gloss-row"><div>cyborg</div><div>[ˈsaɪbɔːrɡ]</div><div>киборг</div></div><div class="gloss-row"><div>goofy</div><div>[ˈɡuːfi]</div><div>глуповатый, забавный</div></div><div class="gloss-row"><div>magnetism</div><div>[ˈmæɡnətɪzəm]</div><div>притягательность</div></div><div class="gloss-row"><div>heritage</div><div>[ˈherɪtɪdʒ]</div><div>наследие, традиции</div></div><div class="gloss-row"><div>authentic</div><div>[ɔːˈθentɪk]</div><div>подлинный, настоящий</div></div><div class="gloss-row"><div>devoted</div><div>[dɪˈvoʊtɪd]</div><div>преданный, любящий</div></div><div class="gloss-row"><div>to praise</div><div>[preɪz]</div><div>хвалить, восхвалять</div></div><div class="gloss-row"><div>unpredictable</div><div>[ˌʌnprɪˈdɪktəbl]</div><div>непредсказуемый</div></div><div class="gloss-row"><div>relentless</div><div>[rɪˈlentləs]</div><div>безжалостный, непрерывный</div></div></div></details></div>
 <div class="panel heart"><h2>FOR THE HEART AND MIND</h2><img class="heart-photo zoomable" src="assets/images/haaland-meditation.jpg" alt="Haaland meditating in Norway"/><p>Read, listen, think and connect the story to your own experience.</p><button class="smallbtn" onclick="scrollToId('learning')">OPEN LEARNING →</button><h3>Story focus</h3><p class="muted">Joy · freedom · roots · kindness · unity · gratitude</p></div>
